@@ -65,5 +65,31 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible,
 /* 7b. ex-fit — a container that shrinks to its content inside a row (e.g. the Google rating badge) */
 .e-con.ex-fit { --width: auto; width: auto; flex: 0 0 auto; }
 
+/* 7c. Line icons uploaded as SVG are drawn with strokes, never filled */
+.elementor-icon svg, .elementor-button-icon svg, .e-n-menu-dropdown-icon svg,
+.e-n-accordion-item-title-icon svg, .elementor-swiper-button svg { fill: none !important; stroke: currentColor; }
+
+/* 9. Header: sits over each page's dark hero (pages add top padding for it) */
+.ex-header { position: absolute; top: 0; left: 0; right: 0; z-index: 50; }
+.ex-push-bottom { margin-top: auto; }
+
+/* 10. ex-icon-btn — square icon-only button (☰ / close); its label stays readable to screen readers */
+.ex-icon-btn .elementor-button-text { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.ex-icon-btn .elementor-button-icon svg { width: 22px; height: 22px; }
+.ex-icon-btn .elementor-button { line-height: 0; }
+
+/* 11. Small eyebrow (mobile menu group titles) */
+.ex-eyebrow--sm .elementor-heading-title { gap: 10px; }
+.ex-eyebrow--sm .elementor-heading-title::before { width: 9px; height: 9px; }
+
+/* 12. Text lists and links on dark backgrounds (footer) */
+.ex-list p { margin: 0; }
+.ex-list p + p { margin-top: var(--ex-gap, 6px); }
+.ex-gap-12 { --ex-gap: 12px; }
+.ex-on-dark a { color: #F5F2EA; }
+.ex-on-dark a:hover { color: #E6E0D5; }
+.ex-on-dark a.ex-underline { color: #E6E0D5; text-decoration: underline; text-underline-offset: 3px; }
+.ex-muted-links a { color: inherit; }
+
 /* 8. Phone: hide header Book button on very narrow screens (approved behaviour) */
 @media (max-width: 380px) { .ex-hide-xs { display: none !important; } }
