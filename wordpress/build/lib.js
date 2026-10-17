@@ -117,8 +117,14 @@
     if (!created) throw new Error('not created ' + model.id);
     if (isNested(model)) {
       // Elementor creates its default items; add/remove through the repeater so items and containers stay in sync
-      while (rep && created.children.length < kids.length) await $e.run('document/repeater/insert', { container: created, name: rep, model: {} });
-      while (rep && created.children.length > kids.length) await $e.run('document/repeater/remove', { container: created, name: rep, index: created.children.length - 1 });
+      const sleep = (ms) => new Promise(r => setTimeout(r, ms));
+      if (rep) {
+        const have = created.repeaters[rep].children.length;
+        for (let n = have; n < kids.length; n++) await $e.run('document/repeater/insert', { container: created, name: rep, model: {} });
+        for (let n = have; n > kids.length; n--) await $e.run('document/repeater/remove', { container: created, name: rep, index: n - 1 });
+        for (let t = 0; t < 40 && created.children.length !== kids.length; t++) await sleep(50);
+        if (created.children.length !== kids.length) throw new Error(model.widgetType + ': ' + created.children.length + ' slots for ' + kids.length + ' items');
+      }
       for (let i = 0; rep && i < items.length; i++) {
         const it = Object.assign({}, items[i]); delete it._id;
         await $e.run('document/elements/settings', { container: created.repeaters[rep].children[i], settings: it, options: { external: true } });
@@ -144,6 +150,13 @@
     if (kids.length) await $e.run('document/elements/delete', { containers: kids });
   }
 
-  window.EX = { rid, px, em, pct, dims, all, gap, C, W, typo, IT, IN, section, heading, text, eyebrow, button, image, img, icon, insert, clearPage,
+  // Run a long build in the background; poll EX.status from another call
+  function runBg(fn) {
+    EX.status = { running: true, errs: [], log: [] };
+    (async () => { try { await fn(EX.status); } catch (e) { EX.status.errs.push(e.message); } EX.status.running = false; })();
+    return 'started';
+  }
+
+  window.EX = { runBg, rid, px, em, pct, dims, all, gap, C, W, typo, IT, IN, section, heading, text, eyebrow, button, image, img, icon, insert, clearPage,
     setMedia: (m) => { MEDIA = m; } };
 })();
