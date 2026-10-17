@@ -108,17 +108,20 @@
     const opts = { at: at ?? parent.children.length };
     if (!hasNested(model)) return $e.run('document/elements/create', { container: parent, model, options: opts });
     const kids = model.elements || [];
-    const shell = Object.assign({}, model, { elements: [] });
-    const created = await $e.run('document/elements/create', { container: parent, model: shell, options: opts });
+    const rep = isNested(model) ? { 'nested-tabs': 'tabs', 'nested-carousel': 'carousel_items', 'nested-accordion': 'items', 'mega-menu': 'menu_items' }[model.widgetType] : null;
+    const items = rep ? (model.settings[rep] || []) : [];
+    const shellSettings = Object.assign({}, model.settings); if (rep) delete shellSettings[rep];
+    const shell = Object.assign({}, model, { settings: shellSettings, elements: [] });
+    await $e.run('document/elements/create', { container: parent, model: shell, options: opts });
+    const created = elementor.getContainer(model.id);
+    if (!created) throw new Error('not created ' + model.id);
     if (isNested(model)) {
-      const rep = { 'nested-tabs': 'tabs', 'nested-carousel': 'carousel_items', 'nested-accordion': 'items', 'mega-menu': 'menu_items' }[model.widgetType];
-      const items = rep ? (model.settings[rep] || []) : [];
-      // make the number of child containers match the number of items
-      while (rep && created.children.length < kids.length) {
-        await $e.run('document/repeater/insert', { container: created, name: rep, model: Object.assign({}, items[created.children.length] || {}) });
-      }
-      while (rep && created.children.length > kids.length) {
-        await $e.run('document/repeater/remove', { container: created, name: rep, index: created.children.length - 1 });
+      // Elementor creates its default items; add/remove through the repeater so items and containers stay in sync
+      while (rep && created.children.length < kids.length) await $e.run('document/repeater/insert', { container: created, name: rep, model: {} });
+      while (rep && created.children.length > kids.length) await $e.run('document/repeater/remove', { container: created, name: rep, index: created.children.length - 1 });
+      for (let i = 0; rep && i < items.length; i++) {
+        const it = Object.assign({}, items[i]); delete it._id;
+        await $e.run('document/repeater/set', { container: created, name: rep, index: i, settings: it, options: { external: true } });
       }
       for (let i = 0; i < kids.length; i++) {
         const slot = created.children[i];
