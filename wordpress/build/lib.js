@@ -121,7 +121,7 @@
       while (rep && created.children.length > kids.length) await $e.run('document/repeater/remove', { container: created, name: rep, index: created.children.length - 1 });
       for (let i = 0; rep && i < items.length; i++) {
         const it = Object.assign({}, items[i]); delete it._id;
-        await $e.run('document/repeater/set', { container: created, name: rep, index: i, settings: it, options: { external: true } });
+        await $e.run('document/elements/settings', { container: created.repeaters[rep].children[i], settings: it, options: { external: true } });
       }
       for (let i = 0; i < kids.length; i++) {
         const slot = created.children[i];
