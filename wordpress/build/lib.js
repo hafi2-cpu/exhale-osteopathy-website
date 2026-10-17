@@ -22,7 +22,8 @@
   const ICON = {
     right: [75, 'exhale-icon-arrow-right.svg'], left: [76, 'exhale-icon-arrow-left.svg'],
     chevron: [77, 'exhale-icon-chevron-down.svg'], plus: [78, 'exhale-icon-plus.svg'],
-    menu: [79, 'exhale-icon-menu.svg'], close: [80, 'exhale-icon-close.svg']
+    menu: [79, 'exhale-icon-menu.svg'], close: [80, 'exhale-icon-close.svg'],
+    clock: [145, 'exhale-icon-clock.svg'], pound: [146, 'exhale-icon-pound.svg'], check: [147, 'exhale-icon-check.svg'], pin: [148, 'exhale-icon-pin.svg'], tick: [149, 'exhale-icon-tick.svg']
   };
   const icon = (k) => ({ value: { id: ICON[k][0], url: SITE + '/wp-content/uploads/2026/10/' + ICON[k][1] }, library: 'svg' });
 

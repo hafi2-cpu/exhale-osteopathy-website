@@ -1,0 +1,1786 @@
+{
+ "S": {
+  "osteo": {
+   "name": "Osteopathy",
+   "short": "osteopathy",
+   "h1": "Osteopathy in Sutton Coldfield",
+   "lead": "Hands-on treatment that finds out why you hurt — then eases pain, restores movement and helps stop it coming back.",
+   "heroImg": "fb7df5d3a8192ed39ce51bce920c19d8",
+   "heroPos": "50% 55%",
+   "facts": [
+    {
+     "k": "Appointment",
+     "v": "45–60 mins",
+     "icon": "M12 7v5l3 2M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0z"
+    },
+    {
+     "k": "From",
+     "v": "£60",
+     "icon": "M16 6.5A3.5 3.5 0 0 0 9.5 8v4.5c0 2-1 3.5-2.5 4.5h10M7 12h7"
+    },
+    {
+     "k": "GP referral",
+     "v": "Not needed",
+     "icon": "M20 6L9 17l-5-5"
+    },
+    {
+     "k": "Clinics",
+     "v": "Sutton & Lichfield",
+     "icon": "M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11zM12 12.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"
+    }
+   ],
+   "introTitle": "Expert osteopathic care for pain, stiffness and injury",
+   "intro": [
+    "Whether it’s a back that’s been grumbling for months, a neck that locks up at your desk or a sudden twinge after the gym, osteopathy looks at the whole picture — how you move, sit, work and train — not just the sore spot.",
+    "Our registered osteopaths combine a thorough assessment with gentle, hands-on treatment and practical advice, so you understand what’s going on and what to do about it between appointments."
+   ],
+   "ticks": [
+    "Registered with the General Osteopathic Council",
+    "Clear diagnosis and plan from your first visit",
+    "Clinics in Sutton Coldfield and Lichfield"
+   ],
+   "introImg": "3e3292b3448a80b063b85bf775c63745",
+   "introAlt": "Hafi Rahman treating a patient’s upper back",
+   "sections": [
+    {
+     "id": "what-is",
+     "title": "What is osteopathy?",
+     "paras": [
+      "Osteopathy is a regulated, hands-on approach to diagnosing and treating problems with muscles, joints and the nervous system. It’s based on the idea that the body works as a connected unit — so pain in one place is often linked to how other areas are moving and loading.",
+      "Treatment uses techniques such as soft tissue work, joint mobilisation and, where appropriate, manipulation, alongside exercise and lifestyle advice tailored to you."
+     ]
+    },
+    {
+     "id": "approach",
+     "title": "How we approach your treatment",
+     "paras": [
+      "We start by listening. Your history, your goals and what your day actually looks like all shape the plan. We then assess how you move, test the structures involved and explain what we find in plain language.",
+      "Most people feel a difference within the first few sessions. We’ll always tell you how many appointments we expect you to need — and when you no longer need us."
+     ]
+    },
+    {
+     "id": "right-for-me",
+     "title": "Is osteopathy right for me?",
+     "paras": [
+      "Osteopathy suits people of all ages, from desk workers and weekend runners to older adults wanting to stay mobile. If we think something needs further investigation or a different type of care, we’ll tell you and help arrange it."
+     ]
+    }
+   ],
+   "techniques": [
+    {
+     "t": "Soft tissue release",
+     "d": "Targeted pressure and stretching to ease tight, overloaded muscles."
+    },
+    {
+     "t": "Joint mobilisation",
+     "d": "Gentle, rhythmic movement to restore range in stiff joints."
+    },
+    {
+     "t": "Spinal manipulation",
+     "d": "Precise, quick adjustments where appropriate and with your consent."
+    },
+    {
+     "t": "Muscle energy technique",
+     "d": "You gently contract against resistance to release restricted areas."
+    },
+    {
+     "t": "Cranial osteopathy",
+     "d": "A very gentle approach, often used for babies and sensitive patients."
+    },
+    {
+     "t": "Exercise &amp; advice",
+     "d": "Simple, realistic exercises and changes that fit into your day."
+    }
+   ],
+   "conds": [
+    [
+     "Back Pain",
+     "back"
+    ],
+    [
+     "Neck Pain",
+     "neck"
+    ],
+    [
+     "Sciatica",
+     "sciatica"
+    ],
+    [
+     "Shoulder Pain",
+     "shoulder"
+    ],
+    [
+     "Headaches & Tension",
+     "head"
+    ],
+    [
+     "Hip Pain",
+     "hip"
+    ],
+    [
+     "Postural Strain",
+     "posture"
+    ],
+    [
+     "Joint Stiffness",
+     "joint"
+    ]
+   ],
+   "team": [
+    "hafi",
+    "freta",
+    "ankita"
+   ],
+   "faqs": [
+    {
+     "q": "Do I need a GP referral?",
+     "a": "No. You can book directly with us. If you’re claiming through health insurance, check whether your insurer needs a referral first."
+    },
+    {
+     "q": "What should I wear?",
+     "a": "Comfortable clothing you can move in, such as leggings or shorts and a vest top. We may ask you to remove some clothing so we can assess you properly — you can always ask for a gown or a chaperone."
+    },
+    {
+     "q": "Does treatment hurt?",
+     "a": "Treatment is usually comfortable. Some techniques can feel tender on sore areas and you may feel a little achy for a day or so afterwards. We’ll always check in with you as we go."
+    },
+    {
+     "q": "How many sessions will I need?",
+     "a": "It depends on the problem and how long you’ve had it. We’ll give you an honest estimate at your first appointment and review progress as we go."
+    },
+    {
+     "q": "Can I claim on my health insurance?",
+     "a": "[Add the insurers you are registered with and any rules patients should know about.]"
+    }
+   ]
+  },
+  "physio": {
+   "name": "Physiotherapy",
+   "short": "physiotherapy",
+   "h1": "Physiotherapy in Sutton Coldfield",
+   "lead": "Thorough assessment and structured rehab to rebuild strength, restore function and get you back to what you love.",
+   "heroImg": "9f8669dac189f5736c81b923529a4b21",
+   "heroPos": "30% 40%",
+   "facts": [
+    {
+     "k": "Appointment",
+     "v": "[45] minutes",
+     "icon": "M12 7v5l3 2M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0z"
+    },
+    {
+     "k": "From",
+     "v": "[£XX]",
+     "icon": "M16 6.5A3.5 3.5 0 0 0 9.5 8v4.5c0 2-1 3.5-2.5 4.5h10M7 12h7"
+    },
+    {
+     "k": "GP referral",
+     "v": "Not needed",
+     "icon": "M20 6L9 17l-5-5"
+    },
+    {
+     "k": "Clinics",
+     "v": "Sutton & Lichfield",
+     "icon": "M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11zM12 12.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"
+    }
+   ],
+   "introTitle": "Structured physiotherapy for lasting recovery",
+   "intro": [
+    "Recovering from a sports injury, living with a persistent joint problem or struggling to get back to full strength after an operation? Physiotherapy gives you a clear, step-by-step route back.",
+    "We combine hands-on treatment with a progressive exercise programme built around your goals — whether that’s running a 10k, lifting your grandchildren or getting through the working day without pain."
+   ],
+   "ticks": [
+    "Registered physiotherapist with a sports science background",
+    "Rehab programmes you can follow at home",
+    "Works hand-in-hand with osteopathy and massage"
+   ],
+   "introImg": "c26f21ae283cf76e8b9e13ffa3174364",
+   "introAlt": "Assessing a patient’s spine and shoulder movement",
+   "sections": [
+    {
+     "id": "what-is",
+     "title": "What is physiotherapy?",
+     "paras": [
+      "Physiotherapy helps restore movement and function when you’re affected by injury, illness or disability. It uses movement, exercise, manual therapy and education to get to the root of the problem.",
+      "The focus is on you playing an active part in your recovery, so the results last beyond the treatment room."
+     ]
+    },
+    {
+     "id": "approach",
+     "title": "How we approach rehabilitation",
+     "paras": [
+      "Your first session is a detailed assessment of how you move, where you’re weak or restricted and what’s driving your symptoms. From there we build a plan with clear milestones.",
+      "Exercises are introduced at the right time and progressed as you improve, so you’re always working at the right level."
+     ]
+    },
+    {
+     "id": "right-for-me",
+     "title": "When should I start?",
+     "paras": [
+      "The sooner the better. Early, guided rehab often shortens recovery and reduces the chance of a problem becoming long-term. If you’re recovering from surgery, we’ll follow your consultant’s guidance."
+     ]
+    }
+   ],
+   "techniques": [
+    {
+     "t": "Exercise prescription",
+     "d": "Personalised, progressive programmes you can do at home or in the gym."
+    },
+    {
+     "t": "Manual therapy",
+     "d": "Hands-on joint and soft tissue techniques to ease pain and stiffness."
+    },
+    {
+     "t": "Movement analysis",
+     "d": "Looking at how you squat, lunge, run or lift to find the weak link."
+    },
+    {
+     "t": "Strength &amp; conditioning",
+     "d": "Building capacity so you’re stronger than before the injury."
+    },
+    {
+     "t": "Post-operative rehab",
+     "d": "Structured recovery after joint replacements and other surgery."
+    },
+    {
+     "t": "Return-to-sport planning",
+     "d": "Clear criteria for getting back to training safely."
+    }
+   ],
+   "conds": [
+    [
+     "Knee Pain",
+     "knee"
+    ],
+    [
+     "Sports Injuries",
+     "ankle"
+    ],
+    [
+     "Shoulder Pain",
+     "shoulder"
+    ],
+    [
+     "Back Pain",
+     "back"
+    ],
+    [
+     "Hip Pain",
+     "hip"
+    ],
+    [
+     "Postural Strain",
+     "posture"
+    ],
+    [
+     "Neck Pain",
+     "neck"
+    ],
+    [
+     "Joint Stiffness",
+     "joint"
+    ]
+   ],
+   "team": [
+    "emre"
+   ],
+   "faqs": [
+    {
+     "q": "Do I need a GP referral?",
+     "a": "No. You can book directly with us. Some insurers ask for a referral before they’ll cover treatment, so it’s worth checking."
+    },
+    {
+     "q": "What’s the difference between osteopathy and physiotherapy?",
+     "a": "There’s a lot of overlap. Osteopathy tends to lead with hands-on treatment, while physiotherapy often leads with exercise-based rehab. We’ll guide you to whichever suits your problem best — or combine the two."
+    },
+    {
+     "q": "Will I get exercises to do at home?",
+     "a": "Yes. You’ll leave with a clear, simple programme, and we’ll progress it at each visit."
+    },
+    {
+     "q": "Can you help after surgery?",
+     "a": "Yes. We regularly help people recover after joint replacements, ligament repairs and other operations, following your surgeon’s protocol."
+    },
+    {
+     "q": "How many sessions will I need?",
+     "a": "We’ll give you an honest estimate at your first appointment and review it as you progress."
+    }
+   ]
+  },
+  "massage": {
+   "name": "Sports Massage",
+   "short": "sports massage",
+   "h1": "Sports Massage in Sutton Coldfield",
+   "lead": "Deep, targeted massage to release tight muscles, speed up recovery and keep you training, working and moving well.",
+   "heroImg": "e2ed325ec41f7e85ecf118011c01be7d",
+   "heroPos": "60% 50%",
+   "facts": [
+    {
+     "k": "Appointment",
+     "v": "60 or 90 mins",
+     "icon": "M12 7v5l3 2M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0z"
+    },
+    {
+     "k": "From",
+     "v": "£60",
+     "icon": "M16 6.5A3.5 3.5 0 0 0 9.5 8v4.5c0 2-1 3.5-2.5 4.5h10M7 12h7"
+    },
+    {
+     "k": "GP referral",
+     "v": "Not needed",
+     "icon": "M20 6L9 17l-5-5"
+    },
+    {
+     "k": "Clinics",
+     "v": "Sutton & Lichfield",
+     "icon": "M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11zM12 12.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"
+    }
+   ],
+   "introTitle": "Massage that works as hard as you do",
+   "intro": [
+    "Sports massage isn’t just for athletes. If you sit at a desk all day, carry stress in your shoulders or train hard at the weekend, targeted massage can relieve tension, reduce soreness and help you move more freely.",
+    "Our therapists tailor the pressure and techniques to you — firm where you need it, gentle where you don’t — and give you simple stretches to keep the benefits going."
+   ],
+   "ticks": [
+    "Sports, deep tissue and pregnancy massage",
+    "Tailored pressure from light to deep",
+    "Easy to combine with osteopathy or physio"
+   ],
+   "introImg": "c6a31e9450e0eeb87fed01960d8d534e",
+   "introAlt": "Zoe giving a sports massage",
+   "sections": [
+    {
+     "id": "what-is",
+     "title": "What is sports massage?",
+     "paras": [
+      "Sports massage is a deep, focused form of massage that works on specific muscles and soft tissues. It aims to relieve tension, improve flexibility and help your body recover from training and everyday strain."
+     ]
+    },
+    {
+     "id": "approach",
+     "title": "How a session works",
+     "paras": [
+      "We’ll start with a quick chat about where you’re tight, what you’ve been doing and any injuries. Then we’ll get to work — checking in on pressure throughout — and finish with stretches or advice to take home."
+     ]
+    },
+    {
+     "id": "right-for-me",
+     "title": "Who is it for?",
+     "paras": [
+      "Runners, gym-goers, team sports players and anyone with muscle tension from work or stress. Regular sessions can be a great way to stay ahead of niggles before they become injuries."
+     ]
+    }
+   ],
+   "techniques": [
+    {
+     "t": "Deep tissue massage",
+     "d": "Firm, slow pressure to reach deeper layers of muscle."
+    },
+    {
+     "t": "Trigger point release",
+     "d": "Sustained pressure on tight knots that refer pain elsewhere."
+    },
+    {
+     "t": "Myofascial release",
+     "d": "Gentle, sustained stretch to ease restrictions in connective tissue."
+    },
+    {
+     "t": "Soft tissue release",
+     "d": "Pressure combined with movement to lengthen tight muscles."
+    },
+    {
+     "t": "Assisted stretching",
+     "d": "Guided stretches to improve flexibility and range of motion."
+    },
+    {
+     "t": "Pre/post-event massage",
+     "d": "Shorter, lighter sessions around race and match days."
+    }
+   ],
+   "conds": [
+    [
+     "Muscle Tension",
+     "joint"
+    ],
+    [
+     "Neck & Shoulders",
+     "neck"
+    ],
+    [
+     "Back Pain",
+     "back"
+    ],
+    [
+     "Sports Injuries",
+     "ankle"
+    ],
+    [
+     "Tight Hips",
+     "hip"
+    ],
+    [
+     "Headaches & Tension",
+     "head"
+    ],
+    [
+     "Postural Strain",
+     "posture"
+    ],
+    [
+     "Knee Pain",
+     "knee"
+    ]
+   ],
+   "team": [
+    "zoe"
+   ],
+   "faqs": [
+    {
+     "q": "Is sports massage painful?",
+     "a": "It can be firm and you may feel some discomfort on tight areas, but it should never be more than you’re comfortable with. Just tell your therapist and they’ll adjust."
+    },
+    {
+     "q": "How often should I book?",
+     "a": "For general maintenance, many people come every 3–6 weeks. If you’re training for an event, more regular sessions in the build-up can help."
+    },
+    {
+     "q": "What should I wear?",
+     "a": "Wear or bring shorts. You’ll be covered with towels throughout and only the area being worked on will be uncovered."
+    },
+    {
+     "q": "Should I have massage before or after an event?",
+     "a": "Both can help. A light session a few days before, and a recovery session a couple of days after, works well for most people."
+    },
+    {
+     "q": "Can I combine it with osteopathy?",
+     "a": "Yes — many patients alternate massage with osteopathy or physiotherapy for the best results."
+    }
+   ]
+  },
+  "laser": {
+   "name": "Laser Therapy",
+   "short": "laser therapy",
+   "h1": "Laser Therapy in Sutton Coldfield",
+   "lead": "Non-invasive, high-power laser treatment to help ease pain and support healing in stubborn tendon, joint and muscle problems.",
+   "heroImg": "f6073e613c34ae90498dc6bc56d9e47f",
+   "heroPos": "50% 50%",
+   "facts": [
+    {
+     "k": "Appointment",
+     "v": "[15–20] minutes",
+     "icon": "M12 7v5l3 2M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0z"
+    },
+    {
+     "k": "From",
+     "v": "[£XX]",
+     "icon": "M16 6.5A3.5 3.5 0 0 0 9.5 8v4.5c0 2-1 3.5-2.5 4.5h10M7 12h7"
+    },
+    {
+     "k": "GP referral",
+     "v": "Not needed",
+     "icon": "M20 6L9 17l-5-5"
+    },
+    {
+     "k": "Clinics",
+     "v": "Sutton & Lichfield",
+     "icon": "M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11zM12 12.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"
+    }
+   ],
+   "introTitle": "A modern option for stubborn pain",
+   "intro": [
+    "Some problems — like long-standing tendon pain or a joint that just won’t settle — don’t respond as well as we’d like to hands-on treatment and exercise alone. Laser therapy can be a useful addition to your plan.",
+    "It’s quick, painless for most people and needs no downtime, so you can carry on with your day straight afterwards."
+   ],
+   "ticks": [
+    "Non-invasive and drug-free",
+    "Usually combined with hands-on treatment and rehab",
+    "Assessed by a clinician before every course"
+   ],
+   "introImg": "",
+   "introAlt": "",
+   "sections": [
+    {
+     "id": "what-is",
+     "title": "What is laser therapy?",
+     "paras": [
+      "High-power laser therapy uses focused light energy that’s absorbed by the tissues. It’s used to help reduce pain and inflammation and to support the body’s natural healing processes.",
+      "[Add the make and model of your laser and any specific claims your supplier supports.]"
+     ]
+    },
+    {
+     "id": "approach",
+     "title": "How treatment works",
+     "paras": [
+      "After an assessment, your clinician moves the laser handpiece over the area for a few minutes. Most people feel a gentle warmth. You’ll wear protective glasses during treatment.",
+      "A course is usually a series of short sessions alongside your other treatment, and we’ll review progress as we go."
+     ]
+    },
+    {
+     "id": "right-for-me",
+     "title": "Is it right for me?",
+     "paras": [
+      "Laser therapy isn’t suitable for everyone — for example, it isn’t used over a pregnancy, certain cancers or some skin conditions. We’ll check your medical history carefully and only recommend it if we think it’s a good fit."
+     ]
+    }
+   ],
+   "techniques": [
+    {
+     "t": "Clinical assessment",
+     "d": "We confirm the diagnosis and check suitability first."
+    },
+    {
+     "t": "High-power laser",
+     "d": "Short, targeted sessions over the affected area."
+    },
+    {
+     "t": "Combined treatment",
+     "d": "Paired with osteopathy, physio or massage for best results."
+    },
+    {
+     "t": "Load management",
+     "d": "Guidance on activity while tissues settle."
+    },
+    {
+     "t": "Rehab exercises",
+     "d": "Strengthening to help stop the problem returning."
+    },
+    {
+     "t": "Progress reviews",
+     "d": "Regular check-ins so you know it’s working."
+    }
+   ],
+   "conds": [
+    [
+     "Tendon Pain",
+     "knee"
+    ],
+    [
+     "Shoulder Pain",
+     "shoulder"
+    ],
+    [
+     "Back Pain",
+     "back"
+    ],
+    [
+     "Joint Stiffness",
+     "joint"
+    ],
+    [
+     "Hip Pain",
+     "hip"
+    ],
+    [
+     "Sports Injuries",
+     "ankle"
+    ],
+    [
+     "Neck Pain",
+     "neck"
+    ],
+    [
+     "Sciatica",
+     "sciatica"
+    ]
+   ],
+   "team": [
+    "hafi",
+    "emre"
+   ],
+   "faqs": [
+    {
+     "q": "Does laser therapy hurt?",
+     "a": "Most people feel only a gentle, soothing warmth. Tell your clinician if it feels too warm and they’ll adjust it."
+    },
+    {
+     "q": "How many sessions will I need?",
+     "a": "It varies by condition. We’ll suggest a course after your assessment and review how you’re responding."
+    },
+    {
+     "q": "Is it safe?",
+     "a": "When delivered by a trained clinician with eye protection and proper screening, it’s a low-risk treatment. We’ll go through any reasons it might not be suitable for you."
+    },
+    {
+     "q": "Can I have it with other treatment?",
+     "a": "Yes — it usually works best as part of a wider plan including hands-on treatment and exercise."
+    },
+    {
+     "q": "Is there any downtime?",
+     "a": "No. You can return to normal activities straight away."
+    }
+   ]
+  },
+  "cranial": {
+   "name": "Cranial Osteopathy",
+   "short": "cranial osteopathy",
+   "h1": "Cranial Osteopathy in Sutton Coldfield",
+   "lead": "A very gentle, hands-on approach for babies, children and adults who prefer a lighter touch.",
+   "heroImg": "9ea7ed8a0901bc61c040972accaa73c8",
+   "heroPos": "50% 40%",
+   "facts": [
+    {
+     "k": "Appointment",
+     "v": "40–45 mins",
+     "icon": "M12 7v5l3 2M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0z"
+    },
+    {
+     "k": "From",
+     "v": "£60",
+     "icon": "M16 6.5A3.5 3.5 0 0 0 9.5 8v4.5c0 2-1 3.5-2.5 4.5h10M7 12h7"
+    },
+    {
+     "k": "GP referral",
+     "v": "Not needed",
+     "icon": "M20 6L9 17l-5-5"
+    },
+    {
+     "k": "Clinics",
+     "v": "Sutton & Lichfield",
+     "icon": "M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11zM12 12.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"
+    }
+   ],
+   "introTitle": "Gentle, light-touch osteopathy",
+   "intro": [
+    "Cranial osteopathy is a subtle, gentle form of osteopathy. Rather than stretching or manipulating, your osteopath uses light, still hand contact to release tension in the head, neck, spine and pelvis.",
+    "Many patients find it deeply relaxing. It’s often used for babies and children, during pregnancy, and for adults who are in a lot of pain or simply prefer a softer approach."
+   ],
+   "ticks": [
+    "Very gentle — suitable from newborns upwards",
+    "Delivered by registered osteopaths",
+    "Can be combined with structural osteopathy"
+   ],
+   "introImg": "5b3d676c6ce99472242a84649521af62",
+   "introAlt": "Gentle cranial osteopathy for a baby",
+   "sections": [
+    {
+     "id": "what-is",
+     "title": "What is cranial osteopathy?",
+     "paras": [
+      "Cranial osteopathy is a gentle approach used by registered osteopaths. Treatment involves light, sustained touch to the head, spine and body to help release areas of tension and strain.",
+      "It isn’t a different profession — it’s one of the many techniques an osteopath may use, and it can be combined with other osteopathic treatment."
+     ]
+    },
+    {
+     "id": "approach",
+     "title": "What happens in a session",
+     "paras": [
+      "We start with a full case history and assessment. You stay clothed and lie or sit comfortably while your osteopath works gently with their hands. Babies can be treated while feeding or in a parent’s arms."
+     ]
+    },
+    {
+     "id": "right-for-me",
+     "title": "Who is it for?",
+     "paras": [
+      "Babies and children, people in significant pain, older adults, during pregnancy, and anyone who prefers a gentler approach. We’ll always explain why we’re recommending it and what to expect."
+     ]
+    }
+   ],
+   "techniques": [
+    {
+     "t": "Light-touch release",
+     "d": "Still, gentle hand contact to ease tension."
+    },
+    {
+     "t": "Head & neck work",
+     "d": "Gentle techniques around the skull, jaw and neck."
+    },
+    {
+     "t": "Spine & pelvis",
+     "d": "Releasing strain through the back and pelvis."
+    },
+    {
+     "t": "Combined treatment",
+     "d": "Blended with structural osteopathy where helpful."
+    },
+    {
+     "t": "Advice",
+     "d": "Simple guidance on posture, sleep and movement."
+    },
+    {
+     "t": "Progress reviews",
+     "d": "Regular check-ins to see how you’re responding."
+    }
+   ],
+   "conds": [
+    [
+     "Headaches & Tension",
+     "head"
+    ],
+    [
+     "Neck Pain",
+     "neck"
+    ],
+    [
+     "TMJ / Jaw Pain",
+     "neck"
+    ],
+    [
+     "Back Pain",
+     "back"
+    ],
+    [
+     "Babies & Children",
+     "baby"
+    ],
+    [
+     "Pregnancy Aches",
+     "back"
+    ],
+    [
+     "Sciatica",
+     "sciatica"
+    ],
+    [
+     "Shoulder Pain",
+     "shoulder"
+    ]
+   ],
+   "team": [
+    "hafi",
+    "freta"
+   ],
+   "faqs": [
+    {
+     "q": "Does cranial osteopathy hurt?",
+     "a": "No. It’s very gentle, and most people find it relaxing."
+    },
+    {
+     "q": "Do I need to undress?",
+     "a": "No. You can stay fully clothed for cranial treatment."
+    },
+    {
+     "q": "Is it safe for babies?",
+     "a": "Yes, when delivered by a registered osteopath. We always work alongside your GP and health visitor."
+    },
+    {
+     "q": "How many sessions will I need?",
+     "a": "It varies. We’ll review how you respond after the first few sessions and be honest about what to expect."
+    }
+   ]
+  },
+  "paediatric": {
+   "name": "Baby & Paediatric Osteopathy",
+   "short": "paediatric osteopathy",
+   "h1": "Baby & Paediatric Osteopathy in Sutton Coldfield",
+   "lead": "Gentle osteopathic care for babies, children and teenagers — from newborn checks to growing pains and sports injuries.",
+   "heroImg": "9ea7ed8a0901bc61c040972accaa73c8",
+   "heroPos": "50% 40%",
+   "facts": [
+    {
+     "k": "Appointment",
+     "v": "40–45 mins",
+     "icon": "M12 7v5l3 2M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0z"
+    },
+    {
+     "k": "From",
+     "v": "£60",
+     "icon": "M16 6.5A3.5 3.5 0 0 0 9.5 8v4.5c0 2-1 3.5-2.5 4.5h10M7 12h7"
+    },
+    {
+     "k": "GP referral",
+     "v": "Not needed",
+     "icon": "M20 6L9 17l-5-5"
+    },
+    {
+     "k": "Clinics",
+     "v": "Sutton & Lichfield",
+     "icon": "M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11zM12 12.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"
+    }
+   ],
+   "introTitle": "Gentle care for little ones",
+   "intro": [
+    "Birth can be physically demanding for both mum and baby. Some parents bring their baby to us for a gentle check of how they’re moving — for example if they always turn their head one way or seem uncomfortable lying in certain positions.",
+    "As children grow, we also see aches and pains from sport, posture and growth spurts. Every treatment is gentle, explained clearly to parents, and always works alongside your GP and health visitor."
+   ],
+   "ticks": [
+    "Gentle techniques suitable from newborns",
+    "Parents present throughout",
+    "We always work alongside your GP and health visitor"
+   ],
+   "introImg": "5b3d676c6ce99472242a84649521af62",
+   "introAlt": "Baby receiving gentle osteopathy",
+   "sections": [
+    {
+     "id": "what-is",
+     "title": "What is paediatric osteopathy?",
+     "paras": [
+      "Paediatric osteopathy is osteopathy adapted for babies, children and teenagers. Techniques are very gentle — often cranial osteopathy — and tailored to your child’s age and needs."
+     ]
+    },
+    {
+     "id": "approach",
+     "title": "What happens at an appointment",
+     "paras": [
+      "We take a detailed history, including pregnancy and birth, then gently assess how your baby or child moves. Babies can feed or be held during treatment. We’ll explain everything we find and anything we’d like you to try at home."
+     ]
+    },
+    {
+     "id": "right-for-me",
+     "title": "When to see your GP instead",
+     "paras": [
+      "If your baby is unwell, has a fever, isn’t feeding, or you’re worried about their health, always speak to your GP, health visitor or NHS 111 first. We’ll refer you on if we think anything needs medical attention."
+     ]
+    }
+   ],
+   "techniques": [
+    {
+     "t": "Cranial osteopathy",
+     "d": "Very gentle, still hand contact."
+    },
+    {
+     "t": "Gentle mobilisation",
+     "d": "Easing stiffness in the neck and spine."
+    },
+    {
+     "t": "Movement checks",
+     "d": "Looking at how your baby turns, lies and moves."
+    },
+    {
+     "t": "Advice for parents",
+     "d": "Positioning, tummy time and carrying tips."
+    },
+    {
+     "t": "Growing pains & sport",
+     "d": "Treatment and rehab for active children and teens."
+    },
+    {
+     "t": "Posture advice",
+     "d": "For school bags, screens and study."
+    }
+   ],
+   "conds": [
+    [
+     "Babies & Children",
+     "baby"
+    ],
+    [
+     "Neck Stiffness",
+     "neck"
+    ],
+    [
+     "Sports Injuries",
+     "ankle"
+    ],
+    [
+     "Knee Pain",
+     "knee"
+    ],
+    [
+     "Back Pain",
+     "back"
+    ],
+    [
+     "Posture",
+     "posture"
+    ],
+    [
+     "Headaches",
+     "head"
+    ],
+    [
+     "Hip Pain",
+     "hip"
+    ]
+   ],
+   "team": [
+    "hafi",
+    "freta"
+   ],
+   "faqs": [
+    {
+     "q": "Is osteopathy safe for babies?",
+     "a": "Yes, when delivered by a registered osteopath using gentle techniques. We always work alongside your GP and health visitor."
+    },
+    {
+     "q": "How young can my baby be seen?",
+     "a": "We can see babies from a few days old. [Confirm your minimum age policy.]"
+    },
+    {
+     "q": "Will I stay with my child?",
+     "a": "Yes. A parent or guardian stays throughout every appointment."
+    },
+    {
+     "q": "Can you treat colic?",
+     "a": "We don’t claim to treat colic. We can assess and gently treat musculoskeletal discomfort, and we’ll always advise you to speak to your GP or health visitor about feeding or crying concerns."
+    }
+   ]
+  },
+  "pregnancy": {
+   "name": "Pregnancy Osteopathy",
+   "short": "pregnancy osteopathy",
+   "h1": "Pregnancy Osteopathy in Sutton Coldfield",
+   "lead": "Safe, gentle osteopathy for back, pelvic and rib pain during pregnancy — and support after your baby arrives.",
+   "heroImg": "fcb8c0b6c5dee3cb4f97fc820f5f9a2d",
+   "heroPos": "50% 45%",
+   "facts": [
+    {
+     "k": "Appointment",
+     "v": "40–60 mins",
+     "icon": "M12 7v5l3 2M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0z"
+    },
+    {
+     "k": "From",
+     "v": "£60",
+     "icon": "M16 6.5A3.5 3.5 0 0 0 9.5 8v4.5c0 2-1 3.5-2.5 4.5h10M7 12h7"
+    },
+    {
+     "k": "GP referral",
+     "v": "Not needed",
+     "icon": "M20 6L9 17l-5-5"
+    },
+    {
+     "k": "Clinics",
+     "v": "Sutton & Lichfield",
+     "icon": "M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11zM12 12.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"
+    }
+   ],
+   "introTitle": "Comfortable, supported pregnancy care",
+   "intro": [
+    "As your body changes during pregnancy, it’s common to feel aches in the lower back, pelvis, hips, ribs or neck. Pregnancy osteopathy uses gentle, adapted techniques to ease discomfort and help you stay active.",
+    "We use side-lying and seated positions, supportive pillows and gentle treatment, and can continue to support you after birth as your body recovers."
+   ],
+   "ticks": [
+    "Adapted positions for every stage of pregnancy",
+    "Gentle hands-on treatment and advice",
+    "Postnatal check-ups after birth"
+   ],
+   "introImg": "6128b4e96822ca4aa5be53906bd1ae7f",
+   "introAlt": "Gentle back treatment",
+   "sections": [
+    {
+     "id": "what-is",
+     "title": "What is pregnancy osteopathy?",
+     "paras": [
+      "Pregnancy osteopathy is osteopathic treatment adapted for pregnancy. Your osteopath uses gentle techniques and comfortable positions to ease the musculoskeletal aches and pains that pregnancy can bring."
+     ]
+    },
+    {
+     "id": "approach",
+     "title": "What to expect",
+     "paras": [
+      "We’ll ask about your pregnancy, health and symptoms, then assess how you’re moving. Treatment is gentle, and we’ll give you simple exercises and positions to help at home and at work."
+     ]
+    },
+    {
+     "id": "right-for-me",
+     "title": "Is it safe?",
+     "paras": [
+      "Osteopathy is generally safe throughout pregnancy when adapted appropriately. Please let your midwife know you’re seeing us, and contact your midwife or maternity unit straight away if you have bleeding, reduced movements, severe headaches or sudden swelling."
+     ]
+    }
+   ],
+   "techniques": [
+    {
+     "t": "Side-lying treatment",
+     "d": "Comfortable positions with plenty of support."
+    },
+    {
+     "t": "Pelvic & back release",
+     "d": "Gentle work for pelvic girdle and back pain."
+    },
+    {
+     "t": "Rib & mid-back work",
+     "d": "Easing rib pain as your bump grows."
+    },
+    {
+     "t": "Cranial osteopathy",
+     "d": "A very gentle option at any stage."
+    },
+    {
+     "t": "Exercise advice",
+     "d": "Safe movement to stay strong and active."
+    },
+    {
+     "t": "Postnatal checks",
+     "d": "Support for your recovery after birth."
+    }
+   ],
+   "conds": [
+    [
+     "Back Pain",
+     "back"
+    ],
+    [
+     "Pelvic Girdle Pain",
+     "hip"
+    ],
+    [
+     "Sciatica",
+     "sciatica"
+    ],
+    [
+     "Rib Pain",
+     "posture"
+    ],
+    [
+     "Neck & Shoulders",
+     "neck"
+    ],
+    [
+     "Hip Pain",
+     "hip"
+    ],
+    [
+     "Headaches",
+     "head"
+    ],
+    [
+     "Postnatal Recovery",
+     "joint"
+    ]
+   ],
+   "team": [
+    "hafi",
+    "freta",
+    "ankita"
+   ],
+   "faqs": [
+    {
+     "q": "When can I start pregnancy osteopathy?",
+     "a": "You can be seen at any stage of pregnancy. Let us know how many weeks you are when you book."
+    },
+    {
+     "q": "Will I lie on my front?",
+     "a": "No — we use side-lying, seated and supported positions to keep you comfortable."
+    },
+    {
+     "q": "Can you help with pelvic girdle pain?",
+     "a": "Yes. Pelvic girdle pain is common in pregnancy and often responds well to gentle treatment and advice."
+    },
+    {
+     "q": "Do you offer pregnancy massage?",
+     "a": "Yes — pregnancy massage is available with our massage therapists (60 mins, £60)."
+    }
+   ]
+  },
+  "acupuncture": {
+   "name": "Acupuncture",
+   "short": "acupuncture",
+   "h1": "Acupuncture in Sutton Coldfield",
+   "lead": "Western medical acupuncture and dry needling to help ease persistent muscle and joint pain, as part of your treatment plan.",
+   "heroImg": "fb7df5d3a8192ed39ce51bce920c19d8",
+   "heroPos": "50% 55%",
+   "facts": [
+    {
+     "k": "Appointment",
+     "v": "[30–45] mins",
+     "icon": "M12 7v5l3 2M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0z"
+    },
+    {
+     "k": "From",
+     "v": "[£XX]",
+     "icon": "M16 6.5A3.5 3.5 0 0 0 9.5 8v4.5c0 2-1 3.5-2.5 4.5h10M7 12h7"
+    },
+    {
+     "k": "GP referral",
+     "v": "Not needed",
+     "icon": "M20 6L9 17l-5-5"
+    },
+    {
+     "k": "Clinics",
+     "v": "Sutton & Lichfield",
+     "icon": "M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11zM12 12.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"
+    }
+   ],
+   "introTitle": "Acupuncture for pain relief",
+   "intro": [
+    "Western medical acupuncture uses very fine, single-use needles placed into specific points and tight muscles to help reduce pain and ease tension. It’s based on modern understanding of anatomy and the nervous system.",
+    "At Exhale we usually use acupuncture alongside hands-on treatment and exercise, rather than on its own, to help calm pain so you can move and recover more comfortably."
+   ],
+   "ticks": [
+    "Sterile, single-use needles",
+    "Delivered by trained clinicians",
+    "Combined with hands-on treatment and rehab"
+   ],
+   "introImg": "ebc5540e0e4f70c2c0727439dc39383e",
+   "introAlt": "Hands-on treatment at Exhale Osteopathy",
+   "sections": [
+    {
+     "id": "what-is",
+     "title": "What is acupuncture?",
+     "paras": [
+      "Acupuncture involves inserting very fine needles into the skin and muscle. In Western medical acupuncture and dry needling, needles are placed into tight muscles and specific points to help reduce pain.",
+      "NICE recommends acupuncture as an option for some people with chronic primary pain, and to help prevent tension-type headaches and migraines."
+     ]
+    },
+    {
+     "id": "approach",
+     "title": "What a session involves",
+     "paras": [
+      "After an assessment, needles are placed and usually left in for a short time while you relax. Most people feel only a small pinprick, followed by a dull ache or heaviness that soon settles."
+     ]
+    },
+    {
+     "id": "right-for-me",
+     "title": "Is it right for me?",
+     "paras": [
+      "Acupuncture isn’t suitable for everyone — for example if you have a bleeding disorder, take blood thinners or have a fear of needles. We’ll check your medical history and talk through the options."
+     ]
+    }
+   ],
+   "techniques": [
+    {
+     "t": "Western medical acupuncture",
+     "d": "Fine needles at specific points to ease pain."
+    },
+    {
+     "t": "Dry needling",
+     "d": "Targeted needling of tight muscle knots."
+    },
+    {
+     "t": "Combined treatment",
+     "d": "Paired with osteopathy or physio."
+    },
+    {
+     "t": "Single-use needles",
+     "d": "Sterile and disposed of after each use."
+    },
+    {
+     "t": "Clinical screening",
+     "d": "Checking suitability before every course."
+    },
+    {
+     "t": "Progress reviews",
+     "d": "We track how you’re responding."
+    }
+   ],
+   "conds": [
+    [
+     "Back Pain",
+     "back"
+    ],
+    [
+     "Neck Pain",
+     "neck"
+    ],
+    [
+     "Headaches",
+     "head"
+    ],
+    [
+     "Shoulder Pain",
+     "shoulder"
+    ],
+    [
+     "Sciatica",
+     "sciatica"
+    ],
+    [
+     "Knee Pain",
+     "knee"
+    ],
+    [
+     "Hip Pain",
+     "hip"
+    ],
+    [
+     "Muscle Tension",
+     "joint"
+    ]
+   ],
+   "team": [
+    "hafi"
+   ],
+   "faqs": [
+    {
+     "q": "Does acupuncture hurt?",
+     "a": "Most people feel a small pinprick and then a dull ache or heaviness. It’s usually far less uncomfortable than people expect."
+    },
+    {
+     "q": "Is it the same as Chinese acupuncture?",
+     "a": "Western medical acupuncture uses similar needles but is based on modern anatomy and physiology rather than traditional Chinese medicine."
+    },
+    {
+     "q": "How many sessions will I need?",
+     "a": "Often a course of several sessions. We’ll review how you respond and only continue if it’s helping."
+    },
+    {
+     "q": "Can it be added to my osteopathy appointment?",
+     "a": "Yes — acupuncture is often used as part of an osteopathy session. [Confirm pricing.]"
+    }
+   ]
+  },
+  "rehab": {
+   "name": "1-to-1 Rehab / Pilates",
+   "short": "rehab and Pilates",
+   "h1": "1-to-1 Rehab & Pilates in Sutton Coldfield",
+   "lead": "Personalised, clinician-led exercise sessions to rebuild strength, control and confidence after injury or pain.",
+   "heroImg": "6b8d864e1d7c783728b37122053efd97",
+   "heroPos": "50% 40%",
+   "facts": [
+    {
+     "k": "Appointment",
+     "v": "[45–60] mins",
+     "icon": "M12 7v5l3 2M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0z"
+    },
+    {
+     "k": "From",
+     "v": "[£XX]",
+     "icon": "M16 6.5A3.5 3.5 0 0 0 9.5 8v4.5c0 2-1 3.5-2.5 4.5h10M7 12h7"
+    },
+    {
+     "k": "GP referral",
+     "v": "Not needed",
+     "icon": "M20 6L9 17l-5-5"
+    },
+    {
+     "k": "Clinics",
+     "v": "Sutton & Lichfield",
+     "icon": "M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11zM12 12.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"
+    }
+   ],
+   "introTitle": "Rehab that’s built around you",
+   "intro": [
+    "Hands-on treatment can ease pain, but lasting results usually come from getting stronger. Our one-to-one rehab and clinical Pilates sessions help you rebuild strength, mobility and control under the guidance of a qualified clinician.",
+    "Every session is tailored to your body, your injury and your goals — whether that’s getting back to running, lifting your children or simply moving without worrying."
+   ],
+   "ticks": [
+    "One-to-one with a qualified clinician",
+    "Clinical Pilates-based exercise",
+    "Progressed as you get stronger"
+   ],
+   "introImg": "c1b26d1d09b98e10ca67e53b603b1499",
+   "introAlt": "One-to-one rehab session",
+   "sections": [
+    {
+     "id": "what-is",
+     "title": "What is 1-to-1 rehab and Pilates?",
+     "paras": [
+      "These are private exercise sessions led by an osteopath or physiotherapist. They combine strength, mobility and clinical Pilates principles to help you recover from injury and stay well."
+     ]
+    },
+    {
+     "id": "approach",
+     "title": "How sessions work",
+     "paras": [
+      "We start by assessing how you move and agreeing clear goals. Each session builds on the last, and you’ll get a simple home programme to keep progressing between visits."
+     ]
+    },
+    {
+     "id": "right-for-me",
+     "title": "Who is it for?",
+     "paras": [
+      "Anyone recovering from injury or surgery, people with recurring back or neck pain, runners and gym-goers, and anyone who wants expert guidance to move and feel better."
+     ]
+    }
+   ],
+   "techniques": [
+    {
+     "t": "Clinical Pilates",
+     "d": "Core control, posture and body awareness."
+    },
+    {
+     "t": "Strength training",
+     "d": "Progressive loading to build resilience."
+    },
+    {
+     "t": "Mobility work",
+     "d": "Restoring range in stiff joints."
+    },
+    {
+     "t": "Balance & control",
+     "d": "Especially after ankle and knee injuries."
+    },
+    {
+     "t": "Home programmes",
+     "d": "Simple routines to do between sessions."
+    },
+    {
+     "t": "Return to sport",
+     "d": "Clear milestones to get back safely."
+    }
+   ],
+   "conds": [
+    [
+     "Back Pain",
+     "back"
+    ],
+    [
+     "Knee Pain",
+     "knee"
+    ],
+    [
+     "Sports Injuries",
+     "ankle"
+    ],
+    [
+     "Hip Pain",
+     "hip"
+    ],
+    [
+     "Shoulder Pain",
+     "shoulder"
+    ],
+    [
+     "Neck Pain",
+     "neck"
+    ],
+    [
+     "Posture",
+     "posture"
+    ],
+    [
+     "After Surgery",
+     "joint"
+    ]
+   ],
+   "team": [
+    "emre",
+    "hafi",
+    "freta"
+   ],
+   "faqs": [
+    {
+     "q": "Do I need to have done Pilates before?",
+     "a": "No. Sessions are tailored to you, whatever your experience or fitness level."
+    },
+    {
+     "q": "What should I wear?",
+     "a": "Comfortable clothes you can move in. Bare feet or grippy socks are ideal."
+    },
+    {
+     "q": "How many sessions will I need?",
+     "a": "It varies — many people do a short block of sessions and then continue at home."
+    },
+    {
+     "q": "Can I combine rehab with treatment?",
+     "a": "Yes. Many patients alternate hands-on treatment with rehab sessions."
+    }
+   ]
+  },
+  "shockwave": {
+   "name": "Shockwave Therapy",
+   "short": "shockwave therapy",
+   "h1": "Shockwave Therapy in Sutton Coldfield",
+   "lead": "An evidence-based option for stubborn tendon and heel pain that hasn’t settled with rest or exercise alone.",
+   "heroImg": "2e1bb7b61346f73aeb15327806251b5c",
+   "heroPos": "45% 45%",
+   "facts": [
+    {
+     "k": "Appointment",
+     "v": "[15–20] mins",
+     "icon": "M12 7v5l3 2M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0z"
+    },
+    {
+     "k": "From",
+     "v": "[£XX]",
+     "icon": "M16 6.5A3.5 3.5 0 0 0 9.5 8v4.5c0 2-1 3.5-2.5 4.5h10M7 12h7"
+    },
+    {
+     "k": "GP referral",
+     "v": "Not needed",
+     "icon": "M20 6L9 17l-5-5"
+    },
+    {
+     "k": "Clinics",
+     "v": "Sutton & Lichfield",
+     "icon": "M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11zM12 12.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"
+    }
+   ],
+   "introTitle": "Help for long-standing tendon pain",
+   "intro": [
+    "Extracorporeal shockwave therapy (ESWT) delivers pulses of acoustic energy through the skin to a painful area. It’s mainly used for long-standing tendon problems and plantar heel pain that haven’t improved with other treatment.",
+    "Treatment is quick, needs no injections or downtime, and is usually combined with a targeted exercise programme for the best results."
+   ],
+   "ticks": [
+    "Non-invasive, no injections",
+    "Short sessions, usually weekly",
+    "Combined with rehab for lasting results"
+   ],
+   "introImg": "e3c5507862e3a9dd88ee2409581c125d",
+   "introAlt": "Ankle and foot assessment",
+   "sections": [
+    {
+     "id": "what-is",
+     "title": "What is shockwave therapy?",
+     "paras": [
+      "Shockwave therapy uses a handheld applicator to send pulses of energy into the affected tissue. It’s thought to reduce pain sensitivity and stimulate the body’s healing response in long-standing tendon problems."
+     ]
+    },
+    {
+     "id": "approach",
+     "title": "What a course involves",
+     "paras": [
+      "A course is usually [3–6] sessions about a week apart. Treatment can feel uncomfortable for a few minutes, but the intensity is adjusted to suit you. You can walk and drive straight afterwards."
+     ]
+    },
+    {
+     "id": "right-for-me",
+     "title": "Is it right for me?",
+     "paras": [
+      "It isn’t suitable during pregnancy, over areas with certain cancers or infections, if you take some blood-thinning medicines, or in some other situations. We’ll screen you carefully first."
+     ]
+    }
+   ],
+   "techniques": [
+    {
+     "t": "Clinical assessment",
+     "d": "Confirming the diagnosis and suitability."
+    },
+    {
+     "t": "Radial shockwave",
+     "d": "Pulses of energy to the painful area."
+    },
+    {
+     "t": "Adjustable intensity",
+     "d": "Set to what you can comfortably tolerate."
+    },
+    {
+     "t": "Tendon loading",
+     "d": "Exercises to strengthen the tendon."
+    },
+    {
+     "t": "Load management",
+     "d": "Guidance on activity during treatment."
+    },
+    {
+     "t": "Progress reviews",
+     "d": "Tracking pain and function across the course."
+    }
+   ],
+   "conds": [
+    [
+     "Plantar Heel Pain",
+     "ankle"
+    ],
+    [
+     "Achilles Tendinopathy",
+     "ankle"
+    ],
+    [
+     "Tennis Elbow",
+     "shoulder"
+    ],
+    [
+     "Shoulder Tendons",
+     "shoulder"
+    ],
+    [
+     "Hip Tendon Pain",
+     "hip"
+    ],
+    [
+     "Jumper’s Knee",
+     "knee"
+    ],
+    [
+     "Shin Pain",
+     "knee"
+    ],
+    [
+     "Sports Injuries",
+     "ankle"
+    ]
+   ],
+   "team": [
+    "emre",
+    "hafi"
+   ],
+   "faqs": [
+    {
+     "q": "Does shockwave therapy hurt?",
+     "a": "It can be uncomfortable during treatment, but we adjust the intensity to suit you, and it only lasts a few minutes."
+    },
+    {
+     "q": "How many sessions will I need?",
+     "a": "Usually a course of [3–6] weekly sessions, alongside an exercise programme."
+    },
+    {
+     "q": "Does it work?",
+     "a": "There’s good evidence for shockwave in some stubborn tendon conditions such as plantar heel pain and tennis elbow. We’ll tell you honestly if it’s a good option for you."
+    },
+    {
+     "q": "Is there any downtime?",
+     "a": "No. You may feel a little sore for a day or two, but you can carry on with normal activities."
+    }
+   ]
+  },
+  "ultrasound": {
+   "name": "Diagnostic Ultrasound",
+   "short": "diagnostic ultrasound",
+   "h1": "Diagnostic Ultrasound Scans in Sutton Coldfield",
+   "lead": "In-clinic musculoskeletal ultrasound to look at tendons, ligaments, muscles and joints — so we can make a clearer diagnosis and plan.",
+   "heroImg": "6046e3fbe3f542c03bbb9172ca220939",
+   "heroPos": "40% 40%",
+   "facts": [
+    {
+     "k": "Appointment",
+     "v": "[30] mins",
+     "icon": "M12 7v5l3 2M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0z"
+    },
+    {
+     "k": "From",
+     "v": "[£XX]",
+     "icon": "M16 6.5A3.5 3.5 0 0 0 9.5 8v4.5c0 2-1 3.5-2.5 4.5h10M7 12h7"
+    },
+    {
+     "k": "GP referral",
+     "v": "Not needed",
+     "icon": "M20 6L9 17l-5-5"
+    },
+    {
+     "k": "Clinics",
+     "v": "Sutton & Lichfield",
+     "icon": "M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11zM12 12.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"
+    }
+   ],
+   "introTitle": "See what’s going on, in real time",
+   "intro": [
+    "Musculoskeletal (MSK) ultrasound uses sound waves to create live images of the soft tissues under the skin. It lets us see tendons, ligaments, muscles and some joints moving in real time.",
+    "Having a scan in clinic can help confirm a diagnosis, rule things out and guide your treatment — often on the same day as your assessment."
+   ],
+   "ticks": [
+    "No radiation",
+    "Live, moving images",
+    "Results explained on the day"
+   ],
+   "introImg": "e7ccc65900e405cbfd5068742f9f19a8",
+   "introAlt": "Shoulder assessment",
+   "sections": [
+    {
+     "id": "what-is",
+     "title": "What is diagnostic ultrasound?",
+     "paras": [
+      "A small probe and some gel are placed on your skin, and sound waves create images of the structures underneath. It’s painless, uses no radiation and lets us compare both sides of your body.",
+      "Ultrasound is especially useful for tendons, ligaments, muscles and bursae. It can’t see inside bones, so we’ll refer you for X-ray or MRI if needed."
+     ]
+    },
+    {
+     "id": "approach",
+     "title": "What happens at a scan",
+     "paras": [
+      "We talk through your symptoms, scan the area, and explain what we can see. You’ll receive [a written report] and a clear plan for what happens next."
+     ]
+    },
+    {
+     "id": "right-for-me",
+     "title": "Who performs the scan?",
+     "paras": [
+      "[Add the name and qualifications of the clinician who performs your ultrasound scans.]"
+     ]
+    }
+   ],
+   "techniques": [
+    {
+     "t": "Tendon scans",
+     "d": "Achilles, patellar, rotator cuff and more."
+    },
+    {
+     "t": "Ligament checks",
+     "d": "Assessing sprains and instability."
+    },
+    {
+     "t": "Muscle injuries",
+     "d": "Looking at strains and tears."
+    },
+    {
+     "t": "Bursae & fluid",
+     "d": "Checking for bursitis and swelling."
+    },
+    {
+     "t": "Dynamic imaging",
+     "d": "Seeing structures as you move."
+    },
+    {
+     "t": "Onward referral",
+     "d": "To your GP or consultant if needed."
+    }
+   ],
+   "conds": [
+    [
+     "Shoulder Pain",
+     "shoulder"
+    ],
+    [
+     "Achilles Pain",
+     "ankle"
+    ],
+    [
+     "Knee Pain",
+     "knee"
+    ],
+    [
+     "Hip Pain",
+     "hip"
+    ],
+    [
+     "Tennis Elbow",
+     "shoulder"
+    ],
+    [
+     "Heel Pain",
+     "ankle"
+    ],
+    [
+     "Sports Injuries",
+     "ankle"
+    ],
+    [
+     "Tendon Problems",
+     "knee"
+    ]
+   ],
+   "team": [
+    "emre",
+    "hafi"
+   ],
+   "faqs": [
+    {
+     "q": "Do I need a referral for a scan?",
+     "a": "No. You can book directly, though we may recommend an assessment first so we know which area to scan."
+    },
+    {
+     "q": "Is ultrasound safe?",
+     "a": "Yes. It uses sound waves, not radiation, and is completely painless."
+    },
+    {
+     "q": "Can ultrasound replace an MRI?",
+     "a": "Not always. Ultrasound is excellent for many soft tissue problems, but some conditions need MRI or X-ray. We’ll refer you on if needed."
+    },
+    {
+     "q": "Will I get a report?",
+     "a": "[Confirm whether patients receive a written report.]"
+    }
+   ]
+  }
+ },
+ "people": {
+  "hafi": {
+   "href": "Practitioner.dc.html",
+   "name": "Hafi Rahman",
+   "role": "Founder & Principal Osteopath",
+   "img": "adb0a00027d03ae9e913fa80bfed0bf2",
+   "bio": "Registered osteopath (B’Ost Hons), sports therapist and personal trainer. Combines structural and cranial osteopathy with exercise-based rehab."
+  },
+  "freta": {
+   "href": "Freta.dc.html",
+   "name": "Freta Teklensenbet",
+   "role": "Registered Osteopath",
+   "img": "4ff59666163d2da4d9903e010addea99",
+   "bio": "Registered osteopath. [Add special interests.]"
+  },
+  "ankita": {
+   "href": "Ankita.dc.html",
+   "name": "Ankita Desai",
+   "role": "Registered Osteopath",
+   "img": "7a6e5e3046a8707b0a2a72472a2adc55",
+   "bio": "Registered osteopath with a Master’s in Osteopathy from the British School of Osteopathy and a Biomedical Science degree from Brunel University."
+  },
+  "zoe": {
+   "href": "Zoe.dc.html",
+   "name": "Zoe Goodwin",
+   "role": "Level 4 Sports Massage Therapist",
+   "img": "0a842542348f2fd4ca49aad4f2bf2c64",
+   "bio": "Level 4 sports massage therapist with a degree in Sport, Exercise & Health Science, now studying for an MSc in Physiotherapy."
+  },
+  "emre": {
+   "href": "Emre.dc.html",
+   "name": "Emre Tosun",
+   "role": "Physiotherapist & Personal Trainer",
+   "img": "",
+   "bio": "Registered physiotherapist and personal trainer with a Master’s in Physiotherapy, specialising in musculoskeletal rehabilitation."
+  }
+ },
+ "T": {
+  "back": "bad5ffe8e3d651f608eed6b8395755e1",
+  "neck": "ecff3978d740e61ad991d87ac8ed9c80",
+  "sciatica": "b4cbb771eeb8f8ab5dc8dc2aea17df46",
+  "shoulder": "c525025c94afa6c27f465df87630f2d5",
+  "head": "a6111fcfc10ade3e8e1ab9feee68d0bd",
+  "hip": "336754bc2f4144cf175e16e96253b0c6",
+  "knee": "45650fb355363711c837123b9102097b",
+  "ankle": "2ba8ade52a5466a109b0e50cb08b37f9",
+  "posture": "69eda695c26e3fcc7ef14bd02b658884",
+  "joint": "6b36c7e66c35b11e6d4a167d6cd862ea",
+  "baby": "4abb3bc38e81b54f28716e660d7ac6bb"
+ },
+ "steps": [
+  {
+   "n": "01",
+   "t": "Your story",
+   "d": "We take a full history — your symptoms, health, work, activity and what you want to get back to."
+  },
+  {
+   "n": "02",
+   "t": "Assessment",
+   "d": "We look at how you move and test the structures involved to find what’s driving the problem."
+  },
+  {
+   "n": "03",
+   "t": "Diagnosis & plan",
+   "d": "We explain what we’ve found in plain language and agree a plan with clear goals and timescales."
+  },
+  {
+   "n": "04",
+   "t": "First treatment",
+   "d": "Where it’s appropriate we start treatment the same day, and send you home with simple things to do."
+  }
+ ],
+ "related": [
+  {
+   "k": "osteo",
+   "name": "Osteopathy",
+   "href": "Service.dc.html",
+   "img": "eb3a3518e6e4460583ce6625b34e0d82"
+  },
+  {
+   "k": "physio",
+   "name": "Physiotherapy",
+   "href": "Physiotherapy.dc.html",
+   "img": "e7ccc65900e405cbfd5068742f9f19a8"
+  },
+  {
+   "k": "massage",
+   "name": "Sports Massage",
+   "href": "Massage.dc.html",
+   "img": "c6a31e9450e0eeb87fed01960d8d534e"
+  },
+  {
+   "k": "laser",
+   "name": "Laser Therapy",
+   "href": "Laser.dc.html",
+   "img": ""
+  },
+  {
+   "k": "cranial",
+   "name": "Cranial Osteopathy",
+   "href": "Cranial.dc.html",
+   "img": "2a651f6711f7912944a68430e75364cb"
+  },
+  {
+   "k": "paediatric",
+   "name": "Baby & Paediatric Osteopathy",
+   "href": "Paediatric.dc.html",
+   "img": "5b3d676c6ce99472242a84649521af62"
+  },
+  {
+   "k": "pregnancy",
+   "name": "Pregnancy Osteopathy",
+   "href": "Pregnancy.dc.html",
+   "img": "6128b4e96822ca4aa5be53906bd1ae7f"
+  },
+  {
+   "k": "acupuncture",
+   "name": "Acupuncture",
+   "href": "Acupuncture.dc.html",
+   "img": "ebc5540e0e4f70c2c0727439dc39383e"
+  },
+  {
+   "k": "rehab",
+   "name": "1-to-1 Rehab / Pilates",
+   "href": "Rehab.dc.html",
+   "img": "c1b26d1d09b98e10ca67e53b603b1499"
+  },
+  {
+   "k": "shockwave",
+   "name": "Shockwave Therapy",
+   "href": "Shockwave.dc.html",
+   "img": "33d9918bd1f13c2db06cb07701f3f61f"
+  },
+  {
+   "k": "ultrasound",
+   "name": "Diagnostic Ultrasound",
+   "href": "Ultrasound.dc.html",
+   "img": ""
+  }
+ ]
+}

@@ -251,6 +251,7 @@
   ]);
 
   EX.HOME = S;
+  EX.bookCard = bookCard;
   EX.buildHome = async function (only) {
     const order = ['hero', 'about', 'services', 'conditions', 'who', 'team', 'reviews', 'logos', 'book'];
     for (const k of (only || order)) await EX.insert(S[k]());
