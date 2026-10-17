@@ -108,7 +108,7 @@
     heading('Osteopathy', { tag: 'span', color: dark ? '#272B26' : '#F5F2EA', t: { f: IN, s: small, w: 500, ls: 0.42, tt: 'uppercase', lh: 1 }, x: { _margin: dims(big > 30 ? 6 : 5, 0, 0, 0), _padding: dims(0, 0, 0, 4) } })
   ]);
   const offcanvas = { id: OC_ID, elType: 'widget', widgetType: 'off-canvas', settings: {
-      horizontal_position: 'right', width: { unit: 'vw', size: 100, sizes: [] }, height: { unit: 'vh', size: 100, sizes: [] },
+      horizontal_position: 'right', width: { unit: 'vw', size: 100, sizes: [] }, height: 'custom', custom_height: { unit: 'vh', size: 100, sizes: [] },
       entrance_animation: 'fadeIn', exit_animation: 'fadeIn', prevent_scroll: 'yes',
       overlay_background_background: 'classic', overlay_background_color: 'rgba(0,0,0,0)',
       custom_css: 'selector .e-off-canvas__content{background:#F5F2EA;color:#272B26;overflow-y:auto}'
