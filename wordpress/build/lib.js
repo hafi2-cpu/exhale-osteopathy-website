@@ -100,9 +100,40 @@
     return W('image', Object.assign({ image: im, image_size: 'full' }, o.x || {}));
   };
 
+  // Nested widgets (tabs, carousel, mega menu…) must be created empty first; Elementor then
+  // creates one container per item, and their content is added into those containers.
+  const isNested = (m) => m.elType === 'widget' && /^(nested-|mega-menu|off-canvas)/.test(m.widgetType);
+  const hasNested = (m) => isNested(m) || (m.elements || []).some(hasNested);
+  async function createTree(parent, model, at) {
+    const opts = { at: at ?? parent.children.length };
+    if (!hasNested(model)) return $e.run('document/elements/create', { container: parent, model, options: opts });
+    const kids = model.elements || [];
+    const shell = Object.assign({}, model, { elements: [] });
+    const created = await $e.run('document/elements/create', { container: parent, model: shell, options: opts });
+    if (isNested(model)) {
+      const rep = { 'nested-tabs': 'tabs', 'nested-carousel': 'carousel_items', 'nested-accordion': 'items', 'mega-menu': 'menu_items' }[model.widgetType];
+      const items = rep ? (model.settings[rep] || []) : [];
+      // make the number of child containers match the number of items
+      while (rep && created.children.length < kids.length) {
+        await $e.run('document/repeater/insert', { container: created, name: rep, model: Object.assign({}, items[created.children.length] || {}) });
+      }
+      while (rep && created.children.length > kids.length) {
+        await $e.run('document/repeater/remove', { container: created, name: rep, index: created.children.length - 1 });
+      }
+      for (let i = 0; i < kids.length; i++) {
+        const slot = created.children[i];
+        if (!slot) throw new Error(model.widgetType + ': missing slot ' + i);
+        if (kids[i].settings && Object.keys(kids[i].settings).length)
+          await $e.run('document/elements/settings', { container: slot, settings: kids[i].settings, options: { external: true } });
+        for (const g of kids[i].elements || []) await createTree(slot, g);
+      }
+    } else {
+      for (const k of kids) await createTree(created, k);
+    }
+    return created;
+  }
   async function insert(model, at) {
-    const target = elementor.getPreviewContainer();
-    return $e.run('document/elements/create', { container: target, model, options: { at: at ?? target.children.length } });
+    return createTree(elementor.getPreviewContainer(), model, at);
   }
   async function clearPage() {
     const target = elementor.getPreviewContainer();

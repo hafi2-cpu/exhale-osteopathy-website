@@ -16,7 +16,9 @@
   };
   EX.L = L;
   const tones = ['#7D7868', '#7B826C', '#8C8471', '#4F5945', '#857C69'];
-  const grid = (cols, s = {}) => Object.assign({ container_type: 'grid', grid_columns_grid: { unit: 'fr', size: cols, sizes: [] } }, s);
+  // grid rows 'auto' — Elementor's default (2 equal rows) would add an empty row of the same height
+  const grid = (cols, s = {}) => Object.assign({ container_type: 'grid', grid_columns_grid: { unit: 'fr', size: cols, sizes: [] },
+    grid_rows_grid: { unit: 'custom', size: 'auto', sizes: [] } }, s);
   const gaps = (r, c = r) => ({ unit: 'px', column: String(c), row: String(r), isLinked: r === c });
 
   // Photo card used by the treatment and Who We Help carousels
