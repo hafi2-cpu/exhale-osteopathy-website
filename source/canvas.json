@@ -1,0 +1,469 @@
+{
+  "v": 3,
+  "attachments": {},
+  "boards": {
+    "Main.dc.html": {
+      "expand": "fill",
+      "h": 7400,
+      "is_interactive": true,
+      "title": "Homepage",
+      "w": 1440,
+      "x": 0,
+      "y": 0
+    },
+    "Service.dc.html": {
+      "expand": "fill",
+      "h": 7600,
+      "is_interactive": true,
+      "title": "Osteopathy",
+      "w": 1440,
+      "x": 1520,
+      "y": 0
+    },
+    "Physiotherapy.dc.html": {
+      "expand": "fill",
+      "h": 7600,
+      "is_interactive": true,
+      "title": "Physiotherapy",
+      "w": 1440,
+      "x": 3040,
+      "y": 0
+    },
+    "Massage.dc.html": {
+      "expand": "fill",
+      "h": 7600,
+      "is_interactive": true,
+      "title": "Sports Massage",
+      "w": 1440,
+      "x": 4560,
+      "y": 0
+    },
+    "Laser.dc.html": {
+      "expand": "fill",
+      "h": 7600,
+      "is_interactive": true,
+      "title": "Laser Therapy",
+      "w": 1440,
+      "x": 6080,
+      "y": 0
+    },
+    "Practitioner.dc.html": {
+      "expand": "fill",
+      "h": 6800,
+      "is_interactive": true,
+      "title": "Hafi Rahman",
+      "w": 1440,
+      "x": 0,
+      "y": 8000
+    },
+    "Zoe.dc.html": {
+      "expand": "fill",
+      "h": 6800,
+      "is_interactive": true,
+      "title": "Zoe Goodwin",
+      "w": 1440,
+      "x": 1520,
+      "y": 8000
+    },
+    "Freta.dc.html": {
+      "expand": "fill",
+      "h": 6800,
+      "is_interactive": true,
+      "title": "Freta Teklensenbet",
+      "w": 1440,
+      "x": 3040,
+      "y": 8000
+    },
+    "Ankita.dc.html": {
+      "expand": "fill",
+      "h": 6800,
+      "is_interactive": true,
+      "title": "Ankita",
+      "w": 1440,
+      "x": 4560,
+      "y": 8000
+    },
+    "Emre.dc.html": {
+      "expand": "fill",
+      "h": 6800,
+      "is_interactive": true,
+      "title": "Emre",
+      "w": 1440,
+      "x": 6080,
+      "y": 8000
+    },
+    "Pricing.dc.html": {
+      "expand": "fill",
+      "h": 4800,
+      "is_interactive": true,
+      "title": "Pricing",
+      "w": 1440,
+      "x": 7600,
+      "y": 0
+    },
+    "About.dc.html": {
+      "expand": "fill",
+      "h": 7200,
+      "is_interactive": true,
+      "title": "About / Our Clinic",
+      "w": 1440,
+      "x": 7600,
+      "y": 8000
+    },
+    "Contact.dc.html": {
+      "expand": "fill",
+      "h": 3900,
+      "is_interactive": true,
+      "title": "Contact",
+      "w": 1440,
+      "x": 9120,
+      "y": 0
+    },
+    "Cranial.dc.html": {
+      "expand": "fill",
+      "h": 7600,
+      "is_interactive": true,
+      "title": "Cranial Osteopathy",
+      "w": 1440,
+      "x": 0,
+      "y": 15600
+    },
+    "Paediatric.dc.html": {
+      "expand": "fill",
+      "h": 7600,
+      "is_interactive": true,
+      "title": "Baby & Paediatric Osteopathy",
+      "w": 1440,
+      "x": 1520,
+      "y": 15600
+    },
+    "Pregnancy.dc.html": {
+      "expand": "fill",
+      "h": 7600,
+      "is_interactive": true,
+      "title": "Pregnancy Osteopathy",
+      "w": 1440,
+      "x": 3040,
+      "y": 15600
+    },
+    "Acupuncture.dc.html": {
+      "expand": "fill",
+      "h": 7600,
+      "is_interactive": true,
+      "title": "Acupuncture",
+      "w": 1440,
+      "x": 4560,
+      "y": 15600
+    },
+    "Rehab.dc.html": {
+      "expand": "fill",
+      "h": 7600,
+      "is_interactive": true,
+      "title": "1-to-1 Rehab / Pilates",
+      "w": 1440,
+      "x": 6080,
+      "y": 15600
+    },
+    "Shockwave.dc.html": {
+      "expand": "fill",
+      "h": 7600,
+      "is_interactive": true,
+      "title": "Shockwave Therapy",
+      "w": 1440,
+      "x": 7600,
+      "y": 15600
+    },
+    "Ultrasound.dc.html": {
+      "expand": "fill",
+      "h": 7600,
+      "is_interactive": true,
+      "title": "Diagnostic Ultrasound",
+      "w": 1440,
+      "x": 9120,
+      "y": 15600
+    },
+    "Condition.dc.html": {
+      "expand": "fill",
+      "h": 8200,
+      "is_interactive": true,
+      "title": "Back Pain",
+      "w": 1440,
+      "x": 0,
+      "y": 24000
+    },
+    "Neck-Pain.dc.html": {
+      "expand": "fill",
+      "h": 8200,
+      "is_interactive": true,
+      "title": "Neck Pain",
+      "w": 1440,
+      "x": 1520,
+      "y": 24000
+    },
+    "Shoulder-Pain.dc.html": {
+      "expand": "fill",
+      "h": 8200,
+      "is_interactive": true,
+      "title": "Shoulder Pain",
+      "w": 1440,
+      "x": 3040,
+      "y": 24000
+    },
+    "Hip-Pain.dc.html": {
+      "expand": "fill",
+      "h": 8200,
+      "is_interactive": true,
+      "title": "Hip Pain",
+      "w": 1440,
+      "x": 4560,
+      "y": 24000
+    },
+    "Knee-Pain.dc.html": {
+      "expand": "fill",
+      "h": 8200,
+      "is_interactive": true,
+      "title": "Knee Pain",
+      "w": 1440,
+      "x": 6080,
+      "y": 24000
+    },
+    "Foot-Ankle-Pain.dc.html": {
+      "expand": "fill",
+      "h": 8200,
+      "is_interactive": true,
+      "title": "Foot & Ankle Pain",
+      "w": 1440,
+      "x": 7600,
+      "y": 24000
+    },
+    "Headaches.dc.html": {
+      "expand": "fill",
+      "h": 8200,
+      "is_interactive": true,
+      "title": "Headaches & Migraines",
+      "w": 1440,
+      "x": 0,
+      "y": 32900
+    },
+    "Sciatica.dc.html": {
+      "expand": "fill",
+      "h": 8200,
+      "is_interactive": true,
+      "title": "Sciatica",
+      "w": 1440,
+      "x": 1520,
+      "y": 32900
+    },
+    "Sports-Injuries.dc.html": {
+      "expand": "fill",
+      "h": 8200,
+      "is_interactive": true,
+      "title": "Sports Injuries",
+      "w": 1440,
+      "x": 3040,
+      "y": 32900
+    },
+    "Tendon-Problems.dc.html": {
+      "expand": "fill",
+      "h": 8200,
+      "is_interactive": true,
+      "title": "Tendon Problems",
+      "w": 1440,
+      "x": 4560,
+      "y": 32900
+    },
+    "Jaw-Pain.dc.html": {
+      "expand": "fill",
+      "h": 8200,
+      "is_interactive": true,
+      "title": "TMJ / Jaw Pain",
+      "w": 1440,
+      "x": 6080,
+      "y": 32900
+    },
+    "Birmingham.dc.html": {
+      "expand": "fill",
+      "h": 7400,
+      "is_interactive": true,
+      "title": "Osteopath Birmingham (/osteopath-birmingham/)",
+      "w": 1440,
+      "x": 10640,
+      "y": 0
+    },
+    "Blog.dc.html": {
+      "expand": "fill",
+      "h": 3900,
+      "is_interactive": true,
+      "title": "Blog",
+      "w": 1440,
+      "x": 12160,
+      "y": 0
+    },
+    "BlogPost.dc.html": {
+      "expand": "fill",
+      "h": 6200,
+      "is_interactive": true,
+      "title": "Blog article",
+      "w": 1440,
+      "x": 13680,
+      "y": 0
+    }
+  },
+  "createdOnFiles": {
+    "at": "2026-10-17T16:10:00Z",
+    "v": 1
+  },
+  "designSystems": [],
+  "launch": {
+    "view": "focused",
+    "file": "Main.dc.html"
+  },
+  "notes": {
+    "seo-condition": {
+      "x": 0,
+      "y": 23560,
+      "w": 900,
+      "maxH": 380,
+      "fill": "green",
+      "size": "m",
+      "text": "SEO \u2014 Back Pain\nMeta title (58 chars): Back Pain Treatment Sutton Coldfield & Birmingham | Exhale\nMeta description (154 chars): Expert osteopaths and physios for lower and upper back pain in Sutton Coldfield, Birmingham. Evening & Saturday appointments, no GP referral. Book online."
+    },
+    "seo-neck-pain": {
+      "x": 1520,
+      "y": 23560,
+      "w": 900,
+      "maxH": 380,
+      "fill": "green",
+      "size": "m",
+      "text": "SEO \u2014 Neck Pain\nMeta title (58 chars): Neck Pain Treatment Sutton Coldfield & Birmingham | Exhale\nMeta description (147 chars): Relief for stiff, painful necks, desk-related tension and whiplash. Registered osteopaths in Sutton Coldfield and Lichfield. No GP referral needed."
+    },
+    "seo-shoulder-pain": {
+      "x": 3040,
+      "y": 23560,
+      "w": 900,
+      "maxH": 380,
+      "fill": "green",
+      "size": "m",
+      "text": "SEO \u2014 Shoulder Pain\nMeta title (49 chars): Shoulder Pain Treatment Sutton Coldfield | Exhale\nMeta description (153 chars): Rotator cuff, frozen shoulder and sports shoulder pain treated by osteopaths and physios in Sutton Coldfield, Birmingham. In-clinic ultrasound available."
+    },
+    "seo-hip-pain": {
+      "x": 4560,
+      "y": 23560,
+      "w": 900,
+      "maxH": 380,
+      "fill": "green",
+      "size": "m",
+      "text": "SEO \u2014 Hip Pain\nMeta title (57 chars): Hip Pain Treatment Sutton Coldfield & Birmingham | Exhale\nMeta description (147 chars): Expert care for hip, groin and buttock pain in Sutton Coldfield and Lichfield. Osteopathy, physio and shockwave. Evening and Saturday appointments."
+    },
+    "seo-knee-pain": {
+      "x": 6080,
+      "y": 23560,
+      "w": 900,
+      "maxH": 380,
+      "fill": "green",
+      "size": "m",
+      "text": "SEO \u2014 Knee Pain\nMeta title (58 chars): Knee Pain Treatment Sutton Coldfield & Birmingham | Exhale\nMeta description (141 chars): Runner\u2019s knee, sprains and arthritic knee pain treated in Sutton Coldfield, Birmingham. Hands-on care plus strength rehab. Book online today."
+    },
+    "seo-foot-ankle-pain": {
+      "x": 7600,
+      "y": 23560,
+      "w": 900,
+      "maxH": 380,
+      "fill": "green",
+      "size": "m",
+      "text": "SEO \u2014 Foot & Ankle Pain\nMeta title (53 chars): Foot & Ankle Pain Treatment Sutton Coldfield | Exhale\nMeta description (143 chars): Plantar fasciitis, ankle sprains and Achilles pain treated in Sutton Coldfield, Birmingham. Rehab and shockwave therapy. No GP referral needed."
+    },
+    "seo-headaches": {
+      "x": 0,
+      "y": 32460,
+      "w": 900,
+      "maxH": 380,
+      "fill": "green",
+      "size": "m",
+      "text": "SEO \u2014 Headaches & Migraines\nMeta title (50 chars): Headache & Migraine Help Sutton Coldfield | Exhale\nMeta description (138 chars): Tension and neck-related headaches eased with osteopathy and acupuncture in Sutton Coldfield, Birmingham. Evening & Saturday appointments."
+    },
+    "seo-sciatica": {
+      "x": 1520,
+      "y": 32460,
+      "w": 900,
+      "maxH": 380,
+      "fill": "green",
+      "size": "m",
+      "text": "SEO \u2014 Sciatica\nMeta title (60 chars): Sciatica Treatment in Sutton Coldfield & Birmingham | Exhale\nMeta description (145 chars): Relief for sciatic leg pain, numbness and tingling. Osteopaths and physios in Sutton Coldfield and Lichfield with a clear plan to help it settle."
+    },
+    "seo-sports-injuries": {
+      "x": 3040,
+      "y": 32460,
+      "w": 900,
+      "maxH": 380,
+      "fill": "green",
+      "size": "m",
+      "text": "SEO \u2014 Sports Injuries\nMeta title (59 chars): Sports Injury Clinic Sutton Coldfield & Birmingham | Exhale\nMeta description (149 chars): Strains, sprains and overuse injuries treated fast in Sutton Coldfield, Birmingham. Physio, osteopathy and sports massage with return-to-sport plans."
+    },
+    "seo-tendon-problems": {
+      "x": 4560,
+      "y": 32460,
+      "w": 900,
+      "maxH": 380,
+      "fill": "green",
+      "size": "m",
+      "text": "SEO \u2014 Tendon Problems\nMeta title (60 chars): Tendon Pain Treatment Sutton Coldfield & Birmingham | Exhale\nMeta description (134 chars): Achilles, tennis elbow and patellar tendon pain treated with rehab and shockwave therapy in Sutton Coldfield, Birmingham. Book online."
+    },
+    "seo-jaw-pain": {
+      "x": 6080,
+      "y": 32460,
+      "w": 900,
+      "maxH": 380,
+      "fill": "green",
+      "size": "m",
+      "text": "SEO \u2014 TMJ / Jaw Pain\nMeta title (50 chars): TMJ & Jaw Pain Treatment Sutton Coldfield | Exhale\nMeta description (129 chars): Gentle osteopathy for jaw pain, clicking and clenching in Sutton Coldfield, Birmingham. Treating the jaw, neck and head together."
+    },
+    "seo-birmingham": {
+      "x": 10640,
+      "y": -440,
+      "w": 900,
+      "maxH": 380,
+      "fill": "green",
+      "size": "m",
+      "text": "SEO \u2014 Osteopath Birmingham\nURL: /osteopath-birmingham/\nMeta title (58 chars): Osteopath Birmingham | Exhale Osteopathy, Sutton Coldfield\nMeta description (151 chars): Registered osteopaths in Sutton Coldfield, north Birmingham. Evening & Saturday appointments, physio and massage under one roof. No GP referral needed.\nAddress uses the \"Clinic address\" tweak (default 247A Jockey Road)."
+    }
+  },
+  "order": [
+    "Main.dc.html",
+    "Service.dc.html",
+    "Physiotherapy.dc.html",
+    "Massage.dc.html",
+    "Laser.dc.html",
+    "Practitioner.dc.html",
+    "Zoe.dc.html",
+    "Freta.dc.html",
+    "Ankita.dc.html",
+    "Emre.dc.html",
+    "Pricing.dc.html",
+    "About.dc.html",
+    "Contact.dc.html",
+    "Cranial.dc.html",
+    "Paediatric.dc.html",
+    "Pregnancy.dc.html",
+    "Acupuncture.dc.html",
+    "Rehab.dc.html",
+    "Shockwave.dc.html",
+    "Ultrasound.dc.html",
+    "Condition.dc.html",
+    "Neck-Pain.dc.html",
+    "Shoulder-Pain.dc.html",
+    "Hip-Pain.dc.html",
+    "Knee-Pain.dc.html",
+    "Foot-Ankle-Pain.dc.html",
+    "Headaches.dc.html",
+    "Sciatica.dc.html",
+    "Sports-Injuries.dc.html",
+    "Tendon-Problems.dc.html",
+    "Jaw-Pain.dc.html",
+    "Birmingham.dc.html",
+    "Blog.dc.html",
+    "BlogPost.dc.html"
+  ],
+  "pages": [],
+  "title": "Exhale Osteopathy Website"
+}
