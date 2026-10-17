@@ -1,0 +1,57 @@
+/* =====================================================================
+   Exhale Osteopathy — site-wide custom CSS
+   Lives in: Elementor > Site Settings > Custom CSS
+   Only for effects Elementor's controls can't produce. Each rule is
+   switched on by adding the class name in a widget/container's
+   Advanced > CSS Classes field, so content stays fully editable.
+   ===================================================================== */
+
+/* 1. Keyboard focus ring (approved design) */
+a:focus-visible, button:focus-visible, [tabindex]:focus-visible,
+.elementor-button:focus-visible {
+  outline: 2px solid #272B26; outline-offset: 2px; box-shadow: 0 0 0 4px #F5F2EA;
+}
+
+/* 2. ex-eyebrow — section label with the small olive square.
+      Add to a Heading widget. Variant ex-eyebrow--light for dark sections. */
+.ex-eyebrow .elementor-heading-title { display: flex; align-items: center; gap: 14px; }
+.ex-eyebrow .elementor-heading-title::before {
+  content: ""; width: 11px; height: 11px; flex: none; background: #7B826C;
+}
+.ex-eyebrow--light .elementor-heading-title::before { background: #F5F2EA; }
+
+/* 3. ex-btn-split — button text on the left, arrow on the right */
+.ex-btn-split .elementor-button { display: flex; width: 100%; }
+.ex-btn-split .elementor-button-content-wrapper { width: 100%; justify-content: space-between; }
+
+/* 4. ex-shade / ex-hero-shade — multi-stop photo gradients from the design
+      (Elementor's own overlay only allows two colours). Use on full-width containers. */
+.ex-shade, .ex-hero-shade { position: relative; isolation: isolate; }
+.ex-shade::after, .ex-hero-shade::after {
+  content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none; border-radius: inherit;
+}
+.ex-shade::after {
+  background: linear-gradient(180deg, rgba(39,43,38,.55) 0%, rgba(39,43,38,.05) 35%, rgba(39,43,38,.1) 60%, rgba(39,43,38,.6) 100%);
+}
+.ex-hero-shade::after {
+  background: linear-gradient(180deg, rgba(39,43,38,.6) 0%, rgba(39,43,38,.3) 30%, rgba(39,43,38,.55) 55%, rgba(39,43,38,.92) 100%);
+}
+
+/* 5. ex-ratio-34 — keeps portrait photos at 3:4 at every screen size */
+.ex-ratio-34 img { width: 100%; height: auto; aspect-ratio: 3 / 4; object-fit: cover; }
+
+/* 6. ex-marquee — scrolling values strip. Container gets ex-marquee;
+      the Text Editor inside gets ex-marquee-track (text is written twice
+      so the loop is seamless — edit both halves). */
+.ex-marquee { overflow: hidden; }
+.ex-marquee-track { width: max-content; flex: none; }
+.ex-marquee-track p { margin: 0; white-space: nowrap; display: flex; gap: 56px; }
+.ex-marquee-track { animation: ex-mq 38s linear infinite; }
+@keyframes ex-mq { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+@media (prefers-reduced-motion: reduce) { .ex-marquee-track { animation: none; } }
+
+/* 7. ex-carousel — hide arrows on tablet/phone, where cards are swiped */
+@media (max-width: 980px) { .ex-carousel .elementor-swiper-button { display: none !important; } }
+
+/* 8. Phone: hide header Book button on very narrow screens (approved behaviour) */
+@media (max-width: 380px) { .ex-hide-xs { display: none !important; } }
