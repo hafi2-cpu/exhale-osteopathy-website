@@ -6,6 +6,10 @@
    Advanced > CSS Classes field, so content stays fully editable.
    ===================================================================== */
 
+/* 0. Spacing comes from the design's explicit margins, so remove the theme's
+      trailing paragraph margin inside text widgets */
+.elementor-widget-text-editor p:last-child { margin-bottom: 0; }
+
 /* 1. Keyboard focus ring (approved design) */
 a:focus-visible, button:focus-visible, [tabindex]:focus-visible,
 .elementor-button:focus-visible {
