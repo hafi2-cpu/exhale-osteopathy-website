@@ -40,10 +40,15 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible,
 /* 5. ex-ratio-34 — keeps portrait photos at 3:4 at every screen size */
 .ex-ratio-34 img { width: 100%; height: auto; aspect-ratio: 3 / 4; object-fit: cover; }
 
+/* 5b. ex-card — treatment / Who We Help photo cards keep the design's 455:625 shape;
+       ex-ratio-box — 3:4 placeholder box (e.g. a missing headshot) */
+.ex-card { aspect-ratio: 455 / 625; }
+.ex-ratio-box { aspect-ratio: 3 / 4; }
+
 /* 6. ex-marquee — scrolling values strip. Container gets ex-marquee;
       the Text Editor inside gets ex-marquee-track (text is written twice
       so the loop is seamless — edit both halves). */
-.ex-marquee { overflow: hidden; }
+.ex-marquee { overflow: hidden; flex: 1 1 0; min-width: 0; }
 .ex-marquee-track { width: max-content; flex: none; }
 .ex-marquee-track p { margin: 0; white-space: nowrap; display: flex; gap: 56px; }
 .ex-marquee-track { animation: ex-mq 38s linear infinite; }
