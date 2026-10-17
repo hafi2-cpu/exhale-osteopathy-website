@@ -24,7 +24,7 @@
 
   const thumb = (asset, size) => asset
     ? image(asset, '', { x: { width: px(size), height: px(size), 'object-fit': 'cover', image_border_radius: all(3), _flex_size: 'none' } })
-    : C({ width: px(size), min_height: px(size), background_background: 'classic', background_color: '#E6E0D5', border_radius: all(3), css_classes: 'ex-fit' }, []);
+    : C({ background_background: 'classic', background_color: '#E6E0D5', border_radius: all(3), css_classes: 'ex-thumb-ph ex-thumb-ph--' + size }, []);
   const linkRow = ([name, href, asset], size, minh) => C({ html_tag: 'a', link: { url: href, is_external: '', nofollow: '' }, flex_direction: 'row', flex_align_items: 'center', flex_gap: gap(14),
     padding: dims(size === 48 ? 6 : 8, 0, size === 48 ? 6 : 8, 0), min_height: minh ? px(minh) : undefined }, [
     thumb(asset, size), heading(name, { tag: 'span', t: { f: IN, s: 17, w: 500, lh: 1.3 } })
@@ -90,7 +90,9 @@
   ])));
   const accCss = [
     'selector .e-n-accordion-item{border:0;border-bottom:1px solid #B7AA99}',
-    'selector .e-n-accordion-item-title{padding:18px 0;border:0;background:transparent;justify-content:space-between}',
+    'selector .e-n-accordion-item-title{padding:18px 0;border:0;background:transparent;justify-content:space-between;flex-direction:row}',
+    'selector .e-n-accordion-item-title-header{order:1;flex:1 1 auto;text-align:left;justify-content:flex-start}',
+    'selector .e-n-accordion-item-title-icon{order:2;margin-left:auto}',
     'selector .e-n-accordion-item-title-icon{width:40px;height:40px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;background:#E6E0D5;color:#272B26;transition:transform .2s}',
     'selector .e-n-accordion-item[open] .e-n-accordion-item-title-icon{background:#4F5945;color:#F5F2EA;transform:rotate(45deg)}',
     'selector .e-n-accordion-item-title-icon svg{width:18px;height:18px;fill:none;stroke:currentColor}',

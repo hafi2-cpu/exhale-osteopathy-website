@@ -91,5 +91,10 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible,
 .ex-on-dark a.ex-underline { color: #E6E0D5; text-decoration: underline; text-underline-offset: 3px; }
 .ex-muted-links a { color: inherit; }
 
+/* 13. Grey placeholder square where a menu item has no thumbnail photo yet */
+.e-con.ex-thumb-ph { flex: 0 0 auto; padding: 0; }
+.e-con.ex-thumb-ph--48 { --width: 48px; width: 48px; height: 48px; min-height: 48px; }
+.e-con.ex-thumb-ph--44 { --width: 44px; width: 44px; height: 44px; min-height: 44px; }
+
 /* 8. Phone: hide header Book button on very narrow screens (approved behaviour) */
 @media (max-width: 380px) { .ex-hide-xs { display: none !important; } }
