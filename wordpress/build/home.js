@@ -186,8 +186,8 @@
           : C({ css_classes: 'ex-ratio-box', background_background: 'classic', background_color: '#E6E0D5', border_radius: all(3), flex_justify_content: 'flex-end', padding: all(14) },
               [heading('[Headshot]', { tag: 'span', color: 'rgba(39,43,38,0.76)', t: { f: IN, s: 12, lh: 1.4 } })]),
         heading(n, { tag: 'h3', t: { s: 20, ls: -0.015, lh: 1.3 }, x: { _margin: dims(16, 0, 0, 0) } }),
-        heading(r, { tag: 'span', color: 'rgba(39,43,38,0.76)', t: { f: IN, s: 14, lh: 1.6 } }),
-        heading('View Profile →', { tag: 'span', color: '#4F5945', t: { f: IN, s: 14, w: 500, lh: 1.6 }, x: { _margin: dims(8, 0, 0, 0) } })
+        heading(r, { tag: 'span', color: 'rgba(39,43,38,0.76)', t: { f: IN, s: 14, lh: 1.75 } }),
+        heading('View Profile →', { tag: 'span', color: '#4F5945', t: { f: IN, s: 14, w: 500, lh: 1.75 }, x: { _margin: dims(8, 0, 0, 0) } })
       ])))
   ]);
 
@@ -208,7 +208,7 @@
       [1, 2, 3].map(() => C({ padding: all(30), flex_gap: gap(14), border_border: 'solid', border_width: all(1), border_color: '#B7AA99', border_radius: all(3) }, [
         stars(),
         text("<p>“[Paste a real Google review here — keep it in the patient's own words.]”</p>", { t: { s: 16, lh: 1.7 }, x: { _flex_size: 'grow' } }),
-        heading('[Patient name]', { tag: 'span', t: { f: IN, s: 14, w: 600, lh: 1.4 } })
+        heading('[Patient name]', { tag: 'span', t: { f: IN, s: 14, w: 600, lh: 1.75 } })
       ]))),
     heading('<a href="#reviews">See All Reviews on Google →</a>', { tag: 'p', color: '#4F5945', t: { f: IN, s: 15, w: 500, lh: 1.6 }, x: { _margin: dims(28, 0, 0, 0) } })
   ]);

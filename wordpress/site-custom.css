@@ -118,5 +118,10 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible,
 .ex-toc-link a { color: #272B26; display: block; }
 .ex-toc-link a:hover { color: #4F5945; }
 
+/* 17. Condition pages: list dots, portrait crop from the top, olive underlined link */
+.e-con.ex-dot { flex: 0 0 auto; padding: 0; }
+.ex-pos-top img { object-position: 50% 20%; }
+a.ex-underline-olive { color: #4F5945; font-weight: 500; text-decoration: underline; text-underline-offset: 3px; }
+
 /* 8. Phone: hide header Book button on very narrow screens (approved behaviour) */
 @media (max-width: 380px) { .ex-hide-xs { display: none !important; } }

@@ -1,0 +1,1360 @@
+{
+ "C": {
+  "back": {
+   "name": "Back Pain",
+   "lower": "back pain",
+   "hero": "fcb8c0b6c5dee3cb4f97fc820f5f9a2d",
+   "heroPos": "50% 45%",
+   "h1": "Back Pain Treatment in Sutton Coldfield & Birmingham",
+   "lead": "Expert osteopaths and physiotherapists for lower back pain, upper back pain and stiffness — with evening and Saturday appointments and no GP referral needed.",
+   "introTitle": "Expert back pain treatment in Birmingham",
+   "intro": [
+    "Back pain is one of the most common reasons people visit an osteopath, and most of the time it isn’t caused by anything serious. Whether it came on suddenly lifting the shopping or has been grumbling for months at your desk, our team at Exhale Osteopathy in Sutton Coldfield will find out what’s driving it and get you moving again.",
+    "We treat lower back pain, upper back pain, muscle spasm, stiffness and recurring “bad backs” for patients across Birmingham, Sutton Coldfield, Streetly and Lichfield. Every appointment combines a thorough assessment with hands-on treatment and simple exercises you can do at home.",
+    "Most people feel a difference within a few sessions — and we’ll always be honest about how many you’re likely to need."
+   ],
+   "introImg": "6128b4e96822ca4aa5be53906bd1ae7f",
+   "introAlt": "Osteopath treating lower back pain at Exhale Osteopathy, Sutton Coldfield",
+   "symTitle": "Signs your back needs some help",
+   "symptoms": [
+    "Aching or sharp pain in the lower or upper back",
+    "Stiffness first thing in the morning or after sitting",
+    "Muscle spasm that makes it hard to stand up straight",
+    "Pain that spreads into the buttock or thigh",
+    "Pain that keeps coming back every few months"
+   ],
+   "causeTitle": "Why back pain happens",
+   "causes": [
+    {
+     "t": "Muscle strain",
+     "d": "Lifting, twisting or a sudden increase in activity."
+    },
+    {
+     "t": "Posture & desk work",
+     "d": "Long hours sitting with little movement."
+    },
+    {
+     "t": "Disc irritation",
+     "d": "Can cause back pain with or without leg pain."
+    },
+    {
+     "t": "Joint stiffness",
+     "d": "Facet joints and the pelvis can become stiff and sore."
+    },
+    {
+     "t": "Stress & poor sleep",
+     "d": "Both can make back pain more sensitive and last longer."
+    }
+   ],
+   "helpTitle": "How we treat back pain",
+   "helpLead": "Your plan is built around your assessment — usually a mix of hands-on treatment, exercise and advice.",
+   "treats": [
+    [
+     "osteo",
+     "Soft tissue work, joint mobilisation and gentle manipulation to ease pain and restore movement."
+    ],
+    [
+     "physio",
+     "Progressive strengthening to support your back and reduce the chance of it coming back."
+    ],
+    [
+     "massage",
+     "Deep tissue work to release tight, guarded muscles around the spine and hips."
+    ]
+   ],
+   "tips": [
+    "Keep moving gently — bed rest usually slows recovery.",
+    "Use heat to ease muscle spasm for 15–20 minutes at a time.",
+    "Break up long periods of sitting every 30–45 minutes.",
+    "Over-the-counter pain relief can help — ask your pharmacist what’s right for you."
+   ],
+   "redFlags": [
+    "Numbness or tingling around your genitals or bottom",
+    "Loss of bladder or bowel control, or difficulty peeing",
+    "Weakness or numbness in both legs, or legs that are getting weaker",
+    "Severe pain after a serious fall or accident"
+   ],
+   "gpNote": "See your GP urgently if you also have a high temperature, unexplained weight loss, or a history of cancer.",
+   "team": [
+    "hafi",
+    "freta",
+    "ankita",
+    "emre"
+   ],
+   "reviewTitle": "What our back pain patients say",
+   "faqTitle": "Back pain questions, answered",
+   "faqs": [
+    {
+     "q": "Can an osteopath help with lower back pain?",
+     "a": "Yes. Lower back pain is the most common problem osteopaths treat. NICE guidelines recommend manual therapy, such as osteopathy, alongside exercise for low back pain."
+    },
+    {
+     "q": "Do I need a GP referral for back pain treatment?",
+     "a": "No. You can book directly with our Sutton Coldfield or Lichfield clinic without seeing your GP first."
+    },
+    {
+     "q": "How many sessions will I need?",
+     "a": "Many people feel better within 2–4 appointments. We’ll give you an honest estimate after your first assessment."
+    },
+    {
+     "q": "Should I rest or keep moving?",
+     "a": "For most back pain, staying gently active helps you recover faster than resting. We’ll show you which movements are safe for you."
+    },
+    {
+     "q": "Do you offer evening and weekend appointments?",
+     "a": "Yes — we’re open until 8pm on weekdays and on Saturday mornings in Sutton Coldfield."
+    }
+   ],
+   "related": [
+    "sciatica",
+    "hip",
+    "neck",
+    "sports"
+   ],
+   "ctaTitle": "Book back pain treatment in Sutton Coldfield"
+  },
+  "neck": {
+   "name": "Neck Pain",
+   "lower": "neck pain",
+   "hero": "b8e8993321b736db53b1dd2295f42dad",
+   "heroPos": "50% 50%",
+   "h1": "Neck Pain Treatment in Sutton Coldfield & Birmingham",
+   "lead": "Relief for stiff, sore and painful necks — from desk-related tension to whiplash — with expert osteopaths in Sutton Coldfield and Lichfield.",
+   "introTitle": "Expert neck pain treatment in Birmingham",
+   "intro": [
+    "A stiff, painful neck can affect everything from sleeping and driving to concentrating at work. At Exhale Osteopathy we treat neck pain for people across Birmingham, Sutton Coldfield, Four Oaks and Lichfield, from office workers and drivers to new parents and athletes.",
+    "Our osteopaths look at how your neck, shoulders and upper back are working together, then use gentle hands-on treatment, practical posture advice and exercises to ease pain and get you turning your head freely again."
+   ],
+   "introImg": "eb3a3518e6e4460583ce6625b34e0d82",
+   "introAlt": "Osteopath treating neck pain at Exhale Osteopathy",
+   "symTitle": "Common neck pain symptoms",
+   "symptoms": [
+    "Stiffness and difficulty turning your head",
+    "Pain spreading into the shoulders or between the shoulder blades",
+    "Headaches that start at the base of the skull",
+    "Waking up with a “cricked” neck",
+    "Pins and needles into the arm or hand"
+   ],
+   "causeTitle": "What causes neck pain",
+   "causes": [
+    {
+     "t": "Desk & screen posture",
+     "d": "Long hours looking down at laptops and phones."
+    },
+    {
+     "t": "Sleeping awkwardly",
+     "d": "Pillows that are too high, low or soft."
+    },
+    {
+     "t": "Whiplash",
+     "d": "After car accidents or sudden jolts."
+    },
+    {
+     "t": "Stress & tension",
+     "d": "Tight shoulders and upper back muscles."
+    },
+    {
+     "t": "Wear and tear",
+     "d": "Normal age-related changes in the joints of the neck."
+    }
+   ],
+   "helpTitle": "How we treat neck pain",
+   "helpLead": "Gentle, hands-on treatment plus practical changes that fit your day.",
+   "treats": [
+    [
+     "osteo",
+     "Gentle mobilisation and soft tissue work to ease stiffness and muscle tension."
+    ],
+    [
+     "acu",
+     "Fine needles to calm persistent, tight areas in the neck and shoulders."
+    ],
+    [
+     "massage",
+     "Targeted massage to release tension through the neck, shoulders and upper back."
+    ]
+   ],
+   "tips": [
+    "Raise your screen to eye level and take regular breaks.",
+    "Use heat on tight muscles for 15–20 minutes.",
+    "Try gentle neck turns and shoulder rolls through the day.",
+    "Choose a pillow that keeps your neck in line with your spine."
+   ],
+   "redFlags": [
+    "Neck pain after a serious fall, accident or head injury",
+    "A sudden, severe headache with neck stiffness",
+    "Fever with a stiff neck or a rash",
+    "Weakness, numbness or clumsiness in both arms or legs"
+   ],
+   "gpNote": "See your GP if pain is getting worse over several weeks or you have unexplained weight loss.",
+   "team": [
+    "hafi",
+    "freta",
+    "ankita"
+   ],
+   "reviewTitle": "What our neck pain patients say",
+   "faqTitle": "Neck pain questions, answered",
+   "faqs": [
+    {
+     "q": "Can an osteopath help with neck pain?",
+     "a": "Yes. Osteopaths regularly treat neck pain and stiffness using gentle hands-on techniques, exercise and posture advice."
+    },
+    {
+     "q": "Is neck manipulation safe?",
+     "a": "We only use manipulation where it’s appropriate and with your consent. Many patients are treated entirely with gentle techniques instead."
+    },
+    {
+     "q": "Can neck problems cause headaches?",
+     "a": "Yes. Tension in the neck and upper back is a common cause of headaches that start at the base of the skull."
+    },
+    {
+     "q": "Do you treat whiplash?",
+     "a": "Yes. We assess and treat whiplash-related neck pain and can provide reports where needed. [Confirm if you offer medico-legal reports.]"
+    }
+   ],
+   "related": [
+    "headaches",
+    "shoulder",
+    "back",
+    "jaw"
+   ],
+   "ctaTitle": "Book neck pain treatment in Sutton Coldfield"
+  },
+  "shoulder": {
+   "name": "Shoulder Pain",
+   "lower": "shoulder pain",
+   "hero": "6046e3fbe3f542c03bbb9172ca220939",
+   "heroPos": "40% 40%",
+   "h1": "Shoulder Pain Treatment in Sutton Coldfield & Birmingham",
+   "lead": "Assessment and treatment for painful, stiff and weak shoulders — including rotator cuff problems and frozen shoulder.",
+   "introTitle": "Expert shoulder pain treatment in Birmingham",
+   "intro": [
+    "Shoulder pain can make simple things like reaching up, getting dressed or sleeping on your side surprisingly difficult. Our osteopaths and physiotherapist in Sutton Coldfield help people across Birmingham get to the bottom of shoulder pain and restore strength and movement.",
+    "We assess how your shoulder blade, neck and upper back are working with the shoulder joint, then combine hands-on treatment with a clear, progressive exercise plan. Where it helps, we can also use in-clinic diagnostic ultrasound or shockwave therapy."
+   ],
+   "introImg": "e7ccc65900e405cbfd5068742f9f19a8",
+   "introAlt": "Shoulder assessment at Exhale Osteopathy, Sutton Coldfield",
+   "symTitle": "Common shoulder symptoms",
+   "symptoms": [
+    "Pain lifting your arm overhead or out to the side",
+    "Pain lying on the affected side at night",
+    "Stiffness and loss of movement",
+    "A weak or “catching” feeling",
+    "Pain spreading down the upper arm"
+   ],
+   "causeTitle": "Common causes of shoulder pain",
+   "causes": [
+    {
+     "t": "Rotator cuff problems",
+     "d": "Irritated or overloaded shoulder tendons."
+    },
+    {
+     "t": "Frozen shoulder",
+     "d": "Gradual, painful stiffening of the joint."
+    },
+    {
+     "t": "Bursitis",
+     "d": "Inflammation of the fluid-filled sac in the shoulder."
+    },
+    {
+     "t": "Overuse",
+     "d": "Gym, racket sports, swimming or repetitive work."
+    },
+    {
+     "t": "Referred pain",
+     "d": "From the neck or upper back."
+    }
+   ],
+   "helpTitle": "How we treat shoulder pain",
+   "helpLead": "Hands-on care and progressive loading to get your shoulder strong again.",
+   "treats": [
+    [
+     "physio",
+     "Progressive strengthening and mobility work to rebuild the shoulder."
+    ],
+    [
+     "osteo",
+     "Hands-on treatment for the shoulder, neck and upper back."
+    ],
+    [
+     "shock",
+     "For stubborn, long-standing tendon problems such as calcific tendinopathy."
+    ]
+   ],
+   "tips": [
+    "Keep the shoulder moving within a comfortable range.",
+    "Avoid long periods with your arm overhead while it’s sore.",
+    "Sleep with a pillow under the affected arm for support.",
+    "Ice or heat — use whichever feels better for 15–20 minutes."
+   ],
+   "redFlags": [
+    "Shoulder or arm pain with chest pain, breathlessness or sweating",
+    "Sudden inability to lift your arm after a fall",
+    "A hot, red, swollen shoulder with fever",
+    "A visible deformity after an injury"
+   ],
+   "gpNote": "See your GP if pain doesn’t improve after several weeks or you feel unwell.",
+   "team": [
+    "emre",
+    "hafi",
+    "ankita"
+   ],
+   "reviewTitle": "What our shoulder patients say",
+   "faqTitle": "Shoulder pain questions, answered",
+   "faqs": [
+    {
+     "q": "Can you treat frozen shoulder?",
+     "a": "Yes. We help manage pain and gradually restore movement. Frozen shoulder can take months to settle, and we’ll guide you through each stage."
+    },
+    {
+     "q": "Do I need a scan for shoulder pain?",
+     "a": "Most shoulder problems can be diagnosed with a hands-on assessment. Where a scan would help, we offer in-clinic diagnostic ultrasound."
+    },
+    {
+     "q": "Should I keep going to the gym?",
+     "a": "Usually yes, with some changes. We’ll show you how to adapt your training so you can stay active while it recovers."
+    },
+    {
+     "q": "How long does a rotator cuff problem take to heal?",
+     "a": "Many improve within 6–12 weeks with the right exercises, though longer-standing problems can take more time."
+    }
+   ],
+   "related": [
+    "neck",
+    "tendon",
+    "sports",
+    "back"
+   ],
+   "ctaTitle": "Book shoulder pain treatment in Sutton Coldfield"
+  },
+  "hip": {
+   "name": "Hip Pain",
+   "lower": "hip pain",
+   "hero": "f6073e613c34ae90498dc6bc56d9e47f",
+   "heroPos": "50% 50%",
+   "h1": "Hip Pain Treatment in Sutton Coldfield & Birmingham",
+   "lead": "Expert care for hip, groin and buttock pain — whether you’re a runner, a desk worker or simply want to walk comfortably again.",
+   "introTitle": "Expert hip pain treatment in Birmingham",
+   "intro": [
+    "Hip pain can show up in the groin, the side of the hip, the buttock or even the knee. Our osteopaths in Sutton Coldfield and Lichfield help people across Birmingham work out exactly where it’s coming from and what to do about it.",
+    "We treat hip pain in runners and gym-goers, people who sit for long hours, and older adults with stiff, achy hips — combining hands-on treatment with strengthening and practical advice."
+   ],
+   "introImg": "c1b26d1d09b98e10ca67e53b603b1499",
+   "introAlt": "Hip mobilisation at Exhale Osteopathy",
+   "symTitle": "Common hip symptoms",
+   "symptoms": [
+    "Pain on the outside of the hip, worse lying on that side",
+    "Groin pain when walking, running or getting out of a car",
+    "Stiffness putting on socks and shoes",
+    "Pain in the buttock that may spread down the leg",
+    "Clicking or catching in the hip"
+   ],
+   "causeTitle": "Common causes of hip pain",
+   "causes": [
+    {
+     "t": "Gluteal tendinopathy",
+     "d": "Irritated tendons on the outside of the hip."
+    },
+    {
+     "t": "Hip osteoarthritis",
+     "d": "Wear-and-tear changes that cause stiffness and ache."
+    },
+    {
+     "t": "Muscle strains",
+     "d": "Hip flexors, groin and hamstrings."
+    },
+    {
+     "t": "Referred pain",
+     "d": "From the lower back or pelvis."
+    },
+    {
+     "t": "Long periods of sitting",
+     "d": "Tight hip flexors and weak glutes."
+    }
+   ],
+   "helpTitle": "How we treat hip pain",
+   "helpLead": "Treatment focused on movement, strength and getting you back to the things you enjoy.",
+   "treats": [
+    [
+     "osteo",
+     "Hands-on treatment for the hip, pelvis and lower back."
+    ],
+    [
+     "physio",
+     "Targeted strengthening for the glutes and hip muscles."
+    ],
+    [
+     "shock",
+     "For stubborn tendon pain on the outside of the hip."
+    ]
+   ],
+   "tips": [
+    "Avoid crossing your legs or sitting on very low chairs.",
+    "Sleep with a pillow between your knees.",
+    "Keep walking — but on flatter routes while it settles.",
+    "Build up activity gradually rather than all at once."
+   ],
+   "redFlags": [
+    "Unable to put weight on your leg after a fall",
+    "A hot, swollen hip with fever or feeling unwell",
+    "Sudden severe hip pain with no obvious cause",
+    "A leg that looks shortened or turned outwards after a fall"
+   ],
+   "gpNote": "See your GP if night pain is severe and constant or you have unexplained weight loss.",
+   "team": [
+    "hafi",
+    "freta",
+    "emre"
+   ],
+   "reviewTitle": "What our hip pain patients say",
+   "faqTitle": "Hip pain questions, answered",
+   "faqs": [
+    {
+     "q": "Can an osteopath help hip arthritis?",
+     "a": "Yes. While we can’t reverse arthritis, treatment and exercise can reduce pain, ease stiffness and keep you moving."
+    },
+    {
+     "q": "Why does my hip hurt at night?",
+     "a": "Pain on the outside of the hip at night is often linked to irritated gluteal tendons. Small changes to sleeping position can help a lot."
+    },
+    {
+     "q": "Could my hip pain be coming from my back?",
+     "a": "Yes, the lower back and pelvis often refer pain to the hip. Our assessment checks all of these areas."
+    },
+    {
+     "q": "Can I keep running with hip pain?",
+     "a": "Often yes, with adjustments. We’ll help you manage your training while you recover."
+    }
+   ],
+   "related": [
+    "back",
+    "knee",
+    "sciatica",
+    "sports"
+   ],
+   "ctaTitle": "Book hip pain treatment in Sutton Coldfield"
+  },
+  "knee": {
+   "name": "Knee Pain",
+   "lower": "knee pain",
+   "hero": "6b8d864e1d7c783728b37122053efd97",
+   "heroPos": "50% 40%",
+   "h1": "Knee Pain Treatment in Sutton Coldfield & Birmingham",
+   "lead": "Expert assessment and rehab for knee pain — from runner’s knee and sports injuries to stiff, arthritic knees.",
+   "introTitle": "Expert knee pain treatment in Birmingham",
+   "intro": [
+    "Knee pain can stop you running, climbing stairs or kneeling down. At Exhale Osteopathy our osteopaths and physiotherapist help people across Birmingham, Sutton Coldfield and Lichfield understand what’s causing their knee pain and build a plan to fix it.",
+    "Because the knee sits between the hip and the foot, we look at how your whole leg moves — then combine hands-on treatment with strengthening that gets you back to the activities you love."
+   ],
+   "introImg": "c1b26d1d09b98e10ca67e53b603b1499",
+   "introAlt": "Knee and hip assessment at Exhale Osteopathy",
+   "symTitle": "Common knee symptoms",
+   "symptoms": [
+    "Pain around or behind the kneecap",
+    "Pain on stairs, squatting or kneeling",
+    "Swelling or stiffness after activity",
+    "A feeling of the knee giving way",
+    "Pain on the inside or outside of the knee"
+   ],
+   "causeTitle": "Common causes of knee pain",
+   "causes": [
+    {
+     "t": "Patellofemoral pain",
+     "d": "Often called runner’s knee."
+    },
+    {
+     "t": "Ligament sprains",
+     "d": "From twisting or contact injuries."
+    },
+    {
+     "t": "Meniscus irritation",
+     "d": "Cartilage problems that can cause catching or swelling."
+    },
+    {
+     "t": "Patellar tendinopathy",
+     "d": "Jumper’s knee from repeated loading."
+    },
+    {
+     "t": "Osteoarthritis",
+     "d": "Stiffness and ache with age-related changes."
+    }
+   ],
+   "helpTitle": "How we treat knee pain",
+   "helpLead": "Strength is usually the key — supported by hands-on care.",
+   "treats": [
+    [
+     "physio",
+     "Progressive strengthening for the quads, hips and calves."
+    ],
+    [
+     "osteo",
+     "Hands-on treatment for the knee, hip and ankle."
+    ],
+    [
+     "rehab",
+     "One-to-one rehab and Pilates to rebuild control and confidence."
+    ]
+   ],
+   "tips": [
+    "Reduce, don’t stop — keep active within a comfortable level.",
+    "Swap running for cycling or swimming for a few weeks.",
+    "Ice can help settle swelling after activity.",
+    "Avoid deep squats and kneeling while it’s sore."
+   ],
+   "redFlags": [
+    "Unable to put weight on your leg after an injury",
+    "A knee that is locked and won’t straighten",
+    "A hot, red, swollen knee with fever",
+    "Calf pain and swelling, especially after travel or surgery"
+   ],
+   "gpNote": "See your GP if swelling keeps coming back without an obvious cause.",
+   "team": [
+    "emre",
+    "hafi",
+    "ankita"
+   ],
+   "reviewTitle": "What our knee pain patients say",
+   "faqTitle": "Knee pain questions, answered",
+   "faqs": [
+    {
+     "q": "Can an osteopath treat knee pain?",
+     "a": "Yes. Osteopaths and physiotherapists both treat knee pain, often with hands-on treatment combined with strengthening exercises."
+    },
+    {
+     "q": "Do I need a scan for my knee?",
+     "a": "Often not. A thorough assessment is usually enough. If a scan would help, we can arrange in-clinic ultrasound or refer you on."
+    },
+    {
+     "q": "Can I keep exercising?",
+     "a": "In most cases, yes. We’ll show you how to modify training so you stay active while it recovers."
+    },
+    {
+     "q": "Do you help after knee surgery?",
+     "a": "Yes. Our physiotherapist supports rehab after ligament repairs and knee replacements, following your surgeon’s guidance."
+    }
+   ],
+   "related": [
+    "sports",
+    "hip",
+    "foot",
+    "tendon"
+   ],
+   "ctaTitle": "Book knee pain treatment in Sutton Coldfield"
+  },
+  "foot": {
+   "name": "Foot & Ankle Pain",
+   "lower": "foot and ankle pain",
+   "hero": "2e1bb7b61346f73aeb15327806251b5c",
+   "heroPos": "45% 45%",
+   "h1": "Foot & Ankle Pain Treatment in Sutton Coldfield & Birmingham",
+   "lead": "Treatment for ankle sprains, heel pain, plantar fasciitis and Achilles problems — so you can walk, run and train without pain.",
+   "introTitle": "Expert foot and ankle treatment in Birmingham",
+   "intro": [
+    "Your feet and ankles take your full body weight with every step, so when they hurt, everything is harder. Our team in Sutton Coldfield treats foot and ankle pain for walkers, runners and footballers across Birmingham and Lichfield.",
+    "From a rolled ankle that never quite recovered to heel pain that’s worst first thing in the morning, we’ll find the cause and use hands-on treatment, rehab and — where it helps — shockwave therapy to get you back on your feet."
+   ],
+   "introImg": "e3c5507862e3a9dd88ee2409581c125d",
+   "introAlt": "Ankle assessment at Exhale Osteopathy, Sutton Coldfield",
+   "symTitle": "Common foot and ankle symptoms",
+   "symptoms": [
+    "Heel pain, especially with your first steps in the morning",
+    "Pain and stiffness at the back of the ankle",
+    "An ankle that keeps rolling or feels unstable",
+    "Swelling after walking or sport",
+    "Pain in the ball of the foot"
+   ],
+   "causeTitle": "Common causes",
+   "causes": [
+    {
+     "t": "Plantar fasciitis",
+     "d": "Irritation of the tissue under the foot."
+    },
+    {
+     "t": "Ankle sprains",
+     "d": "Ligament injuries from rolling the ankle."
+    },
+    {
+     "t": "Achilles tendinopathy",
+     "d": "Pain and stiffness in the Achilles tendon."
+    },
+    {
+     "t": "Footwear & training changes",
+     "d": "New shoes or a sudden jump in mileage."
+    },
+    {
+     "t": "Stiffness after old injuries",
+     "d": "Ankles that never fully regained movement."
+    }
+   ],
+   "helpTitle": "How we treat foot and ankle pain",
+   "helpLead": "Loading the right tissues in the right way is usually the key to recovery.",
+   "treats": [
+    [
+     "physio",
+     "Strength and balance rehab to rebuild a stable, resilient ankle."
+    ],
+    [
+     "shock",
+     "An evidence-based option for stubborn heel and Achilles pain."
+    ],
+    [
+     "osteo",
+     "Hands-on treatment for the foot, ankle, knee and hip."
+    ]
+   ],
+   "tips": [
+    "Wear supportive shoes and avoid going barefoot on hard floors.",
+    "Roll your foot over a cold bottle for heel pain.",
+    "Do gentle calf stretches or raises little and often.",
+    "Reduce running mileage rather than stopping completely."
+   ],
+   "redFlags": [
+    "Unable to put any weight on your foot after an injury",
+    "An obvious deformity or bone sticking out",
+    "Calf pain, swelling and redness — especially after travel",
+    "A wound, colour change or loss of feeling in the foot if you have diabetes"
+   ],
+   "gpNote": "See your GP if you hear a “snap” at the back of the ankle — this could be an Achilles rupture and needs urgent assessment.",
+   "team": [
+    "emre",
+    "hafi",
+    "freta"
+   ],
+   "reviewTitle": "What our foot and ankle patients say",
+   "faqTitle": "Foot and ankle questions, answered",
+   "faqs": [
+    {
+     "q": "Can you treat plantar fasciitis?",
+     "a": "Yes. Plantar fasciitis usually responds well to a combination of loading exercises, footwear advice and, for stubborn cases, shockwave therapy."
+    },
+    {
+     "q": "My ankle sprain never fully recovered — can you help?",
+     "a": "Yes. Ongoing pain or instability after a sprain is common, and targeted strength and balance rehab can make a big difference."
+    },
+    {
+     "q": "Do I need insoles?",
+     "a": "Not always. We’ll assess your feet and only suggest insoles if we think they’ll help."
+    },
+    {
+     "q": "How quickly can I get back to running?",
+     "a": "It depends on the injury. We’ll give you clear milestones so you know when it’s safe to build back up."
+    }
+   ],
+   "related": [
+    "tendon",
+    "knee",
+    "sports",
+    "hip"
+   ],
+   "ctaTitle": "Book foot and ankle treatment in Sutton Coldfield"
+  },
+  "headaches": {
+   "name": "Headaches & Migraines",
+   "lower": "headaches",
+   "hero": "f8e9145ba19cb163a759ff111c5ad1b2",
+   "heroPos": "50% 35%",
+   "h1": "Headache & Migraine Treatment in Sutton Coldfield & Birmingham",
+   "lead": "Help for tension headaches and neck-related headaches, and support alongside your GP for migraines.",
+   "introTitle": "Help for headaches in Birmingham",
+   "intro": [
+    "Many headaches are linked to tension in the neck, shoulders and jaw — especially if you spend long hours at a desk or carry stress in your upper body. Our osteopaths in Sutton Coldfield help people across Birmingham reduce how often headaches happen and how intense they feel.",
+    "We assess your neck, upper back and jaw, then use gentle hands-on treatment, acupuncture where appropriate, and practical advice on posture, screen set-up and sleep. If you have migraines, we work alongside your GP’s care rather than replacing it."
+   ],
+   "introImg": "3e3292b3448a80b063b85bf775c63745",
+   "introAlt": "Neck and upper back treatment for headaches at Exhale Osteopathy",
+   "symTitle": "Headaches we commonly help with",
+   "symptoms": [
+    "A band-like tightness around the head",
+    "Headaches starting at the base of the skull",
+    "Headaches that get worse through the working day",
+    "Pain behind the eyes with neck and shoulder tension",
+    "Headaches linked to jaw clenching or teeth grinding"
+   ],
+   "causeTitle": "Common triggers",
+   "causes": [
+    {
+     "t": "Neck & shoulder tension",
+     "d": "Often from desk work and screens."
+    },
+    {
+     "t": "Stress",
+     "d": "Tight muscles and poor sleep."
+    },
+    {
+     "t": "Jaw clenching",
+     "d": "Tension through the jaw and temples."
+    },
+    {
+     "t": "Dehydration & skipped meals",
+     "d": "Common, easily overlooked triggers."
+    },
+    {
+     "t": "Migraine triggers",
+     "d": "Hormones, sleep changes, certain foods."
+    }
+   ],
+   "helpTitle": "How we help with headaches",
+   "helpLead": "Easing tension in the neck, shoulders and jaw and helping you avoid triggers.",
+   "treats": [
+    [
+     "osteo",
+     "Gentle treatment of the neck, upper back and jaw to ease tension."
+    ],
+    [
+     "acu",
+     "NICE recommends acupuncture as an option to help prevent migraines and tension-type headaches."
+    ],
+    [
+     "cranial",
+     "A very gentle approach for people who prefer light-touch treatment."
+    ]
+   ],
+   "tips": [
+    "Keep a headache diary to spot your triggers.",
+    "Drink water regularly and don’t skip meals.",
+    "Take regular screen breaks and check your desk set-up.",
+    "Use heat on tight neck and shoulder muscles."
+   ],
+   "redFlags": [
+    "A sudden, severe “worst ever” headache",
+    "Headache with fever, stiff neck or a rash",
+    "Headache after a head injury",
+    "Headache with weakness, slurred speech, confusion or vision loss"
+   ],
+   "gpNote": "See your GP if headaches are new and getting worse, or if you’re over 50 and have a new type of headache.",
+   "team": [
+    "hafi",
+    "ankita",
+    "freta"
+   ],
+   "reviewTitle": "What our headache patients say",
+   "faqTitle": "Headache questions, answered",
+   "faqs": [
+    {
+     "q": "Can an osteopath help with headaches?",
+     "a": "Osteopathy can help tension-type and neck-related headaches by easing tension in the neck, shoulders and upper back."
+    },
+    {
+     "q": "Can you treat migraines?",
+     "a": "We don’t replace medical care for migraine, but acupuncture and treatment of neck tension can help some people reduce how often they happen."
+    },
+    {
+     "q": "Is acupuncture safe for headaches?",
+     "a": "When delivered by a trained practitioner using single-use needles, acupuncture is very safe. NICE recommends it as an option for some headache types."
+    },
+    {
+     "q": "How quickly will I notice a difference?",
+     "a": "Some people notice fewer headaches within a few sessions; for others it takes longer. We’ll review progress together."
+    }
+   ],
+   "related": [
+    "neck",
+    "jaw",
+    "shoulder",
+    "back"
+   ],
+   "ctaTitle": "Book headache treatment in Sutton Coldfield"
+  },
+  "sciatica": {
+   "name": "Sciatica",
+   "lower": "sciatica",
+   "hero": "fb7df5d3a8192ed39ce51bce920c19d8",
+   "heroPos": "50% 55%",
+   "h1": "Sciatica Treatment in Sutton Coldfield & Birmingham",
+   "lead": "Relief for leg pain, numbness and tingling caused by an irritated sciatic nerve — with a clear plan to help it settle.",
+   "introTitle": "Expert sciatica treatment in Birmingham",
+   "intro": [
+    "Sciatica is pain that travels from the lower back or buttock down the leg, sometimes with pins and needles or numbness. It can be intense, but most cases settle with the right care. Our osteopaths and physiotherapist in Sutton Coldfield help people across Birmingham and Lichfield manage sciatica and get back to normal life.",
+    "We’ll assess your back, pelvis and nerves carefully, explain what’s going on, and use gentle treatment, specific exercises and advice to reduce pressure on the nerve and calm symptoms down."
+   ],
+   "introImg": "ebc5540e0e4f70c2c0727439dc39383e",
+   "introAlt": "Lower back treatment for sciatica at Exhale Osteopathy",
+   "symTitle": "Common sciatica symptoms",
+   "symptoms": [
+    "Pain spreading from the buttock down the back of the leg",
+    "Burning, shooting or electric-shock pain",
+    "Pins and needles or numbness in the leg or foot",
+    "Pain worse when sitting, coughing or sneezing",
+    "Leg pain that is worse than back pain"
+   ],
+   "causeTitle": "What causes sciatica",
+   "causes": [
+    {
+     "t": "Disc bulge",
+     "d": "The most common cause — usually settles over time."
+    },
+    {
+     "t": "Spinal stenosis",
+     "d": "Narrowing around the nerves, more common with age."
+    },
+    {
+     "t": "Muscle tightness",
+     "d": "Including the piriformis in the buttock."
+    },
+    {
+     "t": "Pregnancy",
+     "d": "Changes in posture and load on the pelvis."
+    },
+    {
+     "t": "Long periods of sitting",
+     "d": "Can aggravate an irritated nerve."
+    }
+   ],
+   "helpTitle": "How we treat sciatica",
+   "helpLead": "Gentle, progressive care to calm the nerve and restore movement.",
+   "treats": [
+    [
+     "osteo",
+     "Gentle hands-on treatment to reduce stiffness and muscle guarding."
+    ],
+    [
+     "physio",
+     "Nerve mobility and strengthening exercises to support recovery."
+    ],
+    [
+     "acu",
+     "Can help reduce pain while the nerve settles."
+    ]
+   ],
+   "tips": [
+    "Keep moving gently — short walks often help.",
+    "Change position regularly rather than sitting for long periods.",
+    "Lie on your back with your knees bent over pillows for relief.",
+    "Speak to your pharmacist or GP about pain relief options."
+   ],
+   "redFlags": [
+    "Numbness or tingling around your genitals or bottom",
+    "Loss of bladder or bowel control, or difficulty peeing",
+    "Weakness or numbness in both legs, or legs that are getting weaker",
+    "Severe pain after a serious fall or accident"
+   ],
+   "gpNote": "See your GP if the leg pain is getting worse, your foot is weak or catching, or symptoms haven’t improved after a few weeks.",
+   "team": [
+    "hafi",
+    "freta",
+    "ankita",
+    "emre"
+   ],
+   "reviewTitle": "What our sciatica patients say",
+   "faqTitle": "Sciatica questions, answered",
+   "faqs": [
+    {
+     "q": "Can an osteopath help with sciatica?",
+     "a": "Yes. Osteopathy, exercise and advice can help ease sciatic pain and support recovery, alongside your GP where needed."
+    },
+    {
+     "q": "How long does sciatica last?",
+     "a": "Many cases improve within 4–6 weeks, though some take longer. We’ll help you manage symptoms and track progress."
+    },
+    {
+     "q": "Should I rest with sciatica?",
+     "a": "Short periods of rest can help in the first few days, but gentle movement usually speeds recovery."
+    },
+    {
+     "q": "Do I need a scan?",
+     "a": "Most people don’t. Scans are usually only needed if symptoms are severe, getting worse, or not improving."
+    }
+   ],
+   "related": [
+    "back",
+    "hip",
+    "sports",
+    "knee"
+   ],
+   "ctaTitle": "Book sciatica treatment in Sutton Coldfield"
+  },
+  "sports": {
+   "name": "Sports Injuries",
+   "lower": "sports injuries",
+   "hero": "e2ed325ec41f7e85ecf118011c01be7d",
+   "heroPos": "60% 50%",
+   "h1": "Sports Injury Clinic in Sutton Coldfield & Birmingham",
+   "lead": "Fast, expert assessment and rehab for strains, sprains and overuse injuries — so you can get back to training with confidence.",
+   "introTitle": "Expert sports injury treatment in Birmingham",
+   "intro": [
+    "Whether you run around Sutton Park, play Sunday league football or lift at the gym, injuries happen. Our sports injury team in Sutton Coldfield — osteopaths, a physiotherapist and sports massage therapists — helps athletes and active people across Birmingham recover quickly and safely.",
+    "We diagnose the problem, treat it hands-on, and give you a clear, staged return-to-sport plan so you know exactly when it’s safe to step things up — and how to stop it happening again."
+   ],
+   "introImg": "33d9918bd1f13c2db06cb07701f3f61f",
+   "introAlt": "Sports injury assessment at Exhale Osteopathy",
+   "symTitle": "Injuries we commonly treat",
+   "symptoms": [
+    "Hamstring, calf and groin strains",
+    "Ankle and knee sprains",
+    "Runner’s knee and shin splints",
+    "Tennis and golfer’s elbow",
+    "Shoulder pain from lifting or throwing"
+   ],
+   "causeTitle": "Why sports injuries happen",
+   "causes": [
+    {
+     "t": "Doing too much too soon",
+     "d": "Sudden jumps in training load."
+    },
+    {
+     "t": "Not enough recovery",
+     "d": "Poor sleep and back-to-back sessions."
+    },
+    {
+     "t": "Weakness or imbalance",
+     "d": "Muscles not ready for the demands of your sport."
+    },
+    {
+     "t": "Old injuries",
+     "d": "Not fully rehabilitated the first time."
+    },
+    {
+     "t": "Contact & accidents",
+     "d": "Tackles, falls and awkward landings."
+    }
+   ],
+   "helpTitle": "How we treat sports injuries",
+   "helpLead": "Treatment and rehab built around your sport and your goals.",
+   "treats": [
+    [
+     "physio",
+     "Staged rehab and return-to-sport planning."
+    ],
+    [
+     "massage",
+     "Sports massage to speed recovery and ease tight muscles."
+    ],
+    [
+     "shock",
+     "For stubborn tendon injuries that haven’t responded to rehab alone."
+    ]
+   ],
+   "tips": [
+    "For the first 48 hours, protect the area and avoid heavy loading.",
+    "Keep gently moving as pain allows.",
+    "Don’t return to full training until you can hop, jog and change direction pain-free.",
+    "Build training up by no more than about 10% a week."
+   ],
+   "redFlags": [
+    "A suspected broken bone or obvious deformity",
+    "Unable to put weight on your leg",
+    "A head injury with confusion, vomiting or drowsiness",
+    "Severe swelling with numbness or a cold, pale limb"
+   ],
+   "gpNote": "If you hear a pop and lose strength immediately — for example in the Achilles or knee — get assessed urgently.",
+   "team": [
+    "emre",
+    "hafi",
+    "zoe"
+   ],
+   "reviewTitle": "What our sporty patients say",
+   "faqTitle": "Sports injury questions, answered",
+   "faqs": [
+    {
+     "q": "Should I see an osteopath or a physio for a sports injury?",
+     "a": "Both can help. We’ll book you with the right clinician for your injury — and they work together where useful."
+    },
+    {
+     "q": "How soon can I be seen?",
+     "a": "We usually have appointments within the week, including evenings and Saturdays. Call 0121 751 2440 to check."
+    },
+    {
+     "q": "Can I keep training?",
+     "a": "Often yes, with changes. We’ll show you what you can safely keep doing while you recover."
+    },
+    {
+     "q": "Do you work with sports clubs?",
+     "a": "[Add any local clubs you work with or club discounts.]"
+    }
+   ],
+   "related": [
+    "knee",
+    "foot",
+    "tendon",
+    "shoulder"
+   ],
+   "ctaTitle": "Book a sports injury appointment in Sutton Coldfield"
+  },
+  "tendon": {
+   "name": "Tendon Problems",
+   "lower": "tendon problems",
+   "hero": "2e1bb7b61346f73aeb15327806251b5c",
+   "heroPos": "45% 45%",
+   "h1": "Tendon Pain Treatment in Sutton Coldfield & Birmingham",
+   "lead": "Expert treatment for Achilles, tennis elbow, patellar and shoulder tendon pain — including shockwave therapy for stubborn cases.",
+   "introTitle": "Expert tendinopathy treatment in Birmingham",
+   "intro": [
+    "Tendon problems — often called tendinopathy or tendonitis — can be slow and frustrating, especially if rest hasn’t helped. Our team in Sutton Coldfield helps people across Birmingham and Lichfield with long-standing tendon pain in the Achilles, knee, hip, elbow and shoulder.",
+    "Tendons usually recover best with the right kind of loading, not rest. We’ll design a progressive exercise plan and, where it helps, add shockwave or laser therapy to support stubborn cases."
+   ],
+   "introImg": "33d9918bd1f13c2db06cb07701f3f61f",
+   "introAlt": "Tendon assessment at Exhale Osteopathy",
+   "symTitle": "Common tendon problems",
+   "symptoms": [
+    "Achilles pain and morning stiffness",
+    "Tennis elbow or golfer’s elbow",
+    "Pain below the kneecap (jumper’s knee)",
+    "Pain on the outside of the hip",
+    "Shoulder pain lifting your arm"
+   ],
+   "causeTitle": "Why tendons become painful",
+   "causes": [
+    {
+     "t": "Sudden increase in load",
+     "d": "More running, lifting or repetitive work."
+    },
+    {
+     "t": "Not enough recovery",
+     "d": "Tendons adapt slowly."
+    },
+    {
+     "t": "Weakness",
+     "d": "Muscles that can’t support the load."
+    },
+    {
+     "t": "Age & hormones",
+     "d": "Tendons can become more sensitive with age and menopause."
+    },
+    {
+     "t": "Some medications",
+     "d": "Certain antibiotics and steroids — ask your GP."
+    }
+   ],
+   "helpTitle": "How we treat tendon pain",
+   "helpLead": "The right load at the right time — plus extra options for stubborn cases.",
+   "treats": [
+    [
+     "physio",
+     "Progressive tendon loading programmes tailored to you."
+    ],
+    [
+     "shock",
+     "Evidence-based shockwave therapy for long-standing tendon pain."
+    ],
+    [
+     "laser",
+     "Can be added to support pain relief alongside rehab."
+    ]
+   ],
+   "tips": [
+    "Don’t rest completely — reduce the activity that flares it.",
+    "Avoid stretching a painful tendon hard.",
+    "Slow, heavy strength exercises are often very helpful.",
+    "Be patient — tendons often take 3 months or more to improve."
+   ],
+   "redFlags": [
+    "A sudden pop or snap with immediate weakness",
+    "Unable to stand on tiptoe after an Achilles injury",
+    "A hot, red, swollen joint with fever",
+    "Sudden severe pain with no obvious cause"
+   ],
+   "gpNote": "See your GP if tendon pain started after taking certain antibiotics.",
+   "team": [
+    "emre",
+    "hafi",
+    "ankita"
+   ],
+   "reviewTitle": "What our tendon pain patients say",
+   "faqTitle": "Tendon pain questions, answered",
+   "faqs": [
+    {
+     "q": "What is the difference between tendonitis and tendinopathy?",
+     "a": "Tendinopathy is the more accurate term for most long-standing tendon pain, which usually isn’t caused by inflammation."
+    },
+    {
+     "q": "Does shockwave therapy work for tendons?",
+     "a": "There’s good evidence for shockwave in some stubborn tendon problems, such as plantar heel pain and tennis elbow. We’ll tell you honestly if it’s a good option."
+    },
+    {
+     "q": "Should I rest my tendon?",
+     "a": "Complete rest usually makes tendons weaker. The right exercises are normally the most important part of recovery."
+    },
+    {
+     "q": "How long does tendon pain take to get better?",
+     "a": "Often 6–12 weeks or more. Long-standing cases can take longer, but steady progress is the goal."
+    }
+   ],
+   "related": [
+    "foot",
+    "sports",
+    "shoulder",
+    "knee"
+   ],
+   "ctaTitle": "Book tendon pain treatment in Sutton Coldfield"
+  },
+  "jaw": {
+   "name": "TMJ / Jaw Pain",
+   "lower": "jaw pain",
+   "hero": "b8e8993321b736db53b1dd2295f42dad",
+   "heroPos": "50% 45%",
+   "h1": "Jaw Pain & TMJ Treatment in Sutton Coldfield & Birmingham",
+   "lead": "Gentle treatment for jaw pain, clicking and clenching — and the neck and head tension that often comes with it.",
+   "introTitle": "Expert TMJ and jaw pain treatment in Birmingham",
+   "intro": [
+    "Pain around the jaw joint (TMJ) can make eating, talking and yawning uncomfortable, and is often linked to clenching, grinding and tension in the neck. Our osteopaths in Sutton Coldfield help people across Birmingham ease jaw pain with gentle, hands-on treatment.",
+    "We look at your jaw, neck and posture together, use gentle techniques to release tight muscles, and give you simple exercises and habits to reduce strain. Where useful, we’ll work alongside your dentist."
+   ],
+   "introImg": "eb3a3518e6e4460583ce6625b34e0d82",
+   "introAlt": "Gentle neck and jaw treatment at Exhale Osteopathy",
+   "symTitle": "Common jaw symptoms",
+   "symptoms": [
+    "Pain in front of the ear or around the jaw",
+    "Clicking, popping or grinding when opening your mouth",
+    "Difficulty opening your mouth fully",
+    "Headaches or earache with no ear infection",
+    "Jaw ache in the morning from clenching"
+   ],
+   "causeTitle": "What causes jaw pain",
+   "causes": [
+    {
+     "t": "Clenching & grinding",
+     "d": "Often during sleep or stress."
+    },
+    {
+     "t": "Neck & posture",
+     "d": "Forward head posture can strain the jaw."
+    },
+    {
+     "t": "Stress",
+     "d": "Tension in the jaw, temples and neck."
+    },
+    {
+     "t": "Dental work",
+     "d": "Long appointments with the mouth wide open."
+    },
+    {
+     "t": "Chewing habits",
+     "d": "Gum, hard foods or chewing on one side."
+    }
+   ],
+   "helpTitle": "How we treat jaw pain",
+   "helpLead": "Gentle care for the jaw, neck and head together.",
+   "treats": [
+    [
+     "osteo",
+     "Gentle release of the jaw muscles, neck and upper back."
+    ],
+    [
+     "cranial",
+     "A light-touch approach that many jaw pain patients find relaxing."
+    ],
+    [
+     "acu",
+     "Fine needles to ease tight jaw and neck muscles."
+    ]
+   ],
+   "tips": [
+    "Rest your jaw — choose softer foods for a while.",
+    "Avoid chewing gum and very wide yawns.",
+    "Notice clenching during the day: lips together, teeth apart.",
+    "Use gentle warmth on the side of the face."
+   ],
+   "redFlags": [
+    "Jaw pain with chest pain or breathlessness",
+    "A locked jaw you can’t open or close",
+    "Swelling of the face with fever",
+    "Jaw pain after a significant injury to the face"
+   ],
+   "gpNote": "See your dentist or GP if you have tooth pain, swelling, or symptoms that aren’t improving.",
+   "team": [
+    "hafi",
+    "ankita",
+    "freta"
+   ],
+   "reviewTitle": "What our jaw pain patients say",
+   "faqTitle": "Jaw pain questions, answered",
+   "faqs": [
+    {
+     "q": "Can an osteopath help with TMJ pain?",
+     "a": "Yes. Osteopaths can help ease jaw pain by treating the jaw muscles, neck and posture, often alongside your dentist’s care."
+    },
+    {
+     "q": "Is treatment inside the mouth?",
+     "a": "Sometimes gentle techniques inside the mouth are useful. We’ll always explain and ask for your consent first, and it’s never essential."
+    },
+    {
+     "q": "Should I see a dentist instead?",
+     "a": "If you grind your teeth, a dentist can check for a night guard. We often work alongside dentists for the best results."
+    },
+    {
+     "q": "Can jaw problems cause headaches?",
+     "a": "Yes. Tension in the jaw muscles is a common cause of headaches around the temples."
+    }
+   ],
+   "related": [
+    "headaches",
+    "neck",
+    "shoulder",
+    "back"
+   ],
+   "ctaTitle": "Book jaw pain treatment in Sutton Coldfield"
+  }
+ },
+ "people": {
+  "hafi": {
+   "name": "Hafi Rahman",
+   "role": "Founder & Principal Osteopath",
+   "href": "Practitioner.dc.html",
+   "img": "f4513f27866f22682d9d1eafdcd00e9b"
+  },
+  "freta": {
+   "name": "Freta Teklensenbet",
+   "role": "Registered Osteopath",
+   "href": "Freta.dc.html",
+   "img": "2b3650271a3bcca5534fca4186d2400c"
+  },
+  "ankita": {
+   "name": "Ankita Desai",
+   "role": "Registered Osteopath",
+   "href": "Ankita.dc.html",
+   "img": "f8984ae774fa815b4d817f0fe0266bba"
+  },
+  "emre": {
+   "name": "Emre Tosun",
+   "role": "Physiotherapist & Personal Trainer",
+   "href": "Emre.dc.html",
+   "img": ""
+  },
+  "zoe": {
+   "name": "Zoe Goodwin",
+   "role": "Level 4 Sports Massage Therapist",
+   "href": "Zoe.dc.html",
+   "img": "a1aa92c86185fbf90aea1ad6a47c85a3"
+  }
+ },
+ "TH": {
+  "back": "bad5ffe8e3d651f608eed6b8395755e1",
+  "neck": "ecff3978d740e61ad991d87ac8ed9c80",
+  "sciatica": "b4cbb771eeb8f8ab5dc8dc2aea17df46",
+  "shoulder": "c525025c94afa6c27f465df87630f2d5",
+  "headaches": "a6111fcfc10ade3e8e1ab9feee68d0bd",
+  "hip": "336754bc2f4144cf175e16e96253b0c6",
+  "knee": "45650fb355363711c837123b9102097b",
+  "foot": "2ba8ade52a5466a109b0e50cb08b37f9",
+  "sports": "69eda695c26e3fcc7ef14bd02b658884",
+  "tendon": "2ba8ade52a5466a109b0e50cb08b37f9",
+  "jaw": "ecff3978d740e61ad991d87ac8ed9c80",
+  "joint": "6b36c7e66c35b11e6d4a167d6cd862ea",
+  "baby": "4abb3bc38e81b54f28716e660d7ac6bb"
+ },
+ "PAGE": {
+  "back": [
+   "Back Pain",
+   "Condition.dc.html"
+  ],
+  "neck": [
+   "Neck Pain",
+   "Neck-Pain.dc.html"
+  ],
+  "shoulder": [
+   "Shoulder Pain",
+   "Shoulder-Pain.dc.html"
+  ],
+  "hip": [
+   "Hip Pain",
+   "Hip-Pain.dc.html"
+  ],
+  "knee": [
+   "Knee Pain",
+   "Knee-Pain.dc.html"
+  ],
+  "foot": [
+   "Foot & Ankle Pain",
+   "Foot-Ankle-Pain.dc.html"
+  ],
+  "headaches": [
+   "Headaches & Migraines",
+   "Headaches.dc.html"
+  ],
+  "sciatica": [
+   "Sciatica",
+   "Sciatica.dc.html"
+  ],
+  "sports": [
+   "Sports Injuries",
+   "Sports-Injuries.dc.html"
+  ],
+  "tendon": [
+   "Tendon Problems",
+   "Tendon-Problems.dc.html"
+  ],
+  "jaw": [
+   "TMJ / Jaw Pain",
+   "Jaw-Pain.dc.html"
+  ]
+ },
+ "TREAT": {
+  "osteo": [
+   "Osteopathy",
+   "Service.dc.html"
+  ],
+  "physio": [
+   "Physiotherapy",
+   "Physiotherapy.dc.html"
+  ],
+  "massage": [
+   "Sports Massage",
+   "Massage.dc.html"
+  ],
+  "laser": [
+   "Laser Therapy",
+   "Laser.dc.html"
+  ],
+  "acu": [
+   "Acupuncture",
+   "Acupuncture.dc.html"
+  ],
+  "shock": [
+   "Shockwave Therapy",
+   "Shockwave.dc.html"
+  ],
+  "rehab": [
+   "1-to-1 Rehab / Pilates",
+   "Rehab.dc.html"
+  ],
+  "cranial": [
+   "Cranial Osteopathy",
+   "Cranial.dc.html"
+  ],
+  "us": [
+   "Diagnostic Ultrasound",
+   "Ultrasound.dc.html"
+  ],
+  "preg": [
+   "Pregnancy Osteopathy",
+   "Pregnancy.dc.html"
+  ]
+ },
+ "steps": [
+  {
+   "n": "01",
+   "t": "Your story",
+   "d": "We ask about your symptoms, health, work and activity — and what you want to get back to."
+  },
+  {
+   "n": "02",
+   "t": "Assessment",
+   "d": "We examine how you move and test the structures involved to find the cause."
+  },
+  {
+   "n": "03",
+   "t": "Diagnosis & plan",
+   "d": "We explain what’s going on in plain English and agree a plan with clear goals."
+  },
+  {
+   "n": "04",
+   "t": "First treatment",
+   "d": "Where appropriate we treat on the day, and send you home with simple things to do."
+  }
+ ],
+ "areas": [
+  "Sutton Coldfield",
+  "Streetly",
+  "Four Oaks",
+  "Boldmere",
+  "Walmley",
+  "Mere Green",
+  "Erdington",
+  "Kingstanding",
+  "Aldridge",
+  "Walsall",
+  "Lichfield",
+  "Birmingham"
+ ],
+ "factsSrc": "const ICON = {\n      user: 'M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM4 21a8 8 0 0 1 16 0',\n      check: 'M20 6L9 17l-5-5',\n      clock: 'M12 7v5l3 2M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0z',\n      pin: 'M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11zM12 12.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z'\n    };\n    const facts = [\n      { k: 'Seen by', v: 'Registered clinicians', icon: ICON.user },\n      { k: 'GP referral', v: 'Not needed', icon: ICON.check },\n      { k: 'Appointments', v: 'Evenings & Saturdays', icon: ICON.clock },\n      { k: 'Clinics', v: 'Sutton & Lichfield', icon: ICON.pin }\n    ];\n    "
+}

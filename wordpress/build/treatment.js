@@ -48,6 +48,7 @@
   }, EX.typo({ f: IT, s: 21, w: 400, ls: -0.01, lh: 1.35 }, 'title_typography')),
   faqs.map(f => C({ padding: all(0) }, [text('<p>' + esc(f.a) + '</p>', { t: { s: 16, lh: 1.75 } })])));
 
+  EX.tx = { grid, gridC, fr, gaps, h2, circle, faqAccordion, photoCard, esc, amp, CPAGE, PEOPLE, PAGE };
   EX.buildTreatment = async function (key, D) {
     const s = D.S[key], people = D.people, T = D.T;
     const [hx, hy] = s.heroPos.split(' ').map(v => parseFloat(v));
@@ -120,12 +121,12 @@
         C({ css_classes: 'ex-sticky', flex_gap: gap(18), html_tag: 'aside' }, [
           C({ html_tag: 'nav', background_background: 'classic', background_color: '#F5F2EA', border_radius: all(3), padding: dims(26, 24, 26, 24) }, [
             heading('On this page', { tag: 'span', color: '#4F5945', t: { f: IN, s: 12, w: 500, ls: 0.2, tt: 'uppercase', lh: 1.4 } }),
-            C({ margin: dims(14, 0, 0, 0) }, toc.map(([t, h], i) => heading('<a href="' + h + '">' + esc(t) + '</a>', { tag: 'p', t: { f: IN, s: 15, lh: 1.5 },
+            C({ margin: dims(14, 0, 0, 0) }, toc.map(([t, h], i) => heading('<a href="' + h + '">' + esc(t) + '</a>', { tag: 'p', t: { f: IN, s: 15, lh: 1.75 },
               x: Object.assign({ _css_classes: 'ex-toc-link', _padding: dims(9, 0, 9, 0) }, i < toc.length - 1 ? { _border_border: 'solid', _border_width: dims(0, 0, 1, 0), _border_color: '#B7AA99' } : {}) })))
           ]),
           C({ background_background: 'classic', background_color: '#272B26', border_radius: all(3), padding: dims(26, 24, 26, 24) }, [
             heading('Book ' + esc(s.name), { tag: 'span', color: '#F5F2EA', t: { s: 22, ls: -0.015, lh: 1.25 } }),
-            heading('Sutton Coldfield &amp; Lichfield · No GP referral', { tag: 'span', color: 'rgba(245,242,234,0.88)', t: { f: IN, s: 14, lh: 1.5 }, x: { _margin: dims(6, 0, 0, 0) } }),
+            heading('Sutton Coldfield &amp; Lichfield · No GP referral', { tag: 'span', color: 'rgba(245,242,234,0.88)', t: { f: IN, s: 14, lh: 1.75 }, x: { _margin: dims(6, 0, 0, 0) } }),
             button('Book online', L.book, { kind: 'olive', h: 48, fs: 15, x: { align: 'justify', _margin: dims(18, 0, 0, 0) } }),
             button('0121 751 2440', 'tel:+441217512440', { kind: 'outline-light', bd: 'rgba(245,242,234,0.35)', h: 48, fs: 15, x: { align: 'justify', _margin: dims(10, 0, 0, 0) } })
           ])
@@ -190,9 +191,9 @@
             : C({ css_classes: 'ex-ratio-box', background_background: 'classic', background_color: '#E6E0D5', border_radius: all(3), flex_justify_content: 'flex-end', padding: all(14) },
               [heading('[Headshot]', { tag: 'span', color: 'rgba(39,43,38,0.76)', t: { f: IN, s: 12, lh: 1.4 } })]),
           heading(esc(p.name), { tag: 'h3', t: { s: 22, ls: -0.015, lh: 1.3 }, x: { _margin: dims(16, 0, 0, 0) } }),
-          heading(esc(p.role), { tag: 'span', color: 'rgba(39,43,38,0.76)', t: { f: IN, s: 14, lh: 1.6 } }),
+          heading(esc(p.role), { tag: 'span', color: 'rgba(39,43,38,0.76)', t: { f: IN, s: 14, lh: 1.75 } }),
           text('<p>' + esc(p.bio) + '</p>', { color: 'rgba(39,43,38,0.84)', t: { s: 15, lh: 1.6 }, x: { _margin: dims(10, 0, 0, 0) } }),
-          heading('View Profile →', { tag: 'span', color: '#4F5945', t: { f: IN, s: 14, w: 500, lh: 1.6 }, x: { _margin: dims(10, 0, 0, 0) } })
+          heading('View Profile →', { tag: 'span', color: '#4F5945', t: { f: IN, s: 14, w: 500, lh: 1.75 }, x: { _margin: dims(10, 0, 0, 0) } })
         ]);
       }))
     ]));
@@ -213,7 +214,7 @@
         C({ padding: all(30), flex_gap: gap(14), background_background: 'classic', background_color: '#F5F2EA', border_radius: all(3) }, [
           stars(),
           text("<p>“[Paste a real Google review that mentions " + esc(s.short) + " — in the patient's own words.]”</p>", { t: { s: 16, lh: 1.7 }, x: { _flex_size: 'grow' } }),
-          heading('[Patient name]', { tag: 'span', t: { f: IN, s: 14, w: 600, lh: 1.4 } })
+          heading('[Patient name]', { tag: 'span', t: { f: IN, s: 14, w: 600, lh: 1.75 } })
         ])))
     ]));
 
