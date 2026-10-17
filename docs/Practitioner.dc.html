@@ -1,0 +1,693 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Practitioner profile</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F5F2EA}
+a{color:#4F5945;text-decoration:none}a:hover{color:#272B26}
+a:focus-visible,button:focus-visible{outline:2px solid #272B26;outline-offset:2px;box-shadow:0 0 0 4px #F5F2EA}a[style*="background: #4F5945"]:hover,button[style*="background: #4F5945"]:hover{background:#272B26!important}a[style*="background: #F5F2EA; color: #272B26"]:hover{background:#E6E0D5!important}a[style*="border: 1px solid rgba(245,242,234,0.9)"]:hover,a[style*="border: 1px solid rgba(245,242,234,0.35)"]:hover,a[style*="border: 1px solid rgba(245,242,234,0.3)"]:hover{background:rgba(245,242,234,0.14)!important}a[style*="border: 1px solid #B7AA99"]:hover{background:#E6E0D5!important;border-color:#4F5945!important}
+*{box-sizing:border-box}
+button{font-family:inherit}
+.pr-wrap{max-width:1340px;margin:0 auto;padding:0 30px}
+.pr-nav{display:flex}
+.pr-hero{grid-template-columns:minmax(0,1.15fr) minmax(0,1fr)}
+.pr-facts{grid-template-columns:repeat(4,minmax(0,1fr))}
+.pr-about{grid-template-columns:minmax(0,1.5fr) minmax(0,1fr)}
+.pr-mega{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+.pr-mega-col{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+.pr-int{grid-template-columns:repeat(4,minmax(0,1fr))}
+.pr-cred{grid-template-columns:repeat(4,minmax(0,1fr))}
+.pr-split{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+.pr-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.pr-team{grid-template-columns:repeat(4,minmax(0,1fr))}
+.pr-book{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+.pr-foot{grid-template-columns:minmax(0,1.3fr) repeat(3,minmax(0,1fr))}
+.pr-side{position:sticky;top:24px}
+@media (max-width:1100px){.pr-int,.pr-cred,.pr-team{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
+@media (max-width:980px){
+.pr-nav{display:none}
+.pr-hero,.pr-about,.pr-mega,.pr-split,.pr-book{grid-template-columns:minmax(0,1fr)!important}
+.pr-facts,.pr-3,.pr-foot{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+.pr-side{position:static}
+.pr-h1{font-size:46px!important}
+.pr-h2{font-size:32px!important}
+}
+@media (max-width:560px){
+.pr-wrap{padding:0 16px}
+.pr-facts,.pr-3,.pr-foot,.pr-int,.pr-cred,.pr-team,.pr-mega-col{grid-template-columns:minmax(0,1fr)!important}
+}
+.mm-btn{display:none}@media (max-width:1180px){nav[aria-label="Main"]{display:none!important}.mm-btn{display:inline-flex!important}}nav[aria-label="Main"] a,nav[aria-label="Main"] button,.mm-book{white-space:nowrap}@media (max-width:980px){.g-cards,.sv-cards{display:flex!important;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px!important;margin-right:-30px;padding-right:30px;scrollbar-width:none}.g-cards>*,.sv-cards>*{flex:0 0 46%;scroll-snap-align:start}button[aria-label^="Previous"],button[aria-label^="Next"]{display:none!important}}@media (max-width:980px){.mm-btn{display:inline-flex!important}.mm-book{height:46px!important;padding:0 18px!important;font-size:15px!important}}@media (max-width:380px){.mm-book{display:none!important}}@media (max-width:980px){[style*="left: -32px"],[style*="left: -36px"]{left:16px!important}#book[style*="height:"]{height:auto!important}}@media (max-width:560px){h1{font-size:36px!important;line-height:1.08!important}h2[class*="h2"]{font-size:28px!important;line-height:1.15!important}section[style*="padding: 100px 0"],section[style*="padding: 96px 0"],section[style*="padding: 104px 0"],section[style*="padding: 110px 0"]{padding-top:64px!important;padding-bottom:64px!important}a[style*="min-width: 2"],a[style*="min-width: 3"]{min-width:0!important;width:100%!important}.g-cards>*,.sv-cards>*{flex:0 0 80%!important}.sv-team,.cd-team,.ab-team,.bh-team,.pr-ppl{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:16px!important}[role="tablist"] button{padding:14px 12px!important;letter-spacing:0.08em!important}}
+</style>
+</helmet>
+<div style="font-family: Inter, ui-sans-serif, system-ui, sans-serif; color: rgba(39,43,38,0.84); font-size: 16px; line-height: 1.75; background: #F5F2EA; width: 100%">
+
+<section style="background: #272B26; position: relative; color: #F5F2EA">
+<header onMouseLeave="{{ closeMenu }}" style="position: relative; z-index: 5; border-bottom: 1px solid rgba(245,242,234,0.1)">
+<div class="pr-wrap" style="height: 96px; display: flex; align-items: center; justify-content: space-between; gap: 24px">
+<a href="Main.dc.html" aria-label="Exhale Osteopathy home" style="display: flex; flex-direction: column; align-items: center; line-height: 1; color: #F5F2EA">
+<span style="font-family: 'Inter Tight', sans-serif; font-size: 34px; font-weight: 400; letter-spacing: -0.045em; color: #F5F2EA">exhale</span>
+<span style="font-size: 10px; font-weight: 500; letter-spacing: 0.42em; text-transform: uppercase; color: #F5F2EA; margin-top: 6px; padding-left: 0.42em">Osteopathy</span>
+</a>
+<nav class="pr-nav" aria-label="Main" style="align-items: center; gap: 6px; font-size: 16px; font-weight: 500">
+<a href="About.dc.html" style="padding: 12px; color: #F5F2EA">About</a>
+<button onClick="{{ toggleMenu }}" onMouseEnter="{{ openMenu }}" aria-expanded="{{ menuOpenStr }}" style="padding: 12px; color: #F5F2EA; background: transparent; border: 0; font-size: 16px; font-weight: 500; cursor: pointer; display: inline-flex; align-items: center; gap: 6px">Treatments <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" style="{{ chevronStyle }}"><path d="M6 9l6 6 6-6"></path></svg></button>
+<button onClick="{{ toggleCond }}" onMouseEnter="{{ openCond }}" aria-expanded="{{ condOpenStr }}" style="padding: 12px; color: #F5F2EA; background: transparent; border: 0; font-size: 16px; font-weight: 500; cursor: pointer; display: inline-flex; align-items: center; gap: 6px">What We Treat <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" style="{{ condChevron }}"><path d="M6 9l6 6 6-6"></path></svg></button>
+<a href="#team" style="padding: 12px; color: #F5F2EA">Our Team</a>
+<a href="Blog.dc.html" style="padding: 12px; color: #F5F2EA">Blog</a>
+<a href="Pricing.dc.html" style="padding: 12px; color: #F5F2EA">Pricing</a>
+<a href="Contact.dc.html" style="padding: 12px; color: #F5F2EA">Contact</a>
+</nav>
+<div style="display: flex; align-items: center; gap: 10px"><a href="#book" class="mm-book" style="background: #4F5945; color: #F5F2EA; font-size: 16px; font-weight: 500; height: 52px; padding: 0 30px; display: inline-flex; align-items: center; border-radius: 3px">Book Now</a><button class="mm-btn" onClick="{{ openMob }}" aria-label="Open menu" aria-expanded="{{ mobOpenStr }}" style="width: 48px; height: 48px; border: 1px solid rgba(245,242,234,0.5); background: transparent; border-radius: 3px; color: #F5F2EA; align-items: center; justify-content: center; cursor: pointer"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></button></div>
+</div>
+<sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
+<div class="pr-wrap" style="position: absolute; left: 0; right: 0; top: 92px">
+<div style="background: #F5F2EA; color: #272B26; padding: 34px 28px 30px; box-shadow: 0 24px 60px rgba(39,43,38,0.25)">
+<div class="pr-mega" style="display: grid; gap: 40px">
+<sc-for list="{{ menuCols }}" as="col" hint-placeholder-count="2">
+<div>
+<div style="display: flex; align-items: center; gap: 14px; padding-bottom: 14px; border-bottom: 1px solid #B7AA99">
+<span aria-hidden="true" style="width: 11px; height: 11px; background: #7B826C; display: inline-block"></span>
+<span style="font-size: 13px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: #4F5945">{{ col.title }}</span>
+</div>
+<div class="pr-mega-col" style="display: grid; gap: 8px 24px; margin-top: 18px">
+<sc-for list="{{ col.items }}" as="it" hint-placeholder-count="5">
+<a href="{{ it.href }}" style="display: flex; align-items: center; gap: 14px; padding: 6px 0; color: #272B26; font-size: 17px; font-weight: 500">
+<sc-if value="{{ it.img }}" hint-placeholder-val="{{ true }}"><img src="{{ it.img }}" alt="" style="width: 48px; height: 48px; flex-shrink: 0; object-fit: cover; border-radius: 3px; display: block"></sc-if>
+<sc-if value="{{ it.noImg }}" hint-placeholder-val="{{ false }}"><span aria-hidden="true" style="width: 48px; height: 48px; flex-shrink: 0; background: #E6E0D5; border-radius: 3px"></span></sc-if>
+<span>{{ it.name }}</span>
+</a>
+</sc-for>
+</div>
+</div>
+</sc-for>
+</div>
+</div>
+</div>
+</sc-if>
+<sc-if value="{{ condOpen }}" hint-placeholder-val="{{ false }}">
+<div class="pr-wrap" style="position: absolute; left: 0; right: 0; top: 92px">
+<div style="background: #F5F2EA; color: #272B26; padding: 34px 28px 30px; box-shadow: 0 24px 60px rgba(39,43,38,0.25)">
+<div class="pr-mega" style="display: grid; gap: 40px">
+<sc-for list="{{ condCols }}" as="col" hint-placeholder-count="2">
+<div>
+<div style="display: flex; align-items: center; gap: 14px; padding-bottom: 14px; border-bottom: 1px solid #B7AA99">
+<span aria-hidden="true" style="width: 11px; height: 11px; background: #7B826C; display: inline-block"></span>
+<span style="font-size: 13px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: #4F5945">{{ col.title }}</span>
+</div>
+<div class="pr-mega-col" style="display: grid; gap: 8px 24px; margin-top: 18px">
+<sc-for list="{{ col.items }}" as="it" hint-placeholder-count="5">
+<a href="{{ it.href }}" style="display: flex; align-items: center; gap: 14px; padding: 6px 0; color: #272B26; font-size: 17px; font-weight: 500">
+<sc-if value="{{ it.img }}" hint-placeholder-val="{{ true }}"><img src="{{ it.img }}" alt="" style="width: 48px; height: 48px; flex-shrink: 0; object-fit: cover; border-radius: 3px; display: block"></sc-if>
+<sc-if value="{{ it.noImg }}" hint-placeholder-val="{{ false }}"><span aria-hidden="true" style="width: 48px; height: 48px; flex-shrink: 0; background: #E6E0D5; border-radius: 3px"></span></sc-if>
+<span>{{ it.name }}</span>
+</a>
+</sc-for>
+</div>
+</div>
+</sc-for>
+</div>
+<div style="margin-top: 22px; padding-top: 18px; border-top: 1px solid #B7AA99; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px; font-size: 15px; color: #272B26">
+<span>Not sure what you need? Call <a href="tel:+441217512440" style="color: #4F5945; font-weight: 500; text-decoration: underline; text-underline-offset: 3px">0121 751 2440</a> and we’ll point you to the right person.</span>
+<a href="Birmingham.dc.html" style="color: #4F5945; font-weight: 500">Visiting from Birmingham? →</a>
+</div>
+</div>
+</div>
+</sc-if>
+<sc-if value="{{ mobOpen }}" hint-placeholder-val="{{ false }}">
+<div role="dialog" aria-modal="true" aria-label="Menu" style="position: fixed; inset: 0; z-index: 60; background: #F5F2EA; color: #272B26; overflow-y: auto; display: flex; flex-direction: column">
+<div style="height: 80px; padding: 0 16px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #B7AA99; flex-shrink: 0">
+<a href="Main.dc.html" aria-label="Exhale Osteopathy home" style="display: flex; flex-direction: column; align-items: center; line-height: 1; color: #272B26">
+<span style="font-family: 'Inter Tight', sans-serif; font-size: 30px; font-weight: 400; letter-spacing: -0.045em; color: #272B26">exhale</span>
+<span style="font-size: 9px; font-weight: 500; letter-spacing: 0.42em; text-transform: uppercase; color: #272B26; margin-top: 5px; padding-left: 0.42em">Osteopathy</span>
+</a>
+<button onClick="{{ closeMob }}" aria-label="Close menu" style="width: 48px; height: 48px; border: 1px solid #B7AA99; background: transparent; border-radius: 3px; color: #272B26; display: inline-flex; align-items: center; justify-content: center; cursor: pointer"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></button>
+</div>
+<nav aria-label="Mobile" style="padding: 4px 16px 24px; max-width: 900px; width: 100%; margin: 0 auto">
+<button onClick="{{ mobTreat }}" aria-expanded="{{ mobTreatStr }}" style="width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 18px 0; border: 0; border-bottom: 1px solid #B7AA99; background: transparent; font-family: 'Inter Tight', sans-serif; font-size: 26px; letter-spacing: -0.02em; color: #272B26; cursor: pointer; text-align: left"><span>Treatments</span><span aria-hidden="true" style="{{ mobTreatIcon }}"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 5v14M5 12h14"></path></svg></span></button>
+<sc-if value="{{ mobTreatOpen }}" hint-placeholder-val="{{ false }}">
+<div style="padding: 4px 0 20px; border-bottom: 1px solid #B7AA99">
+<sc-for list="{{ menuCols }}" as="col" hint-placeholder-count="2">
+<div style="margin-top: 16px">
+<div style="display: flex; align-items: center; gap: 10px; font-size: 12px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: #4F5945"><span aria-hidden="true" style="width: 9px; height: 9px; background: #7B826C"></span>{{ col.title }}</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 2px 24px; margin-top: 8px">
+<sc-for list="{{ col.items }}" as="it" hint-placeholder-count="5">
+<a href="{{ it.href }}" style="display: flex; align-items: center; gap: 14px; padding: 8px 0; min-height: 52px; color: #272B26; font-size: 17px; font-weight: 500">
+<sc-if value="{{ it.img }}" hint-placeholder-val="{{ true }}"><img src="{{ it.img }}" alt="" style="width: 44px; height: 44px; flex-shrink: 0; object-fit: cover; border-radius: 3px; display: block"></sc-if>
+<sc-if value="{{ it.noImg }}" hint-placeholder-val="{{ false }}"><span aria-hidden="true" style="width: 44px; height: 44px; flex-shrink: 0; background: #E6E0D5; border-radius: 3px"></span></sc-if>
+<span>{{ it.name }}</span>
+</a>
+</sc-for>
+</div>
+</div>
+</sc-for>
+</div>
+</sc-if>
+<button onClick="{{ mobCond }}" aria-expanded="{{ mobCondStr }}" style="width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 18px 0; border: 0; border-bottom: 1px solid #B7AA99; background: transparent; font-family: 'Inter Tight', sans-serif; font-size: 26px; letter-spacing: -0.02em; color: #272B26; cursor: pointer; text-align: left"><span>What We Treat</span><span aria-hidden="true" style="{{ mobCondIcon }}"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 5v14M5 12h14"></path></svg></span></button>
+<sc-if value="{{ mobCondOpen }}" hint-placeholder-val="{{ false }}">
+<div style="padding: 4px 0 20px; border-bottom: 1px solid #B7AA99">
+<sc-for list="{{ condCols }}" as="col" hint-placeholder-count="2">
+<div style="margin-top: 16px">
+<div style="display: flex; align-items: center; gap: 10px; font-size: 12px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: #4F5945"><span aria-hidden="true" style="width: 9px; height: 9px; background: #7B826C"></span>{{ col.title }}</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 2px 24px; margin-top: 8px">
+<sc-for list="{{ col.items }}" as="it" hint-placeholder-count="5">
+<a href="{{ it.href }}" style="display: flex; align-items: center; gap: 14px; padding: 8px 0; min-height: 52px; color: #272B26; font-size: 17px; font-weight: 500">
+<sc-if value="{{ it.img }}" hint-placeholder-val="{{ true }}"><img src="{{ it.img }}" alt="" style="width: 44px; height: 44px; flex-shrink: 0; object-fit: cover; border-radius: 3px; display: block"></sc-if>
+<sc-if value="{{ it.noImg }}" hint-placeholder-val="{{ false }}"><span aria-hidden="true" style="width: 44px; height: 44px; flex-shrink: 0; background: #E6E0D5; border-radius: 3px"></span></sc-if>
+<span>{{ it.name }}</span>
+</a>
+</sc-for>
+</div>
+</div>
+</sc-for>
+</div>
+</sc-if>
+<a href="About.dc.html" style="width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 18px 0; border: 0; border-bottom: 1px solid #B7AA99; background: transparent; font-family: 'Inter Tight', sans-serif; font-size: 26px; letter-spacing: -0.02em; color: #272B26; cursor: pointer; text-align: left; text-decoration: none"><span>About</span><span aria-hidden="true" style="color: #4F5945; display: inline-flex"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 12h16M14 6l6 6-6 6"></path></svg></span></a>
+<a href="Practitioner.dc.html" style="width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 18px 0; border: 0; border-bottom: 1px solid #B7AA99; background: transparent; font-family: 'Inter Tight', sans-serif; font-size: 26px; letter-spacing: -0.02em; color: #272B26; cursor: pointer; text-align: left; text-decoration: none"><span>Our Team</span><span aria-hidden="true" style="color: #4F5945; display: inline-flex"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 12h16M14 6l6 6-6 6"></path></svg></span></a>
+<a href="Pricing.dc.html" style="width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 18px 0; border: 0; border-bottom: 1px solid #B7AA99; background: transparent; font-family: 'Inter Tight', sans-serif; font-size: 26px; letter-spacing: -0.02em; color: #272B26; cursor: pointer; text-align: left; text-decoration: none"><span>Pricing</span><span aria-hidden="true" style="color: #4F5945; display: inline-flex"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 12h16M14 6l6 6-6 6"></path></svg></span></a>
+<a href="Blog.dc.html" style="width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 18px 0; border: 0; border-bottom: 1px solid #B7AA99; background: transparent; font-family: 'Inter Tight', sans-serif; font-size: 26px; letter-spacing: -0.02em; color: #272B26; cursor: pointer; text-align: left; text-decoration: none"><span>Blog</span><span aria-hidden="true" style="color: #4F5945; display: inline-flex"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 12h16M14 6l6 6-6 6"></path></svg></span></a>
+<a href="Contact.dc.html" style="width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 18px 0; border: 0; border-bottom: 1px solid #B7AA99; background: transparent; font-family: 'Inter Tight', sans-serif; font-size: 26px; letter-spacing: -0.02em; color: #272B26; cursor: pointer; text-align: left; text-decoration: none"><span>Contact</span><span aria-hidden="true" style="color: #4F5945; display: inline-flex"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 12h16M14 6l6 6-6 6"></path></svg></span></a>
+</nav>
+<div style="margin-top: auto; background: #E6E0D5; padding: 24px 16px 28px">
+<div style="max-width: 900px; margin: 0 auto; display: flex; flex-direction: column; gap: 10px">
+<a href="#book" onClick="{{ closeMob }}" style="background: #4F5945; color: #F5F2EA; font-size: 17px; font-weight: 500; height: 56px; display: flex; align-items: center; justify-content: center; border-radius: 3px">Book an appointment</a>
+<a href="tel:+441217512440" style="border: 1px solid #4F5945; color: #272B26; font-size: 17px; font-weight: 500; height: 56px; display: flex; align-items: center; justify-content: center; gap: 10px; border-radius: 3px">Call 0121 751 2440</a>
+<p style="font-size: 14px; line-height: 1.6; color: #272B26; margin: 8px 0 0; text-align: center">Mon–Fri 09:00–20:00 · Sat 08:00–14:00<br>Sutton Coldfield · Lichfield</p>
+</div>
+</div>
+</div>
+</sc-if>
+</header>
+
+<div class="pr-wrap" style="padding-top: 64px; padding-bottom: 0">
+<div class="pr-hero" style="display: grid; gap: 64px; align-items: end">
+<div style="padding-bottom: 72px">
+<nav aria-label="Breadcrumb" style="display: flex; align-items: center; gap: 10px; font-size: 15px; color: rgba(245,242,234,0.88)">
+<a href="Main.dc.html" style="color: rgba(245,242,234,0.88)">Home</a>
+<span aria-hidden="true">→</span>
+<a href="#team" style="color: rgba(245,242,234,0.88)">Our Team</a>
+<span aria-hidden="true">→</span>
+<span style="color: #F5F2EA; font-weight: 500">{{ p.name }}</span>
+</nav>
+<div style="display: flex; align-items: center; gap: 12px; margin-top: 40px">
+<span aria-hidden="true" style="width: 11px; height: 11px; background: #B7AA99"></span>
+<span style="font-size: 13px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: #E6E0D5">{{ p.role }}</span>
+</div>
+<h1 class="pr-h1" style="font-family: 'Inter Tight', sans-serif; font-weight: 400; font-size: 72px; line-height: 1; letter-spacing: -0.04em; margin: 20px 0 0; color: #F5F2EA">{{ p.name }}</h1>
+<p style="font-size: 15px; color: rgba(245,242,234,0.88); margin: 14px 0 0; letter-spacing: 0.02em">{{ p.reg }}</p>
+<p style="font-size: 19px; line-height: 1.65; color: rgba(245,242,234,0.88); margin: 24px 0 0; max-width: 600px">{{ p.lead }}</p>
+<ul style="list-style: none; padding: 0; margin: 26px 0 0; display: grid; gap: 10px">
+<sc-for list="{{ p.creds }}" as="c" hint-placeholder-count="3">
+<li style="display: flex; gap: 12px; align-items: flex-start; font-size: 16px; color: rgba(245,242,234,0.9)"><span aria-hidden="true" style="width: 22px; height: 22px; flex-shrink: 0; margin-top: 3px; background: rgba(123,130,108,0.25); color: #E6E0D5; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12l5 5 9-10"></path></svg></span>{{ c }}</li>
+</sc-for>
+</ul>
+<div style="display: flex; flex-wrap: wrap; gap: 14px; margin-top: 36px">
+<a href="#book" style="background: #F5F2EA; color: #272B26; font-size: 18px; height: 62px; padding: 0 28px 0 32px; min-width: 280px; display: inline-flex; align-items: center; justify-content: space-between; gap: 24px; border-radius: 3px"><span>Book with {{ p.first }}</span> <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 12h16M14 6l6 6-6 6"></path></svg></a>
+<a href="#treatments" style="border: 1px solid rgba(245,242,234,0.9); color: #F5F2EA; font-size: 18px; height: 62px; padding: 0 28px 0 32px; min-width: 240px; display: inline-flex; align-items: center; justify-content: space-between; gap: 24px; border-radius: 3px">Treatments <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 12h16M14 6l6 6-6 6"></path></svg></a>
+</div>
+</div>
+<div style="position: relative; align-self: stretch; display: flex; align-items: flex-end">
+<sc-if value="{{ p.portrait }}" hint-placeholder-val="{{ true }}"><img src="{{ p.portrait }}" alt="Portrait of {{ p.name }}" style="width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 20%; display: block; border-radius: 3px 3px 0 0"></sc-if>
+<sc-if value="{{ p.noPortrait }}" hint-placeholder-val="{{ false }}"><div style="width: 100%; aspect-ratio: 4 / 5; background: #272B26; border-radius: 3px 3px 0 0; display: flex; align-items: center; justify-content: center; font-size: 13px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(245,242,234,0.5)">[Portrait of {{ p.name }}]</div></sc-if>
+<div style="position: absolute; left: -36px; bottom: 40px; background: #F5F2EA; color: #272B26; padding: 18px 22px; box-shadow: 0 18px 40px rgba(39,43,38,0.25); border-radius: 3px; display: flex; flex-direction: column; gap: 2px; min-width: 240px">
+<span style="font-size: 11px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: #4F5945">Available at</span>
+<span style="font-family: 'Inter Tight', sans-serif; font-size: 18px; letter-spacing: -0.01em">{{ p.clinics }}</span>
+<span style="font-size: 14px; color: rgba(39,43,38,0.76)">{{ p.days }}</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section aria-label="At a glance" style="background: #4F5945; color: #F5F2EA">
+<div class="pr-wrap">
+<div class="pr-facts" style="display: grid">
+<sc-for list="{{ p.facts }}" as="f" hint-placeholder-count="4">
+<div style="padding: 26px 24px 26px 0; border-right: 1px solid rgba(245,242,234,0.14); display: flex; flex-direction: column; line-height: 1.35">
+<span style="font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(245,242,234,0.88)">{{ f.k }}</span>
+<span style="font-family: 'Inter Tight', sans-serif; font-size: 22px; letter-spacing: -0.01em; color: #F5F2EA; margin-top: 4px">{{ f.v }}</span>
+</div>
+</sc-for>
+</div>
+</div>
+</section>
+
+<section style="background: #F5F2EA; padding: 100px 0">
+<div class="pr-wrap">
+<div class="pr-about" style="display: grid; gap: 72px; align-items: start">
+<div>
+<div style="display: flex; align-items: center; gap: 14px; padding-bottom: 14px; border-bottom: 1px solid #B7AA99">
+<span aria-hidden="true" style="width: 11px; height: 11px; background: #7B826C"></span>
+<span style="font-size: 13px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: #4F5945">About {{ p.first }}</span>
+</div>
+<h2 class="pr-h2" style="font-family: 'Inter Tight', sans-serif; font-weight: 400; font-size: 44px; line-height: 1.1; letter-spacing: -0.025em; color: #272B26; margin: 24px 0 0">{{ p.aboutTitle }}</h2>
+<sc-for list="{{ p.bio }}" as="b" hint-placeholder-count="3">
+<p style="font-size: 18px; line-height: 1.8; color: #272B26; margin: 20px 0 0">{{ b }}</p>
+</sc-for>
+<blockquote style="margin: 40px 0 0; padding: 32px 36px; background: #E6E0D5; border-radius: 3px; position: relative">
+<svg width="34" height="34" viewBox="0 0 24 24" fill="#B7AA99" aria-hidden="true"><path d="M9.5 6C6.5 7.2 4.5 9.8 4.5 13.2V18h5.5v-5.5H7.4c.1-2 1.3-3.6 3.1-4.4L9.5 6zm9 0c-3 1.2-5 3.8-5 7.2V18H19v-5.5h-2.6c.1-2 1.3-3.6 3.1-4.4L18.5 6z"></path></svg>
+<p style="font-family: 'Inter Tight', sans-serif; font-size: 26px; line-height: 1.35; letter-spacing: -0.015em; color: #272B26; margin: 12px 0 0">{{ p.quote }}</p>
+<footer style="font-size: 14px; color: rgba(39,43,38,0.76); margin-top: 14px">— {{ p.name }}</footer>
+</blockquote>
+</div>
+<aside class="pr-side" style="display: flex; flex-direction: column; gap: 18px">
+<div style="background: #E6E0D5; border-radius: 3px; padding: 28px 26px">
+<h3 style="font-size: 12px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: #4F5945; margin: 0">Qualifications</h3>
+<ul style="list-style: none; padding: 0; margin: 14px 0 0; display: flex; flex-direction: column">
+<sc-for list="{{ p.quals }}" as="q" hint-placeholder-count="3">
+<li style="padding: 12px 0; border-bottom: 1px solid #B7AA99; display: flex; flex-direction: column; line-height: 1.4"><span style="font-size: 16px; color: #272B26; font-weight: 500">{{ q.t }}</span><span style="font-size: 14px; color: rgba(39,43,38,0.76)">{{ q.d }}</span></li>
+</sc-for>
+</ul>
+<h3 style="font-size: 12px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: #4F5945; margin: 24px 0 0">Registered with</h3>
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 16px 22px; margin-top: 14px">
+<sc-for list="{{ p.logos }}" as="l" hint-placeholder-count="2">
+<img src="{{ l.src }}" alt="{{ l.alt }}" style="{{ l.style }}">
+</sc-for>
+</div>
+</div>
+<div style="background: #272B26; color: #F5F2EA; border-radius: 3px; padding: 26px 24px">
+<span style="font-family: 'Inter Tight', sans-serif; font-size: 22px; letter-spacing: -0.015em; line-height: 1.25; display: block">Book with {{ p.first }}</span>
+<span style="font-size: 14px; color: rgba(245,242,234,0.88); display: block; margin-top: 6px">{{ p.clinics }} · No GP referral</span>
+<a href="#book" style="margin-top: 18px; background: #4F5945; color: #F5F2EA; font-size: 15px; font-weight: 500; height: 48px; display: flex; align-items: center; justify-content: center; border-radius: 3px">Book online</a>
+<a href="tel:+441217512440" style="margin-top: 10px; border: 1px solid rgba(245,242,234,0.35); color: #F5F2EA; font-size: 15px; font-weight: 500; height: 48px; display: flex; align-items: center; justify-content: center; border-radius: 3px">0121 751 2440</a>
+</div>
+</aside>
+</div>
+</div>
+</section>
+
+<section style="background: #E6E0D5; padding: 96px 0">
+<div class="pr-wrap">
+<div style="display: flex; align-items: center; gap: 14px; padding-bottom: 14px; border-bottom: 1px solid #B7AA99">
+<span aria-hidden="true" style="width: 11px; height: 11px; background: #7B826C"></span>
+<span style="font-size: 13px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: #4F5945">Special Interests</span>
+</div>
+<h2 class="pr-h2" style="font-family: 'Inter Tight', sans-serif; font-weight: 400; font-size: 44px; line-height: 1.1; letter-spacing: -0.025em; color: #272B26; margin: 24px 0 0">What {{ p.first }} helps with most</h2>
+<div class="pr-int" style="display: grid; gap: 14px; margin-top: 36px">
+<sc-for list="{{ interests }}" as="c" hint-placeholder-count="4">
+<div style="background: #F5F2EA; border-radius: 3px; overflow: hidden; display: flex; flex-direction: column">
+<img src="{{ c.img }}" alt="" style="width: 100%; aspect-ratio: 16 / 10; object-fit: cover; display: block">
+<div style="padding: 20px 22px 24px">
+<h3 style="font-family: 'Inter Tight', sans-serif; font-weight: 500; font-size: 20px; letter-spacing: -0.01em; color: #272B26; margin: 0">{{ c.name }}</h3>
+<p style="font-size: 15px; line-height: 1.6; color: rgba(39,43,38,0.84); margin: 6px 0 0">{{ c.d }}</p>
+</div>
+</div>
+</sc-for>
+</div>
+</div>
+</section>
+
+<section id="treatments" style="background: #F5F2EA; padding: 100px 0">
+<div class="pr-wrap">
+<div style="display: flex; align-items: center; gap: 14px; padding-bottom: 14px; border-bottom: 1px solid #B7AA99">
+<span aria-hidden="true" style="width: 11px; height: 11px; background: #7B826C"></span>
+<span style="font-size: 13px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: #4F5945">Treatments</span>
+</div>
+<h2 class="pr-h2" style="font-family: 'Inter Tight', sans-serif; font-weight: 400; font-size: 44px; line-height: 1.1; letter-spacing: -0.025em; color: #272B26; margin: 24px 0 0">Book {{ p.first }} for</h2>
+<div class="pr-team" style="display: grid; gap: 14px; margin-top: 36px">
+<sc-for list="{{ treatments }}" as="c" hint-placeholder-count="3">
+<a href="{{ c.href }}" style="position: relative; aspect-ratio: 455 / 560; background: #7B826C; border-radius: 3px; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between; padding: 34px 34px 36px; color: #F5F2EA">
+<sc-if value="{{ c.img }}" hint-placeholder-val="{{ true }}"><img src="{{ c.img }}" alt="" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover"></sc-if>
+<span aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(39,43,38,0.55) 0%, rgba(39,43,38,0.05) 35%, rgba(39,43,38,0.1) 60%, rgba(39,43,38,0.6) 100%)"></span>
+<span style="position: relative; font-family: 'Inter Tight', sans-serif; font-size: 25px; line-height: 1.2; letter-spacing: -0.02em">{{ c.name }}</span>
+<span style="position: relative; display: flex; align-items: center; justify-content: space-between; gap: 12px">
+<span style="font-size: 19px">Learn More</span>
+<span aria-hidden="true" style="width: 58px; height: 58px; background: #F5F2EA; color: #272B26; display: inline-flex; align-items: center; justify-content: center; border-radius: 3px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 12h16M14 6l6 6-6 6"></path></svg></span>
+</span>
+</a>
+</sc-for>
+</div>
+</div>
+</section>
+
+<section style="background: #4F5945; color: #F5F2EA; padding: 100px 0">
+<div class="pr-wrap">
+<div style="display: flex; align-items: center; gap: 14px; padding-bottom: 18px; border-bottom: 1px solid rgba(245,242,234,0.5)">
+<span aria-hidden="true" style="width: 11px; height: 11px; background: #F5F2EA"></span>
+<span style="font-size: 13px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: #F5F2EA">Credentials &amp; Experience</span>
+</div>
+<h2 class="pr-h2" style="font-family: 'Inter Tight', sans-serif; font-weight: 400; font-size: 44px; line-height: 1.1; letter-spacing: -0.025em; color: #F5F2EA; margin: 28px 0 0; max-width: 760px">{{ p.credTitle }}</h2>
+<div class="pr-cred" style="display: grid; gap: 14px; margin-top: 44px">
+<sc-for list="{{ p.recognition }}" as="r" hint-placeholder-count="4">
+<div style="background: rgba(245,242,234,0.08); border: 1px solid rgba(245,242,234,0.18); border-radius: 3px; padding: 28px 26px 30px; display: flex; flex-direction: column; gap: 12px">
+<span aria-hidden="true" style="width: 46px; height: 46px; border-radius: 50%; border: 1px solid rgba(245,242,234,0.35); display: inline-flex; align-items: center; justify-content: center; color: #E6E0D5"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 15a6 6 0 1 0 0-12 6 6 0 0 0 0 12zM8.5 14l-1.5 7 5-3 5 3-1.5-7"></path></svg></span>
+<h3 style="font-family: 'Inter Tight', sans-serif; font-weight: 500; font-size: 21px; letter-spacing: -0.015em; color: #F5F2EA; margin: 0">{{ r.t }}</h3>
+<p style="font-size: 15px; line-height: 1.6; color: rgba(245,242,234,0.82); margin: 0">{{ r.d }}</p>
+</div>
+</sc-for>
+</div>
+</div>
+</section>
+
+<section style="background: #F5F2EA; padding: 100px 0">
+<div class="pr-wrap">
+<div class="pr-split" style="display: grid; gap: 72px; align-items: center">
+<sc-if value="{{ p.action }}" hint-placeholder-val="{{ true }}"><img src="{{ p.action }}" alt="{{ p.first }} treating a patient" style="width: 100%; aspect-ratio: 5 / 4; object-fit: cover; border-radius: 3px; display: block"></sc-if>
+<sc-if value="{{ p.noAction }}" hint-placeholder-val="{{ false }}"><div style="width: 100%; aspect-ratio: 5 / 4; background: #E6E0D5; border-radius: 3px; display: flex; align-items: center; justify-content: center; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(39,43,38,0.76)">[Photo of {{ p.first }} treating]</div></sc-if>
+<div>
+<div style="display: flex; align-items: center; gap: 14px; padding-bottom: 14px; border-bottom: 1px solid #B7AA99">
+<span aria-hidden="true" style="width: 11px; height: 11px; background: #7B826C"></span>
+<span style="font-size: 13px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: #4F5945">Outside the Clinic</span>
+</div>
+<h2 class="pr-h2" style="font-family: 'Inter Tight', sans-serif; font-weight: 400; font-size: 40px; line-height: 1.12; letter-spacing: -0.025em; color: #272B26; margin: 24px 0 0">A little more about {{ p.first }}</h2>
+<p style="font-size: 18px; line-height: 1.8; color: #272B26; margin: 20px 0 0">{{ p.outside }}</p>
+<div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px">
+<sc-for list="{{ p.tags }}" as="t" hint-placeholder-count="3">
+<span style="font-size: 14px; font-weight: 500; color: #4F5945; background: #E6E0D5; padding: 8px 14px; border-radius: 999px">{{ t }}</span>
+</sc-for>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section style="background: #E6E0D5; padding: 96px 0">
+<div class="pr-wrap">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 24px">
+<div>
+<div style="display: flex; align-items: center; gap: 14px">
+<span aria-hidden="true" style="width: 11px; height: 11px; background: #7B826C"></span>
+<span style="font-size: 13px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: #4F5945">Patient Stories</span>
+</div>
+<h2 class="pr-h2" style="font-family: 'Inter Tight', sans-serif; font-weight: 400; font-size: 44px; line-height: 1.1; letter-spacing: -0.025em; color: #272B26; margin: 20px 0 0">What patients say about {{ p.first }}</h2>
+</div>
+<div style="background: #F5F2EA; padding: 16px 22px; display: flex; align-items: center; gap: 14px; border-radius: 3px">
+<span style="font-size: 14px; font-weight: 600; color: #272B26">Google</span>
+<span style="font-family: 'Inter Tight', sans-serif; font-size: 26px; color: #272B26">[5.0]</span>
+<span style="color: #E0A800; letter-spacing: 2px">★★★★★</span>
+</div>
+</div>
+<div class="pr-3" style="display: grid; gap: 20px; margin-top: 40px">
+<sc-for list="{{ reviews }}" as="r" hint-placeholder-count="3">
+<div style="background: #F5F2EA; padding: 30px; display: flex; flex-direction: column; gap: 14px; border-radius: 3px">
+<span style="color: #E0A800; letter-spacing: 2px">★★★★★</span>
+<p style="font-size: 16px; line-height: 1.7; color: #272B26; margin: 0; flex: 1">“[Paste a real Google review that mentions {{ p.first }} — in the patient's own words.]”</p>
+<span style="font-size: 14px; font-weight: 600; color: #272B26">[Patient name]</span>
+</div>
+</sc-for>
+</div>
+</div>
+</section>
+
+<section id="team" style="background: #F5F2EA; padding: 100px 0; overflow: hidden">
+<div class="pr-wrap">
+<div style="display: flex; align-items: center; gap: 14px; padding-bottom: 14px; border-bottom: 1px solid #B7AA99">
+<span aria-hidden="true" style="width: 11px; height: 11px; background: #7B826C"></span>
+<span style="font-size: 13px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: #4F5945">Our Team</span>
+</div>
+<h2 class="pr-h2" style="font-family: 'Inter Tight', sans-serif; font-weight: 400; font-size: 44px; line-height: 1.1; letter-spacing: -0.025em; color: #272B26; margin: 24px 0 0">Meet the rest of the team</h2>
+<div class="pr-team pr-ppl" style="display: grid; gap: 20px; margin-top: 40px">
+<sc-for list="{{ others }}" as="o" hint-placeholder-count="4">
+<a href="{{ o.href }}" style="display: flex; flex-direction: column; color: rgba(39,43,38,0.84)">
+<sc-if value="{{ o.portrait }}" hint-placeholder-val="{{ true }}"><img src="{{ o.portrait }}" alt="{{ o.name }}" style="width: 100%; aspect-ratio: 3 / 4; object-fit: cover; object-position: 50% 20%; border-radius: 3px; display: block"></sc-if>
+<sc-if value="{{ o.noPortrait }}" hint-placeholder-val="{{ false }}"><div style="aspect-ratio: 3 / 4; background: #E6E0D5; display: flex; align-items: flex-end; padding: 14px; font-size: 12px; color: rgba(39,43,38,0.76); border-radius: 3px">[Headshot]</div></sc-if>
+<h3 style="font-family: 'Inter Tight', sans-serif; font-weight: 400; font-size: 22px; letter-spacing: -0.015em; color: #272B26; margin: 16px 0 0">{{ o.name }}</h3>
+<span style="font-size: 14px; color: rgba(39,43,38,0.76)">{{ o.role }}</span>
+<span style="font-size: 14px; font-weight: 500; color: #4F5945; margin-top: 8px">View Profile →</span>
+</a>
+</sc-for>
+</div>
+</div>
+</section>
+
+<section aria-label="Registrations and memberships" style="background: #F5F2EA; border-top: 1px solid #B7AA99; padding: 44px 0 48px">
+<div class="pr-wrap">
+<p style="margin: 0; text-align: center; font-size: 12px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(39,43,38,0.76)">Registered &amp; Accredited</p>
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 28px 72px; margin-top: 28px">
+<img src="assets/fd147b5fe67c84b8213ca8698b4d19c5.png" alt="General Osteopathic Council" style="height: 60px; width: auto; display: block">
+<img src="assets/2327180f75ec1201c108d81a10773018.png" alt="The Institute of Osteopathy" style="height: 72px; width: auto; display: block">
+<img src="assets/3bf80f0bb880bf686723d71a92a87e30.png" alt="HCPC registered" style="height: 72px; width: auto; display: block">
+<img src="assets/0b1f164aa218fea261047c24cd9adf5a.png" alt="The Australian Physiotherapy &amp; Pilates Institute" style="height: 76px; width: auto; display: block">
+</div>
+</div>
+</section>
+
+<section id="book" style="background: #272B26; color: #F5F2EA; padding: 100px 0">
+<div class="pr-wrap">
+<div class="pr-book" style="display: grid; gap: 48px; align-items: center">
+<div>
+<span style="font-size: 11px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: #E6E0D5">Book Today</span>
+<h2 class="pr-h2" style="font-family: 'Inter Tight', sans-serif; font-weight: 400; font-size: 48px; line-height: 1.08; letter-spacing: -0.025em; color: #F5F2EA; margin: 14px 0 0">Book an appointment with {{ p.first }}</h2>
+<p style="font-size: 18px; line-height: 1.7; color: rgba(245,242,234,0.8); margin: 18px 0 0; max-width: 520px">Book online in under a minute, or call 0121 751 2440 and ask for {{ p.first }}. No GP referral needed.</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 14px">
+<a href="#book" style="background: #4F5945; color: #F5F2EA; padding: 24px 26px; display: flex; align-items: center; justify-content: space-between; gap: 20px; border-radius: 3px">
+<span style="display: flex; flex-direction: column; gap: 4px"><span style="font-family: 'Inter Tight', sans-serif; font-size: 22px; letter-spacing: -0.015em">Book with {{ p.first }}</span><span style="font-size: 15px; color: rgba(245,242,234,0.85)">See {{ p.first }}'s next available appointments.</span></span>
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true" style="flex-shrink: 0"><path d="M4 12h16M14 6l6 6-6 6"></path></svg>
+</a>
+<a href="Main.dc.html" style="border: 1px solid rgba(245,242,234,0.3); color: #F5F2EA; padding: 24px 26px; display: flex; align-items: center; justify-content: space-between; gap: 20px; border-radius: 3px">
+<span style="display: flex; flex-direction: column; gap: 4px"><span style="font-family: 'Inter Tight', sans-serif; font-size: 22px; letter-spacing: -0.015em">New Patients</span><span style="font-size: 15px; color: rgba(245,242,234,0.88)">See how your first appointment works, from arrival to treatment plan.</span></span>
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true" style="flex-shrink: 0"><path d="M4 12h16M14 6l6 6-6 6"></path></svg>
+</a>
+</div>
+</div>
+</div>
+</section>
+
+<footer id="contact" style="background: #4F5945; color: #F5F2EA">
+<div class="pr-wrap" style="padding-top: 72px; padding-bottom: 56px">
+<div class="pr-foot" style="display: grid; gap: 40px">
+<div>
+<h2 style="font-family: 'Inter Tight', sans-serif; font-weight: 400; font-size: 28px; letter-spacing: -0.02em; margin: 0">Get In Touch</h2>
+<ul style="list-style: none; padding: 0; margin: 20px 0 0; display: flex; flex-direction: column; gap: 12px; font-size: 15px; color: rgba(245,242,234,0.85)">
+<li>Exhale Osteopathy<br>1 Sutton Oak Corner, Streetly<br>Sutton Coldfield, B74 2DH</li>
+<li><a href="tel:+441217512440" style="color: #F5F2EA">0121 751 2440</a></li>
+<li><a href="mailto:info@exhaleosteopathy.co.uk" style="color: #F5F2EA">info@exhaleosteopathy.co.uk</a></li>
+</ul>
+</div>
+<div>
+<h3 style="font-size: 13px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #E6E0D5; margin: 0">Opening Hours</h3>
+<ul style="list-style: none; padding: 0; margin: 16px 0 0; display: flex; flex-direction: column; gap: 6px; font-size: 14px; color: rgba(245,242,234,0.82)">
+<li>Monday – Friday 09:00 – 20:00</li>
+<li>Saturday 08:00 – 14:00</li>
+<li>Sunday Closed</li>
+</ul>
+</div>
+<div>
+<h3 style="font-size: 13px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #E6E0D5; margin: 0">Treatments</h3>
+<ul style="list-style: none; padding: 0; margin: 16px 0 0; display: flex; flex-direction: column; gap: 6px; font-size: 14px">
+<li><a href="Service.dc.html" style="color: rgba(245,242,234,0.85)">Osteopathy</a></li>
+<li><a href="Physiotherapy.dc.html" style="color: rgba(245,242,234,0.85)">Physiotherapy</a></li>
+<li><a href="Massage.dc.html" style="color: rgba(245,242,234,0.85)">Sports Massage</a></li>
+<li><a href="Laser.dc.html" style="color: rgba(245,242,234,0.85)">Laser Therapy</a></li>
+</ul>
+</div>
+<div>
+<h3 style="font-size: 13px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #E6E0D5; margin: 0">Our Clinics</h3>
+<ul style="list-style: none; padding: 0; margin: 16px 0 0; display: flex; flex-direction: column; gap: 6px; font-size: 14px; color: rgba(245,242,234,0.85)">
+<li>Exhale Osteopathy, Sutton Coldfield<br><a href="Birmingham.dc.html" style="color: #E6E0D5; text-decoration: underline; text-underline-offset: 3px">Visiting from Birmingham?</a></li>
+<li>Lichfield Osteopathic Practice<br>30 Rotten Row, Lichfield, WS13 6JB<br><a href="tel:+441543252673" style="color: #F5F2EA">01543 252673</a></li>
+</ul>
+<a href="#book" style="margin-top: 22px; background: #F5F2EA; color: #272B26; font-size: 14px; font-weight: 500; height: 48px; padding: 0 22px; display: inline-flex; align-items: center; border-radius: 3px">Book Now</a>
+</div>
+</div>
+<div style="margin-top: 56px; padding-top: 22px; border-top: 1px solid rgba(245,242,234,0.18); display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; font-size: 13px; color: rgba(245,242,234,0.88)">
+<span>© 2026 Exhale Osteopathy</span>
+<span>Privacy Policy · Terms &amp; Conditions · Cookie Policy</span>
+</div>
+</div>
+</footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"person":{"editor":"enum","options":["hafi","zoe","freta","ankita","emre"],"default":"hafi"},"$preview":{"width":1440,"height":6800}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { menuOpen: false };
+  }
+  renderVals() {
+    const B = 'assets/';
+    const T = {
+      back: B + 'bad5ffe8e3d651f608eed6b8395755e1.jpg', neck: B + 'ecff3978d740e61ad991d87ac8ed9c80.jpg', sciatica: B + 'b4cbb771eeb8f8ab5dc8dc2aea17df46.jpg',
+      shoulder: B + 'c525025c94afa6c27f465df87630f2d5.jpg', head: B + 'a6111fcfc10ade3e8e1ab9feee68d0bd.jpg', hip: B + '336754bc2f4144cf175e16e96253b0c6.jpg',
+      knee: B + '45650fb355363711c837123b9102097b.jpg', ankle: B + '2ba8ade52a5466a109b0e50cb08b37f9.jpg', posture: B + '69eda695c26e3fcc7ef14bd02b658884.jpg',
+      joint: B + '6b36c7e66c35b11e6d4a167d6cd862ea.jpg', baby: B + '4abb3bc38e81b54f28716e660d7ac6bb.jpg'
+    };
+    const LOGO = {
+      gosc: { src: B + 'fd147b5fe67c84b8213ca8698b4d19c5.png', alt: 'General Osteopathic Council', style: 'height: 38px; width: auto; display: block' },
+      io: { src: B + '2327180f75ec1201c108d81a10773018.png', alt: 'The Institute of Osteopathy', style: 'height: 46px; width: auto; display: block' },
+      hcpc: { src: B + '3bf80f0bb880bf686723d71a92a87e30.png', alt: 'HCPC registered', style: 'height: 46px; width: auto; display: block' },
+      appi: { src: B + '0b1f164aa218fea261047c24cd9adf5a.png', alt: 'APPI', style: 'height: 48px; width: auto; display: block' }
+    };
+    const TREAT = {
+      osteo: { name: 'Osteopathy', href: 'Service.dc.html', img: B + 'eb3a3518e6e4460583ce6625b34e0d82.jpg' },
+      physio: { name: 'Physiotherapy', href: 'Physiotherapy.dc.html', img: B + 'e7ccc65900e405cbfd5068742f9f19a8.jpg' },
+      massage: { name: 'Sports Massage', href: 'Massage.dc.html', img: B + 'c6a31e9450e0eeb87fed01960d8d534e.jpg' },
+      laser: { name: 'Laser Therapy', href: 'Laser.dc.html', img: '' },
+      sports: { name: '1-to-1 Rehab / Pilates', href: 'Rehab.dc.html', img: B + 'c1b26d1d09b98e10ca67e53b603b1499.jpg' },
+      acu: { name: 'Acupuncture', href: 'Acupuncture.dc.html', img: B + 'ebc5540e0e4f70c2c0727439dc39383e.jpg' },
+      cranial: { name: 'Cranial Osteopathy', href: 'Cranial.dc.html', img: B + '2a651f6711f7912944a68430e75364cb.jpg' }
+    };
+    const INT = {
+      back: 'Long-standing and recurring back pain.', neck: 'Desk-related neck and shoulder tension.', sciatica: 'Nerve pain running into the leg.',
+      shoulder: 'Stiff, painful or weak shoulders.', head: 'Tension headaches linked to the neck.', hip: 'Hip and groin pain in active people.',
+      knee: 'Knee pain in runners and gym-goers.', ankle: 'Sprains and sports injuries.', posture: 'Aches from sitting or standing all day.',
+      joint: 'Tight, overworked muscles.', baby: 'Gentle care for babies and children.'
+    };
+    const qPH = [{ t: '[Degree — e.g. M.Ost]', d: '[University, year]' }, { t: '[Further qualification]', d: '[Provider, year]' }, { t: '[Further qualification]', d: '[Provider, year]' }];
+    const recPH = [
+      { t: '[Years in practice]', d: '[e.g. treating patients in Sutton Coldfield since 20XX.]' },
+      { t: '[Further training]', d: '[A course or certification that sets them apart.]' },
+      { t: '[Special interest]', d: '[An area they are known for among patients.]' },
+      { t: '[Achievement]', d: '[Teaching, sports team work, awards or publications.]' }
+    ];
+    const P = {
+      hafi: {
+        name: 'Hafi Rahman', first: 'Hafi', role: 'Founder & Principal Osteopath', href: 'Practitioner.dc.html',
+        reg: 'Registered Osteopath · B’Ost (Hons) · GOsC [Reg. no. XXXX]',
+        lead: 'Hafi founded Exhale Osteopathy to give people unhurried, hands-on care that gets to the root of the problem — and keeps them moving well for the long term.',
+        creds: ['Registered osteopath, sports therapist and personal trainer', 'Combines structural and cranial osteopathy with exercise-based rehab', 'Treats at both Sutton Coldfield and Lichfield'],
+        portrait: B + 'f4513f27866f22682d9d1eafdcd00e9b.jpg', action: B + '3e3292b3448a80b063b85bf775c63745.jpg',
+        clinics: 'Sutton Coldfield & Lichfield', days: '[Mon · Wed · Fri · Sat]',
+        facts: [{ k: 'Registered with', v: 'GOsC' }, { k: 'In practice', v: '[XX] years' }, { k: 'Clinics', v: 'Sutton & Lichfield' }, { k: 'Also trained in', v: 'Sports therapy & acupuncture' }],
+        aboutTitle: 'Treating the person, not just the pain',
+        bio: [
+          '[Hafi’s story — what drew him to osteopathy, where he trained and how his career developed.]',
+          'Alongside osteopathy, Hafi is trained in sports therapy and acupuncture, which lets him combine hands-on treatment, rehab and needling in a single plan when it helps.',
+          '[What he enjoys most about treating, the kind of patients he sees most, and why he set up Exhale.]'
+        ],
+        quote: '[A short line in Hafi’s own words about how he approaches treatment.]',
+        quals: [{ t: 'B’Ost (Hons) — Osteopathy', d: '[University, year]' }, { t: 'Sports Therapy', d: '[Provider, year]' }, { t: 'Personal Training', d: '[Provider, year]' }, { t: 'Acupuncture', d: '[Provider, year]' }],
+        interests: ['back', 'neck', 'sciatica', 'head'],
+        treatments: ['osteo', 'sports', 'acu', 'laser'],
+        credTitle: 'Experienced, qualified and still learning',
+        recognition: recPH,
+        outside: '[Something personal — family, sport, hobbies — so patients get a feel for who they’re booking with.]',
+        tags: ['[Interest]', '[Interest]', '[Interest]']
+      },
+      zoe: {
+        name: 'Zoe Goodwin', first: 'Zoe', role: 'Level 4 Sports Massage Therapist', href: 'Zoe.dc.html',
+        reg: 'Level 4 Sports Massage · BSc Sport, Exercise & Health Science',
+        lead: 'Zoe’s deep, targeted massage helps runners, gym-goers and desk workers release tension, recover faster and keep doing what they love.',
+        creds: ['Level 4 Sports Massage Therapist', 'Degree in Sport, Exercise & Health Science', 'Currently studying for an MSc in Physiotherapy'],
+        portrait: B + 'a1aa92c86185fbf90aea1ad6a47c85a3.jpg', action: B + 'c6a31e9450e0eeb87fed01960d8d534e.jpg',
+        clinics: 'Sutton Coldfield & Lichfield', days: '[Days available]',
+        facts: [{ k: 'Specialty', v: 'Sports massage' }, { k: 'In practice', v: '[XX] years' }, { k: 'Clinic', v: 'Sutton Coldfield' }, { k: 'Sessions', v: '[30 / 60] minutes' }],
+        aboutTitle: 'Massage that keeps you moving',
+        bio: ['[Zoe’s story — training, background and how she came to Exhale.]', '[The kind of clients she sees most and what a session with her is like.]'],
+        quote: '[A short line in Zoe’s own words.]',
+        quals: [{ t: 'Level 4 Sports Massage', d: '[Provider, year]' }, { t: 'BSc Sport, Exercise & Health Science', d: '[University, year]' }, { t: 'MSc Physiotherapy', d: 'In progress' }],
+        interests: ['joint', 'neck', 'hip', 'ankle'],
+        treatments: ['massage', 'sports', 'osteo'],
+        credTitle: 'Trained to get the most from every session',
+        recognition: recPH,
+        outside: '[Something personal — sport, hobbies, events she’s trained for.]',
+        tags: ['[Interest]', '[Interest]', '[Interest]']
+      },
+      freta: {
+        name: 'Freta Teklensenbet', first: 'Freta', role: 'Registered Osteopath', href: 'Freta.dc.html',
+        reg: 'Registered Osteopath · GOsC [Reg. no. XXXX]',
+        lead: '[One or two sentences on Freta’s approach and who she helps most.]',
+        creds: ['Registered osteopath', '[Qualification]', '[Special interest]'],
+        portrait: B + '2b3650271a3bcca5534fca4186d2400c.jpg', action: B + 'eb3a3518e6e4460583ce6625b34e0d82.jpg',
+        clinics: '[Sutton Coldfield / Lichfield]', days: '[Days available]',
+        facts: [{ k: 'Registered with', v: '[Body]' }, { k: 'In practice', v: '[XX] years' }, { k: 'Clinic', v: '[Clinic]' }, { k: 'Special interest', v: '[Interest]' }],
+        aboutTitle: '[Headline about Freta’s approach]',
+        bio: ['[Freta’s story — training, background and how she came to Exhale.]', '[The kind of patients she sees most and what treatment with her is like.]'],
+        quote: '[A short line in Freta’s own words.]',
+        quals: qPH, logos: [LOGO.gosc],
+        interests: ['neck', 'back', 'posture', 'shoulder'],
+        treatments: ['osteo', 'physio', 'massage'],
+        credTitle: '[Headline about Freta’s experience]',
+        recognition: recPH,
+        outside: '[Something personal.]',
+        tags: ['[Interest]', '[Interest]', '[Interest]']
+      },
+      ankita: {
+        name: 'Ankita Desai', first: 'Ankita', role: 'Registered Osteopath', href: 'Ankita.dc.html',
+        reg: 'Registered Osteopath · M.Ost · GOsC [Reg. no. XXXX]',
+        lead: 'Ankita combines a scientific background with hands-on osteopathy to find the cause of your pain and build a plan that fits your life.',
+        creds: ['Registered with the General Osteopathic Council', 'Master’s in Osteopathy — British School of Osteopathy', 'BSc Biomedical Science — Brunel University'],
+        portrait: B + 'f8984ae774fa815b4d817f0fe0266bba.jpg', action: B + '9f8669dac189f5736c81b923529a4b21.jpg',
+        clinics: '[Clinic(s)]', days: '[Days available]',
+        facts: [{ k: 'Registered with', v: 'GOsC' }, { k: 'Trained at', v: 'British School of Osteopathy' }, { k: 'Clinic', v: '[Clinic]' }, { k: 'Background', v: 'Biomedical science' }],
+        aboutTitle: '[Headline about Ankita’s approach]',
+        bio: ['[Ankita’s story — training, background and how she came to Exhale.]', '[The kind of patients she sees most and what treatment with her is like.]'],
+        quote: '[A short line in Ankita’s own words.]',
+        quals: [{ t: 'Master’s in Osteopathy', d: 'British School of Osteopathy' }, { t: 'BSc Biomedical Science', d: 'Brunel University' }, { t: 'Registered Osteopath', d: 'General Osteopathic Council' }],
+        interests: ['shoulder', 'posture', 'neck', 'knee'],
+        treatments: ['osteo', 'physio', 'laser'],
+        credTitle: '[Headline about Ankita’s experience]',
+        recognition: recPH,
+        outside: '[Something personal.]',
+        tags: ['[Interest]', '[Interest]', '[Interest]']
+      },
+      emre: {
+        name: 'Emre Tosun', first: 'Emre', role: 'Physiotherapist & Personal Trainer', href: 'Emre.dc.html',
+        reg: 'Registered Physiotherapist · MSc Physiotherapy · HCPC [Reg. no. XXXX]',
+        lead: 'Emre uses his background in sports science and physiotherapy to get you stronger, moving better and back to the things you love.',
+        creds: ['Registered physiotherapist and personal trainer', 'Master’s in Physiotherapy', 'Specialises in musculoskeletal rehabilitation'],
+        portrait: '', action: '',
+        clinics: '[Clinic(s)]', days: '[Days available]',
+        facts: [{ k: 'Registered with', v: 'HCPC' }, { k: 'Specialty', v: 'MSK rehab' }, { k: 'Clinic', v: '[Clinic]' }, { k: 'Also a', v: 'Personal trainer' }],
+        aboutTitle: 'Rehab that gets you stronger than before',
+        bio: ['[Emre’s story — training, background and how he came to Exhale.]', '[The kind of patients he sees most and what treatment with him is like.]'],
+        quote: '[A short line in Emre’s own words.]',
+        quals: [{ t: 'MSc Physiotherapy', d: '[University, year]' }, { t: 'BSc Sports & Exercise Science', d: '[University, year]' }, { t: 'Personal Training', d: '[Provider, year]' }],
+        interests: ['ankle', 'knee', 'hip', 'back'],
+        treatments: ['physio', 'sports', 'laser'],
+        credTitle: '[Headline about Emre’s experience]',
+        recognition: recPH,
+        outside: '[Something personal.]',
+        tags: ['[Interest]', '[Interest]', '[Interest]']
+      }
+    };
+    const key = P[this.props.person] ? this.props.person : 'hafi';
+    const p0 = P[key];
+    const p = Object.assign({}, p0, { noPortrait: !p0.portrait, noAction: !p0.action });
+    const interests = p0.interests.map(k => ({ name: { back: 'Back Pain', neck: 'Neck & Shoulders', sciatica: 'Sciatica', shoulder: 'Shoulder Pain', head: 'Headaches & Tension', hip: 'Hip Pain', knee: 'Knee Pain', ankle: 'Sports Injuries', posture: 'Postural Strain', joint: 'Muscle Tension', baby: 'Babies & Children' }[k], img: T[k], d: INT[k] }));
+    const treatments = p0.treatments.map(k => TREAT[k]);
+    const others = Object.keys(P).filter(k => k !== key).map(k => ({ name: P[k].name, role: P[k].role, href: P[k].href, portrait: P[k].portrait, noPortrait: !P[k].portrait }));
+    const thumb = (k) => T[k] || '';
+    const menuCols = [
+      { title: 'Osteopathy & Wellbeing', items: [['Osteopathy', 'Service.dc.html', 'neck'], ['Cranial Osteopathy', 'Cranial.dc.html', 'baby'], ['Baby & Paediatric', 'Paediatric.dc.html', 'baby'], ['Pregnancy Osteopathy', 'Pregnancy.dc.html', 'back'], ['Sports Massage', 'Massage.dc.html', 'joint'], ['Acupuncture', 'Acupuncture.dc.html', '']] },
+      { title: 'Recovery & Performance', items: [['Physiotherapy', 'Physiotherapy.dc.html', 'shoulder'], ['1-to-1 Rehab / Pilates', 'Rehab.dc.html', 'posture'], ['Shockwave Therapy', 'Shockwave.dc.html', 'ankle'], ['Laser Therapy', 'Laser.dc.html', ''], ['Diagnostic Ultrasound', 'Ultrasound.dc.html', 'knee']] }
+    ].map(c => ({ title: c.title, items: c.items.map(([n, h, k]) => ({ name: n, href: h, img: thumb(k), noImg: !thumb(k) })) }));
+    const CT = (id) => 'assets/' + id;
+    const condCols = [
+      { title: 'Spine & Head', items: [['Back Pain', 'Condition.dc.html', 'bad5ffe8e3d651f608eed6b8395755e1.jpg'], ['Neck Pain', 'Neck-Pain.dc.html', 'ecff3978d740e61ad991d87ac8ed9c80.jpg'], ['Sciatica', 'Sciatica.dc.html', 'b4cbb771eeb8f8ab5dc8dc2aea17df46.jpg'], ['Headaches & Migraines', 'Headaches.dc.html', 'a6111fcfc10ade3e8e1ab9feee68d0bd.jpg'], ['TMJ / Jaw Pain', 'Jaw-Pain.dc.html', 'f8e9145ba19cb163a759ff111c5ad1b2.jpg']] },
+      { title: 'Joints & Injuries', items: [['Hip Pain', 'Hip-Pain.dc.html', '336754bc2f4144cf175e16e96253b0c6.jpg'], ['Knee Pain', 'Knee-Pain.dc.html', '45650fb355363711c837123b9102097b.jpg'], ['Foot & Ankle Pain', 'Foot-Ankle-Pain.dc.html', '2ba8ade52a5466a109b0e50cb08b37f9.jpg'], ['Shoulder Pain', 'Shoulder-Pain.dc.html', 'c525025c94afa6c27f465df87630f2d5.jpg'], ['Sports Injuries', 'Sports-Injuries.dc.html', '69eda695c26e3fcc7ef14bd02b658884.jpg'], ['Tendon Problems', 'Tendon-Problems.dc.html', '6b36c7e66c35b11e6d4a167d6cd862ea.jpg']] }
+    ].map(c => ({ title: c.title, items: c.items.map(([n, h, id]) => ({ name: n, href: h, img: CT(id), noImg: false })) }));
+    const condOpen = !!this.state.condOpen;
+    const mob = this.state.mob || '';
+    const mobIcon = (on) => 'display: inline-flex; width: 40px; height: 40px; border-radius: 50%; align-items: center; justify-content: center; transition: transform .2s; ' + (on ? 'background: #4F5945; color: #F5F2EA; transform: rotate(45deg)' : 'background: #E6E0D5; color: #272B26');
+    const open = this.state.menuOpen;
+    return {
+      p, interests, treatments, others, menuCols,
+      reviews: [{ id: 1 }, { id: 2 }, { id: 3 }],
+      menuOpen: open,
+      menuOpenStr: open ? 'true' : 'false',
+      chevronStyle: open ? 'transform: rotate(180deg)' : '',
+      toggleMenu: () => this.setState({ menuOpen: !open, condOpen: false }),
+      openMenu: () => this.setState({ menuOpen: true, condOpen: false }),
+      closeMenu: () => this.setState({ menuOpen: false, condOpen: false }),
+      condCols, condOpen,
+      condOpenStr: condOpen ? 'true' : 'false',
+      condChevron: condOpen ? 'transform: rotate(180deg)' : '',
+      toggleCond: () => this.setState({ condOpen: !condOpen, menuOpen: false }),
+      openCond: () => this.setState({ condOpen: true, menuOpen: false }),
+      mobOpen: !!this.state.mobOpen,
+      mobOpenStr: this.state.mobOpen ? 'true' : 'false',
+      openMob: () => this.setState({ mobOpen: true, menuOpen: false, condOpen: false }),
+      closeMob: () => this.setState({ mobOpen: false }),
+      mobTreatOpen: mob === 'treat', mobCondOpen: mob === 'cond',
+      mobTreatStr: mob === 'treat' ? 'true' : 'false', mobCondStr: mob === 'cond' ? 'true' : 'false',
+      mobTreatIcon: mobIcon(mob === 'treat'), mobCondIcon: mobIcon(mob === 'cond'),
+      mobTreat: () => this.setState({ mob: mob === 'treat' ? '' : 'treat' }),
+      mobCond: () => this.setState({ mob: mob === 'cond' ? '' : 'cond' })
+    };
+  }
+}
+</script>
+</body>
+</html>

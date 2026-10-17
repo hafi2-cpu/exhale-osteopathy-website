@@ -79,3 +79,13 @@ Mac/Linux: `shasum -a 256 -c MANIFEST.sha256`. Every line should say `OK`.
 
 Full-page screenshots were left out of this backup at your request. They can be added as a
 separate download.
+
+## Online preview (GitHub Pages)
+
+`docs/` is a browser-ready copy for GitHub Pages: https://hafi2-cpu.github.io/exhale-osteopathy-website/
+It is generated from `source/` and is not the approved reference. Differences from `source/`:
+- image paths are rewritten to relative `assets/<id>.jpg`
+- `noindex` tags and a `robots.txt` are added so search engines don't list it
+- a mobile `viewport` tag is added so phones use the responsive layout
+
+The pages, layout, copy and styles are otherwise unchanged. `source/` remains the frozen approved design.
