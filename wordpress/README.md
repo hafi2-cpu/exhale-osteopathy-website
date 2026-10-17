@@ -1,0 +1,77 @@
+# Exhale Osteopathy — WordPress / Elementor build
+
+The approved design (`/source`) rebuilt as a WordPress site using native Elementor
+containers and widgets. No page content lives in HTML widgets, iframes or PHP templates.
+
+## Stack and dependencies
+
+| Item | Version on staging | Notes |
+|---|---|---|
+| WordPress | 7.1.3 | |
+| Hello Elementor (theme) | 3.5.1 | No child theme needed so far |
+| Elementor | 4.3.5 | Classic containers + widgets (not the v4 "atomic" elements) |
+| Elementor Pro | 4.3.2 | **Required (paid licence)**: Theme Builder header/footer, Mega Menu, Off-Canvas, Carousel, per-element Custom CSS, Site Settings Custom CSS |
+| SiteGround Optimizer / Security / AI Studio / Wizard | host plugins | Pre-installed by SiteGround |
+| SEO plugin | *not yet installed* | One plugin only (Yoast or Rank Math) — to decide |
+
+## Where things live in WordPress
+
+- **Site Settings (Elementor → Site Settings)**: global colours (Deep olive, Muted olive, Soft charcoal + Warm ivory, Warm stone, Mushroom), global fonts (Inter Tight / Inter, hosted locally), button style, 1280px content width, breakpoints 1180 / 980 / 560, and the site-wide **Custom CSS** (`site-custom.css` here — every rule is documented and switched on by a CSS class on an element).
+- **Templates → Theme Builder**
+  - *Exhale Header* — entire site. Logo, Mega Menu (Treatments, What We Treat), Book Now, ☰ button that opens an Off-Canvas full-screen menu.
+  - *Exhale Footer* — entire site.
+  - *Exhale Footer – Condition pages* — condition pages only (third column lists conditions, as in the design).
+- **Pages** — one WordPress page per design page, using the live site's URLs where they exist.
+- **Media Library** — all design photos/logos (`exhale-*.jpg/png`) and line icons (`exhale-icon-*.svg`). See `media-map.json`.
+
+## How the pages were built
+
+`build/*.js` run inside the Elementor editor and insert native elements with Elementor's own
+commands. Page copy comes from the approved design source, extracted unchanged into `data/*.json`.
+After the build, everything is edited normally in Elementor — the scripts are only a record of how it was made.
+
+| Builder | Pages |
+|---|---|
+| `home.js` | Homepage |
+| `treatment.js` + `data/treatments.json` | 11 treatment pages |
+| `condition.js` + `data/conditions.json` | 11 condition pages |
+| `practitioner.js` + `data/practitioners.json` | 5 team profiles |
+| `header.js`, `footer.js` | Theme Builder header and footers |
+
+## URL plan (live addresses kept where they exist)
+
+| Page | WordPress URL | Live site today |
+|---|---|---|
+| Home | `/` | `/` |
+| About | `/about` | `/about` |
+| Pricing | `/our-fees` | `/our-fees` |
+| Contact | `/contact-us` | `/contact-us` |
+| Blog | `/blog-posts` | `/blog-posts` |
+| Booking | `/book` | `/book` |
+| Osteopathy | `/osteopathy` | `/osteopathy` |
+| Cranial Osteopathy | `/cranial-osteopathy` | `/cranial-osteopathy` |
+| Baby & Paediatric | `/babies` | `/babies` |
+| Sports Massage | `/massage` | `/massage` |
+| Acupuncture | `/acupuncture` | `/acupuncture` |
+| Pregnancy Osteopathy | `/pregnancy-osteopathy` | `/pregnacy-pain` → **301** |
+| Back / Neck / Hip / Knee / Jaw pain, Headaches | same slugs | same |
+| Foot & Ankle Pain | `/ankle-pain` | `/ankle-pain` |
+| New: Physiotherapy, Laser, Rehab/Pilates, Shockwave, Ultrasound | `/physiotherapy`, `/laser-therapy`, `/rehab-pilates`, `/shockwave-therapy`, `/diagnostic-ultrasound` | — |
+| New: Shoulder Pain, Sciatica, Sports Injuries, Tendon Problems | `/shoulder-pain`, `/sciatica`, `/sports-injuries`, `/tendon-problems` | — |
+| New: team profiles | `/hafi-rahman`, `/zoe-goodwin`, `/freta-teklensenbet`, `/ankita-desai`, `/emre-tosun` | — |
+| New: Birmingham landing page | `/osteopath-birmingham` | — |
+| Blog posts (4) | same slugs | same |
+
+### Draft 301 redirect map (to confirm before launch)
+
+| From (live) | To |
+|---|---|
+| `/pregnacy-pain` | `/pregnancy-osteopathy` |
+| `/faqs` | *decide*: no FAQ page in the approved design — suggest `/` or the most relevant page |
+
+Permalinks are set to `/%postname%` (no trailing slash), matching the live site.
+
+## Status
+
+See the conversation for the current, tested status of each page. Staging is set to
+"Discourage search engines"; this must be switched off at launch.
