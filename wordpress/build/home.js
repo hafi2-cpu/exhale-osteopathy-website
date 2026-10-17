@@ -73,7 +73,7 @@
           button('New Patients', '#expect', { kind: 'outline-light', h: 64, fs: 18, icon: 'right', split: true, pl: 36, pr: 30 })
         ])
       ]),
-      C({ width: { unit: 'px', size: '' }, flex_align_items: 'flex-end', flex_gap: gap(10) }, [
+      C({ css_classes: 'ex-fit', flex_align_items: 'flex-end', flex_gap: gap(10) }, [
         heading('[5★] Google Reviews', { tag: 'p', color: 'rgba(245,242,234,0.9)', t: { f: IN, s: 12, w: 500, ls: 0.2, tt: 'uppercase', lh: 1.4 } }),
         C({ flex_direction: 'row', flex_gap: gap(0) }, ['3c84c3f41e71194a585fdbe2ba549b68', '3145376680e5c707cbbb4e7924778e72', '281742b2504bf22d441c896347616585', '707736522f4e7464c994a8b9b88b27b3']
           .map((a, i) => image(a, '', { x: { width: px(54), height: px(54), 'object-fit': 'cover',
@@ -197,7 +197,7 @@
     eyebrow('Patient Stories'),
     C({ flex_direction: 'row', flex_wrap: 'wrap', flex_justify_content: 'space-between', flex_align_items: 'flex-end', flex_gap: gap(24), margin: dims(24, 0, 0, 0) }, [
       heading('Loved by Patients Across Sutton &amp; Lichfield', { t: { s: 44, st: 30, sm: 28, lh: 1.1, lhm: 1.15, ls: -0.025 } }),
-      C({ flex_direction: 'row', flex_align_items: 'center', flex_gap: gap(14), padding: dims(16, 22, 16, 22), border_border: 'solid', border_width: all(1), border_color: '#B7AA99', border_radius: all(3), width: { unit: 'px', size: '' } }, [
+      C({ flex_direction: 'row', flex_align_items: 'center', flex_gap: gap(14), padding: dims(16, 22, 16, 22), border_border: 'solid', border_width: all(1), border_color: '#B7AA99', border_radius: all(3), css_classes: 'ex-fit' }, [
         heading('Google', { tag: 'span', t: { f: IN, s: 14, w: 600, lh: 1.4 } }),
         heading('[5.0]', { tag: 'span', t: { s: 26, lh: 1.2 } }),
         stars(),
@@ -233,7 +233,7 @@
     ]),
     W('icon', { selected_icon: icon('right'), primary_color: '#F5F2EA', size: px(24), _flex_size: 'none' })
   ]);
-  S.book = () => section({ x: { _element_id: 'book', background_background: 'classic', background_color: '#272B26' } }, [
+  S.book = () => section({ pb: 36, x: { padding_tablet: dims(100, 30, 100, 30), _element_id: 'book', background_background: 'classic', background_color: '#272B26' } }, [
     C(grid(2, { grid_columns_grid_tablet: { unit: 'fr', size: 1, sizes: [] }, grid_gaps: gaps(48), grid_align_items: 'center' }), [
       C({}, [
         heading('Book Today', { tag: 'p', color: '#E6E0D5', t: { f: IN, s: 11, w: 600, ls: 0.18, tt: 'uppercase', lh: 1.6 } }),

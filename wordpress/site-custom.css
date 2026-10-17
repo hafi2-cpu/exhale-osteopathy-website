@@ -62,5 +62,8 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible,
 /* 7. ex-carousel — hide arrows on tablet/phone, where cards are swiped */
 @media (max-width: 980px) { .ex-carousel .elementor-swiper-button { display: none !important; } }
 
+/* 7b. ex-fit — a container that shrinks to its content inside a row (e.g. the Google rating badge) */
+.e-con.ex-fit { --width: auto; width: auto; flex: 0 0 auto; }
+
 /* 8. Phone: hide header Book button on very narrow screens (approved behaviour) */
 @media (max-width: 380px) { .ex-hide-xs { display: none !important; } }
