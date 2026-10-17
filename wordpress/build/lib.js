@@ -100,49 +100,14 @@
     return W('image', Object.assign({ image: im, image_size: 'full' }, o.x || {}));
   };
 
-  // Nested widgets (tabs, carousel, mega menu…) must be created empty first; Elementor then
-  // creates one container per item, and their content is added into those containers.
-  const isNested = (m) => m.elType === 'widget' && /^(nested-|mega-menu|off-canvas)/.test(m.widgetType);
-  const hasNested = (m) => isNested(m) || (m.elements || []).some(hasNested);
-  async function createTree(parent, model, at) {
-    const opts = { at: at ?? parent.children.length };
-    if (!hasNested(model)) return $e.run('document/elements/create', { container: parent, model, options: opts });
-    const kids = model.elements || [];
-    const rep = isNested(model) ? { 'nested-tabs': 'tabs', 'nested-carousel': 'carousel_items', 'nested-accordion': 'items', 'mega-menu': 'menu_items' }[model.widgetType] : null;
-    const items = rep ? (model.settings[rep] || []) : [];
-    const shellSettings = Object.assign({}, model.settings); if (rep) delete shellSettings[rep];
-    const shell = Object.assign({}, model, { settings: shellSettings, elements: [] });
-    await $e.run('document/elements/create', { container: parent, model: shell, options: opts });
-    const created = elementor.getContainer(model.id);
-    if (!created) throw new Error('not created ' + model.id);
-    if (isNested(model)) {
-      // Elementor creates its default items; add/remove through the repeater so items and containers stay in sync
-      const sleep = (ms) => new Promise(r => setTimeout(r, ms));
-      if (rep) {
-        const have = created.repeaters[rep].children.length;
-        for (let n = have; n < kids.length; n++) await $e.run('document/repeater/insert', { container: created, name: rep, model: {} });
-        for (let n = have; n > kids.length; n--) await $e.run('document/repeater/remove', { container: created, name: rep, index: n - 1 });
-        for (let t = 0; t < 40 && created.children.length !== kids.length; t++) await sleep(50);
-        if (created.children.length !== kids.length) throw new Error(model.widgetType + ': ' + created.children.length + ' slots for ' + kids.length + ' items');
-      }
-      for (let i = 0; rep && i < items.length; i++) {
-        const it = Object.assign({}, items[i]); delete it._id;
-        await $e.run('document/elements/settings', { container: created.repeaters[rep].children[i], settings: it, options: { external: true } });
-      }
-      for (let i = 0; i < kids.length; i++) {
-        const slot = created.children[i];
-        if (!slot) throw new Error(model.widgetType + ': missing slot ' + i);
-        if (kids[i].settings && Object.keys(kids[i].settings).length)
-          await $e.run('document/elements/settings', { container: slot, settings: kids[i].settings, options: { external: true } });
-        for (const g of kids[i].elements || []) await createTree(slot, g);
-      }
-    } else {
-      for (const k of kids) await createTree(created, k);
-    }
-    return created;
-  }
+  // Whole sections are created in one command; nested widgets (tabs, carousels) need their
+  // items and child containers in the same model, which C()/W() provide.
   async function insert(model, at) {
-    return createTree(elementor.getPreviewContainer(), model, at);
+    const target = elementor.getPreviewContainer();
+    await $e.run('document/elements/create', { container: target, model, options: { at: at ?? target.children.length } });
+    const c = elementor.getContainer(model.id);
+    if (!c) throw new Error('not created ' + model.id);
+    return c;
   }
   async function clearPage() {
     const target = elementor.getPreviewContainer();
