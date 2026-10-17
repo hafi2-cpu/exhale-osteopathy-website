@@ -27,7 +27,12 @@
   };
   const icon = (k) => ({ value: { id: ICON[k][0], url: SITE + '/wp-content/uploads/2026/10/' + ICON[k][1] }, library: 'svg' });
 
-  const C = (s, els) => ({ id: rid(), elType: 'container', isInner: false, settings: Object.assign({ content_width: 'full', flex_direction: 'column' }, s), elements: els || [] });
+  // Rows don't wrap unless the design wraps them (Elementor otherwise wraps rows on phones)
+  const C = (s, els) => {
+    const st = Object.assign({ content_width: 'full', flex_direction: 'column' }, s);
+    if (st.flex_direction === 'row' && !st.flex_wrap) st.css_classes = ((st.css_classes || '') + ' ex-nowrap').trim();
+    return { id: rid(), elType: 'container', isInner: false, settings: st, elements: els || [] };
+  };
   const W = (type, s, els) => ({ id: rid(), elType: 'widget', widgetType: type, settings: s || {}, elements: els || [] });
 
   // Typography block with a prefix ('typography' for most widgets)
