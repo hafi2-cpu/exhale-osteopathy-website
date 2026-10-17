@@ -3,10 +3,12 @@
   const { C, W, px, pct, dims, all, gap, heading, text, button, IT, IN } = EX;
   const L = EX.L;
   const colHead = (t) => heading(t, { tag: 'h3', color: '#E6E0D5', t: { f: IN, s: 13, w: 600, ls: 0.14, tt: 'uppercase', lh: 1.4 } });
-  const list = (html, o = {}) => text(html, { color: o.color || 'rgba(245,242,234,0.85)', t: { s: o.s || 14, lh: 1.6 },
+  const list = (html, o = {}) => text(html, { color: o.color || 'rgba(245,242,234,0.85)', t: { s: o.s || 14, lh: 1.75 },
     x: { _css_classes: 'ex-list ex-on-dark' + (o.gap12 ? ' ex-gap-12' : ''), _margin: dims(o.mt ?? 16, 0, 0, 0) } });
 
-  EX.buildFooter = async function () {
+  EX.buildFooter = async function (variant) {
+    const condCol = [['Back Pain', L.back], ['Neck Pain', L.neck], ['Shoulder Pain', L.shoulder], ['Hip Pain', L.hip], ['Knee Pain', L.knee],
+      ['Foot &amp; Ankle Pain', L.ankle], ['Headaches &amp; Migraines', L.head], ['Sciatica', L.sciatica]];
     await EX.clearPage();
     return EX.insert(C({ content_width: 'boxed', html_tag: 'div', background_background: 'classic', background_color: '#4F5945',
       padding: dims(72, 30, 56, 30), padding_mobile: dims(56, 16, 40, 16), _element_id: 'contact' }, [
@@ -22,7 +24,9 @@
           colHead('Opening Hours'),
           list('<p>Monday – Friday 09:00 – 20:00</p><p>Saturday 08:00 – 14:00</p><p>Sunday Closed</p>', { color: 'rgba(245,242,234,0.82)' })
         ]),
-        C({}, [
+        variant === 'conditions'
+          ? C({}, [colHead('What We Treat'), list(condCol.map(([n, h]) => '<p><a href="' + h + '">' + n + '</a></p>').join(''))])
+          : C({}, [
           colHead('Treatments'),
           list('<p><a href="' + L.osteo + '">Osteopathy</a></p><p><a href="/#services">Sports Therapy</a></p><p><a href="' + L.massage + '">Sports Massage</a></p><p><a href="' + L.acu + '">Acupuncture</a></p>',
             { x: {} })
