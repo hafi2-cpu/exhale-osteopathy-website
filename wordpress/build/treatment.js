@@ -79,10 +79,10 @@
     /* AT A GLANCE */
     out.push(section({ pt: 0, pb: 0, ptm: 0, pbm: 0, x: { html_tag: 'section', background_background: 'classic', background_color: '#4F5945' } }, [
       C(grid(4, { grid_columns_grid_tablet: fr(2), grid_columns_grid_mobile: fr(1), grid_gaps: gaps(0) }), s.facts.map(f =>
-        C({ flex_direction: 'row', flex_align_items: 'center', flex_gap: gap(16), padding: dims(28, 24, 28, 0),
+        C({ flex_direction: 'row', css_classes: 'ex-nowrap', flex_align_items: 'center', flex_gap: gap(16), padding: dims(28, 24, 28, 0),
           border_border: 'solid', border_width: dims(0, 1, 0, 0), border_color: 'rgba(245,242,234,0.14)' }, [
           circle(FACT_ICON[f.k] || 'check', 44, 20, { color: '#E6E0D5', box: { border_border: 'solid', border_width: all(1), border_color: 'rgba(245,242,234,0.35)' } }),
-          C({ flex_gap: gap(0) }, [
+          C({ flex_gap: gap(0), css_classes: 'ex-grow' }, [
             heading(esc(f.k), { tag: 'span', color: 'rgba(245,242,234,0.88)', t: { f: IN, s: 12, ls: 0.16, tt: 'uppercase', lh: 1.35 } }),
             heading(esc(f.v), { tag: 'span', color: '#F5F2EA', t: { s: 20, ls: -0.01, lh: 1.35 } })
           ])

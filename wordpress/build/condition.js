@@ -43,9 +43,9 @@
     /* AT A GLANCE */
     out.push(section({ pt: 0, pb: 0, ptm: 0, pbm: 0, x: { background_background: 'classic', background_color: '#4F5945' } }, [
       C(grid(4, { grid_columns_grid_tablet: fr(2), grid_columns_grid_mobile: fr(1), grid_gaps: gaps(0) }), FACTS.map(([k, v, ic]) =>
-        C({ flex_direction: 'row', flex_align_items: 'center', flex_gap: gap(16), padding: dims(26, 24, 26, 0), border_border: 'solid', border_width: dims(0, 1, 0, 0), border_color: 'rgba(245,242,234,0.14)' }, [
+        C({ flex_direction: 'row', css_classes: 'ex-nowrap', flex_align_items: 'center', flex_gap: gap(16), padding: dims(26, 24, 26, 0), border_border: 'solid', border_width: dims(0, 1, 0, 0), border_color: 'rgba(245,242,234,0.14)' }, [
           circle(ic, 44, 20, { color: '#E6E0D5', box: { border_border: 'solid', border_width: all(1), border_color: 'rgba(245,242,234,0.35)' } }),
-          C({}, [heading(k, { tag: 'span', color: 'rgba(245,242,234,0.88)', t: { f: IN, s: 12, ls: 0.16, tt: 'uppercase', lh: 1.35 } }),
+          C({ css_classes: 'ex-grow' }, [heading(k, { tag: 'span', color: 'rgba(245,242,234,0.88)', t: { f: IN, s: 12, ls: 0.16, tt: 'uppercase', lh: 1.35 } }),
             heading(v, { tag: 'span', color: '#F5F2EA', t: { s: 19, ls: -0.01, lh: 1.35 } })])
         ])))
     ]));

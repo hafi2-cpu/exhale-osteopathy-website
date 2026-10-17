@@ -226,8 +226,8 @@
 
   /* 9. BOOK TODAY */
   const bookCard = (title, sub, href, o) => C(Object.assign({ html_tag: 'a', link: { url: href, is_external: '', nofollow: '' }, flex_direction: 'row', flex_align_items: 'center',
-    flex_justify_content: 'space-between', flex_gap: gap(20), padding: dims(24, 26, 24, 26), border_radius: all(3) }, o), [
-    C({ flex_gap: gap(4), width: { unit: 'px', size: '' }, _flex_size: 'grow' }, [
+    flex_justify_content: 'space-between', flex_gap: gap(20), padding: dims(24, 26, 24, 26), border_radius: all(3), css_classes: 'ex-nowrap' }, o), [
+    C({ flex_gap: gap(4), css_classes: 'ex-grow' }, [
       heading(title, { tag: 'span', color: '#F5F2EA', t: { s: 22, ls: -0.015, lh: 1.3 } }),
       heading(sub, { tag: 'span', color: 'rgba(245,242,234,0.86)', t: { f: IN, s: 15, lh: 1.6 } })
     ]),

@@ -113,7 +113,7 @@
     out.push(section({ x: { _element_id: 'treatments', css_classes: 'ex-anchor' } }, [
       eyebrow('Treatments'),
       h2('Book ' + esc(p.first) + ' for', { o: { x: { _margin: dims(24, 0, 0, 0) } } }),
-      C(grid(4, { grid_columns_grid_tablet: fr(2), grid_columns_grid_mobile: fr(2), grid_gaps: gaps(14), margin: dims(36, 0, 0, 0) }), p.treatments.map((k, i) => {
+      C(grid(4, { grid_columns_grid_tablet: fr(2), grid_columns_grid_mobile: fr(1), grid_gaps: gaps(14), margin: dims(36, 0, 0, 0) }), p.treatments.map((k, i) => {
         const t = D.TREAT[k];
         return photoCard(t.name, TPAGE[t.href] || '/', t.img, tones[i % 5], 'ex-card-560');
       }))
