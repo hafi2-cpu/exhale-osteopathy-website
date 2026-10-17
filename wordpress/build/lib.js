@@ -27,7 +27,7 @@
   const icon = (k) => ({ value: { id: ICON[k][0], url: SITE + '/wp-content/uploads/2026/10/' + ICON[k][1] }, library: 'svg' });
 
   const C = (s, els) => ({ id: rid(), elType: 'container', isInner: false, settings: Object.assign({ content_width: 'full', flex_direction: 'column' }, s), elements: els || [] });
-  const W = (type, s) => ({ id: rid(), elType: 'widget', widgetType: type, settings: s || {}, elements: [] });
+  const W = (type, s, els) => ({ id: rid(), elType: 'widget', widgetType: type, settings: s || {}, elements: els || [] });
 
   // Typography block with a prefix ('typography' for most widgets)
   const typo = (o, p = 'typography') => {
