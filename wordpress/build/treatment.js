@@ -34,7 +34,7 @@
   const faqAccordion = (faqs) => W('nested-accordion', Object.assign({
     items: faqs.map(f => ({ _id: EX.rid(), item_title: amp(f.q) })),
     accordion_item_title_icon: icon('plus'), accordion_item_title_icon_active: icon('plus'),
-    title_color: '#272B26', max_items_expended: 'one', default_state: 'all_collapsed', faq_schema: 'yes',
+    title_color: '#272B26', max_items_expended: 'one', default_state: 'expanded', faq_schema: 'yes',
     custom_css: [
       'selector{border-top:1px solid #B7AA99}',
       'selector .e-n-accordion-item{border:0;border-bottom:1px solid #B7AA99}',

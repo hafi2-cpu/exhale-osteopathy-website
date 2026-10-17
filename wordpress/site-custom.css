@@ -9,6 +9,8 @@
 /* 0. Spacing comes from the design's explicit margins, so remove the theme's
       trailing paragraph margin inside text widgets */
 .elementor-widget-text-editor p:last-child { margin-bottom: 0; }
+/* headings output as <span> keep their own line height (not the body's) */
+span.elementor-heading-title { display: block; }
 
 /* 1. Keyboard focus ring (approved design) */
 a:focus-visible, button:focus-visible, [tabindex]:focus-visible,
