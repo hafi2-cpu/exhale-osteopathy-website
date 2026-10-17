@@ -68,7 +68,7 @@
     menu_items: items.map(([t, href, cols]) => Object.assign({ _id: EX.rid(), item_title: t, item_link: { url: href || '', is_external: '', nofollow: '' } },
       cols ? { item_dropdown_content: 'yes' } : { item_dropdown_content: '' })),
     item_layout: 'horizontal', open_on: 'hover', breakpoint_selector: 'none', content_width: 'full_width',
-    item_position_horizontal: 'center', menu_item_title_space_between: px(6),
+    item_position_horizontal: 'center', menu_item_title_space_between: px(6), menu_item_title_distance_from_content: px(20),
     menu_item_icon: icon('chevron'), menu_item_icon_active: icon('chevron'),
     menu_item_title_text_color_normal: '#F5F2EA', menu_item_title_text_color_hover: '#F5F2EA', menu_item_title_text_color_active: '#F5F2EA',
     custom_css: megaCss

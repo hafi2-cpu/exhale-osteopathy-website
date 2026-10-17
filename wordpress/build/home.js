@@ -55,7 +55,7 @@
   const S = {};
 
   /* 1. HERO */
-  S.hero = () => section({ pt: 216, pb: 56, ptm: 176, pbm: 56, x: {
+  S.hero = () => section({ pt: 216, pb: 56, ptm: 216, pbm: 56, x: {
     _element_id: 'top', min_height: px(880), flex_justify_content: 'flex-end',
     background_background: 'classic', background_color: '#272B26', background_image: img('9f8669dac189f5736c81b923529a4b21'),
     background_position: 'initial', background_xpos: pct(40), background_ypos: pct(35), background_size: 'cover',
@@ -123,11 +123,11 @@
   S.services = () => section({ pt: 80, pb: 100, ptm: 64, pbm: 64, x: { _element_id: 'services', overflow: 'hidden', position: 'relative' } }, [
     heading('Hands-on treatment, from first twinge to full recovery.', { t: { s: 34, st: 30, sm: 28, lh: 1.15, ls: -0.02 },
       x: { _element_width: 'initial', _element_custom_width: px(520), _element_custom_width_tablet: pct(100),
-        _position: 'absolute', _position_tablet: '', _offset_orientation_h: 'end', _offset_x_end: px(0), _offset_y: px(0), _z_index: 2,
-        _margin_tablet: dims(0, 0, 24, 0) } }),
+        _position: 'absolute', _offset_orientation_h: 'end', _offset_x_end: px(0), _offset_y: px(0), _z_index: 2,
+        custom_css: '@media (max-width:980px){selector{position:static!important;margin:0 0 24px!important}}' } }),
     W('nested-tabs', Object.assign({
       tabs: [{ _id: EX.rid(), tab_title: 'Osteopathy & Wellbeing' }, { _id: EX.rid(), tab_title: 'Recovery & Performance' }],
-      tabs_justify_horizontal: 'start', tabs_title_space_between: px(0), tabs_title_spacing: px(30),
+      tabs_justify_horizontal: 'start', breakpoint_selector: 'none', tabs_title_space_between: px(0), tabs_title_spacing: px(30),
       tabs_title_background_color_background: 'classic', tabs_title_background_color_color: 'rgba(0,0,0,0)',
       tabs_title_background_color_hover_background: 'classic', tabs_title_background_color_hover_color: 'rgba(0,0,0,0)',
       tabs_title_background_color_active_background: 'classic', tabs_title_background_color_active_color: 'rgba(0,0,0,0)',
@@ -217,10 +217,10 @@
   S.logos = () => section({ pt: 44, pb: 48, ptm: 40, pbm: 44, x: { border_border: 'solid', border_width: dims(1, 0, 0, 0), border_color: '#B7AA99' } }, [
     heading('Registered &amp; Accredited', { tag: 'p', align: 'center', color: 'rgba(39,43,38,0.76)', t: { f: IN, s: 12, w: 500, ls: 0.2, tt: 'uppercase', lh: 1.4 } }),
     C({ flex_direction: 'row', flex_wrap: 'wrap', flex_justify_content: 'center', flex_align_items: 'center', flex_gap: gap(28, 72), margin: dims(28, 0, 0, 0) }, [
-      image('fd147b5fe67c84b8213ca8698b4d19c5', 'General Osteopathic Council', { x: { height: px(60), width: { unit: 'px', size: '' }, _element_width: 'auto' } }),
-      image('2327180f75ec1201c108d81a10773018', 'The Institute of Osteopathy', { x: { height: px(72), width: { unit: 'px', size: '' }, _element_width: 'auto' } }),
-      image('3bf80f0bb880bf686723d71a92a87e30', 'HCPC registered', { x: { height: px(72), width: { unit: 'px', size: '' }, _element_width: 'auto' } }),
-      image('0b1f164aa218fea261047c24cd9adf5a', 'The Australian Physiotherapy & Pilates Institute', { x: { height: px(76), width: { unit: 'px', size: '' }, _element_width: 'auto' } })
+      image('fd147b5fe67c84b8213ca8698b4d19c5', 'General Osteopathic Council', { x: { height: px(60), width: px(143), _element_width: 'auto' } }),
+      image('2327180f75ec1201c108d81a10773018', 'The Institute of Osteopathy', { x: { height: px(72), width: px(74), _element_width: 'auto' } }),
+      image('3bf80f0bb880bf686723d71a92a87e30', 'HCPC registered', { x: { height: px(72), width: px(70), _element_width: 'auto' } }),
+      image('0b1f164aa218fea261047c24cd9adf5a', 'The Australian Physiotherapy & Pilates Institute', { x: { height: px(76), width: px(76), _element_width: 'auto' } })
     ])
   ]);
 
