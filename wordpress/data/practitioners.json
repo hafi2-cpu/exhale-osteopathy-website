@@ -1,0 +1,535 @@
+{
+ "P": {
+  "hafi": {
+   "name": "Hafi Rahman",
+   "first": "Hafi",
+   "role": "Founder & Principal Osteopath",
+   "href": "Practitioner.dc.html",
+   "reg": "Registered Osteopath · B’Ost (Hons) · GOsC [Reg. no. XXXX]",
+   "lead": "Hafi founded Exhale Osteopathy to give people unhurried, hands-on care that gets to the root of the problem — and keeps them moving well for the long term.",
+   "creds": [
+    "Registered osteopath, sports therapist and personal trainer",
+    "Combines structural and cranial osteopathy with exercise-based rehab",
+    "Treats at both Sutton Coldfield and Lichfield"
+   ],
+   "portrait": "f4513f27866f22682d9d1eafdcd00e9b",
+   "action": "3e3292b3448a80b063b85bf775c63745",
+   "clinics": "Sutton Coldfield & Lichfield",
+   "days": "[Mon · Wed · Fri · Sat]",
+   "facts": [
+    {
+     "k": "Registered with",
+     "v": "GOsC"
+    },
+    {
+     "k": "In practice",
+     "v": "[XX] years"
+    },
+    {
+     "k": "Clinics",
+     "v": "Sutton & Lichfield"
+    },
+    {
+     "k": "Also trained in",
+     "v": "Sports therapy & acupuncture"
+    }
+   ],
+   "aboutTitle": "Treating the person, not just the pain",
+   "bio": [
+    "[Hafi’s story — what drew him to osteopathy, where he trained and how his career developed.]",
+    "Alongside osteopathy, Hafi is trained in sports therapy and acupuncture, which lets him combine hands-on treatment, rehab and needling in a single plan when it helps.",
+    "[What he enjoys most about treating, the kind of patients he sees most, and why he set up Exhale.]"
+   ],
+   "quote": "[A short line in Hafi’s own words about how he approaches treatment.]",
+   "quals": [
+    {
+     "t": "B’Ost (Hons) — Osteopathy",
+     "d": "[University, year]"
+    },
+    {
+     "t": "Sports Therapy",
+     "d": "[Provider, year]"
+    },
+    {
+     "t": "Personal Training",
+     "d": "[Provider, year]"
+    },
+    {
+     "t": "Acupuncture",
+     "d": "[Provider, year]"
+    }
+   ],
+   "interests": [
+    "back",
+    "neck",
+    "sciatica",
+    "head"
+   ],
+   "treatments": [
+    "osteo",
+    "sports",
+    "acu",
+    "laser"
+   ],
+   "credTitle": "Experienced, qualified and still learning",
+   "recognition": [
+    {
+     "t": "[Years in practice]",
+     "d": "[e.g. treating patients in Sutton Coldfield since 20XX.]"
+    },
+    {
+     "t": "[Further training]",
+     "d": "[A course or certification that sets them apart.]"
+    },
+    {
+     "t": "[Special interest]",
+     "d": "[An area they are known for among patients.]"
+    },
+    {
+     "t": "[Achievement]",
+     "d": "[Teaching, sports team work, awards or publications.]"
+    }
+   ],
+   "outside": "[Something personal — family, sport, hobbies — so patients get a feel for who they’re booking with.]",
+   "tags": [
+    "[Interest]",
+    "[Interest]",
+    "[Interest]"
+   ]
+  },
+  "zoe": {
+   "name": "Zoe Goodwin",
+   "first": "Zoe",
+   "role": "Level 4 Sports Massage Therapist",
+   "href": "Zoe.dc.html",
+   "reg": "Level 4 Sports Massage · BSc Sport, Exercise & Health Science",
+   "lead": "Zoe’s deep, targeted massage helps runners, gym-goers and desk workers release tension, recover faster and keep doing what they love.",
+   "creds": [
+    "Level 4 Sports Massage Therapist",
+    "Degree in Sport, Exercise & Health Science",
+    "Currently studying for an MSc in Physiotherapy"
+   ],
+   "portrait": "a1aa92c86185fbf90aea1ad6a47c85a3",
+   "action": "c6a31e9450e0eeb87fed01960d8d534e",
+   "clinics": "Sutton Coldfield & Lichfield",
+   "days": "[Days available]",
+   "facts": [
+    {
+     "k": "Specialty",
+     "v": "Sports massage"
+    },
+    {
+     "k": "In practice",
+     "v": "[XX] years"
+    },
+    {
+     "k": "Clinic",
+     "v": "Sutton Coldfield"
+    },
+    {
+     "k": "Sessions",
+     "v": "[30 / 60] minutes"
+    }
+   ],
+   "aboutTitle": "Massage that keeps you moving",
+   "bio": [
+    "[Zoe’s story — training, background and how she came to Exhale.]",
+    "[The kind of clients she sees most and what a session with her is like.]"
+   ],
+   "quote": "[A short line in Zoe’s own words.]",
+   "quals": [
+    {
+     "t": "Level 4 Sports Massage",
+     "d": "[Provider, year]"
+    },
+    {
+     "t": "BSc Sport, Exercise & Health Science",
+     "d": "[University, year]"
+    },
+    {
+     "t": "MSc Physiotherapy",
+     "d": "In progress"
+    }
+   ],
+   "interests": [
+    "joint",
+    "neck",
+    "hip",
+    "ankle"
+   ],
+   "treatments": [
+    "massage",
+    "sports",
+    "osteo"
+   ],
+   "credTitle": "Trained to get the most from every session",
+   "recognition": [
+    {
+     "t": "[Years in practice]",
+     "d": "[e.g. treating patients in Sutton Coldfield since 20XX.]"
+    },
+    {
+     "t": "[Further training]",
+     "d": "[A course or certification that sets them apart.]"
+    },
+    {
+     "t": "[Special interest]",
+     "d": "[An area they are known for among patients.]"
+    },
+    {
+     "t": "[Achievement]",
+     "d": "[Teaching, sports team work, awards or publications.]"
+    }
+   ],
+   "outside": "[Something personal — sport, hobbies, events she’s trained for.]",
+   "tags": [
+    "[Interest]",
+    "[Interest]",
+    "[Interest]"
+   ]
+  },
+  "freta": {
+   "name": "Freta Teklensenbet",
+   "first": "Freta",
+   "role": "Registered Osteopath",
+   "href": "Freta.dc.html",
+   "reg": "Registered Osteopath · GOsC [Reg. no. XXXX]",
+   "lead": "[One or two sentences on Freta’s approach and who she helps most.]",
+   "creds": [
+    "Registered osteopath",
+    "[Qualification]",
+    "[Special interest]"
+   ],
+   "portrait": "2b3650271a3bcca5534fca4186d2400c",
+   "action": "eb3a3518e6e4460583ce6625b34e0d82",
+   "clinics": "[Sutton Coldfield / Lichfield]",
+   "days": "[Days available]",
+   "facts": [
+    {
+     "k": "Registered with",
+     "v": "[Body]"
+    },
+    {
+     "k": "In practice",
+     "v": "[XX] years"
+    },
+    {
+     "k": "Clinic",
+     "v": "[Clinic]"
+    },
+    {
+     "k": "Special interest",
+     "v": "[Interest]"
+    }
+   ],
+   "aboutTitle": "[Headline about Freta’s approach]",
+   "bio": [
+    "[Freta’s story — training, background and how she came to Exhale.]",
+    "[The kind of patients she sees most and what treatment with her is like.]"
+   ],
+   "quote": "[A short line in Freta’s own words.]",
+   "quals": [
+    {
+     "t": "[Degree — e.g. M.Ost]",
+     "d": "[University, year]"
+    },
+    {
+     "t": "[Further qualification]",
+     "d": "[Provider, year]"
+    },
+    {
+     "t": "[Further qualification]",
+     "d": "[Provider, year]"
+    }
+   ],
+   "logos": [
+    {
+     "src": "fd147b5fe67c84b8213ca8698b4d19c5",
+     "alt": "General Osteopathic Council",
+     "style": "height: 38px; width: auto; display: block"
+    }
+   ],
+   "interests": [
+    "neck",
+    "back",
+    "posture",
+    "shoulder"
+   ],
+   "treatments": [
+    "osteo",
+    "physio",
+    "massage"
+   ],
+   "credTitle": "[Headline about Freta’s experience]",
+   "recognition": [
+    {
+     "t": "[Years in practice]",
+     "d": "[e.g. treating patients in Sutton Coldfield since 20XX.]"
+    },
+    {
+     "t": "[Further training]",
+     "d": "[A course or certification that sets them apart.]"
+    },
+    {
+     "t": "[Special interest]",
+     "d": "[An area they are known for among patients.]"
+    },
+    {
+     "t": "[Achievement]",
+     "d": "[Teaching, sports team work, awards or publications.]"
+    }
+   ],
+   "outside": "[Something personal.]",
+   "tags": [
+    "[Interest]",
+    "[Interest]",
+    "[Interest]"
+   ]
+  },
+  "ankita": {
+   "name": "Ankita Desai",
+   "first": "Ankita",
+   "role": "Registered Osteopath",
+   "href": "Ankita.dc.html",
+   "reg": "Registered Osteopath · M.Ost · GOsC [Reg. no. XXXX]",
+   "lead": "Ankita combines a scientific background with hands-on osteopathy to find the cause of your pain and build a plan that fits your life.",
+   "creds": [
+    "Registered with the General Osteopathic Council",
+    "Master’s in Osteopathy — British School of Osteopathy",
+    "BSc Biomedical Science — Brunel University"
+   ],
+   "portrait": "f8984ae774fa815b4d817f0fe0266bba",
+   "action": "9f8669dac189f5736c81b923529a4b21",
+   "clinics": "[Clinic(s)]",
+   "days": "[Days available]",
+   "facts": [
+    {
+     "k": "Registered with",
+     "v": "GOsC"
+    },
+    {
+     "k": "Trained at",
+     "v": "British School of Osteopathy"
+    },
+    {
+     "k": "Clinic",
+     "v": "[Clinic]"
+    },
+    {
+     "k": "Background",
+     "v": "Biomedical science"
+    }
+   ],
+   "aboutTitle": "[Headline about Ankita’s approach]",
+   "bio": [
+    "[Ankita’s story — training, background and how she came to Exhale.]",
+    "[The kind of patients she sees most and what treatment with her is like.]"
+   ],
+   "quote": "[A short line in Ankita’s own words.]",
+   "quals": [
+    {
+     "t": "Master’s in Osteopathy",
+     "d": "British School of Osteopathy"
+    },
+    {
+     "t": "BSc Biomedical Science",
+     "d": "Brunel University"
+    },
+    {
+     "t": "Registered Osteopath",
+     "d": "General Osteopathic Council"
+    }
+   ],
+   "interests": [
+    "shoulder",
+    "posture",
+    "neck",
+    "knee"
+   ],
+   "treatments": [
+    "osteo",
+    "physio",
+    "laser"
+   ],
+   "credTitle": "[Headline about Ankita’s experience]",
+   "recognition": [
+    {
+     "t": "[Years in practice]",
+     "d": "[e.g. treating patients in Sutton Coldfield since 20XX.]"
+    },
+    {
+     "t": "[Further training]",
+     "d": "[A course or certification that sets them apart.]"
+    },
+    {
+     "t": "[Special interest]",
+     "d": "[An area they are known for among patients.]"
+    },
+    {
+     "t": "[Achievement]",
+     "d": "[Teaching, sports team work, awards or publications.]"
+    }
+   ],
+   "outside": "[Something personal.]",
+   "tags": [
+    "[Interest]",
+    "[Interest]",
+    "[Interest]"
+   ]
+  },
+  "emre": {
+   "name": "Emre Tosun",
+   "first": "Emre",
+   "role": "Physiotherapist & Personal Trainer",
+   "href": "Emre.dc.html",
+   "reg": "Registered Physiotherapist · MSc Physiotherapy · HCPC [Reg. no. XXXX]",
+   "lead": "Emre uses his background in sports science and physiotherapy to get you stronger, moving better and back to the things you love.",
+   "creds": [
+    "Registered physiotherapist and personal trainer",
+    "Master’s in Physiotherapy",
+    "Specialises in musculoskeletal rehabilitation"
+   ],
+   "portrait": "",
+   "action": "",
+   "clinics": "[Clinic(s)]",
+   "days": "[Days available]",
+   "facts": [
+    {
+     "k": "Registered with",
+     "v": "HCPC"
+    },
+    {
+     "k": "Specialty",
+     "v": "MSK rehab"
+    },
+    {
+     "k": "Clinic",
+     "v": "[Clinic]"
+    },
+    {
+     "k": "Also a",
+     "v": "Personal trainer"
+    }
+   ],
+   "aboutTitle": "Rehab that gets you stronger than before",
+   "bio": [
+    "[Emre’s story — training, background and how he came to Exhale.]",
+    "[The kind of patients he sees most and what treatment with him is like.]"
+   ],
+   "quote": "[A short line in Emre’s own words.]",
+   "quals": [
+    {
+     "t": "MSc Physiotherapy",
+     "d": "[University, year]"
+    },
+    {
+     "t": "BSc Sports & Exercise Science",
+     "d": "[University, year]"
+    },
+    {
+     "t": "Personal Training",
+     "d": "[Provider, year]"
+    }
+   ],
+   "interests": [
+    "ankle",
+    "knee",
+    "hip",
+    "back"
+   ],
+   "treatments": [
+    "physio",
+    "sports",
+    "laser"
+   ],
+   "credTitle": "[Headline about Emre’s experience]",
+   "recognition": [
+    {
+     "t": "[Years in practice]",
+     "d": "[e.g. treating patients in Sutton Coldfield since 20XX.]"
+    },
+    {
+     "t": "[Further training]",
+     "d": "[A course or certification that sets them apart.]"
+    },
+    {
+     "t": "[Special interest]",
+     "d": "[An area they are known for among patients.]"
+    },
+    {
+     "t": "[Achievement]",
+     "d": "[Teaching, sports team work, awards or publications.]"
+    }
+   ],
+   "outside": "[Something personal.]",
+   "tags": [
+    "[Interest]",
+    "[Interest]",
+    "[Interest]"
+   ]
+  }
+ },
+ "INT": {
+  "back": "Long-standing and recurring back pain.",
+  "neck": "Desk-related neck and shoulder tension.",
+  "sciatica": "Nerve pain running into the leg.",
+  "shoulder": "Stiff, painful or weak shoulders.",
+  "head": "Tension headaches linked to the neck.",
+  "hip": "Hip and groin pain in active people.",
+  "knee": "Knee pain in runners and gym-goers.",
+  "ankle": "Sprains and sports injuries.",
+  "posture": "Aches from sitting or standing all day.",
+  "joint": "Tight, overworked muscles.",
+  "baby": "Gentle care for babies and children."
+ },
+ "TREAT": {
+  "osteo": {
+   "name": "Osteopathy",
+   "href": "Service.dc.html",
+   "img": "eb3a3518e6e4460583ce6625b34e0d82"
+  },
+  "physio": {
+   "name": "Physiotherapy",
+   "href": "Physiotherapy.dc.html",
+   "img": "e7ccc65900e405cbfd5068742f9f19a8"
+  },
+  "massage": {
+   "name": "Sports Massage",
+   "href": "Massage.dc.html",
+   "img": "c6a31e9450e0eeb87fed01960d8d534e"
+  },
+  "laser": {
+   "name": "Laser Therapy",
+   "href": "Laser.dc.html",
+   "img": ""
+  },
+  "sports": {
+   "name": "1-to-1 Rehab / Pilates",
+   "href": "Rehab.dc.html",
+   "img": "c1b26d1d09b98e10ca67e53b603b1499"
+  },
+  "acu": {
+   "name": "Acupuncture",
+   "href": "Acupuncture.dc.html",
+   "img": "ebc5540e0e4f70c2c0727439dc39383e"
+  },
+  "cranial": {
+   "name": "Cranial Osteopathy",
+   "href": "Cranial.dc.html",
+   "img": "2a651f6711f7912944a68430e75364cb"
+  }
+ },
+ "T": {
+  "back": "bad5ffe8e3d651f608eed6b8395755e1",
+  "neck": "ecff3978d740e61ad991d87ac8ed9c80",
+  "sciatica": "b4cbb771eeb8f8ab5dc8dc2aea17df46",
+  "shoulder": "c525025c94afa6c27f465df87630f2d5",
+  "head": "a6111fcfc10ade3e8e1ab9feee68d0bd",
+  "hip": "336754bc2f4144cf175e16e96253b0c6",
+  "knee": "45650fb355363711c837123b9102097b",
+  "ankle": "2ba8ade52a5466a109b0e50cb08b37f9",
+  "posture": "69eda695c26e3fcc7ef14bd02b658884",
+  "joint": "6b36c7e66c35b11e6d4a167d6cd862ea",
+  "baby": "4abb3bc38e81b54f28716e660d7ac6bb"
+ }
+}

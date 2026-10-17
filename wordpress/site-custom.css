@@ -123,5 +123,18 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible,
 .ex-pos-top img { object-position: 50% 20%; }
 a.ex-underline-olive { color: #4F5945; font-weight: 500; text-decoration: underline; text-underline-offset: 3px; }
 
+/* 18. Practitioner pages */
+.ex-crumbs--88 a { color: rgba(245,242,234,.88); }
+.ex-eyebrow--mush .elementor-heading-title::before { background: #B7AA99; }
+.ex-eyebrow--g12 .elementor-heading-title { gap: 12px; }
+.ex-round-top img { border-radius: 3px 3px 0 0; }
+.ex-float-card--hi { left: -36px; bottom: 40px; min-width: 240px; box-shadow: 0 18px 40px rgba(39,43,38,.25); }
+@media (max-width: 980px) { .ex-float-card--hi { left: 16px; } }
+.ex-ratio-1610 img { width: 100%; height: auto; aspect-ratio: 16 / 10; object-fit: cover; display: block; }
+.ex-ratio-54 img { width: 100%; height: auto; aspect-ratio: 5 / 4; object-fit: cover; }
+.ex-ratio-54-box { aspect-ratio: 5 / 4; }
+.ex-card-560 { aspect-ratio: 455 / 560; }
+.ex-icon-fill .elementor-icon svg { fill: currentColor !important; stroke: none; }
+
 /* 8. Phone: hide header Book button on very narrow screens (approved behaviour) */
 @media (max-width: 380px) { .ex-hide-xs { display: none !important; } }
