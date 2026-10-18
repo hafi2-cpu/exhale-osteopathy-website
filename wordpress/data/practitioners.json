@@ -380,14 +380,14 @@
   "emre": {
    "name": "Emre Tosun",
    "first": "Emre",
-   "role": "Physiotherapist & Personal Trainer",
+   "role": "Physiotherapist, Personal Trainer & Sports Massage Therapist",
    "href": "Emre.dc.html",
    "reg": "Registered Physiotherapist · MSc Physiotherapy · HCPC [Reg. no. XXXX]",
-   "lead": "Emre uses his background in sports science and physiotherapy to get you stronger, moving better and back to the things you love.",
+   "lead": "Emre helps people manage pain, recover from injuries and feel more confident in their movement — with a plan built around your needs and goals.",
    "creds": [
-    "Registered physiotherapist and personal trainer",
-    "Master’s in Physiotherapy",
-    "Specialises in musculoskeletal rehabilitation"
+    "Physiotherapist, personal trainer and sports massage therapist",
+    "Master’s in Physiotherapy, with a background in Sports and Exercise Science",
+    "Combines hands-on treatment with practical rehabilitation"
    ],
    "portrait": "emre-portrait",
    "action": "",
@@ -408,26 +408,32 @@
     },
     {
      "k": "Also a",
-     "v": "Personal trainer"
+     "v": "Personal trainer &amp; sports massage therapist"
     }
    ],
    "aboutTitle": "Rehab that gets you stronger than before",
    "bio": [
-    "[Emre’s story — training, background and how he came to Exhale.]",
-    "[The kind of patients he sees most and what treatment with him is like.]"
+    "Hi, I’m Emre, a physiotherapist, personal trainer and sports massage therapist with a background in Sports and Exercise Science and a Master’s degree in Physiotherapy.",
+    "I help people manage pain, recover from injuries and feel more confident in their movement. Whether you’re struggling with everyday aches, a sports injury or getting back into exercise, I’ll work with you to build a treatment plan around your needs and goals.",
+    "My approach combines hands-on treatment with practical rehabilitation. Depending on what’s appropriate for you, this may include massage, muscle energy techniques (METs), stretching and cupping, alongside targeted exercises to improve strength and mobility.",
+    "As a personal trainer, I also enjoy helping people bridge the gap between injury recovery and returning to the activities they love."
    ],
-   "quote": "[A short line in Emre’s own words.]",
+   "quote": "My aim is to help you understand your symptoms and give you the tools to manage your recovery beyond the treatment room.",
    "quals": [
     {
      "t": "MSc Physiotherapy",
      "d": "[University, year]"
     },
     {
-     "t": "BSc Sports & Exercise Science",
+     "t": "Sports & Exercise Science",
      "d": "[University, year]"
     },
     {
      "t": "Personal Training",
+     "d": "[Provider, year]"
+    },
+    {
+     "t": "Sports Massage",
      "d": "[Provider, year]"
     }
    ],
@@ -439,6 +445,7 @@
    ],
    "treatments": [
     "physio",
+    "massage",
     "sports",
     "laser"
    ],
@@ -461,11 +468,10 @@
      "d": "[Teaching, sports team work, awards or publications.]"
     }
    ],
-   "outside": "[Something personal.]",
+   "outside": "Outside the clinic, I enjoy playing padel and keeping active, so I understand how frustrating it can be when pain gets in the way.",
    "tags": [
-    "[Interest]",
-    "[Interest]",
-    "[Interest]"
+    "Padel",
+    "Keeping active"
    ]
   }
  },

@@ -26,7 +26,7 @@
   const TEAM = [
     ['Osteopathy', [['Hafi Rahman', L.hafi, '707736522f4e7464c994a8b9b88b27b3', 'Founder &amp; Principal Osteopath'], ['Freta Teklensenbet', L.freta, '281742b2504bf22d441c896347616585', 'Registered Osteopath'],
       ['Ankita Desai', L.ankita, '3c84c3f41e71194a585fdbe2ba549b68', 'Registered Osteopath']]],
-    ['Physiotherapy &amp; Massage', [['Emre Tosun', L.emre, 'emre-avatar', 'Physiotherapist &amp; Personal Trainer'], ['Zoe Goodwin', L.zoe, '3145376680e5c707cbbb4e7924778e72', 'Sports Massage Therapist']]]
+    ['Physiotherapy &amp; Massage', [['Emre Tosun', L.emre, 'emre-avatar', 'Physiotherapist, Personal Trainer &amp; Sports Massage Therapist'], ['Zoe Goodwin', L.zoe, '3145376680e5c707cbbb4e7924778e72', 'Sports Massage Therapist']]]
   ];
 
   const thumb = (asset, size) => asset

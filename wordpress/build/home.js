@@ -173,7 +173,7 @@
   /* 6. TEAM */
   const TEAM = [['Hafi Rahman', 'Founder & Principal Osteopath', 'adb0a00027d03ae9e913fa80bfed0bf2', L.hafi], ['Zoe Goodwin', 'Sports Massage Therapist', '0a842542348f2fd4ca49aad4f2bf2c64', L.zoe],
     ['Freta Teklensenbet', 'Registered Osteopath', '4ff59666163d2da4d9903e010addea99', L.freta], ['Ankita Desai', 'Registered Osteopath', '7a6e5e3046a8707b0a2a72472a2adc55', L.ankita],
-    ['Emre Tosun', 'Physiotherapist & Personal Trainer', 'emre-portrait', L.emre]];
+    ['Emre Tosun', 'Physiotherapist, Personal Trainer & Sports Massage Therapist', 'emre-portrait', L.emre]];
   S.team = () => section({ x: { _element_id: 'team' } }, [
     eyebrow('Our Team'),
     C({ flex_direction: 'row', flex_wrap: 'wrap', flex_justify_content: 'space-between', flex_align_items: 'flex-end', flex_gap: gap(20), margin: dims(24, 0, 0, 0) }, [
