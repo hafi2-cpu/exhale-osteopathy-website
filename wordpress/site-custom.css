@@ -222,5 +222,12 @@ a.ex-w400 { font-weight: 400; }
        (stops cards stretching the circle into an oval) */
 .e-con.ex-fit:has(> .elementor-widget-icon:only-child) { width: var(--min-height) !important; height: var(--min-height); flex: 0 0 auto !important; }
 
+/* 28. ex-strip — "at a glance" strips: each item starts 24px after the divider line before it
+       (the first item in each row stays flush with the page edge) */
+.ex-strip > .e-con { padding-left: 24px !important; }
+@media (min-width: 981px) { .ex-strip:not(.ex-strip--3) > .e-con:nth-child(4n+1), .ex-strip--3 > .e-con:nth-child(3n+1) { padding-left: 0 !important; } }
+@media (min-width: 561px) and (max-width: 980px) { .ex-strip > .e-con:nth-child(2n+1) { padding-left: 0 !important; } }
+@media (max-width: 560px) { .ex-strip > .e-con { padding-left: 0 !important; } }
+
 /* 8. Phone: hide header Book button on very narrow screens (approved behaviour) */
 @media (max-width: 380px) { .ex-hide-xs { display: none !important; } }

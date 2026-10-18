@@ -54,7 +54,7 @@
 
     /* AT A GLANCE */
     out.push(section({ pt: 0, pb: 0, ptm: 0, pbm: 0, x: { background_background: 'classic', background_color: '#4F5945' } }, [
-      C(grid(4, { grid_columns_grid_tablet: fr(2), grid_columns_grid_mobile: fr(1), grid_gaps: gaps(0) }), p.facts.map(f =>
+      C(grid(4, { grid_columns_grid_tablet: fr(2), grid_columns_grid_mobile: fr(1), grid_gaps: gaps(0), css_classes: 'ex-strip' }), p.facts.map(f =>
         C({ padding: dims(26, 24, 26, 0), border_border: 'solid', border_width: dims(0, 1, 0, 0), border_color: 'rgba(245,242,234,0.14)' }, [
           heading(esc(f.k), { tag: 'span', color: 'rgba(245,242,234,0.88)', t: { f: IN, s: 12, ls: 0.16, tt: 'uppercase', lh: 1.35 } }),
           heading(esc(f.v), { tag: 'span', color: '#F5F2EA', t: { s: 22, ls: -0.01, lh: 1.35 }, x: { _margin: dims(4, 0, 0, 0) } })

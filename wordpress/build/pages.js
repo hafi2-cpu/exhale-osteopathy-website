@@ -384,7 +384,7 @@
 
     const WAYS = [['phone', 'Call us', '0121 751 2440', 'tel:+441217512440'], ['mail', 'Email us', 'info@exhaleosteopathy.co.uk', 'mailto:info@exhaleosteopathy.co.uk'], ['calendar', 'Book online', 'Choose a time', '#book']];
     out.push(section({ pt: 0, pb: 0, ptm: 0, pbm: 0, x: { background_background: 'classic', background_color: '#4F5945' } }, [
-      C(grid(3, { grid_columns_grid_tablet: fr(2), grid_columns_grid_mobile: fr(1), grid_gaps: gaps(0) }), WAYS.map(([ic, k, v, href]) =>
+      C(grid(3, { grid_columns_grid_tablet: fr(2), grid_columns_grid_mobile: fr(1), grid_gaps: gaps(0), css_classes: 'ex-strip ex-strip--3' }), WAYS.map(([ic, k, v, href]) =>
         C({ html_tag: 'a', link: link(href), flex_direction: 'row', flex_align_items: 'center', flex_gap: gap(18), padding: dims(30, 24, 30, 0),
           border_border: 'solid', border_width: dims(0, 1, 0, 0), border_color: 'rgba(245,242,234,0.14)' }, [
           circle(ic, 52, 22, { color: '#E6E0D5', box: { border_border: 'solid', border_width: all(1), border_color: 'rgba(245,242,234,0.35)' } }),
@@ -515,7 +515,7 @@
     /* AT A GLANCE (verified facts only) */
     const FACTS = [['Location', 'Sutton Coldfield, Birmingham'], ['Open late', 'Mon–Fri until 8pm'], ['Weekends', 'Saturday 8am–2pm'], ['GP referral', 'Not needed']];
     out.push(section({ pt: 0, pb: 0, ptm: 0, pbm: 0, x: { background_background: 'classic', background_color: '#4F5945' } }, [
-      C(grid(4, { grid_columns_grid_tablet: fr(2), grid_columns_grid_mobile: fr(1), grid_gaps: gaps(0) }), FACTS.map(([k, v]) =>
+      C(grid(4, { grid_columns_grid_tablet: fr(2), grid_columns_grid_mobile: fr(1), grid_gaps: gaps(0), css_classes: 'ex-strip' }), FACTS.map(([k, v]) =>
         C({ padding: dims(26, 24, 26, 0), border_border: 'solid', border_width: dims(0, 1, 0, 0), border_color: 'rgba(245,242,234,0.14)' }, [
           heading(k, { tag: 'span', color: 'rgba(245,242,234,0.88)', t: { f: IN, s: 12, ls: 0.16, tt: 'uppercase', lh: 1.35 } }),
           heading(v, { tag: 'span', color: '#F5F2EA', t: { s: 20, ls: -0.01, lh: 1.35 }, x: { _margin: dims(4, 0, 0, 0) } })
@@ -903,7 +903,7 @@
 
     const FACTS = [['First appointment', '45–60 minutes'], ['Initial consultation', '£75, including treatment'], ['GP referral', 'Not needed'], ['Appointments', 'Evenings &amp; Saturdays']];
     out.push(section({ pt: 0, pb: 0, ptm: 0, pbm: 0, x: { background_background: 'classic', background_color: '#4F5945' } }, [
-      C(grid(4, { grid_columns_grid_tablet: fr(2), grid_columns_grid_mobile: fr(1), grid_gaps: gaps(0) }), FACTS.map(([k, v]) =>
+      C(grid(4, { grid_columns_grid_tablet: fr(2), grid_columns_grid_mobile: fr(1), grid_gaps: gaps(0), css_classes: 'ex-strip' }), FACTS.map(([k, v]) =>
         C({ padding: dims(26, 24, 26, 0), border_border: 'solid', border_width: dims(0, 1, 0, 0), border_color: 'rgba(245,242,234,0.14)' }, [
           heading(k, { tag: 'span', color: 'rgba(245,242,234,0.88)', t: { f: IN, s: 12, ls: 0.16, tt: 'uppercase', lh: 1.35 } }),
           heading(v, { tag: 'span', color: '#F5F2EA', t: { s: 20, ls: -0.01, lh: 1.35 }, x: { _margin: dims(4, 0, 0, 0) } })
