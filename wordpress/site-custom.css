@@ -188,5 +188,17 @@ a.ex-underline-olive { color: #4F5945; font-weight: 500; text-decoration: underl
 .ex-strong-600 strong { font-weight: 600; color: #272B26; }
 a.ex-w400 { font-weight: 400; }
 
+/* 24. Blog: hairline under the header on plain dark heroes, 4:3 cards, category filter underline, load-more button */
+.ex-hero-line { position: relative; }
+.ex-hero-line::before { content: ""; position: absolute; left: 0; right: 0; top: 96px; height: 1px; background: rgba(245,242,234,.1); }
+.ex-ratio-43 { aspect-ratio: 4 / 3; }
+.ex-ratio-43 img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.ex-blog-filter .e-filter-item { border-bottom: 2px solid transparent; margin-bottom: -1px; background: transparent; }
+.ex-blog-filter .e-filter-item[aria-pressed="true"] { border-bottom-color: #4F5945; }
+.ex-blog-grid .e-load-more-anchor + .elementor-button-wrapper .elementor-button,
+.ex-blog-grid .e-loop__load-more .elementor-button { background: transparent; color: #272B26; border: 1px solid #B7AA99; border-radius: 3px;
+  font: 500 15px/1.2 Inter, sans-serif; height: 52px; padding: 0 30px; display: inline-flex; align-items: center; }
+.ex-blog-grid .e-loop__load-more .elementor-button:hover { background: #E6E0D5; border-color: #4F5945; }
+
 /* 8. Phone: hide header Book button on very narrow screens (approved behaviour) */
 @media (max-width: 380px) { .ex-hide-xs { display: none !important; } }

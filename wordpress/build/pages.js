@@ -654,6 +654,56 @@
     return out;
   };
 
+
+  /* ---------------- BLOG ---------------- */
+  // Uses Elementor Pro Loop Grid + Taxonomy Filter with the loop-item templates "Exhale Blog Card" / "Exhale Blog Featured Card"
+  P.BLOG = { card: 401, featured: 407, small: 410, featuredPost: 400 };
+  P.blog = () => {
+    const B = P.BLOG, out = [];
+    out.push(section({ pt: 168, pb: 80, ptm: 136, pbm: 56, x: { background_background: 'classic', background_color: '#272B26', css_classes: 'ex-hero-line' } }, [
+      heading('<a href="/">Home</a> <span aria-hidden="true">→</span> <strong>Blog</strong>',
+        { tag: 'p', color: 'rgba(245,242,234,0.88)', t: { f: IN, s: 15, lh: 1.6 }, x: { _css_classes: 'ex-on-dark ex-crumbs ex-crumbs--88' } }),
+      C({ flex_direction: 'row', flex_wrap: 'wrap', flex_justify_content: 'space-between', flex_align_items: 'flex-end', flex_gap: gap(32), margin: dims(24, 0, 0, 0) }, [
+        heading('Advice from the treatment room', { tag: 'h1', color: '#F5F2EA', t: { s: 68, st: 44, sm: 36, lh: 1.02, lhm: 1.08, ls: -0.035 }, x: maxw(760) }),
+        text('<p>Practical guides, exercises and honest answers to the questions our patients ask most — written by the Exhale team.</p>', { color: 'rgba(245,242,234,0.85)', t: { s: 19, lh: 1.65 }, x: maxw(480) })
+      ])
+    ]));
+    out.push(section({ pt: 72, pb: 40, ptm: 40, pbm: 24 }, [
+      W('loop-grid', { template_id: String(B.featured), columns: '1', columns_tablet: '1', columns_mobile: '1', posts_per_page: 1,
+        post_query_post_type: 'by_id', post_query_posts_ids: [String(B.featuredPost)], row_gap: px(0), column_gap: px(0) })
+    ]));
+    const gridId = EX.rid();
+    out.push(section({ pt: 40, pb: 100, ptm: 24, pbm: 64 }, [
+      C({ flex_direction: 'row', flex_wrap: 'wrap', flex_justify_content: 'space-between', flex_align_items: 'center', flex_gap: gap(20),
+        border_border: 'solid', border_width: dims(0, 0, 1, 0), border_color: '#B7AA99' }, [
+        W('taxonomy-filter', Object.assign({ selected_element: gridId, taxonomy: 'category', show_first_item: 'yes', first_item_title: 'All',
+          horizontal_scroll: 'disable', taxonomy_filter_items_space_between: px(0), _css_classes: 'ex-blog-filter',
+          taxonomy_filter_normal_text_color: '#272B26', taxonomy_filter_hover_text_color: '#4F5945', taxonomy_filter_active_text_color: '#4F5945',
+          taxonomy_filter_padding: dims(14, 18, 16, 18), taxonomy_filter_border_radius: all(0) }, EX.typo({ f: IN, s: 14, w: 500, ls: 0.06, lh: 1.4 }, 'taxonomy_filter_typography')))
+      ]),
+      Object.assign(W('loop-grid', { template_id: String(B.card), columns: '3', columns_tablet: '2', columns_mobile: '1', posts_per_page: 6,
+        post_query_post_type: 'post', post_query_exclude: ['manual_selection'], post_query_exclude_ids: [String(B.featuredPost)],
+        column_gap: px(24), row_gap: px(40), pagination_type: 'load_more_on_click', text: 'Load more articles', load_more_spacing: px(56),
+        load_more_no_posts_custom_message: '', _margin: dims(40, 0, 0, 0), _css_classes: 'ex-blog-grid' }), { id: gridId })
+    ]));
+    out.push(section({ pt: 80, pb: 80, ptm: 56, pbm: 56, x: { background_background: 'classic', background_color: '#4F5945' } }, [
+      C({ flex_direction: 'row', flex_wrap: 'wrap', flex_justify_content: 'space-between', flex_align_items: 'center', flex_gap: gap(32) }, [
+        C({ width: px(680), width_tablet: pct(100) }, [
+          label('Follow Us', '#E6E0D5'),
+          heading('More tips and exercises on Instagram', { color: '#F5F2EA', t: { s: 36, st: 30, sm: 28, lh: 1.15, ls: -0.02 }, x: { _margin: dims(12, 0, 0, 0) } }),
+          para('Short videos, simple exercises and clinic news from the team.', { color: 'rgba(245,242,234,0.85)', t: { s: 17, lh: 1.7 }, mt: 12 })
+        ]),
+        C({ flex_direction: 'row', flex_gap: gap(12), css_classes: 'ex-fit' }, [
+          P.iconBtn('Instagram', 'https://www.instagram.com/lichfield_osteopaths', 'instagram'),
+          P.iconBtn('Facebook', 'https://www.facebook.com/LichfieldOsteopaths/', 'facebook')
+        ])
+      ])
+    ]));
+    out.push(P.book({ title: 'Reading isn’t fixing it?', ts: 46, lead: 'Book an assessment and we’ll find out what’s going on. No GP referral needed.',
+      cards: [['Book an Appointment', 'Initial consultation &amp; treatment — £75.', L.book, 'olive'], ['Call 0121 751 2440', 'Speak to our team.', 'tel:+441217512440', 'outline']] }));
+    return out;
+  };
+
   EX.buildPage = async function (key) {
     const out = P[key]();
     await EX.clearPage();
