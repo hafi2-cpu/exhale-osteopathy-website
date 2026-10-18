@@ -157,7 +157,7 @@ a.ex-underline-olive { color: #4F5945; font-weight: 500; text-decoration: underl
 .ex-hero-side--92::after { background: linear-gradient(90deg, rgba(39,43,38,.92) 0%, rgba(39,43,38,.72) 45%, rgba(39,43,38,.3) 100%); }
 .ex-fee-tabs .e-n-tabs { gap: 40px; }
 .ex-fee-tabs .e-n-tabs-heading { flex: 0 0 320px !important; width: 320px !important; position: sticky; top: 24px; align-self: flex-start; counter-reset: fee; }
-.ex-fee-tabs .e-n-tab-title { counter-increment: fee; justify-content: flex-start; gap: 16px; padding: 18px 20px; border: 1px solid #B7AA99; border-radius: 3px; width: 100%; }
+.ex-fee-tabs .e-n-tab-title { counter-increment: fee; justify-content: flex-start; gap: 16px; padding: 18px 20px !important; border: 1px solid #B7AA99; border-radius: 3px; width: 100%; }
 .ex-fee-tabs .e-n-tab-title[aria-selected="true"] { border-color: #272B26; }
 .ex-fee-tabs .e-n-tab-title::before { content: "0" counter(fee); font-family: Inter, sans-serif; font-size: 13px; letter-spacing: .08em; color: #4F5945; }
 .ex-fee-tabs .e-n-tab-title[aria-selected="true"]::before { color: #B7AA99; }
@@ -169,7 +169,7 @@ a.ex-underline-olive { color: #4F5945; font-weight: 500; text-decoration: underl
   .ex-fee-tabs .e-n-tabs-heading { flex: none !important; width: 100% !important; position: static; flex-direction: row !important; flex-wrap: wrap !important; }
   .ex-fee-tabs .e-n-tab-title { flex: 0 0 100% !important; }
 }
-@media (max-width: 560px) { .ex-fee-tabs .e-n-tab-title { padding: 14px 12px; letter-spacing: .08em; } }
+@media (max-width: 560px) { .ex-fee-tabs .e-n-tab-title { padding: 14px 12px !important; letter-spacing: .08em; } }
 .ex-dur { font-family: Inter, sans-serif; font-size: 14px; letter-spacing: 0; color: rgba(39,43,38,.76); margin-left: 6px; }
 .e-con.ex-minw-240 { min-width: 240px; }
 .ex-nowrap-text .elementor-heading-title { white-space: nowrap; }
@@ -182,6 +182,11 @@ a.ex-underline-olive { color: #4F5945; font-weight: 500; text-decoration: underl
 .ex-gap-8 { --ex-gap: 8px; }
 .ex-dark-links a { color: #272B26; }
 .ex-dark-links a:hover { color: #4F5945; }
+
+/* 23. Birmingham: side shade variant, bold label line, regular-weight olive links */
+.ex-hero-side--93::after { background: linear-gradient(90deg, rgba(39,43,38,.93) 0%, rgba(39,43,38,.75) 45%, rgba(39,43,38,.3) 100%); }
+.ex-strong-600 strong { font-weight: 600; color: #272B26; }
+a.ex-w400 { font-weight: 400; }
 
 /* 8. Phone: hide header Book button on very narrow screens (approved behaviour) */
 @media (max-width: 380px) { .ex-hide-xs { display: none !important; } }

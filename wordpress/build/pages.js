@@ -15,6 +15,9 @@
     circle('tick', 22, 13, { color: '#4F5945', box: { background_background: 'classic', background_color: o.bg || '#E6E0D5', margin: dims(2, 0, 0, 0) } }),
     text('<p>' + t + '</p>', { color: o.color, t: { s: o.s || 15, lh: o.lh || 1.6 } })
   ]);
+  // Rounded link chip (condition links, tags)
+  P.chip = (t, href, o = {}) => button(t.replace(/&amp;/g, '&'), href, { kind: 'ivory', h: 44, fs: 15, pl: 16, pr: 16,
+    x: Object.assign({ background_color: o.bg || '#E6E0D5', button_text_color: '#4F5945', button_background_hover_color: o.bg || '#E6E0D5', hover_color: '#272B26', border_radius: all(999) }, o.x || {}) });
   P.label = label; P.para = para; P.maxw = maxw; P.stars = stars; P.tickRow = tickRow; P.link = link;
 
   // Inner-page hero: photo, multi-stop shade, breadcrumb, H1, lead + two buttons above a hairline
@@ -47,8 +50,9 @@
       C({ padding: all(30), flex_gap: gap(14), background_background: 'classic', background_color: o.card || '#F5F2EA', border_radius: all(3) }, [
         stars(),
         text('<p>“' + prompt + '”</p>', { t: { s: 16, lh: 1.7 }, x: { _flex_size: 'grow' } }),
-        heading('[Patient name]', { tag: 'span', t: { f: IN, s: 14, w: 600, lh: 1.75 } })
-      ])))
+        heading(o.name || '[Patient name]', { tag: 'span', t: { f: IN, s: 14, w: 600, lh: 1.75 } })
+      ]))),
+    ...(o.after ? [o.after] : [])
   ]);
 
   // Closing "Book Today" band. cards: [[title, sub, href, 'olive'|'outline'|'outline-dark']]
@@ -299,7 +303,7 @@
             C({ flex_direction: 'row', flex_wrap: 'wrap', flex_justify_content: 'space-between', flex_align_items: 'center', flex_gap: gap(24), padding: dims(22, 0, 22, 0),
               border_border: 'solid', border_width: dims(0, 0, 1, 0), border_color: '#B7AA99' }, [
               C({ css_classes: 'ex-grow ex-minw-240' }, [
-                heading(rn + (dur ? ' <small class="ex-dur">' + dur + '</small>' : ''), { tag: 'h4', t: { s: 21, ls: -0.01, lh: 1.35 } }),
+                heading(rn + (dur ? ' <small class="ex-dur">' + dur + '</small>' : ''), { tag: 'h4', t: { s: 21, ls: -0.01, lh: 1.75 } }),
                 text('<p>' + d + '</p>', { color: 'rgba(39,43,38,0.84)', t: { s: 15, lh: 1.6 }, x: { _margin: dims(4, 0, 0, 0) } })
               ]),
               C({ flex_direction: 'row', flex_align_items: 'center', flex_gap: gap(22), css_classes: 'ex-fit' }, [
@@ -411,9 +415,9 @@
     const h4 = (t) => heading(t, { tag: 'h4', color: '#4F5945', t: { f: IN, s: 12, w: 500, ls: 0.2, tt: 'uppercase', lh: 1.4 } });
     CL.forEach(c => {
       const photo = c.photo
-        ? C({ min_height: px(520), min_height_mobile: px(320), border_radius: all(3), background_background: 'classic', background_color: '#E6E0D5', background_image: img(c.photo),
+        ? C({ min_height: px(520), border_radius: all(3), background_background: 'classic', background_color: '#E6E0D5', background_image: img(c.photo),
             background_position: 'center center', background_size: 'cover' }, [])
-        : C({ min_height: px(520), min_height_mobile: px(320), border_radius: all(3), background_background: 'classic', background_color: '#E6E0D5', flex_justify_content: 'center', flex_align_items: 'center',
+        : C({ min_height: px(520), border_radius: all(3), background_background: 'classic', background_color: '#E6E0D5', flex_justify_content: 'center', flex_align_items: 'center',
             border_border: c.bg === '#E6E0D5' ? 'solid' : '', border_width: all(1), border_color: '#B7AA99' },
           [heading('[Photo of ' + c.name + ']', { tag: 'span', color: 'rgba(39,43,38,0.76)', t: { f: IN, s: 13, ls: 0.14, tt: 'uppercase', lh: 1.4 } })]);
       const details = C({}, [
@@ -470,6 +474,184 @@
         button('Book an appointment', L.book, { kind: 'olive', h: 64, fs: 18, icon: 'right', split: true, minw: 300, pl: 34, pr: 30 })
       ])
     ]));
+    return out;
+  };
+
+
+  /* ---------------- BIRMINGHAM ---------------- */
+  // Approved design default address ("Clinic address" tweak = 247A Jockey Road). Change here if the launch address differs.
+  const BH_ADDR = { street: '247A Jockey Road', town: 'Sutton Coldfield', pc: 'B73 5XE', line: '247A Jockey Road, Sutton Coldfield, B73 5XE',
+    maps: 'https://www.google.com/maps/search/?api=1&query=247A+Jockey+Road+Sutton+Coldfield+B73+5XE' };
+  P.birmingham = () => {
+    const A = BH_ADDR, out = [];
+    out.push(P.heroSide({ img: '2cef3306a31a7e7056f2f7bef5cf4201', y: 15, minh: 700, pt: 176, crumb: 'Osteopath Birmingham', h1: 'Osteopathy for patients across Birmingham', h1w: 820, leadw: 680,
+      shade: 'ex-hero-side ex-hero-side--93',
+      lead: 'Exhale Osteopathy is an independent osteopathy and physiotherapy clinic in Sutton Coldfield, in the north of Birmingham. Patients come to us from across the city for unhurried, hands-on care from registered clinicians.',
+      extra: [
+        C({ flex_direction: 'row', flex_align_items: 'center', flex_gap: gap(12), css_classes: 'ex-fit', margin: dims(24, 0, 0, 0), padding: dims(12, 18, 12, 18),
+          background_background: 'classic', background_color: 'rgba(245,242,234,0.1)', border_border: 'solid', border_width: all(1), border_color: 'rgba(245,242,234,0.2)', border_radius: all(3) }, [
+          W('icon', { selected_icon: icon('pin'), primary_color: '#E6E0D5', size: px(18) }),
+          heading('Our clinic: ' + A.line, { tag: 'span', color: '#F5F2EA', t: { f: IN, s: 15, lh: 1.5 } })
+        ]),
+        C({ flex_direction: 'row', flex_wrap: 'wrap', flex_align_items: 'center', flex_gap: gap(14), margin: dims(30, 0, 0, 0) }, [
+          button('Book an appointment', '#book', { kind: 'ivory', h: 62, fs: 18, icon: 'right', split: true, minw: 280, pl: 32, pr: 28 }),
+          button('Plan your visit', '#visit', { kind: 'outline-light', h: 62, fs: 18, icon: 'right', split: true, minw: 260, pl: 32, pr: 28 })
+        ])
+      ] }));
+
+    const FACTS = [['Location', 'Sutton Coldfield, Birmingham'], ['Open late', 'Mon–Fri until 8pm'], ['Weekends', 'Saturday 8am–2pm'], ['First appointment', '45–60 mins · £75']];
+    out.push(section({ pt: 0, pb: 0, ptm: 0, pbm: 0, x: { background_background: 'classic', background_color: '#4F5945' } }, [
+      C(grid(4, { grid_columns_grid_tablet: fr(2), grid_columns_grid_mobile: fr(1), grid_gaps: gaps(0) }), FACTS.map(([k, v]) =>
+        C({ padding: dims(26, 24, 26, 0), border_border: 'solid', border_width: dims(0, 1, 0, 0), border_color: 'rgba(245,242,234,0.14)' }, [
+          heading(k, { tag: 'span', color: 'rgba(245,242,234,0.88)', t: { f: IN, s: 12, ls: 0.16, tt: 'uppercase', lh: 1.35 } }),
+          heading(v, { tag: 'span', color: '#F5F2EA', t: { s: 20, ls: -0.01, lh: 1.35 }, x: { _margin: dims(4, 0, 0, 0) } })
+        ])))
+    ]));
+
+    const GET = [['car', 'By car', '[Parking details to confirm before launch — e.g. on-site, on-street or nearest car park.]'],
+      ['train', 'By public transport', '[Nearest bus routes or train station to confirm before launch.]'],
+      ['access', 'Access', '[Confirm step-free access.] Let us know any access needs when you book.']];
+    out.push(section({ x: { _element_id: 'visit', css_classes: 'ex-anchor' } }, [
+      C(gridC('minmax(0,1fr) minmax(0,1.1fr)', { grid_columns_grid_tablet: fr(1), grid_gaps: gaps(64), grid_gaps_tablet: gaps(40), grid_align_items: 'start' }), [
+        C({}, [
+          eyebrow('Where We Are'),
+          h2('In Sutton Coldfield — not the city centre', { o: { x: { _margin: dims(24, 0, 0, 0) } } }),
+          para('We want to be upfront: Exhale isn’t in central Birmingham. Our clinic is in Sutton Coldfield, a town within the City of Birmingham’s boundary, on its northern side. For many patients in north Birmingham that makes us a convenient choice; others are happy to travel a little further for the care they want.', { mt: 20 }),
+          para('If you’re weighing up whether the trip is worth it, call us on <a class="ex-underline-olive ex-w400" href="tel:+441217512440">0121 751 2440</a>. We’ll talk through your problem and be honest if we think a clinic closer to you would suit you better.', { mt: 20 }),
+          C({ margin: dims(32, 0, 0, 0), padding: dims(28, 28, 30, 28), padding_mobile: dims(24, 20, 26, 20), background_background: 'classic', background_color: '#E6E0D5', border_radius: all(3) }, [
+            heading('Address', { tag: 'h3', color: '#4F5945', t: { f: IN, s: 12, w: 500, ls: 0.2, tt: 'uppercase', lh: 1.4 } }),
+            heading('Exhale Osteopathy<br>' + A.street + '<br>' + A.town + ', ' + A.pc, { tag: 'p', t: { s: 22, ls: -0.01, lh: 1.35 }, x: { _margin: dims(10, 0, 0, 0) } }),
+            heading('Getting here', { tag: 'h3', color: '#4F5945', t: { f: IN, s: 12, w: 500, ls: 0.2, tt: 'uppercase', lh: 1.4 }, x: { _margin: dims(24, 0, 0, 0) } }),
+            C({ flex_gap: gap(10), margin: dims(12, 0, 0, 0) }, GET.map(([ic, t, d]) => C({ flex_direction: 'row', flex_align_items: 'flex-start', flex_gap: gap(14) }, [
+              circle(ic, 34, 16, { color: '#4F5945', box: { background_background: 'classic', background_color: '#F5F2EA' } }),
+              text('<p><strong>' + t + '</strong><br>' + d + '</p>', { t: { s: 16, lh: 1.5 }, x: { _css_classes: 'ex-strong-600' } })
+            ])))
+          ])
+        ]),
+        C({}, [
+          C({ border_radius: all(3), overflow: 'hidden', padding: all(0) }, [W('google_maps', { address: A.street + ', ' + A.town + ' ' + A.pc, zoom: { unit: 'px', size: 15, sizes: [] }, height: px(520), height_mobile: px(360), _css_classes: 'ex-map' })]),
+          C({ flex_direction: 'row', flex_wrap: 'wrap', flex_gap: gap(12), margin: dims(18, 0, 0, 0) }, [
+            button('Open in Google Maps', A.maps, { kind: 'olive', h: 52, fs: 15, pl: 24, pr: 24, icon: 'arrowNE', gapIcon: 10 }),
+            button('All contact details', L.contact, { kind: 'outline', h: 52, fs: 15, pl: 24, pr: 24 })
+          ])
+        ])
+      ])
+    ]));
+
+    const WHY = [['01', 'Time to be properly assessed', 'Your first appointment is 45–60 minutes, so there’s time to listen, examine and start treatment without rushing.'],
+      ['02', 'Evening and Saturday slots', 'Open until 8pm on weekdays and 8am–2pm on Saturdays, so you don’t need to take time off work.'],
+      ['03', 'Osteopathy, physio and massage together', 'Our team works side by side, so you can move between treatments without starting again elsewhere.'],
+      ['04', 'Registered clinicians', 'Our osteopaths are registered with the General Osteopathic Council and our physiotherapist holds a Master’s in Physiotherapy.'],
+      ['05', 'No GP referral needed', 'Book directly online or by phone — there’s no need to wait for a referral.'],
+      ['06', 'Clear, published prices', 'Initial consultations are £75 and follow-ups £60, with no hidden extras.']];
+    out.push(section({ x: { background_background: 'classic', background_color: '#E6E0D5' } }, [
+      eyebrow('Why Patients Travel to Us'),
+      h2('What you get when you choose Exhale', { o: { x: Object.assign({ _margin: dims(24, 0, 0, 0) }, maxw(780)) } }),
+      C(grid(3, { grid_columns_grid_tablet: fr(2), grid_columns_grid_mobile: fr(1), grid_gaps: gaps(14), margin: dims(40, 0, 0, 0) }), WHY.map(([n, t, d]) =>
+        C({ flex_gap: gap(12), padding: dims(30, 28, 32, 28), background_background: 'classic', background_color: '#F5F2EA', border_radius: all(3) }, [
+          heading(n, { tag: 'span', color: '#4F5945', t: { s: 13, ls: 0.1, lh: 1.4 } }),
+          heading(t, { tag: 'h3', t: { s: 22, w: 500, ls: -0.015, lh: 1.3 } }),
+          text('<p>' + d + '</p>', { color: 'rgba(39,43,38,0.84)', t: { s: 15, lh: 1.65 } })
+        ])))
+    ]));
+
+    const SVC = [['Osteopathy', L.osteo, 'Hands-on treatment for back, neck and joint pain.'], ['Physiotherapy', L.physio, 'Assessment and structured rehab for injuries.'],
+      ['Sports Massage', L.massage, 'Sports, deep tissue and pregnancy massage.'], ['Cranial Osteopathy', L.cranial, 'A very gentle, light-touch approach.'],
+      ['Baby &amp; Paediatric Osteopathy', L.babies, 'Gentle care for babies, children and teens.'], ['Pregnancy Osteopathy', L.preg, 'Adapted treatment for pregnancy aches.'],
+      ['Acupuncture', L.acu, 'Western medical acupuncture and dry needling.'], ['1-to-1 Rehab / Pilates', L.rehab, 'Clinician-led strength and control sessions.'],
+      ['Shockwave Therapy', L.shock, 'For stubborn tendon and heel pain.'], ['Diagnostic Ultrasound', L.us, 'In-clinic scans of tendons and soft tissues.']];
+    out.push(section({}, [
+      eyebrow('Our Treatments'),
+      C({ flex_direction: 'row', flex_wrap: 'wrap', flex_justify_content: 'space-between', flex_align_items: 'flex-end', flex_gap: gap(24), margin: dims(24, 0, 0, 0) }, [
+        h2('More than osteopathy, all under one roof', { o: { x: maxw(680) } }),
+        text('<p>Osteopaths, a physiotherapist and sports massage therapists work side by side, so you can be referred within the team rather than starting again somewhere else.</p>', { t: { s: 17, lh: 1.7 }, x: maxw(500) })
+      ]),
+      C(grid(2, { grid_columns_grid_tablet: fr(1), grid_gaps: gaps(0, 48), margin: dims(36, 0, 0, 0), border_border: 'solid', border_width: dims(1, 0, 0, 0), border_color: '#B7AA99' }), SVC.map(([n, href, d]) =>
+        C({ html_tag: 'a', link: link(href), flex_direction: 'row', flex_justify_content: 'space-between', flex_align_items: 'center', flex_gap: gap(20), padding: dims(22, 0, 22, 0),
+          border_border: 'solid', border_width: dims(0, 0, 1, 0), border_color: '#B7AA99' }, [
+          C({ css_classes: 'ex-grow' }, [
+            heading(n, { tag: 'span', t: { s: 21, ls: -0.01, lh: 1.5 } }),
+            heading(d, { tag: 'span', color: 'rgba(39,43,38,0.84)', t: { f: IN, s: 15, lh: 1.5 } })
+          ]),
+          W('icon', { selected_icon: icon('right'), view: 'stacked', shape: 'square', primary_color: '#E6E0D5', secondary_color: '#4F5945', size: px(18), icon_padding: px(13), border_radius: all(3) })
+        ])))
+    ]));
+
+    const TEAM = [['Hafi Rahman', 'Founder &amp; Osteopath', L.hafi, 'f4513f27866f22682d9d1eafdcd00e9b', 'B’Ost (Hons). Also a sports therapist and personal trainer.'],
+      ['Ankita Desai', 'Registered Osteopath', L.ankita, 'f8984ae774fa815b4d817f0fe0266bba', 'Master’s in Osteopathy, British School of Osteopathy.'],
+      ['Freta Teklensenbet', 'Registered Osteopath', L.freta, '2b3650271a3bcca5534fca4186d2400c', 'Registered with the General Osteopathic Council.'],
+      ['Emre Tosun', 'Physiotherapist', L.emre, '', 'MSc Physiotherapy. Specialises in MSK rehab.'],
+      ['Zoe Goodwin', 'Sports Massage Therapist', L.zoe, 'a1aa92c86185fbf90aea1ad6a47c85a3', 'Level 4 Sports Massage; BSc Sport, Exercise &amp; Health Science.']];
+    out.push(section({ x: { background_background: 'classic', background_color: '#E6E0D5' } }, [
+      eyebrow('Who You’ll See'),
+      h2('Registered, qualified clinicians', { o: { x: { _margin: dims(24, 0, 0, 0) } } }),
+      C(grid(5, { grid_columns_grid_tablet_extra: fr(3), grid_columns_grid_tablet: fr(3), grid_columns_grid_mobile: fr(2), grid_gaps: gaps(20), grid_gaps_mobile: gaps(16), margin: dims(40, 0, 0, 0) }),
+        TEAM.map(([n, role, href, a, cred]) => C({ html_tag: 'a', link: link(href) }, [
+          P.photo(a, n.replace(/&amp;/g, '&'), 'ex-ratio-34', { x: { _css_classes: 'ex-ratio-34 ex-pos-top' }, ph: '[Headshot]' }),
+          heading(n, { tag: 'h3', t: { s: 20, ls: -0.015, lh: 1.3 }, x: { _margin: dims(16, 0, 0, 0) } }),
+          heading(role, { tag: 'span', color: 'rgba(39,43,38,0.76)', t: { f: IN, s: 14, lh: 1.75 } }),
+          text('<p>' + cred + '</p>', { color: 'rgba(39,43,38,0.84)', t: { s: 14, lh: 1.55 }, x: { _margin: dims(8, 0, 0, 0) } }),
+          heading('View Profile →', { tag: 'span', color: '#4F5945', t: { f: IN, s: 14, w: 500, lh: 1.75 }, x: { _margin: dims(8, 0, 0, 0) } })
+        ])))
+    ]));
+
+    const STEPS = [['01', 'Book online or call', 'Choose a practitioner and time online, or call 0121 751 2440 and we’ll help you pick.'],
+      ['02', 'Your first appointment', '45–60 minutes: we take your history, assess how you move and explain what we find. £75.'],
+      ['03', 'Treatment on the day', 'Where it’s appropriate we treat at your first visit and give you simple things to do at home.'],
+      ['04', 'Follow-ups if needed', '40–45 minute follow-ups at £60. We’ll be honest about how many you’re likely to need.']];
+    out.push(section({ pt: 100, pb: 108, ptm: 64, pbm: 64, x: { background_background: 'classic', background_color: '#4F5945' } }, [
+      eyebrow('How It Works', { light: true, pb: 18 }),
+      h2('From booking to feeling better', { t: { s: 46, lh: 1.08, ls: -0.03 }, o: { color: '#F5F2EA', x: Object.assign({ _margin: dims(28, 0, 0, 0) }, maxw(780)) } }),
+      C(grid(4, { grid_columns_grid_tablet_extra: fr(2), grid_columns_grid_tablet: fr(2), grid_columns_grid_mobile: fr(1), grid_gaps: gaps(14), margin: dims(48, 0, 0, 0) }), STEPS.map(([n, t, d]) =>
+        C({ flex_gap: gap(14), padding: dims(30, 28, 32, 28), border_radius: all(3), background_background: 'classic', background_color: 'rgba(245,242,234,0.08)',
+          border_border: 'solid', border_width: all(1), border_color: 'rgba(245,242,234,0.18)' }, [
+          heading(n, { tag: 'span', color: '#E6E0D5', t: { s: 52, lh: 1, ls: -0.04 } }),
+          heading(t, { tag: 'h3', color: '#F5F2EA', t: { s: 22, w: 500, ls: -0.015, lh: 1.25 } }),
+          text('<p>' + d + '</p>', { color: 'rgba(245,242,234,0.85)', t: { s: 15, lh: 1.65 } })
+        ]))),
+      C({ flex_direction: 'row', flex_wrap: 'wrap', flex_gap: gap(12), margin: dims(36, 0, 0, 0) }, [
+        button('Book your first appointment', '#book', { kind: 'ivory', h: 54, fs: 16, pl: 26, pr: 26 }),
+        button('See all fees', L.fees, { kind: 'outline-light', bd: 'rgba(245,242,234,0.7)', h: 54, fs: 16, pl: 26, pr: 26 })
+      ])
+    ]));
+
+    out.push(P.reviews('In our patients’ words', '[Paste a genuine Google review, word for word. Only mention where the patient is from if they said so in the review.]',
+      { bg: '#F5F2EA', card: '#E6E0D5', name: '[Reviewer name as shown on Google]',
+        after: heading('<a href="#google">Read all our reviews on Google →</a>', { tag: 'p', t: { f: IN, s: 15, w: 500, lh: 1.75 }, x: { _margin: dims(26, 0, 0, 0) } }) }));
+
+    const FAQ = [['Is Exhale Osteopathy in Birmingham?', 'We’re in Sutton Coldfield, which is part of the City of Birmingham on its northern side — not in Birmingham city centre. Our address is ' + A.line + '.'],
+      ['Do I need a GP referral?', 'No. You can book directly with us online or by phone.'],
+      ['How do I book?', 'Book online at any time, call 0121 751 2440, or email info@exhaleosteopathy.co.uk.'],
+      ['What happens at my first appointment?', 'We talk through your symptoms and history, assess how you move, explain what we think is going on and agree a plan. Where appropriate, treatment starts the same day.'],
+      ['What should I wear?', 'Comfortable clothes you can move in, such as leggings or shorts and a vest top. You can always ask for a gown or a chaperone.'],
+      ['Is there parking?', '[Confirm parking arrangements at the launch address.]'],
+      ['What if I need to cancel?', 'Please give us 24 hours’ notice. Missed appointments or late cancellations may be charged at 50% if we can’t fill the slot.'],
+      ['Can I claim on health insurance?', '[List the insurers you’re registered with, or remove this question.]']];
+    const acc = faqAccordion(FAQ.map(([q, a]) => ({ q, a })));
+    acc.settings.default_state = 'all_collapsed';
+    acc.settings.custom_css = acc.settings.custom_css.replace('background:#E6E0D5;color:#4F5945', 'background:#F5F2EA;color:#4F5945');
+    out.push(section({ x: { _element_id: 'faqs', css_classes: 'ex-anchor', background_background: 'classic', background_color: '#E6E0D5' } }, [
+      C(gridC('minmax(0,1fr) minmax(0,1.5fr)', { grid_columns_grid_tablet: fr(1), grid_gaps: gaps(64), grid_gaps_tablet: gaps(40), grid_align_items: 'start' }), [
+        C({}, [
+          eyebrow('Visiting Us'),
+          h2('Questions from Birmingham patients', { o: { x: { _margin: dims(24, 0, 0, 0) } } }),
+          para('Anything else? Call <a class="ex-underline-olive ex-w400" href="tel:+441217512440">0121 751 2440</a> or email <a class="ex-underline-olive ex-w400 ex-break" href="mailto:info@exhaleosteopathy.co.uk">info@exhaleosteopathy.co.uk</a>.', { t: { s: 17, lh: 1.7 }, mt: 18 })
+        ]),
+        acc
+      ])
+    ]));
+
+    const CONDS = [['Back Pain', L.back], ['Neck Pain', L.neck], ['Shoulder Pain', L.shoulder], ['Hip Pain', L.hip], ['Knee Pain', L.knee], ['Foot &amp; Ankle Pain', L.ankle],
+      ['Headaches &amp; Migraines', L.head], ['Sciatica', L.sciatica], ['Sports Injuries', L.sports], ['Tendon Problems', L.tendon], ['TMJ / Jaw Pain', L.jaw]];
+    out.push(section({ pt: 80, pb: 80, ptm: 56, pbm: 56 }, [
+      label('Common Problems We Treat'),
+      heading('Find out how we can help', { t: { s: 34, st: 32, sm: 28, lh: 1.15, ls: -0.02 }, x: { _margin: dims(12, 0, 0, 0) } }),
+      C({ flex_direction: 'row', flex_wrap: 'wrap', flex_gap: gap(10), margin: dims(24, 0, 0, 0) }, CONDS.map(([n, href]) => P.chip(n, href)))
+    ]));
+
+    out.push(P.book({ img: '602bcebb1c29e98bc4fcd47a4c86b013', title: 'Book with an osteopath in Sutton Coldfield', ts: 46, leadw: 540,
+      lead: 'Initial consultation &amp; treatment £75 · Follow-ups £60. No GP referral needed. Weekday evenings and Saturday mornings available.',
+      cards: [['Book online', 'Choose your practitioner and time.', L.book, 'olive'], ['Call 0121 751 2440', 'Not sure who to see? We’ll help you choose.', 'tel:+441217512440', 'outline']] }));
     return out;
   };
 
