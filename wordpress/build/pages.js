@@ -409,7 +409,7 @@
         treats: ['Osteopathy', 'Cranial Osteopathy', 'Physiotherapy', 'Acupuncture', 'Sports Massage'], bg: '#F5F2EA', pt: 40 }, { name: P.CLINICS.sutton.name, short: P.CLINICS.sutton.short, map: P.CLINICS.sutton.map, dir: P.CLINICS.sutton.dir }),
       Object.assign({ n: '02', addr: '30 Rotten Row, Lichfield, Staffordshire, WS13 6JB', phone: '01543 252673', tel: 'tel:+441543252673', phone2: 'Established 1983',
         email: 'contact@lichfield-osteopaths.co.uk', hours: [['Mon – Fri', '09:00 – 19:00'], ['Saturday', '09:00 – 14:00'], ['Sunday', 'Closed']],
-        photo: 'lichfield-clinic', pos: [36, 50, 52], photoAlt: 'Lichfield Osteopathic Practice, 30 Rotten Row', getting: ['Parking outside the clinic', 'Free parking at Tesco, a few minutes’ walk', 'A few minutes’ walk from Lichfield city centre'],
+        photo: 'lichfield-clinic', pos: [36, 50, 41], photoAlt: 'Lichfield Osteopathic Practice, 30 Rotten Row', getting: ['Parking outside the clinic', 'Free parking at Tesco, a few minutes’ walk', 'A few minutes’ walk from Lichfield city centre'],
         treats: ['Osteopathy', 'Cranial Osteopathy', 'Paediatric Osteopathy', 'Sports &amp; Deep Tissue Massage', 'Pregnancy Massage'], bg: '#E6E0D5', pt: 90, flip: true },
         { name: P.CLINICS.lichfield.name, short: P.CLINICS.lichfield.short, map: P.CLINICS.lichfield.map, dir: P.CLINICS.lichfield.dir })];
     const h4 = (t) => heading(t, { tag: 'h4', color: '#4F5945', t: { f: IN, s: 12, w: 500, ls: 0.2, tt: 'uppercase', lh: 1.4 } });
