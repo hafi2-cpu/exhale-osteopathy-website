@@ -116,10 +116,11 @@
       ])
     ])
   ]);
+  const DIR = (a) => 'https://www.google.com/maps/dir/?api=1&destination=' + encodeURIComponent(a);
   P.CLINICS = {
-    sutton: { name: 'Exhale Osteopathy', short: 'Sutton Coldfield', map: '1 Sutton Oak Corner, Streetly, Sutton Coldfield B74 2DH',
+    sutton: { name: 'Exhale Osteopathy', short: 'Sutton Coldfield', map: '1 Sutton Oak Corner, Streetly, Sutton Coldfield B74 2DH', dir: DIR('Exhale Osteopathy, 1 Sutton Oak Corner, Sutton Coldfield B74 2DH'),
       addr: '1 Sutton Oak Corner, Streetly, Sutton Coldfield, B74 2DH · 0121 751 2440' },
-    lichfield: { name: 'Lichfield Osteopathic Practice', short: 'Lichfield', map: '30 Rotten Row, Lichfield WS13 6JB',
+    lichfield: { name: 'Lichfield Osteopathic Practice', short: 'Lichfield', map: '30 Rotten Row, Lichfield WS13 6JB', dir: DIR('Lichfield Osteopathic Practice, 30 Rotten Row, Lichfield WS13 6JB'),
       addr: '30 Rotten Row, Lichfield, WS13 6JB · 01543 252673' }
   };
 
@@ -363,6 +364,112 @@
     out.push(EX.HOME.logos());
     out.push(P.book({ title: 'Ready when you are. Book in minutes.', lead: 'No GP referral needed. Book online, call the clinic, or send us a message — and start feeling better, sooner.',
       cards: [['Book an Appointment', 'Pick a time online in under a minute.', L.book, 'olive'], ['New Patients', 'See how your first appointment works, from arrival to treatment plan.', '/', 'outline-dark']] }));
+    return out;
+  };
+
+
+  /* ---------------- CONTACT ---------------- */
+  const iconBtn = (lbl, href, ic) => button(lbl, href, { kind: 'ivory', h: 60, fs: 14, icon: ic, gapIcon: 0, pl: 18, pr: 18,
+    x: { _css_classes: 'ex-icon-btn ex-round', button_text_color: '#4F5945', hover_color: '#4F5945', border_radius: all(50, '%'), text_padding: all(18) } });
+  P.iconBtn = iconBtn;
+  P.contact = () => {
+    const out = [];
+    out.push(P.heroSide({ img: '6046e3fbe3f542c03bbb9172ca220939', x: 60, y: 40, minh: 600, crumb: 'Contact', h1: 'Get in touch', shade: 'ex-hero-side',
+      lead: 'Call, email or pop in to either of our clinics. Our reception team is happy to help with bookings, insurance and any questions.',
+      buttons: [['Call 0121 751 2440', 'tel:+441217512440', 280], ['Book online', '#book', 260]] }));
+
+    const WAYS = [['phone', 'Call us', '0121 751 2440', 'tel:+441217512440'], ['mail', 'Email us', 'info@exhaleosteopathy.co.uk', 'mailto:info@exhaleosteopathy.co.uk'], ['calendar', 'Book online', 'Choose a time', '#book']];
+    out.push(section({ pt: 0, pb: 0, ptm: 0, pbm: 0, x: { background_background: 'classic', background_color: '#4F5945' } }, [
+      C(grid(3, { grid_columns_grid_tablet: fr(2), grid_columns_grid_mobile: fr(1), grid_gaps: gaps(0) }), WAYS.map(([ic, k, v, href]) =>
+        C({ html_tag: 'a', link: link(href), flex_direction: 'row', flex_align_items: 'center', flex_gap: gap(18), padding: dims(30, 24, 30, 0),
+          border_border: 'solid', border_width: dims(0, 1, 0, 0), border_color: 'rgba(245,242,234,0.14)' }, [
+          circle(ic, 52, 22, { color: '#E6E0D5', box: { border_border: 'solid', border_width: all(1), border_color: 'rgba(245,242,234,0.35)' } }),
+          C({ css_classes: 'ex-grow' }, [
+            heading(k, { tag: 'span', color: 'rgba(245,242,234,0.88)', t: { f: IN, s: 12, ls: 0.16, tt: 'uppercase', lh: 1.35 } }),
+            heading(v, { tag: 'span', color: '#F5F2EA', t: { s: 22, sm: 19, ls: -0.01, lh: 1.35 }, x: { _css_classes: 'ex-break' } })
+          ])
+        ])))
+    ]));
+
+    out.push(section({ pt: 100, pb: 40, ptm: 64, pbm: 32 }, [
+      eyebrow('Our Clinics'),
+      h2('Find us in Sutton Coldfield &amp; Lichfield', { t: { s: 48, lh: 1.08, ls: -0.03 }, o: { x: { _margin: dims(24, 0, 0, 0) } } }),
+      para('Coming from elsewhere in Birmingham? See our <a class="ex-underline-olive" href="' + L.bham + '">guide for Birmingham patients</a>.', { t: { s: 17, lh: 1.7 }, mt: 16 })
+    ]));
+
+    const CL = [
+      Object.assign({ n: '01', addr: '1 Sutton Oak Corner, Streetly, Sutton Coldfield, B74 2DH (inside Sutton Hearing Care)', phone: '0121 751 2440', tel: 'tel:+441217512440', phone2: 'Mobile 07412 995401',
+        email: 'info@exhaleosteopathy.co.uk', hours: [['Mon – Fri', '09:00 – 20:00'], ['Saturday', '08:00 – 14:00'], ['Sunday', 'Closed']],
+        photo: '3e5af535c29942d9a3c973f98d64792e', photoAlt: 'A treatment room at Exhale Osteopathy, Sutton Coldfield',
+        getting: ['We’re inside Sutton Hearing Care', '[Parking details]', '[Step-free access?]'],
+        treats: ['Osteopathy', 'Cranial Osteopathy', 'Physiotherapy', 'Acupuncture', 'Sports Massage'], bg: '#F5F2EA', pt: 40 }, { name: P.CLINICS.sutton.name, short: P.CLINICS.sutton.short, map: P.CLINICS.sutton.map, dir: P.CLINICS.sutton.dir }),
+      Object.assign({ n: '02', addr: '30 Rotten Row, Lichfield, Staffordshire, WS13 6JB', phone: '01543 252673', tel: 'tel:+441543252673', phone2: 'Established 1983',
+        email: 'contact@lichfield-osteopaths.co.uk', hours: [['Mon – Fri', '09:00 – 19:00'], ['Saturday', '09:00 – 14:00'], ['Sunday', 'Closed']],
+        photo: '', getting: ['Parking outside the clinic', 'Free parking at Tesco, a few minutes’ walk', 'A few minutes’ walk from Lichfield city centre'],
+        treats: ['Osteopathy', 'Cranial Osteopathy', 'Paediatric Osteopathy', 'Sports &amp; Deep Tissue Massage', 'Pregnancy Massage'], bg: '#E6E0D5', pt: 90, flip: true },
+        { name: P.CLINICS.lichfield.name, short: P.CLINICS.lichfield.short, map: P.CLINICS.lichfield.map, dir: P.CLINICS.lichfield.dir })];
+    const h4 = (t) => heading(t, { tag: 'h4', color: '#4F5945', t: { f: IN, s: 12, w: 500, ls: 0.2, tt: 'uppercase', lh: 1.4 } });
+    CL.forEach(c => {
+      const photo = c.photo
+        ? C({ min_height: px(520), min_height_mobile: px(320), border_radius: all(3), background_background: 'classic', background_color: '#E6E0D5', background_image: img(c.photo),
+            background_position: 'center center', background_size: 'cover', _title: c.photoAlt }, [])
+        : C({ min_height: px(520), min_height_mobile: px(320), border_radius: all(3), background_background: 'classic', background_color: '#E6E0D5', flex_justify_content: 'center', flex_align_items: 'center',
+            border_border: c.bg === '#E6E0D5' ? 'solid' : '', border_width: all(1), border_color: '#B7AA99' },
+          [heading('[Photo of ' + c.name + ']', { tag: 'span', color: 'rgba(39,43,38,0.76)', t: { f: IN, s: 13, ls: 0.14, tt: 'uppercase', lh: 1.4 } })]);
+      const details = C({}, [
+        heading(c.n, { tag: 'span', color: '#4F5945', t: { s: 15, ls: 0.1, lh: 1.4 } }),
+        heading(c.name, { tag: 'h3', t: { s: 40, st: 34, sm: 30, lh: 1.1, ls: -0.025 }, x: { _margin: dims(8, 0, 0, 0) } }),
+        para(c.addr, { t: { s: 18, lh: 1.6 }, mt: 12 }),
+        C(grid(2, { grid_columns_grid_mobile: fr(1), grid_gaps: gaps(28, 32), margin: dims(32, 0, 0, 0), padding: dims(28, 0, 0, 0),
+          border_border: 'solid', border_width: dims(1, 0, 0, 0), border_color: '#B7AA99' }), [
+          C({}, [h4('Contact'), text('<p><a href="' + c.tel + '">' + c.phone + '</a></p><p class="ex-small">' + c.phone2 + '</p><p><a href="mailto:' + c.email + '">' + c.email + '</a></p>',
+            { t: { s: 16, lh: 1.75 }, x: { _margin: dims(12, 0, 0, 0), _css_classes: 'ex-list ex-gap-8 ex-dark-links ex-break' } })]),
+          C({}, [h4('Opening Hours'), C({ flex_gap: gap(4), margin: dims(12, 0, 0, 0) }, c.hours.map(([d, t]) => C({ flex_direction: 'row', flex_justify_content: 'space-between', flex_gap: gap(16) }, [
+            heading(d, { tag: 'span', color: 'rgba(39,43,38,0.84)', t: { f: IN, s: 15, lh: 1.75 } }), heading(t, { tag: 'span', t: { f: IN, s: 15, lh: 1.75 }, x: { _flex_size: 'none' } })])))]),
+          C({}, [h4('Getting Here'), C({ flex_gap: gap(8), margin: dims(12, 0, 0, 0) }, c.getting.map(g => C({ flex_direction: 'row', flex_align_items: 'flex-start', flex_gap: gap(10) }, [
+            circle('pin', 20, 11, { color: '#4F5945', box: { background_background: 'classic', background_color: c.bg === '#E6E0D5' ? '#F5F2EA' : '#E6E0D5', margin: dims(3, 0, 0, 0) } }),
+            text('<p>' + g + '</p>', { t: { s: 15, lh: 1.6 } })])))]),
+          C({}, [h4('Treatments Here'), C({ flex_direction: 'row', flex_wrap: 'wrap', flex_gap: gap(8), margin: dims(12, 0, 0, 0) }, c.treats.map(t =>
+            heading(t, { tag: 'span', color: '#4F5945', t: { f: IN, s: 13, w: 500, lh: 1.5 }, x: { _element_width: 'auto', _padding: dims(6, 12, 6, 12), _border_radius: all(999),
+              _background_background: 'classic', _background_color: c.bg === '#E6E0D5' ? '#F5F2EA' : '#E6E0D5' } })))])
+        ]),
+        C({ margin: dims(32, 0, 0, 0), border_radius: all(3), overflow: 'hidden', padding: all(0) }, [W('google_maps', { address: c.map, zoom: { unit: 'px', size: 15, sizes: [] }, height: px(180), _css_classes: 'ex-map' })]),
+        C({ flex_direction: 'row', flex_wrap: 'wrap', flex_gap: gap(12), margin: dims(24, 0, 0, 0) }, [
+          button('Book at ' + c.short, L.book, { kind: 'olive', h: 52, fs: 15, pl: 24, pr: 24 }),
+          button('Get directions', c.dir, { kind: 'outline', h: 52, fs: 15, pl: 24, pr: 24, icon: 'arrowNE', gapIcon: 10 })
+        ])
+      ]);
+      out.push(section({ pt: c.pt, pb: 90, ptm: c.flip ? 64 : 24, pbm: 64, x: { background_background: 'classic', background_color: c.bg } }, [
+        C(gridC('minmax(0,1.1fr) minmax(0,1fr)', { grid_columns_grid_tablet: fr(1), grid_gaps: gaps(56, 56), grid_gaps_tablet: gaps(32), grid_align_items: 'stretch' }),
+          c.flip ? [details, photo] : [photo, details])
+      ]));
+    });
+
+    out.push(section({ pt: 80, pb: 80, ptm: 56, pbm: 56, x: { background_background: 'classic', background_color: '#E6E0D5' } }, [
+      C({ flex_direction: 'row', flex_wrap: 'wrap', flex_justify_content: 'space-between', flex_align_items: 'center', flex_gap: gap(32) }, [
+        C({ width: px(680), width_tablet: pct(100) }, [
+          label('Follow Us'),
+          heading('Tips, exercises and life at Exhale', { t: { s: 36, st: 32, sm: 28, lh: 1.15, ls: -0.02 }, x: { _margin: dims(12, 0, 0, 0) } }),
+          para('Follow us for simple exercises, clinic news and behind-the-scenes from the team.', { t: { s: 17, lh: 1.7 }, mt: 12 })
+        ]),
+        C({ flex_direction: 'row', flex_gap: gap(12), css_classes: 'ex-fit' }, [
+          iconBtn('Instagram', 'https://www.instagram.com/lichfield_osteopaths', 'instagram'),
+          iconBtn('Facebook', 'https://www.facebook.com/LichfieldOsteopaths/', 'facebook'),
+          iconBtn('Google reviews', '#google', 'star')
+        ])
+      ])
+    ]));
+
+    out.push(section({ pt: 96, pb: 96, ptm: 64, pbm: 64, x: { _element_id: 'book', css_classes: 'ex-anchor', background_background: 'classic', background_color: '#272B26' } }, [
+      C({ flex_direction: 'row', flex_wrap: 'wrap', flex_justify_content: 'space-between', flex_align_items: 'center', flex_gap: gap(32) }, [
+        C({ width: px(640), width_tablet: pct(100) }, [
+          heading('Book Today', { tag: 'p', color: '#E6E0D5', t: { f: IN, s: 11, w: 600, ls: 0.18, tt: 'uppercase', lh: 1.6 } }),
+          h2('Ready when you are', { t: { s: 48, lh: 1.08, ls: -0.025 }, o: { color: '#F5F2EA', x: { _margin: dims(14, 0, 0, 0) } } }),
+          text('<p>No GP referral needed. Choose a time online in under a minute.</p>', { color: 'rgba(245,242,234,0.8)', t: { s: 18, lh: 1.7 }, x: { _margin: dims(16, 0, 0, 0) } })
+        ]),
+        button('Book an appointment', L.book, { kind: 'olive', h: 64, fs: 18, icon: 'right', split: true, minw: 300, pl: 34, pr: 30 })
+      ])
+    ]));
     return out;
   };
 
