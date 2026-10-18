@@ -200,5 +200,16 @@ a.ex-w400 { font-weight: 400; }
   font: 500 15px/1.2 Inter, sans-serif; height: 52px; padding: 0 30px; display: inline-flex; align-items: center; }
 .ex-blog-grid .e-loop__load-more .elementor-button:hover { background: #E6E0D5; border-color: #4F5945; }
 
+/* 25. Blog article: round "e" avatars, overlapping hero photo, light bold text, right column hidden below 1180px */
+.e-con.ex-avatar { flex: none; padding: 0; }
+.e-con.ex-avatar--40 { --width: 40px; width: 40px; height: 40px; min-height: 40px; }
+.e-con.ex-avatar--64 { --width: 64px; width: 64px; height: 64px; min-height: 64px; }
+.ex-overlap { position: relative; }
+.ex-cover-520 img { width: 100%; max-width: 1180px; height: 520px; object-fit: cover; display: block; margin: 0 auto; }
+@media (max-width: 560px) { .ex-cover-520 img { height: 300px; } }
+.ex-strong-light strong { color: #F5F2EA; font-weight: 600; }
+@media (max-width: 1180px) { .ex-hide-1180 { display: none !important; } }
+.ex-share .elementor-share-btn { width: 44px; height: 44px; }
+
 /* 8. Phone: hide header Book button on very narrow screens (approved behaviour) */
 @media (max-width: 380px) { .ex-hide-xs { display: none !important; } }

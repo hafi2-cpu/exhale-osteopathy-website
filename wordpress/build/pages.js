@@ -704,6 +704,154 @@
     return out;
   };
 
+
+  /* ---------------- BLOG ARTICLE: Does Osteopathy Help With Pelvic Girdle Pain? (post 400) ---------------- */
+  const avatar = (size, fs) => C({ css_classes: 'ex-avatar ex-avatar--' + size, background_background: 'classic', background_color: '#4F5945', border_radius: all(50, '%'),
+    flex_justify_content: 'center', flex_align_items: 'center', padding: all(0) }, [heading('e', { tag: 'span', color: '#F5F2EA', t: { s: fs, lh: 1 } })]);
+  P.avatar = avatar;
+  P.postPgp = () => {
+    const out = [];
+    const aH2 = (t, id) => heading(t, { t: { s: 32, sm: 28, lh: 1.15, ls: -0.02 }, x: { _element_id: id, _css_classes: 'ex-anchor', _margin: dims(52, 0, 0, 0) } });
+    const aP = (t, mt) => para(t, { mt: mt ?? 18 });
+    out.push(section({ pt: 160, pb: 150, ptm: 128, pbm: 140, x: { background_background: 'classic', background_color: '#272B26', css_classes: 'ex-hero-line', flex_align_items: 'center' } }, [
+      C({ width: px(900), width_tablet: pct(100), flex_align_items: 'center' }, [
+        heading('<a href="/">Home</a> <span aria-hidden="true">→</span> <a href="' + L.blog + '">Blog</a> <span aria-hidden="true">→</span> <strong>Pregnancy</strong>',
+          { tag: 'p', align: 'center', color: 'rgba(245,242,234,0.88)', t: { f: IN, s: 15, lh: 1.6 }, x: { _css_classes: 'ex-on-dark ex-crumbs ex-crumbs--88' } }),
+        heading('Does Osteopathy Help With Pelvic Girdle Pain?', { tag: 'h1', align: 'center', color: '#F5F2EA', t: { s: 58, st: 40, sm: 36, lh: 1.06, lhm: 1.08, ls: -0.035 }, x: { _margin: dims(26, 0, 0, 0) } }),
+        text('<p>What pelvic girdle pain is, how osteopathy can help, and the simple exercises and everyday changes that make a difference during pregnancy.</p>',
+          { color: 'rgba(245,242,234,0.85)', t: { s: 19, lh: 1.65 }, x: Object.assign({ align: 'center', _margin: dims(22, 0, 0, 0) }, maxw(680)) }),
+        C({ flex_direction: 'row', flex_justify_content: 'center', flex_align_items: 'center', flex_gap: gap(14), margin: dims(30, 0, 0, 0), css_classes: 'ex-fit' }, [
+          avatar(40, 18),
+          text('<p><strong>[Author name]</strong><br>[Date] · 6 min read</p>', { color: 'rgba(245,242,234,0.88)', t: { s: 14, lh: 1.4 }, x: { _css_classes: 'ex-strong-light' } })
+        ])
+      ])
+    ]));
+    out.push(section({ pt: 0, pb: 0, ptm: 0, pbm: 0, x: { margin: dims(-110, 0, 0, 0), position: '', z_index: 2, css_classes: 'ex-overlap' } }, [
+      image('fcb8c0b6c5dee3cb4f97fc820f5f9a2d', 'Osteopath treating a patient\'s lower back', { x: { _css_classes: 'ex-cover-520', image_border_radius: all(3), align: 'center' } })
+    ]));
+
+    const TECH = [['Joint mobilisation', 'gentle movement of the pelvic and lower back joints.'], ['Soft tissue work', 'easing tight muscles around the hips, buttocks and back.'],
+      ['Postural advice', 'simple changes to how you sit, stand and sleep.'], ['Exercises &amp; stretches', 'to support and strengthen the pelvis.'], ['Clinical Pilates', 'building core and pelvic stability.']];
+    const EXS = [['01', 'Hip bridges', 'Strengthen the glutes to support the pelvis. Lie on your back with knees bent and lift your hips gently.'],
+      ['02', 'Pelvic floor exercises', 'Regular squeezes help support the pelvis and are recommended throughout pregnancy.'],
+      ['03', 'Pelvic tilts', 'Gently rock the pelvis on all fours or against a wall to ease stiffness.'],
+      ['04', 'Gentle cardio', 'Walking or swimming (avoiding breaststroke kick) helps you stay active.'],
+      ['05', 'Supported squats', 'Shallow squats holding a chair or worktop, only if they feel comfortable.']];
+    const FAQ = [['What should I avoid with pelvic girdle pain?', 'Try to avoid standing on one leg, heavy lifting, carrying a child on one hip and wide-legged movements such as breaststroke kick.'],
+      ['What makes pelvic girdle pain worse?', 'Common triggers include stairs, turning over in bed, getting in and out of the car and walking for long periods.'],
+      ['How can I ease pelvic girdle pain?', 'Treatment, gentle exercise, a pillow between your knees at night, keeping your knees together when moving, ice or heat, and sometimes a pelvic support belt can all help. Rest when you need to.'],
+      ['Is osteopathy safe during pregnancy?', 'Osteopathy is generally safe throughout pregnancy when adapted appropriately. Let your midwife know you’re seeing us.']];
+    const acc = faqAccordion(FAQ.map(([q, a]) => ({ q, a })));
+    acc.settings.title_typography_font_size = px(20);
+    acc.settings.custom_css = acc.settings.custom_css.replace('padding:24px 0', 'padding:20px 0').replace('width:40px;height:40px', 'width:36px;height:36px').replace('padding:0 48px 26px 0', 'padding:0 40px 22px 0');
+    acc.settings._margin = dims(20, 0, 0, 0);
+
+    const TOC = [['what-is', 'What is pelvic girdle pain?'], ['how-helps', 'How osteopathy can help'], ['evidence', 'Does it work?'], ['expect', 'What to expect'],
+      ['exercises', 'Exercises that can help'], ['tips', 'Everyday tips'], ['faqs', 'FAQs']];
+    const left = C({ css_classes: 'ex-sticky', html_tag: 'aside' }, [
+      C({ html_tag: 'nav', padding: dims(16, 0, 0, 0), border_border: 'solid', border_width: dims(2, 0, 0, 0), border_color: '#272B26' }, [
+        label('In this article'),
+        C({ margin: dims(12, 0, 0, 0) }, TOC.map(([id, t]) => heading('<a href="#' + id + '">' + t + '</a>', { tag: 'p', t: { f: IN, s: 15, lh: 1.45 },
+          x: { _css_classes: 'ex-toc-link', _padding: dims(8, 0, 8, 0), _border_border: 'solid', _border_width: dims(0, 0, 1, 0), _border_color: '#B7AA99' } })))
+      ]),
+      W('share-buttons', { share_buttons: [{ _id: EX.rid(), button: 'facebook' }, { _id: EX.rid(), button: 'email' }], view: 'icon', skin: 'flat', shape: 'circle',
+        color_source: 'custom', primary_color: '#E6E0D5', secondary_color: '#4F5945', primary_color_hover: '#4F5945', secondary_color_hover: '#F5F2EA',
+        button_size: px(1.1), icon_size: em(1.1), column_gap: px(10), _margin: dims(24, 0, 0, 0), _css_classes: 'ex-share' })
+    ]);
+    const art = C({ html_tag: 'article' }, [
+      heading('Pelvic girdle pain (PGP) is common in pregnancy — it’s thought to affect around 1 in 5 pregnant women. It can make walking, climbing stairs and even turning over in bed uncomfortable. The good news is that it usually responds well to the right care, and osteopathy can be part of that.',
+        { tag: 'p', t: { s: 23, sm: 20, lh: 1.55, ls: -0.01 } }),
+      aH2('What is pelvic girdle pain?', 'what-is'),
+      aP('PGP is pain in the joints of the pelvis — at the front (the pubic symphysis), at the back (the sacroiliac joints), or both. During pregnancy, hormonal changes and the growing weight of your bump change how these joints move and how much load they carry, which can lead to pain and stiffness.'),
+      aP('You might feel it over the pubic bone, in the lower back or buttocks, in the groin, or down the inner thighs. It’s often worse with activities that load one leg at a time.'),
+      aH2('How osteopathy can help', 'how-helps'),
+      aP('Osteopathy is a hands-on approach that aims to restore comfortable movement and function in the pelvis, lower back and hips. Treatment is always adapted for pregnancy — we use side-lying and seated positions with plenty of support, and gentle techniques suited to your stage.'),
+      C({ margin: dims(28, 0, 0, 0), padding: dims(28, 30, 28, 30), padding_mobile: dims(24, 20, 24, 20), background_background: 'classic', background_color: '#E6E0D5', border_radius: all(3) }, [
+        heading('Techniques we may use', { tag: 'h3', t: { s: 20, w: 500, lh: 1.3 } }),
+        C({ flex_gap: gap(10), margin: dims(14, 0, 0, 0) }, TECH.map(([t, d]) => C({ flex_direction: 'row', flex_align_items: 'flex-start', flex_gap: gap(12) }, [
+          circle('tick', 22, 12, { color: '#4F5945', box: { background_background: 'classic', background_color: '#F5F2EA', margin: dims(3, 0, 0, 0) } }),
+          text('<p><strong>' + t + '</strong> — ' + d + '</p>', { t: { s: 16, lh: 1.75 }, x: { _css_classes: 'ex-strong-600' } })])))
+      ]),
+      aH2('Does it work?', 'evidence'),
+      aP('Research into manual therapy for pregnancy-related pelvic pain is still growing, but studies — including a 2021 observational study of pregnant women receiving osteopathic treatment — have reported improvements in pain and quality of life, particularly over several visits. Many of our patients find a combination of treatment, exercise and practical advice makes daily life much easier.'),
+      aH2('What to expect at your appointment', 'expect'),
+      aP('We’ll ask about your pregnancy, your symptoms and what makes them better or worse, then gently assess how your pelvis, back and hips are moving. Treatment usually includes hands-on work, some simple exercises and advice for home and work. Most people need a few sessions, and we’ll review how you’re doing each time.'),
+      aH2('Exercises that can help', 'exercises'),
+      aP('Gentle exercise can support the pelvis and keep you moving. Always check with your osteopath or midwife which exercises are right for you, and stop anything that increases your pain.'),
+      C(grid(2, { grid_columns_grid_mobile: fr(1), grid_gaps: gaps(12), margin: dims(24, 0, 0, 0) }), EXS.map(([n, t, d]) =>
+        C({ padding: dims(22, 22, 24, 22), border_border: 'solid', border_width: all(1), border_color: '#B7AA99', border_radius: all(3) }, [
+          heading(n, { tag: 'span', color: '#4F5945', t: { s: 13, ls: 0.1, lh: 1.4 } }),
+          heading(t, { tag: 'h3', t: { s: 19, w: 500, lh: 1.3 }, x: { _margin: dims(6, 0, 0, 0) } }),
+          text('<p>' + d + '</p>', { color: 'rgba(39,43,38,0.84)', t: { s: 15, lh: 1.6 }, x: { _margin: dims(6, 0, 0, 0) } })
+        ]))),
+      aH2('Everyday tips for pelvic girdle pain', 'tips'),
+      C({ flex_gap: gap(12), margin: dims(24, 0, 0, 0) }, [
+        ['Try to', '#4F5945', 'Keep your knees together when getting in and out of the car or turning in bed · sleep with a pillow between your knees · take stairs one step at a time · rest when you need to · use ice or heat for comfort.'],
+        ['Try to avoid', '#272B26', 'Standing on one leg (e.g. to put on trousers — sit down instead) · heavy lifting · carrying a toddler on one hip · wide-legged movements such as breaststroke kick.']
+      ].map(([t, col, d]) => C({ padding: dims(22, 24, 22, 24), background_background: 'classic', background_color: '#E6E0D5', border_radius: all(3) }, [
+        heading(t, { tag: 'h3', color: col, t: { s: 19, w: 500, lh: 1.3 } }),
+        text('<p>' + d + '</p>', { t: { s: 16, lh: 1.7 }, x: { _margin: dims(8, 0, 0, 0) } })]))),
+      C({ flex_direction: 'row', flex_wrap: 'wrap', flex_justify_content: 'space-between', flex_align_items: 'center', flex_gap: gap(20), margin: dims(40, 0, 0, 0),
+        padding: dims(30, 32, 30, 32), padding_mobile: dims(26, 22, 26, 22), background_background: 'classic', background_color: '#272B26', border_radius: all(3) }, [
+        C({ width: px(440), width_tablet: pct(100), css_classes: 'ex-shrink-w' }, [
+          label('Pregnancy Osteopathy', '#E6E0D5'),
+          heading('Struggling with pelvic pain? We can help — at any stage of pregnancy.', { tag: 'p', color: '#F5F2EA', t: { s: 22, lh: 1.35 }, x: { _margin: dims(8, 0, 0, 0) } })
+        ]),
+        button('Learn more', L.preg, { kind: 'olive', h: 50, fs: 15, pl: 22, pr: 22 })
+      ]),
+      aH2('Frequently asked questions', 'faqs'),
+      acc,
+      text('<p>This article is general information, not a substitute for advice from your midwife, GP or osteopath. Contact your midwife or maternity unit straight away if you have bleeding, reduced baby movements, severe headaches or sudden swelling.</p>',
+        { color: 'rgba(39,43,38,0.76)', t: { s: 14, lh: 1.6 }, x: { _margin: dims(32, 0, 0, 0), _padding: dims(18, 20, 18, 20), _background_background: 'classic', _background_color: '#E6E0D5', _border_radius: all(3) } }),
+      C({ flex_direction: 'row', flex_align_items: 'center', flex_gap: gap(18), margin: dims(40, 0, 0, 0), padding: dims(28, 0, 0, 0), border_border: 'solid', border_width: dims(1, 0, 0, 0), border_color: '#B7AA99' }, [
+        avatar(64, 26),
+        C({ css_classes: 'ex-grow' }, [
+          heading('Written by', { tag: 'span', color: '#4F5945', t: { f: IN, s: 12, w: 500, ls: 0.16, tt: 'uppercase', lh: 1.75 } }),
+          heading('[Author name], [Role]', { tag: 'p', t: { s: 20, lh: 1.4 }, x: { _margin: dims(4, 0, 0, 0) } }),
+          heading('<a href="' + L.hafi + '">View profile →</a>', { tag: 'span', t: { f: IN, s: 14, w: 500, lh: 1.75 } })
+        ])
+      ])
+    ]);
+    const REL = [['Pregnancy Osteopathy', L.preg], ['Pregnancy Massage', L.massage], ['Hip Pain', L.hip], ['Back Pain', L.back]];
+    const right = C({ css_classes: 'ex-sticky ex-hide-1180', html_tag: 'aside' }, [
+      C({ padding: dims(26, 24, 26, 24), background_background: 'classic', background_color: '#272B26', border_radius: all(3) }, [
+        heading('Pelvic pain in pregnancy?', { tag: 'span', color: '#F5F2EA', t: { s: 21, ls: -0.015, lh: 1.25 } }),
+        heading('Gentle, adapted treatment in Sutton Coldfield &amp; Lichfield.', { tag: 'span', color: 'rgba(245,242,234,0.88)', t: { f: IN, s: 14, lh: 1.75 }, x: { _margin: dims(8, 0, 0, 0) } }),
+        button('Book an appointment', L.book, { kind: 'olive', h: 48, fs: 15, x: { align: 'justify', _margin: dims(18, 0, 0, 0) } }),
+        button('0121 751 2440', 'tel:+441217512440', { kind: 'outline-light', bd: 'rgba(245,242,234,0.35)', h: 48, fs: 15, x: { align: 'justify', _margin: dims(10, 0, 0, 0) } })
+      ]),
+      C({ margin: dims(18, 0, 0, 0), padding: dims(22, 22, 22, 22), background_background: 'classic', background_color: '#E6E0D5', border_radius: all(3) }, [
+        label('Related'),
+        C({ margin: dims(10, 0, 0, 0) }, REL.map(([t, h], i) => heading('<a href="' + h + '">' + t + '</a>', { tag: 'p', t: { f: IN, s: 15, lh: 1.6 },
+          x: Object.assign({ _css_classes: 'ex-toc-link', _padding: dims(8, 0, 8, 0) }, i < REL.length - 1 ? { _border_border: 'solid', _border_width: dims(0, 0, 1, 0), _border_color: '#B7AA99' } : {}) })))
+      ])
+    ]);
+    out.push(section({ pt: 72, pb: 100, ptm: 48, pbm: 64 }, [
+      C(gridC('260px minmax(0,720px) 260px', { grid_columns_grid_tablet_extra: { unit: 'custom', size: '240px minmax(0,1fr)', sizes: [] }, grid_columns_grid_tablet: fr(1),
+        grid_gaps: gaps(56), grid_gaps_tablet: gaps(40), grid_align_items: 'start', grid_justify_content: 'space-between', css_classes: 'ex-post-body' }), [left, art, right])
+    ]));
+
+    out.push(section({ pt: 96, pb: 96, ptm: 64, pbm: 64, x: { background_background: 'classic', background_color: '#E6E0D5' } }, [
+      C({ flex_direction: 'row', flex_wrap: 'wrap', flex_justify_content: 'space-between', flex_align_items: 'flex-end', flex_gap: gap(20) }, [
+        h2('More from the blog', { t: { s: 40, lh: 1.1, ls: -0.025 } }),
+        heading('<a href="' + L.blog + '">View all articles →</a>', { tag: 'span', t: { f: IN, s: 15, w: 500, lh: 1.75 } })
+      ]),
+      W('loop-grid', { template_id: String(P.BLOG.small), columns: '3', columns_tablet: '2', columns_mobile: '1', posts_per_page: 3, post_query_post_type: 'post',
+        post_query_exclude: ['current_post'], column_gap: px(24), row_gap: px(24), _margin: dims(36, 0, 0, 0) })
+    ]));
+    out.push(section({ pt: 80, pb: 80, ptm: 56, pbm: 56, x: { _element_id: 'book', css_classes: 'ex-anchor', background_background: 'classic', background_color: '#272B26' } }, [
+      C({ flex_direction: 'row', flex_wrap: 'wrap', flex_justify_content: 'space-between', flex_align_items: 'center', flex_gap: gap(32) }, [
+        C({ width: px(640), width_tablet: pct(100) }, [
+          heading('Book Today', { tag: 'p', color: '#E6E0D5', t: { f: IN, s: 11, w: 600, ls: 0.18, tt: 'uppercase', lh: 1.6 } }),
+          h2('Ready when you are', { t: { s: 44, lh: 1.08, ls: -0.025 }, o: { color: '#F5F2EA', x: { _margin: dims(14, 0, 0, 0) } } }),
+          text('<p>No GP referral needed. Evening and Saturday appointments available.</p>', { color: 'rgba(245,242,234,0.8)', t: { s: 18, lh: 1.7 }, x: { _margin: dims(14, 0, 0, 0) } })
+        ]),
+        button('Book an appointment', L.book, { kind: 'olive', h: 64, fs: 18, icon: 'right', split: true, minw: 300, pl: 34, pr: 30 })
+      ])
+    ]));
+    return out;
+  };
+
   EX.buildPage = async function (key) {
     const out = P[key]();
     await EX.clearPage();
