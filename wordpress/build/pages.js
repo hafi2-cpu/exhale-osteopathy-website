@@ -489,22 +489,31 @@
   const BH_ADDR = BH_ADDRS['sutton-oak'];
   P.birmingham = () => {
     const A = BH_ADDR, out = [];
-    out.push(P.heroSide({ img: '2cef3306a31a7e7056f2f7bef5cf4201', y: 15, minh: 700, pt: 176, ptm: 176, crumb: 'Osteopath Birmingham', h1: 'Osteopathy for patients across Birmingham', h1w: 820, leadw: 680,
-      shade: 'ex-hero-side ex-hero-side--93',
-      lead: 'Exhale Osteopathy is an independent osteopathy and physiotherapy clinic in Sutton Coldfield, in the north of Birmingham. Patients come to us from across the city for unhurried, hands-on care from registered clinicians.',
-      extra: [
-        C({ flex_direction: 'row', flex_align_items: 'center', flex_gap: gap(12), css_classes: 'ex-fit', margin: dims(24, 0, 0, 0), padding: dims(12, 18, 12, 18),
-          background_background: 'classic', background_color: 'rgba(245,242,234,0.1)', border_border: 'solid', border_width: all(1), border_color: 'rgba(245,242,234,0.2)', border_radius: all(3) }, [
-          W('icon', { selected_icon: icon('pin'), primary_color: '#E6E0D5', size: px(18) }),
-          heading('Our clinic: ' + A.line, { tag: 'span', color: '#F5F2EA', t: { f: IN, s: 15, lh: 1.5 } })
-        ]),
-        C({ flex_direction: 'row', flex_wrap: 'wrap', flex_align_items: 'center', flex_gap: gap(14), margin: dims(30, 0, 0, 0) }, [
-          button('Book an appointment', '#book', { kind: 'ivory', h: 62, fs: 18, icon: 'right', split: true, minw: 280, pl: 32, pr: 28 }),
-          button('Plan your visit', '#visit', { kind: 'outline-light', h: 62, fs: 18, icon: 'right', split: true, minw: 260, pl: 32, pr: 28 })
-        ])
-      ] }));
+    const GOOGLE_REVIEWS = 'https://www.google.com/maps/search/?api=1&query=Exhale+Osteopathy+Sutton+Coldfield'; // replace with the clinic's verified Google reviews link
+    const DIRECTIONS = P.CLINICS.sutton.dir;
 
-    const FACTS = [['Location', 'Sutton Coldfield, Birmingham'], ['Open late', 'Mon–Fri until 8pm'], ['Weekends', 'Saturday 8am–2pm'], ['First appointment', '45–60 mins · £75']];
+    /* HERO */
+    out.push(section({ pt: 176, pb: 72, ptm: 176, pbm: 56, x: { min_height: px(700), flex_justify_content: 'flex-end',
+      background_background: 'classic', background_color: '#272B26', background_image: img('2cef3306a31a7e7056f2f7bef5cf4201'), background_position: 'initial',
+      background_xpos: pct(50), background_ypos: pct(15), background_size: 'cover', css_classes: 'ex-hero-side ex-hero-side--93' } }, [
+      heading('Exhale Osteopathy · Sutton Coldfield', { tag: 'p', color: '#E6E0D5', t: { f: IN, s: 11, w: 600, ls: 0.18, tt: 'uppercase', lh: 1.6 } }),
+      heading('Looking for an osteopath in Birmingham?', { tag: 'h1', color: '#F5F2EA', t: { s: 64, st: 44, sm: 36, lh: 1.04, lhm: 1.08, ls: -0.035 }, x: Object.assign({ _margin: dims(18, 0, 0, 0) }, maxw(820)) }),
+      text('<p>Personal care, clear advice and time to understand what’s troubling you.</p>', { color: 'rgba(245,242,234,0.9)', t: { s: 20, lh: 1.6 }, x: Object.assign({ _margin: dims(22, 0, 0, 0) }, maxw(680)) }),
+      text('<p>At Exhale Osteopathy, we welcome patients from across Birmingham to our Sutton Coldfield clinic. Whether you’re dealing with a recent ache, a recurring problem or discomfort that’s affecting everyday life, we start by listening.</p><p>Our team offers osteopathy, physiotherapy and sports massage, with an approach shaped around your symptoms, your circumstances and what you want to get back to doing.</p>',
+        { color: 'rgba(245,242,234,0.82)', t: { s: 17, lh: 1.7 }, x: Object.assign({ _margin: dims(14, 0, 0, 0), _css_classes: 'ex-list ex-gap-12' }, maxw(680)) }),
+      C({ flex_direction: 'row', flex_wrap: 'wrap', flex_align_items: 'center', flex_gap: gap(14), margin: dims(30, 0, 0, 0) }, [
+        button('Book an appointment', L.book, { kind: 'ivory', h: 62, fs: 18, icon: 'right', split: true, minw: 280, pl: 32, pr: 28 }),
+        button('Meet our team', '#team', { kind: 'outline-light', h: 62, fs: 18, icon: 'right', split: true, minw: 260, pl: 32, pr: 28 })
+      ]),
+      C({ flex_direction: 'row', flex_align_items: 'center', flex_gap: gap(12), css_classes: 'ex-fit', margin: dims(24, 0, 0, 0), padding: dims(12, 18, 12, 18),
+        background_background: 'classic', background_color: 'rgba(245,242,234,0.1)', border_border: 'solid', border_width: all(1), border_color: 'rgba(245,242,234,0.2)', border_radius: all(3) }, [
+        W('icon', { selected_icon: icon('pin'), primary_color: '#E6E0D5', size: px(18) }),
+        heading('Sutton Coldfield, north Birmingham · Book directly without a GP referral', { tag: 'span', color: '#F5F2EA', t: { f: IN, s: 15, lh: 1.5 } })
+      ])
+    ]));
+
+    /* AT A GLANCE (verified facts only) */
+    const FACTS = [['Location', 'Sutton Coldfield, Birmingham'], ['Open late', 'Mon–Fri until 8pm'], ['Weekends', 'Saturday 8am–2pm'], ['GP referral', 'Not needed']];
     out.push(section({ pt: 0, pb: 0, ptm: 0, pbm: 0, x: { background_background: 'classic', background_color: '#4F5945' } }, [
       C(grid(4, { grid_columns_grid_tablet: fr(2), grid_columns_grid_mobile: fr(1), grid_gaps: gaps(0) }), FACTS.map(([k, v]) =>
         C({ padding: dims(26, 24, 26, 0), border_border: 'solid', border_width: dims(0, 1, 0, 0), border_color: 'rgba(245,242,234,0.14)' }, [
@@ -513,46 +522,41 @@
         ])))
     ]));
 
-    const GET = [['car', 'By car', '[Parking details to confirm before launch — e.g. on-site, on-street or nearest car park.]'],
-      ['train', 'By public transport', '[Nearest bus routes or train station to confirm before launch.]'],
-      ['access', 'Access', '[Confirm step-free access.] Let us know any access needs when you book.']];
+    /* LOCATION */
     out.push(section({ x: { _element_id: 'visit', css_classes: 'ex-anchor' } }, [
       C(gridC('minmax(0,1fr) minmax(0,1.1fr)', { grid_columns_grid_tablet: fr(1), grid_gaps: gaps(64), grid_gaps_tablet: gaps(40), grid_align_items: 'start' }), [
         C({}, [
           eyebrow('Where We Are'),
-          h2('In Sutton Coldfield — not the city centre', { o: { x: { _margin: dims(24, 0, 0, 0) } } }),
-          para('We want to be upfront: Exhale isn’t in central Birmingham. Our clinic is in Sutton Coldfield, a town within the City of Birmingham’s boundary, on its northern side. For many patients in north Birmingham that makes us a convenient choice; others are happy to travel a little further for the care they want.', { mt: 20 }),
-          para('If you’re weighing up whether the trip is worth it, call us on <a class="ex-underline-olive ex-w400" href="tel:+441217512440">0121 751 2440</a>. We’ll talk through your problem and be honest if we think a clinic closer to you would suit you better.', { mt: 20 }),
+          h2('Visit our Sutton Coldfield clinic in north Birmingham', { o: { x: { _margin: dims(24, 0, 0, 0) } } }),
+          para('Choosing a clinic involves more than finding a name on a map. You need to know who you’ll see, what to expect and whether getting there will work for you.', { mt: 20 }),
+          para('Exhale is based in Sutton Coldfield, within the City of Birmingham. Our location may be particularly convenient if you live or work in north Birmingham, including Erdington, Kingstanding and Great Barr.', { mt: 20 }),
           C({ margin: dims(32, 0, 0, 0), padding: dims(28, 28, 30, 28), padding_mobile: dims(24, 20, 26, 20), background_background: 'classic', background_color: '#E6E0D5', border_radius: all(3) }, [
             heading('Address', { tag: 'h3', color: '#4F5945', t: { f: IN, s: 12, w: 500, ls: 0.2, tt: 'uppercase', lh: 1.4 } }),
             heading('Exhale Osteopathy<br>' + A.street + '<br>' + A.town + ', ' + A.pc, { tag: 'p', t: { s: 22, ls: -0.01, lh: 1.35 }, x: { _margin: dims(10, 0, 0, 0) } }),
-            heading('Getting here', { tag: 'h3', color: '#4F5945', t: { f: IN, s: 12, w: 500, ls: 0.2, tt: 'uppercase', lh: 1.4 }, x: { _margin: dims(24, 0, 0, 0) } }),
-            C({ flex_gap: gap(10), margin: dims(12, 0, 0, 0) }, GET.map(([ic, t, d]) => C({ flex_direction: 'row', flex_align_items: 'flex-start', flex_gap: gap(14) }, [
-              circle(ic, 34, 16, { color: '#4F5945', box: { background_background: 'classic', background_color: '#F5F2EA' } }),
-              text('<p><strong>' + t + '</strong><br>' + d + '</p>', { t: { s: 16, lh: 1.5 }, x: { _css_classes: 'ex-strong-600' } })
-            ])))
+            text('<p>Inside Sutton Hearing Care</p>', { color: 'rgba(39,43,38,0.84)', t: { s: 16, lh: 1.6 }, x: { _margin: dims(6, 0, 0, 0) } }),
+            heading('Telephone', { tag: 'h3', color: '#4F5945', t: { f: IN, s: 12, w: 500, ls: 0.2, tt: 'uppercase', lh: 1.4 }, x: { _margin: dims(24, 0, 0, 0) } }),
+            heading('<a href="tel:+441217512440">0121 751 2440</a>', { tag: 'p', t: { s: 22, ls: -0.01, lh: 1.35 }, x: { _margin: dims(10, 0, 0, 0), _css_classes: 'ex-dark-links' } })
           ])
         ]),
         C({}, [
-          C({ border_radius: all(3), overflow: 'hidden', padding: all(0) }, [W('google_maps', { address: A.street + ', ' + A.town + ' ' + A.pc, zoom: { unit: 'px', size: 15, sizes: [] }, height: px(520), _css_classes: 'ex-map' })]),
+          C({ border_radius: all(3), overflow: 'hidden', padding: all(0) }, [W('google_maps', { address: 'Exhale Osteopathy, 1 Sutton Oak Corner, Sutton Coldfield B74 2DH', zoom: { unit: 'px', size: 15, sizes: [] }, height: px(520), _css_classes: 'ex-map' })]),
           C({ flex_direction: 'row', flex_wrap: 'wrap', flex_gap: gap(12), margin: dims(18, 0, 0, 0) }, [
-            button('Open in Google Maps', A.maps, { kind: 'olive', h: 52, fs: 15, pl: 24, pr: 24, icon: 'arrowNE', gapIcon: 10 }),
-            button('All contact details', L.contact, { kind: 'outline', h: 52, fs: 15, pl: 24, pr: 24 })
+            button('Get directions', DIRECTIONS, { kind: 'olive', h: 52, fs: 15, pl: 24, pr: 24, icon: 'arrowNE', gapIcon: 10 }),
+            button('Call 0121 751 2440', 'tel:+441217512440', { kind: 'outline', h: 52, fs: 15, pl: 24, pr: 24 })
           ])
         ])
       ])
     ]));
 
-    const WHY = [['01', 'Time to be properly assessed', 'Your first appointment is 45–60 minutes, so there’s time to listen, examine and start treatment without rushing.'],
-      ['02', 'Evening and Saturday slots', 'Open until 8pm on weekdays and 8am–2pm on Saturdays, so you don’t need to take time off work.'],
-      ['03', 'Osteopathy, physio and massage together', 'Our team works side by side, so you can move between treatments without starting again elsewhere.'],
-      ['04', 'Registered clinicians', 'Our osteopaths are registered with the General Osteopathic Council and our physiotherapist holds a Master’s in Physiotherapy.'],
-      ['05', 'No GP referral needed', 'Book directly online or by phone — there’s no need to wait for a referral.'],
-      ['06', 'Clear, published prices', 'Initial consultations are £75 and follow-ups £60, with no hidden extras.']];
+    /* REASONS */
+    const WHY = [['01', 'Time to explain what’s happening', 'Tell us what hurts, when it started and how it affects your day. Your work, activity levels, medical history and concerns all help us understand the bigger picture.'],
+      ['02', 'An assessment with a clear explanation', 'We assess your symptoms and explain our findings in straightforward language. You’ll have the opportunity to ask questions and discuss the options before deciding whether to proceed with treatment.'],
+      ['03', 'A plan built around your goals', 'Your priority might be sitting comfortably at work, walking further, returning to exercise or managing day-to-day activities. We’ll discuss a practical plan that takes those goals into account.'],
+      ['04', 'Advice about the next step', 'Hands-on treatment won’t be appropriate for every person or every problem. If your assessment suggests you need another type of care or further investigation, we’ll explain why and discuss where to seek help.']];
     out.push(section({ x: { background_background: 'classic', background_color: '#E6E0D5' } }, [
-      eyebrow('Why Patients Travel to Us'),
-      h2('What you get when you choose Exhale', { o: { x: Object.assign({ _margin: dims(24, 0, 0, 0) }, maxw(780)) } }),
-      C(grid(3, { grid_columns_grid_tablet: fr(2), grid_columns_grid_mobile: fr(1), grid_gaps: gaps(14), margin: dims(40, 0, 0, 0) }), WHY.map(([n, t, d]) =>
+      eyebrow('Why Patients Choose Exhale'),
+      h2('Care that starts with understanding you', { o: { x: Object.assign({ _margin: dims(24, 0, 0, 0) }, maxw(780)) } }),
+      C(grid(2, { grid_columns_grid_mobile: fr(1), grid_gaps: gaps(14), margin: dims(40, 0, 0, 0) }), WHY.map(([n, t, d]) =>
         C({ flex_gap: gap(12), padding: dims(30, 28, 32, 28), background_background: 'classic', background_color: '#F5F2EA', border_radius: all(3) }, [
           heading(n, { tag: 'span', color: '#4F5945', t: { s: 13, ls: 0.1, lh: 1.4 } }),
           heading(t, { tag: 'h3', t: { s: 22, w: 500, ls: -0.015, lh: 1.3 } }),
@@ -560,36 +564,52 @@
         ])))
     ]));
 
-    const SVC = [['Osteopathy', L.osteo, 'Hands-on treatment for back, neck and joint pain.'], ['Physiotherapy', L.physio, 'Assessment and structured rehab for injuries.'],
-      ['Sports Massage', L.massage, 'Sports, deep tissue and pregnancy massage.'], ['Cranial Osteopathy', L.cranial, 'A very gentle, light-touch approach.'],
-      ['Baby &amp; Paediatric Osteopathy', L.babies, 'Gentle care for babies, children and teens.'], ['Pregnancy Osteopathy', L.preg, 'Adapted treatment for pregnancy aches.'],
-      ['Acupuncture', L.acu, 'Western medical acupuncture and dry needling.'], ['1-to-1 Rehab / Pilates', L.rehab, 'Clinician-led strength and control sessions.'],
-      ['Shockwave Therapy', L.shock, 'For stubborn tendon and heel pain.'], ['Diagnostic Ultrasound', L.us, 'In-clinic scans of tendons and soft tissues.']];
+    /* TREATMENTS */
+    const SVC = [['Osteopathy', L.osteo, 'An assessment-led approach that may include hands-on treatment, movement advice and exercises, depending on your symptoms and preferences.', 'Explore osteopathy'],
+      ['Physiotherapy', L.physio, 'Assessment, rehabilitation and exercise guidance to help you work towards your movement and activity goals.', 'Explore physiotherapy'],
+      ['Sports massage', L.massage, 'Massage for people seeking help with muscular tension or recovery from activity. You don’t need to play sport to book.', 'Explore sports massage']];
     out.push(section({}, [
       eyebrow('Our Treatments'),
       C({ flex_direction: 'row', flex_wrap: 'wrap', flex_justify_content: 'space-between', flex_align_items: 'flex-end', flex_gap: gap(24), margin: dims(24, 0, 0, 0) }, [
-        h2('More than osteopathy, all under one roof', { o: { x: maxw(680) } }),
-        text('<p>Osteopaths, a physiotherapist and sports massage therapists work side by side, so you can be referred within the team rather than starting again somewhere else.</p>', { t: { s: 17, lh: 1.7 }, x: maxw(500) })
+        h2('Osteopathy, physiotherapy and sports massage', { o: { x: maxw(680) } }),
+        text('<p>Different people need different approaches. Our team brings together several services at the same clinic, making it easier to discuss which may suit your needs.</p>', { t: { s: 17, lh: 1.7 }, x: maxw(500) })
       ]),
-      C(grid(2, { grid_columns_grid_tablet: fr(1), grid_gaps: gaps(0, 48), margin: dims(36, 0, 0, 0), border_border: 'solid', border_width: dims(1, 0, 0, 0), border_color: '#B7AA99' }), SVC.map(([n, href, d]) =>
-        C({ html_tag: 'a', link: link(href), flex_direction: 'row', flex_justify_content: 'space-between', flex_align_items: 'center', flex_gap: gap(20), padding: dims(22, 0, 22, 0),
+      C(grid(3, { grid_columns_grid_tablet: fr(1), grid_gaps: gaps(0, 48), margin: dims(36, 0, 0, 0), border_border: 'solid', border_width: dims(1, 0, 0, 0), border_color: '#B7AA99' }), SVC.map(([n, href, d, cta]) =>
+        C({ html_tag: 'a', link: link(href), flex_direction: 'row', flex_justify_content: 'space-between', flex_align_items: 'flex-start', flex_gap: gap(20), padding: dims(26, 0, 26, 0),
           border_border: 'solid', border_width: dims(0, 0, 1, 0), border_color: '#B7AA99' }, [
           C({ css_classes: 'ex-grow' }, [
-            heading(n, { tag: 'span', t: { s: 21, ls: -0.01, lh: 1.5 } }),
-            heading(d, { tag: 'span', color: 'rgba(39,43,38,0.84)', t: { f: IN, s: 15, lh: 1.5 } })
+            heading(n, { tag: 'h3', t: { s: 21, ls: -0.01, lh: 1.5 } }),
+            text('<p>' + d + '</p>', { color: 'rgba(39,43,38,0.84)', t: { s: 15, lh: 1.6 }, x: { _margin: dims(4, 0, 0, 0) } }),
+            heading(cta + ' →', { tag: 'span', color: '#4F5945', t: { f: IN, s: 15, w: 500, lh: 1.6 }, x: { _margin: dims(10, 0, 0, 0) } })
           ]),
           W('icon', { selected_icon: icon('right'), view: 'stacked', shape: 'square', primary_color: '#E6E0D5', secondary_color: '#4F5945', size: px(18), icon_padding: px(13), border_radius: all(3) })
-        ])))
+        ]))),
+      para('We also offer dedicated appointments for <a class="ex-underline-olive ex-w400" href="' + L.preg + '">pregnancy</a> and for <a class="ex-underline-olive ex-w400" href="' + L.babies + '">babies and children</a>. These have different assessment needs, so please choose the relevant service when booking or contact us for guidance.',
+        { t: { s: 17, lh: 1.7 }, mt: 28, x: maxw(820) }),
+      heading('<a href="/#services">View all treatments →</a>', { tag: 'p', t: { f: IN, s: 15, w: 500, lh: 1.75 }, x: { _margin: dims(14, 0, 0, 0) } })
     ]));
 
+    /* TEAM */
     const TEAM = [['Hafi Rahman', 'Founder &amp; Osteopath', L.hafi, 'f4513f27866f22682d9d1eafdcd00e9b', 'B’Ost (Hons). Also a sports therapist and personal trainer.'],
       ['Ankita Desai', 'Registered Osteopath', L.ankita, 'f8984ae774fa815b4d817f0fe0266bba', 'Master’s in Osteopathy, British School of Osteopathy.'],
       ['Freta Teklensenbet', 'Registered Osteopath', L.freta, '2b3650271a3bcca5534fca4186d2400c', 'Registered with the General Osteopathic Council.'],
       ['Emre Tosun', 'Physiotherapist', L.emre, '', 'MSc Physiotherapy. Specialises in MSK rehab.'],
       ['Zoe Goodwin', 'Sports Massage Therapist', L.zoe, 'a1aa92c86185fbf90aea1ad6a47c85a3', 'Level 4 Sports Massage; BSc Sport, Exercise &amp; Health Science.']];
-    out.push(section({ x: { background_background: 'classic', background_color: '#E6E0D5' } }, [
+    out.push(section({ x: { _element_id: 'team', css_classes: 'ex-anchor', background_background: 'classic', background_color: '#E6E0D5' } }, [
       eyebrow('Who You’ll See'),
-      h2('Registered, qualified clinicians', { o: { x: { _margin: dims(24, 0, 0, 0) } } }),
+      C(gridC('minmax(0,1fr) minmax(0,1fr)', { grid_columns_grid_tablet: fr(1), grid_gaps: gaps(24, 64), margin: dims(24, 0, 0, 0), grid_align_items: 'start' }), [
+        C({}, [
+          h2('Meet the people behind your care'),
+          para('Knowing who will treat you matters.', { t: { s: 19, lh: 1.6 }, mt: 16 })
+        ]),
+        C({}, [
+          text('<p>Exhale is led by <a class="ex-underline-olive ex-w400" href="' + L.hafi + '">Hafi Rahman</a>, osteopath and founder, alongside a team of osteopaths, a physiotherapist and a sports massage therapist.</p>' +
+            '<p>Visit our practitioner profiles to read about each clinician’s qualifications, experience and areas of interest. You can then choose a practitioner when booking.</p>' +
+            '<p>If you’re unsure who to see, call reception on <a class="ex-underline-olive ex-w400" href="tel:+441217512440">0121 751 2440</a> and we’ll help you find an appropriate appointment.</p>',
+            { t: { s: 17, lh: 1.7 }, x: { _css_classes: 'ex-list ex-gap-12' } }),
+          button('Meet our team', L.about + '#team', { kind: 'outline', h: 52, fs: 15, pl: 24, pr: 24, x: { _margin: dims(22, 0, 0, 0) } })
+        ])
+      ]),
       C(grid(5, { grid_columns_grid_tablet_extra: fr(3), grid_columns_grid_tablet: fr(3), grid_columns_grid_mobile: fr(2), grid_gaps: gaps(20), grid_gaps_mobile: gaps(16), margin: dims(40, 0, 0, 0) }),
         TEAM.map(([n, role, href, a, cred]) => C({ html_tag: 'a', link: link(href) }, [
           P.photo(a, n.replace(/&amp;/g, '&'), 'ex-ratio-34', { x: { _css_classes: 'ex-ratio-34 ex-pos-top' }, ph: '[Headshot]' }),
@@ -600,13 +620,14 @@
         ])))
     ]));
 
-    const STEPS = [['01', 'Book online or call', 'Choose a practitioner and time online, or call 0121 751 2440 and we’ll help you pick.'],
-      ['02', 'Your first appointment', '45–60 minutes: we take your history, assess how you move and explain what we find. £75.'],
-      ['03', 'Treatment on the day', 'Where it’s appropriate we treat at your first visit and give you simple things to do at home.'],
-      ['04', 'Follow-ups if needed', '40–45 minute follow-ups at £60. We’ll be honest about how many you’re likely to need.']];
+    /* FIRST APPOINTMENT */
+    const STEPS = [['01', 'Tell us about your symptoms', 'We’ll ask about your current concerns, relevant medical history and how the problem affects your daily life.'],
+      ['02', 'Have an assessment', 'Your practitioner will explain the examination and ask for your consent. This may include looking at your movement and carrying out relevant physical tests.'],
+      ['03', 'Discuss your options', 'We’ll explain our findings, whether treatment is appropriate and what it may involve. You can ask questions, decline any part of the assessment or treatment, or ask us to stop at any time.'],
+      ['04', 'Agree your next steps', 'Where appropriate, treatment may begin at the first appointment. We may also suggest exercises or practical changes to try at home. Any follow-up recommendations will depend on your individual needs.']];
     out.push(section({ pt: 100, pb: 108, ptm: 64, pbm: 64, x: { background_background: 'classic', background_color: '#4F5945' } }, [
-      eyebrow('How It Works', { light: true, pb: 18 }),
-      h2('From booking to feeling better', { t: { s: 46, lh: 1.08, ls: -0.03 }, o: { color: '#F5F2EA', x: Object.assign({ _margin: dims(28, 0, 0, 0) }, maxw(780)) } }),
+      eyebrow('Your First Appointment', { light: true, pb: 18 }),
+      h2('What happens at your first appointment?', { t: { s: 46, lh: 1.08, ls: -0.03 }, o: { color: '#F5F2EA', x: Object.assign({ _margin: dims(28, 0, 0, 0) }, maxw(780)) } }),
       C(grid(4, { grid_columns_grid_tablet_extra: fr(2), grid_columns_grid_tablet: fr(2), grid_columns_grid_mobile: fr(1), grid_gaps: gaps(14), margin: dims(48, 0, 0, 0) }), STEPS.map(([n, t, d]) =>
         C({ flex_gap: gap(14), padding: dims(30, 28, 32, 28), border_radius: all(3), background_background: 'classic', background_color: 'rgba(245,242,234,0.08)',
           border_border: 'solid', border_width: all(1), border_color: 'rgba(245,242,234,0.18)' }, [
@@ -615,50 +636,64 @@
           text('<p>' + d + '</p>', { color: 'rgba(245,242,234,0.85)', t: { s: 15, lh: 1.65 } })
         ]))),
       C({ flex_direction: 'row', flex_wrap: 'wrap', flex_gap: gap(12), margin: dims(36, 0, 0, 0) }, [
-        button('Book your first appointment', '#book', { kind: 'ivory', h: 54, fs: 16, pl: 26, pr: 26 }),
-        button('See all fees', L.fees, { kind: 'outline-light', bd: 'rgba(245,242,234,0.7)', h: 54, fs: 16, pl: 26, pr: 26 })
+        button('View appointment fees', L.fees, { kind: 'outline-light', bd: 'rgba(245,242,234,0.7)', h: 54, fs: 16, pl: 26, pr: 26 }),
+        button('Book your first appointment', L.book, { kind: 'ivory', h: 54, fs: 16, pl: 26, pr: 26 })
       ])
     ]));
 
-    out.push(P.reviews('In our patients’ words', '[Paste a genuine Google review, word for word. Only mention where the patient is from if they said so in the review.]',
-      { bg: '#F5F2EA', card: '#E6E0D5', name: '[Reviewer name as shown on Google]',
-        after: heading('<a href="#google">Read all our reviews on Google →</a>', { tag: 'p', t: { f: IN, s: 15, w: 500, lh: 1.75 }, x: { _margin: dims(26, 0, 0, 0) } }) }));
+    /* REVIEWS — introduction and Google link only (no unverified testimonial cards) */
+    out.push(section({ pt: 96, pb: 96, ptm: 64, pbm: 64 }, [
+      C({ flex_direction: 'row', flex_wrap: 'wrap', flex_justify_content: 'space-between', flex_align_items: 'flex-end', flex_gap: gap(32) }, [
+        C({ width: px(760), width_tablet: pct(100) }, [
+          heading('Patient Stories', { tag: 'p', color: '#4F5945', t: { f: IN, s: 13, w: 500, ls: 0.2, tt: 'uppercase', lh: 1.4 }, x: { _css_classes: 'ex-eyebrow' } }),
+          h2('Read about other patients’ experiences', { o: { x: { _margin: dims(20, 0, 0, 0) } } }),
+          para('Choosing someone to help with your health is a personal decision. Reading independent reviews can give you an idea of how other patients have experienced the clinic, our communication and their appointments.', { t: { s: 17, lh: 1.7 }, mt: 16 })
+        ]),
+        button('Read our reviews on Google', GOOGLE_REVIEWS, { kind: 'olive', h: 54, fs: 16, pl: 26, pr: 26, icon: 'arrowNE', gapIcon: 10 })
+      ])
+    ]));
 
-    const FAQ = [['Is Exhale Osteopathy in Birmingham?', 'We’re in Sutton Coldfield, which is part of the City of Birmingham on its northern side — not in Birmingham city centre. Our address is ' + A.line + '.'],
-      ['Do I need a GP referral?', 'No. You can book directly with us online or by phone.'],
-      ['How do I book?', 'Book online at any time, call 0121 751 2440, or email info@exhaleosteopathy.co.uk.'],
-      ['What happens at my first appointment?', 'We talk through your symptoms and history, assess how you move, explain what we think is going on and agree a plan. Where appropriate, treatment starts the same day.'],
-      ['What should I wear?', 'Comfortable clothes you can move in, such as leggings or shorts and a vest top. You can always ask for a gown or a chaperone.'],
-      ['Is there parking?', '[Confirm parking arrangements at the launch address.]'],
-      ['What if I need to cancel?', 'Please give us 24 hours’ notice. Missed appointments or late cancellations may be charged at 50% if we can’t fill the slot.'],
-      ['Can I claim on health insurance?', '[List the insurers you’re registered with, or remove this question.]']];
+    /* FAQS */
+    const FAQ = [['Where in Birmingham is Exhale Osteopathy?', 'Our clinic is in Sutton Coldfield, in north Birmingham. Please check the location details on this page for our current street address, directions and parking arrangements before travelling.'],
+      ['Do I need a GP referral?', 'No. You can book directly with us. If you intend to claim through private health insurance, check your insurer’s requirements and whether your chosen practitioner is covered before booking.'],
+      ['Should I book osteopathy or physiotherapy?', 'Both involve assessing your symptoms and discussing an appropriate plan. The best starting point depends on your needs, preferences and the practitioner’s expertise. If you’re unsure, contact reception and we’ll help guide your booking.'],
+      ['Can I choose who I see?', 'Yes. You can view our practitioner profiles and check their available appointments through online booking. Some services are provided by specific practitioners.'],
+      ['What should I wear?', 'Wear comfortable clothing that allows you to move. Depending on the area being assessed, your practitioner may discuss adjusting or removing some clothing. They will explain what is needed, respect your preferences and ask for your consent.'],
+      ['Will I receive treatment at my first visit?', 'Treatment may be offered after your assessment if it is appropriate and you agree to it. Occasionally, further investigation or another type of care may be the more suitable next step.'],
+      ['How many appointments will I need?', 'There is no fixed number that suits everyone. Your practitioner will discuss their recommendations after assessing you and review the plan according to your progress.'],
+      ['Is there parking, and is the clinic accessible?', 'Please check the confirmed parking and access information in the location section above. If you have mobility needs or are visiting with a pram, call before your appointment so we can discuss the arrangements.']];
     const acc = faqAccordion(FAQ.map(([q, a]) => ({ q, a })));
+    acc.settings.title_tag = 'h3';
     acc.settings.custom_css = acc.settings.custom_css.replace('background:#E6E0D5;color:#4F5945', 'background:#F5F2EA;color:#4F5945');
     out.push(section({ x: { _element_id: 'faqs', css_classes: 'ex-anchor', background_background: 'classic', background_color: '#E6E0D5' } }, [
       C(gridC('minmax(0,1fr) minmax(0,1.5fr)', { grid_columns_grid_tablet: fr(1), grid_gaps: gaps(64), grid_gaps_tablet: gaps(40), grid_align_items: 'start' }), [
         C({}, [
           eyebrow('Visiting Us'),
-          h2('Questions from Birmingham patients', { o: { x: { _margin: dims(24, 0, 0, 0) } } }),
+          h2('Questions about visiting Exhale from Birmingham', { o: { x: { _margin: dims(24, 0, 0, 0) } } }),
           para('Anything else? Call <a class="ex-underline-olive ex-w400" href="tel:+441217512440">0121 751 2440</a> or email <a class="ex-underline-olive ex-w400 ex-break" href="mailto:info@exhaleosteopathy.co.uk">info@exhaleosteopathy.co.uk</a>.', { t: { s: 17, lh: 1.7 }, mt: 18 })
         ]),
         acc
       ])
     ]));
 
-    const CONDS = [['Back Pain', L.back], ['Neck Pain', L.neck], ['Shoulder Pain', L.shoulder], ['Hip Pain', L.hip], ['Knee Pain', L.knee], ['Foot &amp; Ankle Pain', L.ankle],
-      ['Headaches &amp; Migraines', L.head], ['Sciatica', L.sciatica], ['Sports Injuries', L.sports], ['Tendon Problems', L.tendon], ['TMJ / Jaw Pain', L.jaw]];
+    /* CONDITION LINKS */
+    const CONDS = [['Back pain', L.back], ['Neck pain', L.neck], ['Shoulder pain', L.shoulder], ['Hip pain', L.hip], ['Knee pain', L.knee], ['Foot and ankle pain', L.ankle],
+      ['Sciatica', L.sciatica], ['Sports injuries', L.sports]];
     out.push(section({ pt: 80, pb: 80, ptm: 56, pbm: 56 }, [
       label('Common Problems We Treat'),
-      heading('Find out how we can help', { t: { s: 34, st: 32, sm: 28, lh: 1.15, ls: -0.02 }, x: { _margin: dims(12, 0, 0, 0) } }),
-      C({ flex_direction: 'row', flex_wrap: 'wrap', flex_gap: gap(10), margin: dims(24, 0, 0, 0) }, CONDS.map(([n, href]) => P.chip(n, href)))
+      heading('Explore information about your symptoms', { t: { s: 34, st: 32, sm: 28, lh: 1.15, ls: -0.02 }, x: { _margin: dims(12, 0, 0, 0) } }),
+      para('Our condition pages explain how we approach assessment and when another type of care may be needed.', { t: { s: 17, lh: 1.7 }, mt: 12, x: maxw(760) }),
+      C({ flex_direction: 'row', flex_wrap: 'wrap', flex_gap: gap(10), margin: dims(24, 0, 0, 0) }, CONDS.map(([n, href]) => P.chip(n, href))),
+      para('If you’re unsure whether an appointment is suitable, <a class="ex-underline-olive ex-w400" href="' + L.contact + '">contact us</a> before booking.', { t: { s: 16, lh: 1.7 }, mt: 22 })
     ]));
 
-    out.push(P.book({ img: '602bcebb1c29e98bc4fcd47a4c86b013', title: 'Book with an osteopath in Sutton Coldfield', ts: 46, leadw: 540,
-      lead: 'Initial consultation &amp; treatment £75 · Follow-ups £60. No GP referral needed. Weekday evenings and Saturday mornings available.',
-      cards: [['Book online', 'Choose your practitioner and time.', L.book, 'olive'], ['Call 0121 751 2440', 'Not sure who to see? We’ll help you choose.', 'tel:+441217512440', 'outline']] }));
+    /* FINAL BOOKING */
+    out.push(P.book({ img: '602bcebb1c29e98bc4fcd47a4c86b013', title: 'Book an appointment at Exhale', ts: 46, leadw: 540,
+      lead: 'Find a practitioner and appointment time that work for you at our Sutton Coldfield clinic.</p><p>You can check availability and book online, or call us if you would prefer to speak to someone first.',
+      cards: [['Book an appointment', 'Check availability and book online.', L.book, 'olive'], ['Call 0121 751 2440', 'Speak to someone first.', 'tel:+441217512440', 'outline'],
+        ['Email us', 'info@exhaleosteopathy.co.uk', 'mailto:info@exhaleosteopathy.co.uk', 'outline']] }));
     return out;
   };
-
 
   /* ---------------- BLOG ---------------- */
   // Uses Elementor Pro Loop Grid + Taxonomy Filter with the loop-item templates "Exhale Blog Card" / "Exhale Blog Featured Card"
