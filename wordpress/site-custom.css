@@ -43,7 +43,7 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible,
   background: linear-gradient(180deg, rgba(39,43,38,.55) 0%, rgba(39,43,38,.05) 35%, rgba(39,43,38,.1) 60%, rgba(39,43,38,.6) 100%);
 }
 .ex-hero-shade::after {
-  background: linear-gradient(180deg, rgba(39,43,38,.6) 0%, rgba(39,43,38,.3) 30%, rgba(39,43,38,.55) 55%, rgba(39,43,38,.92) 100%);
+  background: linear-gradient(180deg, rgba(39,43,38,.45) 0%, rgba(39,43,38,.08) 30%, rgba(39,43,38,.3) 60%, rgba(39,43,38,.82) 100%);
 }
 
 /* 5. ex-ratio-34 — keeps portrait photos at 3:4 at every screen size */
@@ -105,7 +105,7 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible,
 /* 14. Inner-page heroes: dark-to-clear gradient from the left (treatment pages) */
 .ex-hero-side { position: relative; isolation: isolate; }
 .ex-hero-side::after { content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
-  background: linear-gradient(90deg, rgba(39,43,38,.9) 0%, rgba(39,43,38,.7) 40%, rgba(39,43,38,.25) 100%); }
+  background: linear-gradient(90deg, rgba(39,43,38,.78) 0%, rgba(39,43,38,.5) 40%, rgba(39,43,38,.05) 100%); }
 
 /* 15. Floating rating card over a photo; sticky "On this page" panel */
 .ex-float-card { position: absolute !important; left: -32px; bottom: 32px; z-index: 2; box-shadow: 0 18px 40px rgba(39,43,38,.14); }
@@ -154,12 +154,12 @@ a.ex-underline-olive { color: #4F5945; font-weight: 500; text-decoration: underl
 /* 20. One-off pages: About-style hero shade (four stops, darker at the foot) */
 .ex-shade--about { position: relative; isolation: isolate; }
 .ex-shade--about::after { content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
-  background: linear-gradient(180deg, rgba(39,43,38,.55) 0%, rgba(39,43,38,.15) 30%, rgba(39,43,38,.55) 60%, rgba(39,43,38,.94) 100%); }
+  background: linear-gradient(180deg, rgba(39,43,38,.45) 0%, rgba(39,43,38,.05) 30%, rgba(39,43,38,.3) 60%, rgba(39,43,38,.82) 100%); }
 /* Google Map widget sits flush in the top of a clinic card */
 .ex-map iframe { display: block; }
 
 /* 21. Pricing: side shade variant, fee tabs (numbered with a CSS counter, arrow on the right), duration text */
-.ex-hero-side--92::after { background: linear-gradient(90deg, rgba(39,43,38,.92) 0%, rgba(39,43,38,.72) 45%, rgba(39,43,38,.3) 100%); }
+.ex-hero-side--92::after { background: linear-gradient(90deg, rgba(39,43,38,.8) 0%, rgba(39,43,38,.52) 45%, rgba(39,43,38,.08) 100%); }
 .ex-fee-tabs .e-n-tabs { gap: 40px; }
 .ex-fee-tabs .e-n-tabs-heading { flex: 0 0 320px !important; width: 320px !important; position: sticky; top: 24px; align-self: flex-start; counter-reset: fee; }
 .ex-fee-tabs .e-n-tab-title { counter-increment: fee; justify-content: flex-start; gap: 16px; padding: 18px 20px !important; border: 1px solid #B7AA99; border-radius: 3px; width: 100%; }
@@ -189,7 +189,7 @@ a.ex-underline-olive { color: #4F5945; font-weight: 500; text-decoration: underl
 .ex-dark-links a:hover { color: #4F5945; }
 
 /* 23. Birmingham: side shade variant, bold label line, regular-weight olive links */
-.ex-hero-side--93::after { background: linear-gradient(90deg, rgba(39,43,38,.93) 0%, rgba(39,43,38,.75) 45%, rgba(39,43,38,.3) 100%); }
+.ex-hero-side--93::after { background: linear-gradient(90deg, rgba(39,43,38,.8) 0%, rgba(39,43,38,.52) 45%, rgba(39,43,38,.08) 100%); }
 .ex-strong-600 strong { font-weight: 600; color: #272B26; }
 a.ex-w400 { font-weight: 400; }
 
@@ -231,3 +231,9 @@ a.ex-w400 { font-weight: 400; }
 
 /* 8. Phone: hide header Book button on very narrow screens (approved behaviour) */
 @media (max-width: 380px) { .ex-hide-xs { display: none !important; } }
+
+/* 30. Lighter hero shades (client feedback 18 Oct): phones get a top-to-bottom shade because the text fills the hero */
+@media (max-width: 767px) {
+  .ex-hero-side::after, .ex-hero-side--92::after, .ex-hero-side--93::after {
+    background: linear-gradient(180deg, rgba(39,43,38,.45) 0%, rgba(39,43,38,.55) 40%, rgba(39,43,38,.8) 100%); }
+}
