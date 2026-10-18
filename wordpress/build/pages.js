@@ -1,7 +1,7 @@
 /* Exhale Osteopathy — one-off pages (About, Pricing, Contact, Birmingham, Blog, blog posts).
    Shared section helpers first, then one builder per page: EX.buildPage(key). */
 (function () {
-  const { C, W, px, pct, dims, all, gap, section, heading, text, eyebrow, button, image, img, icon, IT, IN } = EX;
+  const { C, W, px, em, pct, dims, all, gap, section, heading, text, eyebrow, button, image, img, icon, IT, IN } = EX;
   const { grid, gridC, fr, gaps, h2, circle, faqAccordion, esc } = EX.tx;
   const L = EX.L;
   const P = EX.P = {};
