@@ -29,6 +29,9 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible,
 /* 3. ex-btn-split — button text on the left, arrow on the right */
 .ex-btn-split .elementor-button { display: flex; width: 100%; }
 .ex-btn-split .elementor-button-content-wrapper { width: 100%; justify-content: space-between; }
+/*    the width set in Elementor acts as a minimum (as in the design); long labels widen the button instead of wrapping */
+.elementor-widget.ex-btn-split { width: auto !important; min-width: var(--container-widget-width); max-width: 100%; }
+.ex-btn-split .elementor-button-text { white-space: nowrap; }
 
 /* 4. ex-shade / ex-hero-shade — multi-stop photo gradients from the design
       (Elementor's own overlay only allows two colours). Use on full-width containers. */
