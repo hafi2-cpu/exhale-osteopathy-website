@@ -215,5 +215,8 @@ a.ex-w400 { font-weight: 400; }
 @media (max-width: 1180px) { .ex-hide-1180 { display: none !important; } }
 .ex-share .elementor-share-btn { width: 44px; height: 44px; }
 
+/* 26. Logo image keeps its proportions at the height set in Elementor */
+.ex-logo img { width: auto; max-width: none; display: block; }
+
 /* 8. Phone: hide header Book button on very narrow screens (approved behaviour) */
 @media (max-width: 380px) { .ex-hide-xs { display: none !important; } }

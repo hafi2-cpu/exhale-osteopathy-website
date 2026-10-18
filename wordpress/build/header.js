@@ -105,10 +105,14 @@
   }, EX.typo({ f: IT, s: 26, w: 400, ls: -0.02, lh: 1.25 }, 'title_typography')), [
     C({ padding: all(0) }, [mobGroup(TREAT)]), C({ padding: all(0) }, [mobGroup(CONDS)])
   ]);
-  const logo = (dark, big = 34, small = 10) => C({ html_tag: 'a', link: { url: '/', is_external: '', nofollow: '' }, flex_align_items: 'center', css_classes: 'ex-fit' }, [
-    heading('exhale', { tag: 'span', color: dark ? '#272B26' : '#F5F2EA', t: { s: big, ls: -0.045, lh: 1 } }),
-    heading('Osteopathy', { tag: 'span', color: dark ? '#272B26' : '#F5F2EA', t: { f: IN, s: small, w: 500, ls: 0.42, tt: 'uppercase', lh: 1 }, x: { _margin: dims(big > 30 ? 6 : 5, 0, 0, 0), _padding: dims(0, 0, 0, 4) } })
-  ]);
+  // Real Exhale logo (white on dark heroes, colour on the light mobile menu). Media IDs 430 (white) / 431 (colour)
+  const LOGO = { white: [430, 'exhale-logo-white.png'], colour: [431, 'exhale-logo-colour.png'] };
+  const logo = (dark, h = 46, hm = 38) => {
+    const L0 = LOGO[dark ? 'colour' : 'white'];
+    return W('image', { image: { id: L0[0], url: location.origin + '/wp-content/uploads/2026/10/' + L0[1], alt: 'Exhale Osteopathy', source: 'library' }, image_size: 'full',
+      link_to: 'custom', link: { url: '/', is_external: '', nofollow: '' }, height: px(h), height_tablet: px(hm), height_mobile: px(hm),
+      _element_width: 'auto', _flex_size: 'none', _css_classes: 'ex-logo' });
+  };
   const offcanvas = { id: OC_ID, elType: 'widget', widgetType: 'off-canvas', settings: {
       horizontal_position: 'right', width: { unit: 'vw', size: 100, sizes: [] }, height: 'custom', custom_height: { unit: 'vh', size: 100, sizes: [] },
       entrance_animation: 'fadeIn', exit_animation: 'fadeIn', prevent_scroll: 'yes',
@@ -118,7 +122,7 @@
     C({ min_height: { unit: 'vh', size: 100, sizes: [] }, background_background: 'classic', background_color: '#F5F2EA', padding: all(0) }, [
       C({ flex_direction: 'row', flex_justify_content: 'space-between', flex_align_items: 'center', min_height: px(80), padding: dims(0, 16, 0, 16),
         border_border: 'solid', border_width: dims(0, 0, 1, 0), border_color: '#B7AA99' }, [
-        logo(true, 30, 9),
+        logo(true, 38, 34),
         button('Close menu', actionHash('close', OC_ID), { kind: 'outline', h: 48, pl: 12, pr: 12, icon: 'close', x: { _css_classes: 'ex-icon-btn', icon_indent: px(0) } })
       ]),
       C({ content_width: 'boxed', boxed_width: px(900), padding: dims(4, 16, 24, 16), html_tag: 'nav' }, [
