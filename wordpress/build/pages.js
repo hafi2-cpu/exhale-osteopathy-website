@@ -350,7 +350,7 @@
 
     out.push(section({ pt: 72, pb: 72, ptm: 56, pbm: 56, x: { background_background: 'classic', background_color: '#4F5945' } }, [
       C({ flex_direction: 'row', flex_wrap: 'wrap', flex_justify_content: 'space-between', flex_align_items: 'center', flex_gap: gap(32) }, [
-        C({ css_classes: 'ex-shrink', width: px(720), width_tablet: pct(100) }, [
+        C({ width: px(720), width_tablet: pct(100) }, [
           label('Health Insurance', '#E6E0D5'),
           heading('Claiming through your insurer?', { color: '#F5F2EA', t: { s: 36, st: 32, sm: 28, lh: 1.15, ls: -0.02 }, x: { _margin: dims(12, 0, 0, 0) } }),
           text("<p>We're registered with [list insurers]. Call reception with your policy and authorisation numbers and we'll take care of the rest.</p>", { color: 'rgba(245,242,234,0.85)', t: { s: 17, lh: 1.7 }, x: { _margin: dims(12, 0, 0, 0) } })
