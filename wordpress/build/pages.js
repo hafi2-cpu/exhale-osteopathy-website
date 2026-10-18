@@ -89,7 +89,7 @@
   // Photo or grey placeholder in a fixed shape
   P.photo = (asset, alt, cls, o = {}) => asset ? image(asset, alt, { x: Object.assign({ _css_classes: cls, image_border_radius: all(3) }, o.x || {}) })
     : C(Object.assign({ css_classes: cls + '-box', background_background: 'classic', background_color: '#E6E0D5', border_radius: all(3), flex_justify_content: 'flex-end', padding: all(14) }, o.box || {}),
-      [heading(o.ph || '[Photo]', { tag: 'span', color: 'rgba(39,43,38,0.76)', t: { f: IN, s: 12, lh: 1.4 } })]);
+      o.ph === '' ? [] : [heading(o.ph || '[Photo]', { tag: 'span', color: 'rgba(39,43,38,0.76)', t: { f: IN, s: 12, lh: 1.4 } })]);
 
   // Team cards (About / Birmingham)
   const TEAM = [
@@ -612,7 +612,7 @@
       ]),
       C(grid(5, { grid_columns_grid_tablet_extra: fr(3), grid_columns_grid_tablet: fr(3), grid_columns_grid_mobile: fr(2), grid_gaps: gaps(20), grid_gaps_mobile: gaps(16), margin: dims(40, 0, 0, 0) }),
         TEAM.map(([n, role, href, a, cred]) => C({ html_tag: 'a', link: link(href) }, [
-          P.photo(a, n.replace(/&amp;/g, '&'), 'ex-ratio-34', { x: { _css_classes: 'ex-ratio-34 ex-pos-top' }, ph: '[Headshot]' }),
+          P.photo(a, n.replace(/&amp;/g, '&'), 'ex-ratio-34', { x: { _css_classes: 'ex-ratio-34 ex-pos-top' }, ph: '', box: { background_color: '#F5F2EA' } }),
           heading(n, { tag: 'h3', t: { s: 20, ls: -0.015, lh: 1.3 }, x: { _margin: dims(16, 0, 0, 0) } }),
           heading(role, { tag: 'span', color: 'rgba(39,43,38,0.76)', t: { f: IN, s: 14, lh: 1.75 } }),
           text('<p>' + cred + '</p>', { color: 'rgba(39,43,38,0.84)', t: { s: 14, lh: 1.55 }, x: { _margin: dims(8, 0, 0, 0) } }),
