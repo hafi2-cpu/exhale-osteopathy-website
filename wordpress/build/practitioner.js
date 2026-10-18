@@ -10,7 +10,7 @@
     knee: 'Knee Pain', ankle: 'Sports Injuries', posture: 'Postural Strain', joint: 'Muscle Tension', baby: 'Babies & Children' };
   const label = (t, color) => heading(t, { tag: 'h3', color: color || '#4F5945', t: { f: IN, s: 12, w: 500, ls: 0.2, tt: 'uppercase', lh: 1.4 } });
   const LOGOH = { 'General Osteopathic Council': ['fd147b5fe67c84b8213ca8698b4d19c5', 38, 91], 'The Institute of Osteopathy': ['2327180f75ec1201c108d81a10773018', 46, 47],
-    'HCPC registered': ['3bf80f0bb880bf686723d71a92a87e30', 46, 45], 'APPI': ['0b1f164aa218fea261047c24cd9adf5a', 48, 48] };
+    'HCPC registered': ['3bf80f0bb880bf686723d71a92a87e30', 46, 45], 'APPI': ['0b1f164aa218fea261047c24cd9adf5a', 48, 48], 'Sports Therapy Organisation': ['exhale-sto', 50, 50] };
 
   EX.buildPractitioner = async function (key, D) {
     const p = D.P[key];
@@ -81,7 +81,7 @@
               heading(esc(q.t), { tag: 'span', t: { f: IN, s: 16, w: 500, lh: 1.4 } }),
               heading(esc(q.d), { tag: 'span', color: 'rgba(39,43,38,0.76)', t: { f: IN, s: 14, lh: 1.4 } })
             ]))),
-            heading('Registered with', { tag: 'h3', color: '#4F5945', t: { f: IN, s: 12, w: 500, ls: 0.2, tt: 'uppercase', lh: 1.4 }, x: { _margin: dims(24, 0, 0, 0) } }),
+            heading('Registrations &amp; memberships', { tag: 'h3', color: '#4F5945', t: { f: IN, s: 12, w: 500, ls: 0.2, tt: 'uppercase', lh: 1.4 }, x: { _margin: dims(24, 0, 0, 0) } }),
             C({ flex_direction: 'row', flex_wrap: 'wrap', flex_align_items: 'center', flex_gap: gap(16, 22), margin: dims(14, 0, 0, 0) },
               (p.logos || []).map(l => { const m = LOGOH[l.alt]; return image(m[0], l.alt, { x: { height: px(m[1]), width: px(m[2]), _element_width: 'auto' } }); }))
           ]),
