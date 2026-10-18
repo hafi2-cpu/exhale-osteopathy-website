@@ -218,5 +218,9 @@ a.ex-w400 { font-weight: 400; }
 /* 26. Logo image keeps its proportions at the height set in Elementor */
 .ex-logo img { width: auto; max-width: none; display: block; }
 
+/* 27. Round icon circles: a container holding only an icon stays exactly as wide as its height
+       (stops cards stretching the circle into an oval) */
+.e-con.ex-fit:has(> .elementor-widget-icon:only-child) { width: var(--min-height) !important; height: var(--min-height); flex: 0 0 auto !important; }
+
 /* 8. Phone: hide header Book button on very narrow screens (approved behaviour) */
 @media (max-width: 380px) { .ex-hide-xs { display: none !important; } }
