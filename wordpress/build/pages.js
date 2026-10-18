@@ -409,14 +409,14 @@
         treats: ['Osteopathy', 'Cranial Osteopathy', 'Physiotherapy', 'Acupuncture', 'Sports Massage'], bg: '#F5F2EA', pt: 40 }, { name: P.CLINICS.sutton.name, short: P.CLINICS.sutton.short, map: P.CLINICS.sutton.map, dir: P.CLINICS.sutton.dir }),
       Object.assign({ n: '02', addr: '30 Rotten Row, Lichfield, Staffordshire, WS13 6JB', phone: '01543 252673', tel: 'tel:+441543252673', phone2: 'Established 1983',
         email: 'contact@lichfield-osteopaths.co.uk', hours: [['Mon – Fri', '09:00 – 19:00'], ['Saturday', '09:00 – 14:00'], ['Sunday', 'Closed']],
-        photo: 'lichfield-clinic', pos: [36, 50], photoAlt: 'Lichfield Osteopathic Practice, 30 Rotten Row', getting: ['Parking outside the clinic', 'Free parking at Tesco, a few minutes’ walk', 'A few minutes’ walk from Lichfield city centre'],
+        photo: 'lichfield-clinic', pos: [36, 50, 52], photoAlt: 'Lichfield Osteopathic Practice, 30 Rotten Row', getting: ['Parking outside the clinic', 'Free parking at Tesco, a few minutes’ walk', 'A few minutes’ walk from Lichfield city centre'],
         treats: ['Osteopathy', 'Cranial Osteopathy', 'Paediatric Osteopathy', 'Sports &amp; Deep Tissue Massage', 'Pregnancy Massage'], bg: '#E6E0D5', pt: 90, flip: true },
         { name: P.CLINICS.lichfield.name, short: P.CLINICS.lichfield.short, map: P.CLINICS.lichfield.map, dir: P.CLINICS.lichfield.dir })];
     const h4 = (t) => heading(t, { tag: 'h4', color: '#4F5945', t: { f: IN, s: 12, w: 500, ls: 0.2, tt: 'uppercase', lh: 1.4 } });
     CL.forEach(c => {
       const photo = c.photo
         ? C(Object.assign({ min_height: px(520), border_radius: all(3), background_background: 'classic', background_color: '#E6E0D5', background_image: img(c.photo),
-            background_size: 'cover' }, c.pos ? { background_position: 'initial', background_xpos: { unit: '%', size: c.pos[0] }, background_ypos: { unit: '%', size: c.pos[1] } } : { background_position: 'center center' }), [])
+            background_size: 'cover' }, c.pos ? { background_position: 'initial', background_xpos: { unit: '%', size: c.pos[0] }, background_ypos: { unit: '%', size: c.pos[1] }, background_position_tablet: 'initial', background_xpos_tablet: { unit: '%', size: c.pos[2] }, background_ypos_tablet: { unit: '%', size: c.pos[1] }, background_position_mobile: 'initial', background_xpos_mobile: { unit: '%', size: c.pos[2] }, background_ypos_mobile: { unit: '%', size: c.pos[1] } } : { background_position: 'center center' }), [])
         : C({ min_height: px(520), border_radius: all(3), background_background: 'classic', background_color: '#E6E0D5', flex_justify_content: 'center', flex_align_items: 'center',
             border_border: c.bg === '#E6E0D5' ? 'solid' : '', border_width: all(1), border_color: '#B7AA99' },
           [heading('[Photo of ' + c.name + ']', { tag: 'span', color: 'rgba(39,43,38,0.76)', t: { f: IN, s: 13, ls: 0.14, tt: 'uppercase', lh: 1.4 } })]);
