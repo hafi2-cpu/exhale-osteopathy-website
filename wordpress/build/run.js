@@ -6,13 +6,14 @@
   for (let i = 0; i < 200 && !(window.elementor && elementor.getPreviewContainer && elementor.getPreviewContainer()); i++) await new Promise(r => setTimeout(r, 250));
   const media = JSON.parse(await get('media-map.json'));
   eval(await get('build/lib.js')); EX.setMedia(media);
-  for (const f of ['home', 'treatment', 'condition', 'practitioner', 'header', 'footer']) eval(await get('build/' + f + '.js'));
+  for (const f of ['home', 'treatment', 'condition', 'practitioner', 'header', 'footer', 'pages']) eval(await get('build/' + f + '.js'));
   const job = window.EX_JOB;
   EX.runBg(async (st) => {
     if (job.kind === 'home') { await EX.clearPage(); await EX.buildHome(); }
     if (job.kind === 'treatment') await EX.buildTreatment(job.key, JSON.parse(await get('data/treatments.json')));
     if (job.kind === 'condition') await EX.buildCondition(job.key, JSON.parse(await get('data/conditions.json')));
     if (job.kind === 'practitioner') await EX.buildPractitioner(job.key, JSON.parse(await get('data/practitioners.json')));
+    if (job.kind === 'page') await EX.buildPage(job.key);
     if (job.kind === 'header') await EX.buildHeader();
     if (job.kind === 'footer') await EX.buildFooter(job.variant);
     st.log.push('built');

@@ -146,5 +146,12 @@ a.ex-underline-olive { color: #4F5945; font-weight: 500; text-decoration: underl
 .e-con.ex-shrink { --width: auto; width: auto; flex: 0 1 auto; min-width: 0; max-width: 100%; }
 .e-con.ex-nowrap { --flex-wrap: nowrap; flex-wrap: nowrap; }
 
+/* 20. One-off pages: About-style hero shade (four stops, darker at the foot) */
+.ex-shade--about { position: relative; isolation: isolate; }
+.ex-shade--about::after { content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
+  background: linear-gradient(180deg, rgba(39,43,38,.55) 0%, rgba(39,43,38,.15) 30%, rgba(39,43,38,.55) 60%, rgba(39,43,38,.94) 100%); }
+/* Google Map widget sits flush in the top of a clinic card */
+.ex-map iframe { display: block; }
+
 /* 8. Phone: hide header Book button on very narrow screens (approved behaviour) */
 @media (max-width: 380px) { .ex-hide-xs { display: none !important; } }
