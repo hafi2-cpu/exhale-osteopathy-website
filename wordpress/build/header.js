@@ -29,6 +29,12 @@
     ['Physiotherapy &amp; Massage', [['Emre Tosun', L.emre, 'emre-avatar', 'Physiotherapist, Personal Trainer &amp; Sports Massage Therapist'], ['Zoe Goodwin', L.zoe, '3145376680e5c707cbbb4e7924778e72', 'Sports Massage Therapist']]]
   ];
 
+  // About dropdown
+  const ABOUT = [
+    ['About Exhale', [['About Exhale', L.about, '3e5af535c29942d9a3c973f98d64792e', 'Our story, values and clinics'], ['Blog', L.blog, '6128b4e96822ca4aa5be53906bd1ae7f', 'Advice from the treatment room'],
+      ['Visiting from Birmingham', L.bham, '2cef3306a31a7e7056f2f7bef5cf4201', 'Our Sutton Coldfield clinic in north Birmingham']]]
+  ];
+
   const thumb = (asset, size) => asset
     ? image(asset, '', { x: { width: px(size), height: px(size), 'object-fit': 'cover', image_border_radius: all(3), _flex_size: 'none' } })
     : C({ background_background: 'classic', background_color: '#E6E0D5', border_radius: all(3), css_classes: 'ex-thumb-ph ex-thumb-ph--' + size }, []);
@@ -67,6 +73,12 @@
     heading('<a href="' + L.about + '#team">Meet the whole team →</a>', { tag: 'p', color: '#4F5945', t: { f: IN, s: 15, w: 500, lh: 1.6 } })
   ]);
 
+  const aboutFooter = C({ flex_direction: 'row', flex_wrap: 'wrap', flex_justify_content: 'space-between', flex_align_items: 'center', flex_gap: gap(12),
+    margin: dims(22, 0, 0, 0), padding: dims(18, 0, 0, 0), border_border: 'solid', border_width: dims(1, 0, 0, 0), border_color: '#B7AA99' }, [
+    text('<p>New to Exhale? Book online or call <a href="tel:+441217512440" style="font-weight:500;text-decoration:underline;text-underline-offset:3px">0121 751 2440</a>.</p>', { t: { s: 15, lh: 1.6 } }),
+    heading('<a href="' + L.newp + '">What to expect at your first visit →</a>', { tag: 'p', color: '#4F5945', t: { f: IN, s: 15, w: 500, lh: 1.6 } })
+  ]);
+
   const megaCss = [
     'selector .e-n-menu-title{padding:12px;background:transparent}',
     'selector .e-n-menu-title-container{gap:6px}',
@@ -78,7 +90,7 @@
     'selector .e-n-menu-title a,selector .e-n-menu-title-text{white-space:nowrap}'
   ].join('\n');
 
-  const items = [['About', L.about], ['Treatments', '', TREAT], ['What We Treat', '', CONDS], ['Our Team', '', TEAM], ['Blog', L.blog], ['Pricing', L.fees], ['Contact', L.contact]];
+  const items = [['About', L.about, ABOUT], ['Treatments', '', TREAT], ['What We Treat', '', CONDS], ['Our Team', '', TEAM], ['New Patients', L.newp], ['Pricing', L.fees], ['Contact', L.contact]];
   const mega = W('mega-menu', Object.assign({
     menu_items: items.map(([t, href, cols]) => Object.assign({ _id: EX.rid(), item_title: t, item_link: { url: href || '', is_external: '', nofollow: '' } },
       cols ? { item_dropdown_content: 'yes' } : { item_dropdown_content: '' })),
@@ -88,7 +100,7 @@
     menu_item_title_text_color_normal: '#F5F2EA', menu_item_title_text_color_hover: '#F5F2EA', menu_item_title_text_color_active: '#F5F2EA',
     custom_css: megaCss
   }, EX.typo({ f: IN, s: 16, w: 500, lh: 1.5 }, 'menu_item_title_typography'), hideBelowDesktop),
-  items.map(([, , cols], i) => C({ padding: all(0) }, cols ? [panel(cols, i === 2 ? condFooter : i === 3 ? teamFooter : null)] : [])));
+  items.map(([, , cols], i) => C({ padding: all(0) }, cols ? [panel(cols, i === 0 ? aboutFooter : i === 2 ? condFooter : i === 3 ? teamFooter : null)] : [])));
 
   // Off-canvas (mobile) menu
   const OC_ID = EX.rid();
@@ -114,11 +126,11 @@
     'selector .e-n-accordion-item > [role="region"], selector .e-n-accordion-item > .e-con{border:0;padding:0}'
   ].join('\n');
   const accordion = W('nested-accordion', Object.assign({
-    items: [{ _id: EX.rid(), item_title: 'Treatments' }, { _id: EX.rid(), item_title: 'What We Treat' }, { _id: EX.rid(), item_title: 'Our Team' }],
+    items: [{ _id: EX.rid(), item_title: 'About' }, { _id: EX.rid(), item_title: 'Treatments' }, { _id: EX.rid(), item_title: 'What We Treat' }, { _id: EX.rid(), item_title: 'Our Team' }],
     accordion_item_title_icon: icon('plus'), accordion_item_title_icon_active: icon('plus'),
     title_color: '#272B26', custom_css: accCss, max_items_expended: 'one', default_state: 'all_collapsed'
   }, EX.typo({ f: IT, s: 26, w: 400, ls: -0.02, lh: 1.25 }, 'title_typography')), [
-    C({ padding: all(0) }, [mobGroup(TREAT)]), C({ padding: all(0) }, [mobGroup(CONDS)]), C({ padding: all(0) }, [mobGroup(TEAM)])
+    C({ padding: all(0) }, [mobGroup(ABOUT)]), C({ padding: all(0) }, [mobGroup(TREAT)]), C({ padding: all(0) }, [mobGroup(CONDS)]), C({ padding: all(0) }, [mobGroup(TEAM)])
   ]);
   // Real Exhale logo (white on dark heroes, colour on the light mobile menu). Media IDs 430 (white) / 431 (colour)
   const LOGO = { white: [430, 'exhale-logo-white.png'], colour: [431, 'exhale-logo-colour.png'] };
@@ -142,7 +154,7 @@
       ]),
       C({ content_width: 'boxed', boxed_width: px(900), padding: dims(4, 16, 24, 16), html_tag: 'nav' }, [
         accordion,
-        bigRow('About', L.about), bigRow('Pricing', L.fees), bigRow('Blog', L.blog), bigRow('Contact', L.contact)
+        bigRow('New Patients', L.newp), bigRow('Pricing', L.fees), bigRow('Contact', L.contact)
       ]),
       C({ margin: dims(0, 0, 0, 0), padding: dims(24, 16, 28, 16), background_background: 'classic', background_color: '#E6E0D5', css_classes: 'ex-push-bottom' }, [
         C({ content_width: 'boxed', boxed_width: px(900), flex_gap: gap(10), padding: all(0) }, [
