@@ -412,7 +412,7 @@
     CL.forEach(c => {
       const photo = c.photo
         ? C({ min_height: px(520), min_height_mobile: px(320), border_radius: all(3), background_background: 'classic', background_color: '#E6E0D5', background_image: img(c.photo),
-            background_position: 'center center', background_size: 'cover', _title: c.photoAlt }, [])
+            background_position: 'center center', background_size: 'cover' }, [])
         : C({ min_height: px(520), min_height_mobile: px(320), border_radius: all(3), background_background: 'classic', background_color: '#E6E0D5', flex_justify_content: 'center', flex_align_items: 'center',
             border_border: c.bg === '#E6E0D5' ? 'solid' : '', border_width: all(1), border_color: '#B7AA99' },
           [heading('[Photo of ' + c.name + ']', { tag: 'span', color: 'rgba(39,43,38,0.76)', t: { f: IN, s: 13, ls: 0.14, tt: 'uppercase', lh: 1.4 } })]);
@@ -427,7 +427,7 @@
           C({}, [h4('Opening Hours'), C({ flex_gap: gap(4), margin: dims(12, 0, 0, 0) }, c.hours.map(([d, t]) => C({ flex_direction: 'row', flex_justify_content: 'space-between', flex_gap: gap(16) }, [
             heading(d, { tag: 'span', color: 'rgba(39,43,38,0.84)', t: { f: IN, s: 15, lh: 1.75 } }), heading(t, { tag: 'span', t: { f: IN, s: 15, lh: 1.75 }, x: { _flex_size: 'none' } })])))]),
           C({}, [h4('Getting Here'), C({ flex_gap: gap(8), margin: dims(12, 0, 0, 0) }, c.getting.map(g => C({ flex_direction: 'row', flex_align_items: 'flex-start', flex_gap: gap(10) }, [
-            circle('pin', 20, 11, { color: '#4F5945', box: { background_background: 'classic', background_color: c.bg === '#E6E0D5' ? '#F5F2EA' : '#E6E0D5', margin: dims(3, 0, 0, 0) } }),
+            circle('tick', 20, 11, { color: '#4F5945', box: { background_background: 'classic', background_color: c.bg === '#E6E0D5' ? '#F5F2EA' : '#E6E0D5', margin: dims(3, 0, 0, 0) } }),
             text('<p>' + g + '</p>', { t: { s: 15, lh: 1.6 } })])))]),
           C({}, [h4('Treatments Here'), C({ flex_direction: 'row', flex_wrap: 'wrap', flex_gap: gap(8), margin: dims(12, 0, 0, 0) }, c.treats.map(t =>
             heading(t, { tag: 'span', color: '#4F5945', t: { f: IN, s: 13, w: 500, lh: 1.5 }, x: { _element_width: 'auto', _padding: dims(6, 12, 6, 12), _border_radius: all(999),
