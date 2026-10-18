@@ -367,7 +367,7 @@
     out.push(P.reviews('Loved by patients across Sutton &amp; Lichfield', '[Paste a real Google review here — ideally one that mentions value or being looked after.]'));
     out.push(EX.HOME.logos());
     out.push(P.book({ title: 'Ready when you are. Book in minutes.', lead: 'No GP referral needed. Book online, call the clinic, or send us a message — and start feeling better, sooner.',
-      cards: [['Book an Appointment', 'Pick a time online in under a minute.', L.book, 'olive'], ['New Patients', 'See how your first appointment works, from arrival to treatment plan.', '/', 'outline-dark']] }));
+      cards: [['Book an Appointment', 'Pick a time online in under a minute.', L.book, 'olive'], ['New Patients', 'See how your first appointment works, from arrival to treatment plan.', L.newp, 'outline-dark']] }));
     return out;
   };
 
@@ -889,6 +889,139 @@
         button('Book an appointment', L.book, { kind: 'olive', h: 64, fs: 18, icon: 'right', split: true, minw: 300, pl: 34, pr: 30 })
       ])
     ]));
+    return out;
+  };
+
+  /* ---------------- NEW PATIENTS (/new-patients) ----------------
+     Facts used here all come from the approved site: fees and lengths (Pricing), cancellation and payment (Pricing),
+     first-appointment steps (treatment pages), clothing/chaperone (Birmingham FAQ), hours and addresses (footer/Contact). */
+  P.newPatients = () => {
+    const out = [];
+    out.push(P.heroSide({ img: 'e7ccc65900e405cbfd5068742f9f19a8', x: 60, y: 40, minh: 600, crumb: 'New Patients', h1: 'New patients: what to expect at your first appointment',
+      lead: 'Booking with Exhale for the first time? Here’s how your first visit works, how long it takes, what it costs and what to wear — so you can arrive knowing exactly what will happen.',
+      buttons: [['Book an appointment', L.book, 280], ['Your first visit', '#first', 260]] }));
+
+    const FACTS = [['First appointment', '45–60 minutes'], ['Initial consultation', '£75, including treatment'], ['GP referral', 'Not needed'], ['Appointments', 'Evenings &amp; Saturdays']];
+    out.push(section({ pt: 0, pb: 0, ptm: 0, pbm: 0, x: { background_background: 'classic', background_color: '#4F5945' } }, [
+      C(grid(4, { grid_columns_grid_tablet: fr(2), grid_columns_grid_mobile: fr(1), grid_gaps: gaps(0) }), FACTS.map(([k, v]) =>
+        C({ padding: dims(26, 24, 26, 0), border_border: 'solid', border_width: dims(0, 1, 0, 0), border_color: 'rgba(245,242,234,0.14)' }, [
+          heading(k, { tag: 'span', color: 'rgba(245,242,234,0.88)', t: { f: IN, s: 12, ls: 0.16, tt: 'uppercase', lh: 1.35 } }),
+          heading(v, { tag: 'span', color: '#F5F2EA', t: { s: 20, ls: -0.01, lh: 1.35 }, x: { _margin: dims(4, 0, 0, 0) } })
+        ])))
+    ]));
+
+    /* Intro */
+    out.push(section({ pt: 100, pb: 90, ptm: 64, pbm: 56 }, [
+      C(gridC('minmax(0,1fr) minmax(0,1.2fr)', { grid_columns_grid_tablet: fr(1), grid_gaps: gaps(72), grid_gaps_tablet: gaps(32), grid_align_items: 'start' }), [
+        C({}, [eyebrow('Welcome to Exhale'), h2('Unhurried care from your very first visit', { t: { s: 44, lh: 1.1, ls: -0.025 }, o: { x: { _margin: dims(24, 0, 0, 0) } } })]),
+        C({}, [
+          para('Your first appointment is the most important one. It’s our chance to understand what’s going on, find out what’s driving the problem and agree a plan that fits your life — not to rush you through a standard treatment.', { t: { s: 19, lh: 1.75 } }),
+          para('You can book with any of our osteopaths, our physiotherapist or our sports massage therapist, at our clinics in <a class="ex-underline-olive ex-w400" href="' + L.contact + '">Sutton Coldfield and Lichfield</a>. You don’t need a GP referral.', { mt: 20 })
+        ])
+      ])
+    ]));
+
+    /* First appointment steps */
+    const STEPS = [['01', 'Your story', 'We take a full history — your symptoms, health, work, activity and what you want to get back to.'],
+      ['02', 'Assessment', 'We look at how you move and test the structures involved to find what’s driving the problem.'],
+      ['03', 'Diagnosis &amp; plan', 'We explain what we’ve found in plain language and agree a plan with clear goals and timescales.'],
+      ['04', 'First treatment', 'Where it’s appropriate we start treatment the same day, and send you home with simple things to do.']];
+    out.push(section({ pt: 100, pb: 108, ptm: 64, pbm: 64, x: { _element_id: 'first', css_classes: 'ex-anchor', background_background: 'classic', background_color: '#4F5945' } }, [
+      eyebrow('Your First Appointment', { light: true, pb: 18 }),
+      h2('What happens at your first appointment', { t: { s: 48, lh: 1.08, ls: -0.03 }, o: { color: '#F5F2EA', x: Object.assign({ _margin: dims(28, 0, 0, 0) }, maxw(780)) } }),
+      text('<p>Your first appointment lasts 45–60 minutes and includes treatment on the day wherever it’s appropriate. Nothing happens without your agreement — you can ask questions, ask for a chaperone, or ask us to stop at any time.</p>',
+        { color: 'rgba(245,242,234,0.85)', t: { s: 18, lh: 1.7 }, x: Object.assign({ _margin: dims(20, 0, 0, 0) }, maxw(720)) }),
+      C(grid(4, { grid_columns_grid_tablet_extra: fr(2), grid_columns_grid_tablet: fr(2), grid_columns_grid_mobile: fr(1), grid_gaps: gaps(14), margin: dims(48, 0, 0, 0) }), STEPS.map(([n, t, d]) =>
+        C({ flex_gap: gap(14), padding: dims(30, 28, 32, 28), border_radius: all(3), background_background: 'classic', background_color: 'rgba(245,242,234,0.08)',
+          border_border: 'solid', border_width: all(1), border_color: 'rgba(245,242,234,0.18)' }, [
+          heading(n, { tag: 'span', color: '#E6E0D5', t: { s: 52, lh: 1, ls: -0.04 } }),
+          heading(t, { tag: 'h3', color: '#F5F2EA', t: { s: 22, w: 500, ls: -0.015, lh: 1.25 } }),
+          text('<p>' + d + '</p>', { color: 'rgba(245,242,234,0.85)', t: { s: 15, lh: 1.65 } })
+        ])))
+    ]));
+
+    /* Before your visit */
+    const BEFORE = [['calendar', 'Book online or by phone', 'Choose your practitioner and a time online, or call <a class="ex-underline-olive ex-w400" href="tel:+441217512440">0121 751 2440</a> and we’ll help you choose who to see.'],
+      ['user', 'What to wear', 'Comfortable clothes you can move in, such as leggings or shorts and a vest top. You can always ask for a gown or a chaperone.'],
+      ['pin', 'Finding us', 'Our Sutton Coldfield clinic is inside Sutton Hearing Care, 1 Sutton Oak Corner, B74 2DH. Our Lichfield practice is at 30 Rotten Row, WS13 6JB.'],
+      ['card', 'Health insurance', 'Claiming through your insurer? Call reception with your policy and authorisation numbers before your first visit.']];
+    out.push(section({ x: { background_background: 'classic', background_color: '#E6E0D5' } }, [
+      eyebrow('Before You Arrive'),
+      h2('Getting ready for your visit', { o: { x: { _margin: dims(24, 0, 0, 0) } } }),
+      C(grid(2, { grid_columns_grid_mobile: fr(1), grid_gaps: gaps(14), margin: dims(36, 0, 0, 0) }), BEFORE.map(([ic, t, d]) =>
+        C({ flex_direction: 'row', flex_align_items: 'flex-start', flex_gap: gap(16), padding: dims(26, 26, 28, 26), background_background: 'classic', background_color: '#F5F2EA', border_radius: all(3) }, [
+          circle(ic, 46, 20, { color: '#4F5945', box: { background_background: 'classic', background_color: '#E6E0D5' } }),
+          C({ css_classes: 'ex-grow' }, [
+            heading(t, { tag: 'h3', t: { s: 21, w: 500, ls: -0.015, lh: 1.3 } }),
+            text('<p>' + d + '</p>', { color: 'rgba(39,43,38,0.84)', t: { s: 15, lh: 1.65 }, x: { _margin: dims(8, 0, 0, 0) } })
+          ])
+        ])))
+    ]));
+
+    /* After your first visit */
+    out.push(section({}, [
+      C(gridC('minmax(0,1fr) minmax(0,1.2fr)', { grid_columns_grid_tablet: fr(1), grid_gaps: gaps(72), grid_gaps_tablet: gaps(32), grid_align_items: 'start' }), [
+        C({}, [eyebrow('Follow-up Appointments'), h2('After your first visit', { o: { x: { _margin: dims(24, 0, 0, 0) } } })]),
+        C({}, [
+          para('Follow-up appointments last 40–45 minutes and continue the plan we agreed together. Treatment is tailored to you and may combine hands-on techniques, exercise and practical advice for work, sport and home.', { t: { s: 18, lh: 1.8 } }),
+          para('How many sessions you need depends on the problem. We’ll give you an honest estimate at your first visit — and tell you if you don’t need to come back.', { mt: 18 }),
+          para('Explore <a class="ex-underline-olive ex-w400" href="' + L.osteo + '">osteopathy</a>, <a class="ex-underline-olive ex-w400" href="' + L.physio + '">physiotherapy</a> and <a class="ex-underline-olive ex-w400" href="' + L.massage + '">sports massage</a>, or read about the <a class="ex-underline-olive ex-w400" href="' + L.back + '">conditions we treat</a>.', { mt: 18 })
+        ])
+      ])
+    ]));
+
+    /* Fees and policies */
+    const KNOW = [['pound', 'Fees', 'Initial consultation and treatment (45–60 mins) £75. Returning patient treatment (40–45 mins) £60.'],
+      ['card', 'Paying', 'Payment is taken at the end of each appointment.'],
+      ['clock', 'Cancellations', 'Please give us 24 hours’ notice. Late cancellations and missed appointments may be charged at 50% if we can’t fill the slot.'],
+      ['check', 'No referral needed', 'You can book directly — no need to see your GP first. Some insurers do ask for a referral.']];
+    out.push(section({ x: { background_background: 'classic', background_color: '#E6E0D5' } }, [
+      C({ flex_direction: 'row', flex_wrap: 'wrap', flex_justify_content: 'space-between', flex_align_items: 'flex-end', flex_gap: gap(24) }, [
+        C({ css_classes: 'ex-shrink' }, [eyebrow('Good to Know'), h2('Fees and policies', { o: { x: { _margin: dims(24, 0, 0, 0) } } })]),
+        button('See all fees', L.fees, { kind: 'outline', h: 52, fs: 15, pl: 24, pr: 24 })
+      ]),
+      C(grid(4, { grid_columns_grid_tablet_extra: fr(2), grid_columns_grid_tablet: fr(2), grid_columns_grid_mobile: fr(1), grid_gaps: gaps(14), margin: dims(36, 0, 0, 0) }), KNOW.map(([ic, t, d]) =>
+        C({ flex_gap: gap(12), padding: dims(28, 26, 30, 26), background_background: 'classic', background_color: '#F5F2EA', border_radius: all(3) }, [
+          circle(ic, 46, 20, { color: '#4F5945', box: { background_background: 'classic', background_color: '#E6E0D5' } }),
+          heading(t, { tag: 'h3', t: { s: 21, w: 500, ls: -0.015, lh: 1.3 } }),
+          text('<p>' + d + '</p>', { color: 'rgba(39,43,38,0.84)', t: { s: 15, lh: 1.65 } })
+        ])))
+    ]));
+
+    /* Team */
+    out.push(section({}, [
+      eyebrow('Choose Your Practitioner'),
+      C({ flex_direction: 'row', flex_wrap: 'wrap', flex_justify_content: 'space-between', flex_align_items: 'flex-end', flex_gap: gap(24), margin: dims(24, 0, 0, 0) }, [
+        h2('Who you could see', { o: { x: maxw(640) } }),
+        text('<p>Read about each clinician before you book. Not sure who’s right for you? Call us and we’ll help you choose.</p>', { t: { s: 17, lh: 1.7 }, x: maxw(520) })
+      ]),
+      P.teamGrid()
+    ]));
+
+    /* FAQs */
+    const FAQ = [['Do I need a GP referral?', 'No. You can book directly with us online or by phone. If you’re claiming through health insurance, check whether your insurer asks for a referral.'],
+      ['How long is the first appointment?', 'Your initial consultation lasts 45–60 minutes and includes treatment on the day wherever it’s appropriate.'],
+      ['How much does it cost?', 'An initial consultation and treatment is £75 and returning patient appointments are £60. See our fees page for physiotherapy, sports massage and other treatments.'],
+      ['What should I wear?', 'Comfortable clothes you can move in, such as leggings or shorts and a vest top. You can always ask for a gown or a chaperone.'],
+      ['Will I be treated at my first appointment?', 'Where it’s appropriate, yes — and only with your agreement. If we think another type of care or further investigation would be better, we’ll explain why.'],
+      ['How many appointments will I need?', 'It depends on the problem. We’ll give you an honest estimate at your first visit and review your progress as we go.'],
+      ['Can I claim on health insurance?', 'Call reception with your policy and authorisation numbers before your first visit and we’ll take care of the rest.'],
+      ['What if I need to cancel?', 'Please give us 24 hours’ notice. Late cancellations and missed appointments may be charged at 50% if we can’t fill the slot.']];
+    out.push(section({ x: { _element_id: 'faqs', css_classes: 'ex-anchor', background_background: 'classic', background_color: '#E6E0D5' } }, [
+      C(gridC('minmax(0,1fr) minmax(0,1.5fr)', { grid_columns_grid_tablet: fr(1), grid_gaps: gaps(64), grid_gaps_tablet: gaps(40), grid_align_items: 'start' }), [
+        C({}, [
+          eyebrow('FAQs'),
+          h2('New patient questions', { o: { x: { _margin: dims(24, 0, 0, 0) } } }),
+          para('Anything else? Call <a class="ex-underline-olive ex-w400" href="tel:+441217512440">0121 751 2440</a> or email <a class="ex-underline-olive ex-w400 ex-break" href="mailto:info@exhaleosteopathy.co.uk">info@exhaleosteopathy.co.uk</a>.', { t: { s: 17, lh: 1.7 }, mt: 18 })
+        ]),
+        (() => { const a = faqAccordion(FAQ.map(([q, a]) => ({ q, a }))); a.settings.title_tag = 'h3';
+          a.settings.custom_css = a.settings.custom_css.replace('background:#E6E0D5;color:#4F5945', 'background:#F5F2EA;color:#4F5945'); return a; })()
+      ])
+    ]));
+
+    out.push(EX.HOME.logos());
+    out.push(P.book({ img: 'e7ccc65900e405cbfd5068742f9f19a8', title: 'Book your first appointment', lead: 'No GP referral needed. Choose a practitioner and time online, or call us if you’d like to talk it through first.',
+      cards: [['Book an Appointment', 'Pick a time online in under a minute.', L.book, 'olive'], ['Call 0121 751 2440', 'Not sure who to see? We’ll help you choose.', 'tel:+441217512440', 'outline']] }));
     return out;
   };
 

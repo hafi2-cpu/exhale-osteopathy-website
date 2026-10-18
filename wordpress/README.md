@@ -109,3 +109,10 @@ See the conversation for the current, tested status of each page. Staging is set
 - [ ] Appointment lengths and prices (removed from this page; still on the Pricing page).
 - [ ] SEO title and meta description (needs the SEO plugin): "Osteopath Birmingham | Exhale Osteopathy, Sutton Coldfield" / "Looking for an osteopath in Birmingham? Visit Exhale in Sutton Coldfield for osteopathy, physiotherapy and sports massage. Meet the team and book online."
 - [ ] At launch: indexable, self-referencing canonical on the live domain, included in the XML sitemap, LocalBusiness/MedicalClinic schema for the one real clinic (no separate Birmingham branch).
+
+## New Patients page (/new-patients)
+
+- SEO title: `New Patients: Your First Appointment | Exhale Osteopathy` (55 chars)
+- Meta description: `New to Exhale Osteopathy? See what happens at your first appointment in Sutton Coldfield or Lichfield, how long it takes, fees, what to wear and how to book.` (156 chars)
+- Linked from: homepage hero and booking card ("New Patients", "Your First Visit"), Pricing booking card.
+- To confirm: accepted payment methods, insurers you're registered with, parking at each clinic, whether the same fees apply to every practitioner.

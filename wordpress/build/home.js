@@ -6,7 +6,7 @@
 
   // Live-site URLs kept where a page already exists; new pages use matching flat slugs.
   const L = {
-    about: '/about', fees: '/our-fees', contact: '/contact-us', blog: '/blog-posts', book: 'https://exhale-osteopaths.uk2.cliniko.com/bookings?business_id=1358847506980544559#service', bham: '/osteopath-birmingham',
+    about: '/about', fees: '/our-fees', contact: '/contact-us', blog: '/blog-posts', book: 'https://exhale-osteopaths.uk2.cliniko.com/bookings?business_id=1358847506980544559#service', bham: '/osteopath-birmingham', newp: '/new-patients',
     osteo: '/osteopathy', cranial: '/cranial-osteopathy', babies: '/babies', preg: '/pregnancy-osteopathy', massage: '/massage',
     acu: '/acupuncture', physio: '/physiotherapy', rehab: '/rehab-pilates', shock: '/shockwave-therapy', laser: '/laser-therapy',
     us: '/diagnostic-ultrasound', back: '/back-pain', neck: '/neck-pain', shoulder: '/shoulder-pain', hip: '/hip-pain',
@@ -70,7 +70,7 @@
           { color: 'rgba(245,242,234,0.9)', t: { s: 20, lh: 1.65 } }),
         C({ flex_direction: 'row', flex_wrap: 'wrap', flex_gap: gap(14), margin: dims(32, 0, 0, 0) }, [
           button('Book an appointment', '#book', { kind: 'ivory', h: 64, fs: 18, icon: 'right', split: true, pl: 36, pr: 30 }),
-          button('New Patients', '#expect', { kind: 'outline-light', h: 64, fs: 18, icon: 'right', split: true, pl: 36, pr: 30 })
+          button('New Patients', L.newp, { kind: 'outline-light', h: 64, fs: 18, icon: 'right', split: true, pl: 36, pr: 30 })
         ])
       ]),
       C({ css_classes: 'ex-fit', flex_align_items: 'flex-end', flex_gap: gap(10) }, [
@@ -93,7 +93,7 @@
           { t: { s: 18, lh: 1.75 }, x: { _margin: dims(24, 0, 0, 0), _element_width: 'initial', _element_custom_width: px(600), _element_custom_width_tablet: pct(100) } }),
         C({ flex_direction: 'row', flex_wrap: 'wrap', flex_gap: gap(12), margin: dims(32, 0, 0, 0) }, [
           button('Meet the Team', '#team', { kind: 'olive' }),
-          button('Your First Visit', '#expect', { kind: 'outline' })
+          button('Your First Visit', L.newp, { kind: 'outline' })
         ])
       ]),
       C(grid(3, { grid_columns_grid_mobile: { unit: 'fr', size: 3, sizes: [] }, grid_gaps: gaps(14) }), [
@@ -244,7 +244,7 @@
       C({ flex_gap: gap(14) }, [
         bookCard('Book an Appointment', 'Pick a time online in under a minute, or call and speak to a real person.', L.book,
           { background_background: 'classic', background_color: '#4F5945' }),
-        bookCard('New Patients', 'New to osteopathy? See exactly how your first appointment works, from arrival to treatment plan.', '#expect',
+        bookCard('New Patients', 'New to osteopathy? See exactly how your first appointment works, from arrival to treatment plan.', L.newp,
           { _element_id: 'expect', border_border: 'solid', border_width: all(1), border_color: 'rgba(245,242,234,0.3)' })
       ])
     ])
