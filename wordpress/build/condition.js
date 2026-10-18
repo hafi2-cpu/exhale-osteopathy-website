@@ -11,7 +11,7 @@
   const label = (t, color) => heading(t, { tag: 'span', color: color || '#4F5945', t: { f: IN, s: 12, w: 500, ls: 0.2, tt: 'uppercase', lh: 1.4 } });
   const card = (els, o = {}) => C(Object.assign({ background_background: 'classic', background_color: '#F5F2EA', border_radius: all(3), padding: dims(40, 40, 44, 40), padding_mobile: dims(30, 24, 32, 24) }, o), els);
   const row = (els, o = {}) => C(Object.assign({ flex_direction: 'row', flex_align_items: 'flex-start' }, o), els);
-  const dot = (size, color, mt) => C({ css_classes: 'ex-dot', width: px(size), min_height: px(size), background_background: 'classic', background_color: color, border_radius: all(50, '%'), margin: dims(mt, 0, 0, 0), padding: all(0) }, []);
+  const dot = (size, color, mt) => C({ css_classes: 'ex-dot', width: px(size), width_tablet: px(size), width_mobile: px(size), min_height: px(size), background_background: 'classic', background_color: color, border_radius: all(50, '%'), margin: dims(mt, 0, 0, 0), padding: all(0) }, []);
 
   EX.buildCondition = async function (key, D) {
     const c = D.C[key], people = D.people, TH = D.TH;
