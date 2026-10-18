@@ -206,7 +206,6 @@ a.ex-w400 { font-weight: 400; }
 .e-con.ex-avatar--64 { --width: 64px; width: 64px; height: 64px; min-height: 64px; }
 .ex-overlap { position: relative; }
 .ex-cover-520 img { width: 100%; max-width: 1180px; height: 520px; object-fit: cover; display: block; margin: 0 auto; }
-@media (max-width: 560px) { .ex-cover-520 img { height: 300px; } }
 .ex-strong-light strong { color: #F5F2EA; font-weight: 600; }
 @media (max-width: 1180px) { .ex-hide-1180 { display: none !important; } }
 .ex-share .elementor-share-btn { width: 44px; height: 44px; }
