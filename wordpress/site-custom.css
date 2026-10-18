@@ -237,3 +237,6 @@ a.ex-w400 { font-weight: 400; }
   .ex-hero-side::after, .ex-hero-side--92::after, .ex-hero-side--93::after {
     background: linear-gradient(180deg, rgba(39,43,38,.6) 0%, rgba(39,43,38,.5) 15%, rgba(39,43,38,.55) 40%, rgba(39,43,38,.8) 100%); }
 }
+
+/* 31. Header "Book Now" stays visible over light photos: soft ivory ring + shadow (client feedback 18 Oct) */
+.ex-header .ex-hide-xs .elementor-button { box-shadow: inset 0 0 0 1px rgba(245,242,234,.45), 0 8px 24px rgba(20,22,19,.28); }
