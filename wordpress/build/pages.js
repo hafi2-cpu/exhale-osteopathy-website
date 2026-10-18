@@ -97,7 +97,7 @@
     ['Zoe Goodwin', 'Sports Massage Therapist', L.zoe, 'a1aa92c86185fbf90aea1ad6a47c85a3'],
     ['Freta Teklensenbet', 'Registered Osteopath', L.freta, '2b3650271a3bcca5534fca4186d2400c'],
     ['Ankita Desai', 'Registered Osteopath', L.ankita, 'f8984ae774fa815b4d817f0fe0266bba'],
-    ['Emre Tosun', 'Physiotherapist &amp; Personal Trainer', L.emre, '']];
+    ['Emre Tosun', 'Physiotherapist &amp; Personal Trainer', L.emre, 'emre-portrait']];
   P.TEAM = TEAM;
   P.teamGrid = (o = {}) => C(grid(o.cols || 5, { grid_columns_grid_tablet_extra: fr(3), grid_columns_grid_tablet: fr(3), grid_columns_grid_mobile: fr(2), grid_gaps: gaps(20), grid_gaps_mobile: gaps(16), margin: dims(40, 0, 0, 0) }),
     (o.team || TEAM).map(([n, role, href, a]) => C({ html_tag: 'a', link: link(href) }, [
@@ -593,7 +593,7 @@
     const TEAM = [['Hafi Rahman', 'Founder &amp; Osteopath', L.hafi, 'f4513f27866f22682d9d1eafdcd00e9b', 'B’Ost (Hons). Also a sports therapist and personal trainer.'],
       ['Ankita Desai', 'Registered Osteopath', L.ankita, 'f8984ae774fa815b4d817f0fe0266bba', 'Master’s in Osteopathy, British School of Osteopathy.'],
       ['Freta Teklensenbet', 'Registered Osteopath', L.freta, '2b3650271a3bcca5534fca4186d2400c', 'Registered with the General Osteopathic Council.'],
-      ['Emre Tosun', 'Physiotherapist', L.emre, '', 'MSc Physiotherapy. Specialises in MSK rehab.'],
+      ['Emre Tosun', 'Physiotherapist', L.emre, 'emre-portrait', 'MSc Physiotherapy. Specialises in MSK rehab.'],
       ['Zoe Goodwin', 'Sports Massage Therapist', L.zoe, 'a1aa92c86185fbf90aea1ad6a47c85a3', 'Level 4 Sports Massage; BSc Sport, Exercise &amp; Health Science.']];
     out.push(section({ x: { _element_id: 'team', css_classes: 'ex-anchor', background_background: 'classic', background_color: '#E6E0D5' } }, [
       eyebrow('Who You’ll See'),
