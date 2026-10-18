@@ -18,7 +18,7 @@
   P.label = label; P.para = para; P.maxw = maxw; P.stars = stars; P.tickRow = tickRow; P.link = link;
 
   // Inner-page hero: photo, multi-stop shade, breadcrumb, H1, lead + two buttons above a hairline
-  P.hero = (o) => section({ pt: o.pt || 216, pb: 72, ptm: 160, pbm: 56, x: { min_height: px(o.minh || 760), flex_justify_content: 'flex-end',
+  P.hero = (o) => section({ pt: o.pt || 216, pb: 72, ptm: o.pt || 216, pbm: 56, x: { min_height: px(o.minh || 760), flex_justify_content: 'flex-end',
     background_background: 'classic', background_color: '#272B26', background_image: img(o.img), background_position: 'initial',
     background_xpos: pct(o.x ?? 50), background_ypos: pct(o.y ?? 50), background_size: 'cover', css_classes: o.shade || 'ex-shade--about' } }, [
     heading('<a href="/">Home</a> <span aria-hidden="true">→</span> <strong>' + o.crumb + '</strong>',
@@ -51,21 +51,35 @@
       ])))
   ]);
 
-  // Closing "Book Today" band
-  P.book = (o) => section({ pt: o.pt || 100, pb: o.pb || 100, x: { _element_id: 'book', css_classes: 'ex-anchor', background_background: 'classic', background_color: '#272B26', background_image: img(o.img),
-    background_position: 'center center', background_size: 'cover', background_overlay_background: 'classic', background_overlay_color: '#272B26', background_overlay_opacity: { unit: 'px', size: o.op || 0.8, sizes: [] } } }, [
+  // Closing "Book Today" band. cards: [[title, sub, href, 'olive'|'outline'|'outline-dark']]
+  const OUTLINE = { border_border: 'solid', border_width: all(1), border_color: 'rgba(245,242,234,0.35)', background_background: 'classic', background_color: 'rgba(39,43,38,0.4)' };
+  P.book = (o) => section({ pt: o.pt || 100, pb: o.pb || 100, x: Object.assign({ _element_id: 'book', css_classes: 'ex-anchor', background_background: 'classic', background_color: '#272B26' },
+    o.img ? { background_image: img(o.img), background_position: 'center center', background_size: 'cover', background_overlay_background: 'classic', background_overlay_color: '#272B26',
+      background_overlay_opacity: { unit: 'px', size: o.op || 0.8, sizes: [] } } : {}) }, [
     C(grid(2, { grid_columns_grid_tablet: fr(1), grid_gaps: gaps(48), grid_align_items: 'center' }), [
       C({}, [
         heading('Book Today', { tag: 'p', color: '#E6E0D5', t: { f: IN, s: 11, w: 600, ls: 0.18, tt: 'uppercase', lh: 1.6 } }),
-        h2(o.title, { t: { s: 48, lh: 1.08, ls: -0.025 }, o: { color: '#F5F2EA', x: { _margin: dims(14, 0, 0, 0) } } }),
-        text('<p>' + o.lead + '</p>', { color: 'rgba(245,242,234,0.8)', t: { s: 18, lh: 1.7 }, x: Object.assign({ _margin: dims(18, 0, 0, 0) }, maxw(520)) })
+        h2(o.title, { t: { s: o.ts || 48, lh: 1.08, ls: -0.025 }, o: { color: '#F5F2EA', x: { _margin: dims(14, 0, 0, 0) } } }),
+        text('<p>' + o.lead + '</p>', { color: 'rgba(245,242,234,0.8)', t: { s: 18, lh: 1.7 }, x: Object.assign({ _margin: dims(18, 0, 0, 0) }, maxw(o.leadw || 520)) })
       ]),
-      C({ flex_gap: gap(14) }, [
-        EX.bookCard('Book an Appointment', 'Pick a time online in under a minute.', L.book, { background_background: 'classic', background_color: '#4F5945' }),
-        EX.bookCard('Call 0121 751 2440', o.callSub || 'Speak to a real person on reception.', 'tel:+441217512440',
-          { border_border: 'solid', border_width: all(1), border_color: 'rgba(245,242,234,0.35)', background_background: 'classic', background_color: 'rgba(39,43,38,0.4)' })
-      ])
+      C({ flex_gap: gap(14) }, (o.cards || [['Book an Appointment', 'Pick a time online in under a minute.', L.book, 'olive'],
+        ['Call 0121 751 2440', o.callSub || 'Speak to a real person on reception.', 'tel:+441217512440', 'outline']]).map(([t, sub, href, k]) =>
+        EX.bookCard(t, sub, href, k === 'olive' ? { background_background: 'classic', background_color: '#4F5945' }
+          : k === 'outline' ? OUTLINE : { border_border: 'solid', border_width: all(1), border_color: 'rgba(245,242,234,0.3)' })))
     ])
+  ]);
+
+  // Inner-page hero with a left-to-right shade (Pricing, Contact, Blog)
+  P.heroSide = (o) => section({ pt: o.pt || 166, pb: 72, ptm: 150, pbm: 56, x: { min_height: px(o.minh || 560), flex_justify_content: 'flex-end',
+    background_background: 'classic', background_color: '#272B26', background_image: o.img ? img(o.img) : { url: '', id: '' }, background_position: 'initial',
+    background_xpos: pct(o.x ?? 50), background_ypos: pct(o.y ?? 50), background_size: 'cover', css_classes: o.shade || 'ex-hero-side ex-hero-side--92' } }, [
+    heading('<a href="/">Home</a> <span aria-hidden="true">→</span> <strong>' + o.crumb + '</strong>',
+      { tag: 'p', color: 'rgba(245,242,234,0.8)', t: { f: IN, s: 15, lh: 1.6 }, x: { _css_classes: 'ex-on-dark ex-crumbs' } }),
+    heading(o.h1, { tag: 'h1', color: '#F5F2EA', t: { s: o.h1s || 64, st: 44, sm: 36, lh: 1.04, lhm: 1.08, ls: -0.035 }, x: Object.assign({ _margin: dims(22, 0, 0, 0) }, maxw(o.h1w || 760)) }),
+    text('<p>' + o.lead + '</p>', { color: 'rgba(245,242,234,0.88)', t: { s: 20, lh: 1.6 }, x: Object.assign({ _margin: dims(22, 0, 0, 0) }, maxw(o.leadw || 600)) }),
+    ...(o.buttons ? [C({ flex_direction: 'row', flex_wrap: 'wrap', flex_align_items: 'center', flex_gap: gap(14), margin: dims(36, 0, 0, 0) }, o.buttons.map((b, i) =>
+      button(b[0], b[1], { kind: i ? 'outline-light' : 'ivory', h: 62, fs: 18, icon: 'right', split: true, minw: b[2] || 280, pl: 32, pr: 28 })))] : []),
+    ...(o.extra || [])
   ]);
 
   // Photo or grey placeholder in a fixed shape
@@ -232,6 +246,123 @@
     out.push(EX.HOME.logos());
     out.push(P.book({ img: '2cef3306a31a7e7056f2f7bef5cf4201', title: 'Book your first appointment today',
       lead: "In pain, or just want a proper assessment? We're here to help. No GP referral needed." }));
+    return out;
+  };
+
+
+  /* ---------------- PRICING ---------------- */
+  P.pricing = () => {
+    const out = [];
+    out.push(P.heroSide({ img: '602bcebb1c29e98bc4fcd47a4c86b013', x: 60, crumb: 'Pricing', h1: 'Clear, honest pricing',
+      lead: "No hidden extras and no pressure to book more than you need. Here's exactly what each appointment costs.",
+      buttons: [['Book an appointment', '#book'], ['What to expect', '/']] }));
+
+    const CATS = [
+      ['Osteopathy', L.osteo, 'Hands-on assessment and treatment for back, neck, joint and muscle pain.', [
+        ['Appointments', [['Initial consultation &amp; treatment', '(45–60 mins)', 'Full history, assessment, diagnosis and first treatment.', '£75'],
+          ['Returning patient treatment', '(40–45 mins)', 'Ongoing treatment and progression of your plan.', '£60']]],
+        ['Other', [['Cranial &amp; paediatric osteopathy', '(40–45 mins)', 'Gentle treatment for babies, children and adults — booked as a standard appointment.', '[£XX]']]]],
+        'Initial consultations include treatment on the day wherever it’s appropriate. Most people need [2–4] sessions for a new problem — we’ll give you an honest estimate at your first visit.'],
+      ['Physiotherapy', L.physio, 'Assessment and structured rehab for injuries, joint problems and recovery after surgery.', [
+        ['Appointments', [['Initial assessment', '([60] mins)', 'Detailed assessment, diagnosis and a personalised rehab plan.', '[£XX]'],
+          ['Follow-up session', '([45] mins)', 'Treatment and progression of your exercise programme.', '[£XX]']]]],
+        'Your home exercise programme is included in every appointment at no extra cost.'],
+      ['Sports Massage', L.massage, 'Sports, deep tissue and pregnancy massage for tight muscles, recovery and everyday tension.', [
+        ['Sessions', [['Sports, deep tissue or pregnancy massage', '(60 mins)', 'Your choice of sports/deep tissue or pregnancy massage.', '£60'],
+          ['Sports, deep tissue or pregnancy massage', '(90 mins)', 'Extended session — available at our Lichfield clinic.', '£80']]]],
+        'Pre- and post-event sessions are available around race and match days — call us to arrange.'],
+      ['Laser Therapy', L.laser, 'High-power laser treatment for stubborn tendon, joint and muscle pain.', [
+        ['Sessions', [['Laser therapy session', '([15–20] mins)', 'Following a clinical assessment.', '[£XX]'],
+          ['Course of [6] sessions', '', 'Paid upfront, used over your treatment plan.', '[£XX]']]]],
+        'Laser can be added to an osteopathy or physio appointment for [£XX]. We’ll check it’s suitable for you first.'],
+      ['Acupuncture', L.acu, 'Western medical acupuncture and dry needling for persistent pain.', [
+        ['Sessions', [['Acupuncture session', '([30] mins)', 'Can be used on its own or alongside other treatment.', '[£XX]']]]],
+        'Dry needling is included within osteopathy appointments where appropriate, at no extra cost.'],
+      ['Sports Therapy', L.rehab, 'Injury assessment, hands-on treatment and return-to-sport planning.', [
+        ['Appointments', [['Initial assessment', '([60] mins)', 'Assessment of your injury and a plan to get you back to training.', '[£XX]'],
+          ['Follow-up session', '([45] mins)', 'Treatment and rehab progression.', '[£XX]']]]],
+        '[Add any sports club or student discounts here.]']];
+
+    const panel = ([name, href, intro, groups, note]) => C({ padding: all(0) }, [
+      C({ background_background: 'classic', background_color: '#F5F2EA', border_radius: all(3), padding: dims(44, 48, 40, 48), padding_mobile: dims(30, 22, 30, 22) }, [
+        C({ flex_direction: 'row', flex_wrap: 'wrap', flex_justify_content: 'space-between', flex_align_items: 'flex-start', flex_gap: gap(20) }, [
+          C({ css_classes: 'ex-shrink' }, [
+            heading(name, { tag: 'h3', t: { s: 34, sm: 28, ls: -0.02, lh: 1.2 } }),
+            text('<p>' + intro + '</p>', { color: 'rgba(39,43,38,0.84)', t: { s: 16, lh: 1.65 }, x: Object.assign({ _margin: dims(8, 0, 0, 0) }, maxw(560)) })
+          ]),
+          heading('<a href="' + href + '">About ' + name + ' →</a>', { tag: 'p', t: { f: IN, s: 15, w: 500, lh: 1.75 }, x: { _flex_size: 'none' } })
+        ]),
+        ...groups.map(([gt, rows]) => C({ margin: dims(34, 0, 0, 0) }, [
+          label(gt),
+          C({ margin: dims(10, 0, 0, 0), border_border: 'solid', border_width: dims(1, 0, 0, 0), border_color: '#B7AA99' }, rows.map(([rn, dur, d, price]) =>
+            C({ flex_direction: 'row', flex_wrap: 'wrap', flex_justify_content: 'space-between', flex_align_items: 'center', flex_gap: gap(24), padding: dims(22, 0, 22, 0),
+              border_border: 'solid', border_width: dims(0, 0, 1, 0), border_color: '#B7AA99' }, [
+              C({ css_classes: 'ex-grow ex-minw-240' }, [
+                heading(rn + (dur ? ' <small class="ex-dur">' + dur + '</small>' : ''), { tag: 'h4', t: { s: 21, ls: -0.01, lh: 1.35 } }),
+                text('<p>' + d + '</p>', { color: 'rgba(39,43,38,0.84)', t: { s: 15, lh: 1.6 }, x: { _margin: dims(4, 0, 0, 0) } })
+              ]),
+              C({ flex_direction: 'row', flex_align_items: 'center', flex_gap: gap(22), css_classes: 'ex-fit' }, [
+                heading(price, { tag: 'span', t: { s: 30, ls: -0.02, lh: 1.2 }, x: { _css_classes: 'ex-nowrap-text' } }),
+                button('Book', '#book', { kind: 'outline', h: 44, fs: 14, pl: 18, pr: 18 })
+              ])
+            ])))
+        ])),
+        C({ flex_direction: 'row', flex_align_items: 'flex-start', flex_gap: gap(14), margin: dims(30, 0, 0, 0), padding: dims(20, 22, 20, 22),
+          background_background: 'classic', background_color: '#E6E0D5', border_radius: all(3) }, [
+          C({ css_classes: 'ex-fit', width: px(26), min_height: px(26), border_radius: all(50, '%'), background_background: 'classic', background_color: '#4F5945',
+            flex_justify_content: 'center', flex_align_items: 'center', padding: all(0) }, [heading('i', { tag: 'span', color: '#F5F2EA', t: { s: 14, w: 600, lh: 1 } })]),
+          text('<p>' + note + '</p>', { t: { s: 15, lh: 1.65 } })
+        ])
+      ])
+    ]);
+
+    out.push(section({ x: { _element_id: 'fees', css_classes: 'ex-anchor', background_background: 'classic', background_color: '#E6E0D5' } }, [
+      eyebrow('Our Fees'),
+      C({ flex_direction: 'row', flex_wrap: 'wrap', flex_justify_content: 'space-between', flex_align_items: 'flex-end', flex_gap: gap(24), margin: dims(24, 0, 0, 0) }, [
+        h2('Prices &amp; appointments', { t: { s: 48, lh: 1.08, ls: -0.03 } }),
+        text("<p>Prices are the same at both clinics. Choose a treatment to see what's included.</p>", { t: { s: 17, lh: 1.7 }, x: maxw(460) })
+      ]),
+      C({ margin: dims(44, 0, 0, 0) }, [W('nested-tabs', Object.assign({
+        tabs: CATS.map(c => ({ _id: EX.rid(), tab_title: c[0] })),
+        tabs_direction: 'inline-start', tabs_direction_tablet: 'block-start', breakpoint_selector: 'none',
+        tabs_title_space_between: px(6), title_text_color: '#272B26', title_text_color_hover: '#272B26', title_text_color_active: '#F5F2EA',
+        tabs_title_background_color_background: 'classic', tabs_title_background_color_color: '#F5F2EA',
+        tabs_title_background_color_hover_background: 'classic', tabs_title_background_color_hover_color: '#E6E0D5',
+        tabs_title_background_color_active_background: 'classic', tabs_title_background_color_active_color: '#272B26',
+        _css_classes: 'ex-fee-tabs'
+      }, EX.typo({ f: IT, s: 19, w: 400, ls: -0.01, lh: 1.3 }, 'title_typography')), CATS.map(panel))])
+    ]));
+
+    const KNOW = [['card', 'Paying', 'Payment is taken at the end of each appointment. [Add accepted payment methods.]'],
+      ['clock', 'Cancellations', 'Please give us 24 hours’ notice. Late cancellations and missed appointments may be charged at 50% if we can’t fill the slot.'],
+      ['check', 'No referral needed', 'You can book directly — no need to see your GP first. Some insurers do ask for a referral.'],
+      ['pin', 'Two clinics', 'Osteopathy and massage prices are the same in Sutton Coldfield and Lichfield, so book whichever suits you.']];
+    out.push(section({}, [
+      eyebrow('Good to Know'),
+      h2('Before you book', { o: { x: { _margin: dims(24, 0, 0, 0) } } }),
+      C(grid(4, { grid_columns_grid_tablet_extra: fr(2), grid_columns_grid_tablet: fr(2), grid_columns_grid_mobile: fr(1), grid_gaps: gaps(14), margin: dims(36, 0, 0, 0) }), KNOW.map(([ic, t, d]) =>
+        C({ flex_gap: gap(12), padding: dims(28, 26, 30, 26), background_background: 'classic', background_color: '#E6E0D5', border_radius: all(3) }, [
+          circle(ic, 46, 20, { color: '#4F5945', box: { background_background: 'classic', background_color: '#F5F2EA' } }),
+          heading(t, { tag: 'h3', t: { s: 21, w: 500, ls: -0.015, lh: 1.3 } }),
+          text('<p>' + d + '</p>', { color: 'rgba(39,43,38,0.84)', t: { s: 15, lh: 1.65 } })
+        ])))
+    ]));
+
+    out.push(section({ pt: 72, pb: 72, ptm: 56, pbm: 56, x: { background_background: 'classic', background_color: '#4F5945' } }, [
+      C({ flex_direction: 'row', flex_wrap: 'wrap', flex_justify_content: 'space-between', flex_align_items: 'center', flex_gap: gap(32) }, [
+        C({ css_classes: 'ex-shrink', width: px(720), width_tablet: pct(100) }, [
+          label('Health Insurance', '#E6E0D5'),
+          heading('Claiming through your insurer?', { color: '#F5F2EA', t: { s: 36, st: 32, sm: 28, lh: 1.15, ls: -0.02 }, x: { _margin: dims(12, 0, 0, 0) } }),
+          text("<p>We're registered with [list insurers]. Call reception with your policy and authorisation numbers and we'll take care of the rest.</p>", { color: 'rgba(245,242,234,0.85)', t: { s: 17, lh: 1.7 }, x: { _margin: dims(12, 0, 0, 0) } })
+        ]),
+        button('Call 0121 751 2440', 'tel:+441217512440', { kind: 'ivory', h: 60, fs: 17, icon: 'right', gapIcon: 18, pl: 28, pr: 28 })
+      ])
+    ]));
+
+    out.push(P.reviews('Loved by patients across Sutton &amp; Lichfield', '[Paste a real Google review here — ideally one that mentions value or being looked after.]'));
+    out.push(EX.HOME.logos());
+    out.push(P.book({ title: 'Ready when you are. Book in minutes.', lead: 'No GP referral needed. Book online, call the clinic, or send us a message — and start feeling better, sooner.',
+      cards: [['Book an Appointment', 'Pick a time online in under a minute.', L.book, 'olive'], ['New Patients', 'See how your first appointment works, from arrival to treatment plan.', '/', 'outline-dark']] }));
     return out;
   };
 
