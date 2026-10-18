@@ -95,3 +95,17 @@ Permalinks are set to `/%postname%` (no trailing slash), matching the live site.
 
 See the conversation for the current, tested status of each page. Staging is set to
 "Discourage search engines"; this must be switched off at launch.
+
+## Birmingham page — editorial checklist (to confirm before launch)
+
+- [ ] Launch address: page shows **1 Sutton Oak Corner, Streetly, Sutton Coldfield, B74 2DH** (inside Sutton Hearing Care). Switch to 247A Jockey Road, B73 5XE only once the new premises are open (`BH_ADDRS` in `pages.js`, plus footer and Contact).
+- [ ] Parking details (not shown on the page until confirmed).
+- [ ] Step-free / pram access details (not shown until confirmed).
+- [ ] Public transport / travel information (not shown until confirmed).
+- [ ] Verified Google reviews link — the button currently opens a Google Maps search for "Exhale Osteopathy Sutton Coldfield".
+- [ ] Which practitioners work at the Sutton Coldfield clinic (all five are shown).
+- [ ] Pregnancy and baby/children appointments available at Sutton Coldfield; baby appointments with Hafi.
+- [ ] Emre's headshot (grey card until supplied).
+- [ ] Appointment lengths and prices (removed from this page; still on the Pricing page).
+- [ ] SEO title and meta description (needs the SEO plugin): "Osteopath Birmingham | Exhale Osteopathy, Sutton Coldfield" / "Looking for an osteopath in Birmingham? Visit Exhale in Sutton Coldfield for osteopathy, physiotherapy and sports massage. Meet the team and book online."
+- [ ] At launch: indexable, self-referencing canonical on the live domain, included in the XML sitemap, LocalBusiness/MedicalClinic schema for the one real clinic (no separate Birmingham branch).
