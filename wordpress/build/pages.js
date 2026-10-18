@@ -479,9 +479,14 @@
 
 
   /* ---------------- BIRMINGHAM ---------------- */
-  // Approved design default address ("Clinic address" tweak = 247A Jockey Road). Change here if the launch address differs.
-  const BH_ADDR = { street: '247A Jockey Road', town: 'Sutton Coldfield', pc: 'B73 5XE', line: '247A Jockey Road, Sutton Coldfield, B73 5XE',
-    maps: 'https://www.google.com/maps/search/?api=1&query=247A+Jockey+Road+Sutton+Coldfield+B73+5XE' };
+  // Clinic address shown on the Birmingham page (the design's "Clinic address" setting).
+  // Current: 1 Sutton Oak Corner. When the move happens, swap to BH_ADDRS['jockey-road'] and rebuild this page.
+  const BH_ADDRS = {
+    'sutton-oak': { street: '1 Sutton Oak Corner, Streetly', town: 'Sutton Coldfield', pc: 'B74 2DH', line: '1 Sutton Oak Corner, Streetly, Sutton Coldfield, B74 2DH',
+      maps: 'https://www.google.com/maps/search/?api=1&query=1+Sutton+Oak+Corner+Sutton+Coldfield+B74+2DH' },
+    'jockey-road': { street: '247A Jockey Road', town: 'Sutton Coldfield', pc: 'B73 5XE', line: '247A Jockey Road, Sutton Coldfield, B73 5XE',
+      maps: 'https://www.google.com/maps/search/?api=1&query=247A+Jockey+Road+Sutton+Coldfield+B73+5XE' } };
+  const BH_ADDR = BH_ADDRS['sutton-oak'];
   P.birmingham = () => {
     const A = BH_ADDR, out = [];
     out.push(P.heroSide({ img: '2cef3306a31a7e7056f2f7bef5cf4201', y: 15, minh: 700, pt: 176, ptm: 176, crumb: 'Osteopath Birmingham', h1: 'Osteopathy for patients across Birmingham', h1w: 820, leadw: 680,
