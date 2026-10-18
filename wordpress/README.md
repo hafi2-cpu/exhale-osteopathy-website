@@ -37,6 +37,12 @@ After the build, everything is edited normally in Elementor — the scripts are 
 | `condition.js` + `data/conditions.json` | 11 condition pages |
 | `practitioner.js` + `data/practitioners.json` | 5 team profiles |
 | `header.js`, `footer.js` | Theme Builder header and footers |
+| `pages.js` | About, Pricing, Contact, Birmingham, Blog listing, blog article (pelvic girdle pain) |
+
+Blog: real WordPress posts in categories (Osteopathy, Pregnancy, Babies & Children, Conditions, Self-Care, Sports).
+The Blog page uses Elementor Pro **Loop Grid + Taxonomy Filter** with three loop-item templates
+(*Exhale Blog Card*, *Exhale Blog Featured Card*, *Exhale Blog Card Small*), so new posts appear automatically.
+The four "suggested post" ideas from the design are saved as **draft posts** (drafts don't appear on the site).
 
 ## URL plan (live addresses kept where they exist)
 
@@ -70,6 +76,19 @@ After the build, everything is edited normally in Elementor — the scripts are 
 | `/faqs` | *decide*: no FAQ page in the approved design — suggest `/` or the most relevant page |
 
 Permalinks are set to `/%postname%` (no trailing slash), matching the live site.
+
+## WordPress IDs (staging)
+
+| What | ID |
+|---|---|
+| Home | 11 |
+| Treatments | Osteopathy 150, Physio 213, Massage 214, Laser 215, Cranial 216, Babies 217, Pregnancy 218, Acupuncture 219, Rehab 220, Shockwave 221, Ultrasound 222 |
+| Conditions | Back 161, Neck 223, Shoulder 224, Hip 225, Knee 226, Foot & Ankle 227, Headaches 228, Sciatica 229, Sports Injuries 230, Tendon 231, Jaw 232 |
+| Team | Hafi 168, Zoe 233, Freta 234, Ankita 235, Emre 236 |
+| One-off pages | About 356, Our Fees 357, Contact Us 358, Osteopath Birmingham 359, Blog 360 |
+| Posts | Pelvic girdle pain 400 (built), Why choose 399, Cranial babies 398, Early pregnancy 397 (text to import); drafts 393–396 |
+| Theme Builder | Header 127, Footer 105, Footer – Condition pages 186 (all 11 condition pages) |
+| Loop items | Blog Card 401, Featured Card 407, Card Small 410 |
 
 ## Status
 
