@@ -53,7 +53,7 @@ The four "suggested post" ideas from the design are saved as **draft posts** (dr
 | Pricing | `/our-fees` | `/our-fees` |
 | Contact | `/contact-us` | `/contact-us` |
 | Blog | `/blog-posts` | `/blog-posts` |
-| Booking | `/book` | `/book` |
+| Booking | Book buttons go straight to Cliniko | `/book` → **301** to Cliniko booking page |
 | Osteopathy | `/osteopathy` | `/osteopathy` |
 | Cranial Osteopathy | `/cranial-osteopathy` | `/cranial-osteopathy` |
 | Baby & Paediatric | `/babies` | `/babies` |
@@ -73,6 +73,7 @@ The four "suggested post" ideas from the design are saved as **draft posts** (dr
 | From (live) | To |
 |---|---|
 | `/pregnacy-pain` | `/pregnancy-osteopathy` |
+| `/book` | `https://exhale-osteopaths.uk2.cliniko.com/bookings?business_id=1358847506980544559#service` |
 | `/faqs` | *decide*: no FAQ page in the approved design — suggest `/` or the most relevant page |
 
 Permalinks are set to `/%postname%` (no trailing slash), matching the live site.

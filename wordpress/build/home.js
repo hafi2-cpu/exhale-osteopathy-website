@@ -6,7 +6,7 @@
 
   // Live-site URLs kept where a page already exists; new pages use matching flat slugs.
   const L = {
-    about: '/about', fees: '/our-fees', contact: '/contact-us', blog: '/blog-posts', book: '/book', bham: '/osteopath-birmingham',
+    about: '/about', fees: '/our-fees', contact: '/contact-us', blog: '/blog-posts', book: 'https://exhale-osteopaths.uk2.cliniko.com/bookings?business_id=1358847506980544559#service', bham: '/osteopath-birmingham',
     osteo: '/osteopathy', cranial: '/cranial-osteopathy', babies: '/babies', preg: '/pregnancy-osteopathy', massage: '/massage',
     acu: '/acupuncture', physio: '/physiotherapy', rehab: '/rehab-pilates', shock: '/shockwave-therapy', laser: '/laser-therapy',
     us: '/diagnostic-ultrasound', back: '/back-pain', neck: '/neck-pain', shoulder: '/shoulder-pain', hip: '/hip-pain',
