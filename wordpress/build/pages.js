@@ -74,7 +74,7 @@
   ]);
 
   // Inner-page hero with a left-to-right shade (Pricing, Contact, Blog)
-  P.heroSide = (o) => section({ pt: o.pt || 166, pb: 72, ptm: 150, pbm: 56, x: { min_height: px(o.minh || 560), flex_justify_content: 'flex-end',
+  P.heroSide = (o) => section({ pt: o.pt || 166, pb: 72, ptm: o.ptm || 150, pbm: 56, x: { min_height: px(o.minh || 560), flex_justify_content: 'flex-end',
     background_background: 'classic', background_color: '#272B26', background_image: o.img ? img(o.img) : { url: '', id: '' }, background_position: 'initial',
     background_xpos: pct(o.x ?? 50), background_ypos: pct(o.y ?? 50), background_size: 'cover', css_classes: o.shade || 'ex-hero-side ex-hero-side--92' } }, [
     heading('<a href="/">Home</a> <span aria-hidden="true">→</span> <strong>' + o.crumb + '</strong>',
@@ -289,7 +289,7 @@
         '[Add any sports club or student discounts here.]']];
 
     const panel = ([name, href, intro, groups, note]) => C({ padding: all(0) }, [
-      C({ background_background: 'classic', background_color: '#F5F2EA', border_radius: all(3), padding: dims(44, 48, 40, 48), padding_mobile: dims(30, 22, 30, 22) }, [
+      C({ background_background: 'classic', background_color: '#F5F2EA', border_radius: all(3), padding: dims(44, 48, 40, 48), padding_mobile: dims(44, 24, 40, 24) }, [
         C({ flex_direction: 'row', flex_wrap: 'wrap', flex_justify_content: 'space-between', flex_align_items: 'flex-start', flex_gap: gap(20) }, [
           C({ css_classes: 'ex-shrink' }, [
             heading(name, { tag: 'h3', t: { s: 34, sm: 28, ls: -0.02, lh: 1.2 } }),
@@ -484,7 +484,7 @@
     maps: 'https://www.google.com/maps/search/?api=1&query=247A+Jockey+Road+Sutton+Coldfield+B73+5XE' };
   P.birmingham = () => {
     const A = BH_ADDR, out = [];
-    out.push(P.heroSide({ img: '2cef3306a31a7e7056f2f7bef5cf4201', y: 15, minh: 700, pt: 176, crumb: 'Osteopath Birmingham', h1: 'Osteopathy for patients across Birmingham', h1w: 820, leadw: 680,
+    out.push(P.heroSide({ img: '2cef3306a31a7e7056f2f7bef5cf4201', y: 15, minh: 700, pt: 176, ptm: 176, crumb: 'Osteopath Birmingham', h1: 'Osteopathy for patients across Birmingham', h1w: 820, leadw: 680,
       shade: 'ex-hero-side ex-hero-side--93',
       lead: 'Exhale Osteopathy is an independent osteopathy and physiotherapy clinic in Sutton Coldfield, in the north of Birmingham. Patients come to us from across the city for unhurried, hands-on care from registered clinicians.',
       extra: [
@@ -529,7 +529,7 @@
           ])
         ]),
         C({}, [
-          C({ border_radius: all(3), overflow: 'hidden', padding: all(0) }, [W('google_maps', { address: A.street + ', ' + A.town + ' ' + A.pc, zoom: { unit: 'px', size: 15, sizes: [] }, height: px(520), height_mobile: px(360), _css_classes: 'ex-map' })]),
+          C({ border_radius: all(3), overflow: 'hidden', padding: all(0) }, [W('google_maps', { address: A.street + ', ' + A.town + ' ' + A.pc, zoom: { unit: 'px', size: 15, sizes: [] }, height: px(520), _css_classes: 'ex-map' })]),
           C({ flex_direction: 'row', flex_wrap: 'wrap', flex_gap: gap(12), margin: dims(18, 0, 0, 0) }, [
             button('Open in Google Maps', A.maps, { kind: 'olive', h: 52, fs: 15, pl: 24, pr: 24, icon: 'arrowNE', gapIcon: 10 }),
             button('All contact details', L.contact, { kind: 'outline', h: 52, fs: 15, pl: 24, pr: 24 })
@@ -628,7 +628,6 @@
       ['What if I need to cancel?', 'Please give us 24 hours’ notice. Missed appointments or late cancellations may be charged at 50% if we can’t fill the slot.'],
       ['Can I claim on health insurance?', '[List the insurers you’re registered with, or remove this question.]']];
     const acc = faqAccordion(FAQ.map(([q, a]) => ({ q, a })));
-    acc.settings.default_state = 'all_collapsed';
     acc.settings.custom_css = acc.settings.custom_css.replace('background:#E6E0D5;color:#4F5945', 'background:#F5F2EA;color:#4F5945');
     out.push(section({ x: { _element_id: 'faqs', css_classes: 'ex-anchor', background_background: 'classic', background_color: '#E6E0D5' } }, [
       C(gridC('minmax(0,1fr) minmax(0,1.5fr)', { grid_columns_grid_tablet: fr(1), grid_gaps: gaps(64), grid_gaps_tablet: gaps(40), grid_align_items: 'start' }), [
