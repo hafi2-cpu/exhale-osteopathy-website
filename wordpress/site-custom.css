@@ -15,14 +15,14 @@ span.elementor-heading-title { display: block; }
 /* 1. Keyboard focus ring (approved design) */
 a:focus-visible, button:focus-visible, [tabindex]:focus-visible,
 .elementor-button:focus-visible {
-  outline: 2px solid #272B26; outline-offset: 2px; box-shadow: 0 0 0 4px #F5F2EA;
+  outline: 2px solid #22302A; outline-offset: 2px; box-shadow: 0 0 0 4px #F5F2EA;
 }
 
 /* 2. ex-eyebrow — section label with the small olive square.
       Add to a Heading widget. Variant ex-eyebrow--light for dark sections. */
 .ex-eyebrow .elementor-heading-title { display: flex; align-items: center; gap: 14px; }
 .ex-eyebrow .elementor-heading-title::before {
-  content: ""; width: 11px; height: 11px; flex: none; background: #7B826C;
+  content: ""; width: 11px; height: 11px; flex: none; background: #B8975A;
 }
 .ex-eyebrow--light .elementor-heading-title::before { background: #F5F2EA; }
 
@@ -40,10 +40,10 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible,
   content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none; border-radius: inherit;
 }
 .ex-shade::after {
-  background: linear-gradient(180deg, rgba(39,43,38,.55) 0%, rgba(39,43,38,.05) 35%, rgba(39,43,38,.1) 60%, rgba(39,43,38,.6) 100%);
+  background: linear-gradient(180deg, rgba(34,48,42,.55) 0%, rgba(34,48,42,.05) 35%, rgba(34,48,42,.1) 60%, rgba(34,48,42,.6) 100%);
 }
 .ex-hero-shade::after {
-  background: linear-gradient(180deg, rgba(39,43,38,.62) 0%, rgba(39,43,38,.3) 12%, rgba(39,43,38,.06) 30%, rgba(39,43,38,.3) 60%, rgba(39,43,38,.82) 100%);
+  background: linear-gradient(180deg, rgba(34,48,42,.62) 0%, rgba(34,48,42,.3) 12%, rgba(34,48,42,.06) 30%, rgba(34,48,42,.3) 60%, rgba(34,48,42,.82) 100%);
 }
 
 /* 5. ex-ratio-34 — keeps portrait photos at 3:4 at every screen size */
@@ -93,8 +93,8 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible,
 .ex-list p + p { margin-top: var(--ex-gap, 6px); }
 .ex-gap-12 { --ex-gap: 12px; }
 .ex-on-dark a { color: #F5F2EA; }
-.ex-on-dark a:hover { color: #E6E0D5; }
-.ex-on-dark a.ex-underline { color: #E6E0D5; text-decoration: underline; text-underline-offset: 3px; }
+.ex-on-dark a:hover { color: #EDE5D6; }
+.ex-on-dark a.ex-underline { color: #EDE5D6; text-decoration: underline; text-underline-offset: 3px; }
 .ex-muted-links a { color: inherit; }
 
 /* 13. Grey placeholder square where a menu item has no thumbnail photo yet */
@@ -105,10 +105,10 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible,
 /* 14. Inner-page heroes: dark-to-clear gradient from the left (treatment pages) */
 .ex-hero-side { position: relative; isolation: isolate; }
 .ex-hero-side::after { content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
-  background: linear-gradient(180deg, rgba(39,43,38,.62) 0px, rgba(39,43,38,.38) 120px, rgba(39,43,38,0) 260px), linear-gradient(90deg, rgba(39,43,38,.78) 0%, rgba(39,43,38,.5) 40%, rgba(39,43,38,.05) 100%); }
+  background: linear-gradient(180deg, rgba(34,48,42,.62) 0px, rgba(34,48,42,.38) 120px, rgba(34,48,42,0) 260px), linear-gradient(90deg, rgba(34,48,42,.78) 0%, rgba(34,48,42,.5) 40%, rgba(34,48,42,.05) 100%); }
 
 /* 15. Floating rating card over a photo; sticky "On this page" panel */
-.ex-float-card { position: absolute !important; left: -32px; bottom: 32px; z-index: 2; box-shadow: 0 18px 40px rgba(39,43,38,.14); }
+.ex-float-card { position: absolute !important; left: -32px; bottom: 32px; z-index: 2; box-shadow: 0 18px 40px rgba(34,48,42,.14); }
 .ex-sticky { position: sticky; top: 24px; }
 @media (max-width: 980px) { .ex-float-card { left: 16px; } .ex-sticky { position: static; } }
 .ex-anchor { scroll-margin-top: 24px; }
@@ -122,20 +122,20 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible,
 .ex-card-600 { aspect-ratio: 455 / 600; }
 .ex-crumbs a { color: rgba(245,242,234,.8); }
 .ex-crumbs strong { color: #F5F2EA; font-weight: 500; }
-.ex-toc-link a { color: #272B26; display: block; }
-.ex-toc-link a:hover { color: #4F5945; }
+.ex-toc-link a { color: #22302A; display: block; }
+.ex-toc-link a:hover { color: #56684F; }
 
 /* 17. Condition pages: list dots, portrait crop from the top, olive underlined link */
 .e-con.ex-dot { flex: 0 0 auto; padding: 0; }
 .ex-pos-top img { object-position: 50% 20%; }
-a.ex-underline-olive { color: #4F5945; font-weight: 500; text-decoration: underline; text-underline-offset: 3px; }
+a.ex-underline-olive { color: #56684F; font-weight: 500; text-decoration: underline; text-underline-offset: 3px; }
 
 /* 18. Practitioner pages */
 .ex-crumbs--88 a { color: rgba(245,242,234,.88); }
 .ex-eyebrow--mush .elementor-heading-title::before { background: #B7AA99; }
 .ex-eyebrow--g12 .elementor-heading-title { gap: 12px; }
 .ex-round-top img { border-radius: 3px 3px 0 0; }
-.ex-float-card--hi { left: -36px; bottom: 40px; min-width: 240px; box-shadow: 0 18px 40px rgba(39,43,38,.25); }
+.ex-float-card--hi { left: -36px; bottom: 40px; min-width: 240px; box-shadow: 0 18px 40px rgba(34,48,42,.25); }
 @media (max-width: 980px) { .ex-float-card--hi { left: 16px; } }
 .ex-ratio-1610 { aspect-ratio: 16 / 10; }
 .ex-ratio-1610 img { width: 100%; height: 100%; object-fit: cover; display: block; }
@@ -154,17 +154,17 @@ a.ex-underline-olive { color: #4F5945; font-weight: 500; text-decoration: underl
 /* 20. One-off pages: About-style hero shade (four stops, darker at the foot) */
 .ex-shade--about { position: relative; isolation: isolate; }
 .ex-shade--about::after { content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
-  background: linear-gradient(180deg, rgba(39,43,38,.62) 0%, rgba(39,43,38,.3) 13%, rgba(39,43,38,.05) 30%, rgba(39,43,38,.3) 60%, rgba(39,43,38,.82) 100%); }
+  background: linear-gradient(180deg, rgba(34,48,42,.62) 0%, rgba(34,48,42,.3) 13%, rgba(34,48,42,.05) 30%, rgba(34,48,42,.3) 60%, rgba(34,48,42,.82) 100%); }
 /* Google Map widget sits flush in the top of a clinic card */
 .ex-map iframe { display: block; }
 
 /* 21. Pricing: side shade variant, fee tabs (numbered with a CSS counter, arrow on the right), duration text */
-.ex-hero-side--92::after { background: linear-gradient(180deg, rgba(39,43,38,.62) 0px, rgba(39,43,38,.38) 120px, rgba(39,43,38,0) 260px), linear-gradient(90deg, rgba(39,43,38,.8) 0%, rgba(39,43,38,.52) 45%, rgba(39,43,38,.08) 100%); }
+.ex-hero-side--92::after { background: linear-gradient(180deg, rgba(34,48,42,.62) 0px, rgba(34,48,42,.38) 120px, rgba(34,48,42,0) 260px), linear-gradient(90deg, rgba(34,48,42,.8) 0%, rgba(34,48,42,.52) 45%, rgba(34,48,42,.08) 100%); }
 .ex-fee-tabs .e-n-tabs { gap: 40px; }
 .ex-fee-tabs .e-n-tabs-heading { flex: 0 0 320px !important; width: 320px !important; position: sticky; top: 24px; align-self: flex-start; counter-reset: fee; }
 .ex-fee-tabs .e-n-tab-title { counter-increment: fee; justify-content: flex-start; gap: 16px; padding: 18px 20px !important; border: 1px solid #B7AA99; border-radius: 3px; width: 100%; }
-.ex-fee-tabs .e-n-tab-title[aria-selected="true"] { border-color: #272B26; }
-.ex-fee-tabs .e-n-tab-title::before { content: "0" counter(fee); font-family: Inter, sans-serif; font-size: 13px; letter-spacing: .08em; color: #4F5945; }
+.ex-fee-tabs .e-n-tab-title[aria-selected="true"] { border-color: #22302A; }
+.ex-fee-tabs .e-n-tab-title::before { content: "0" counter(fee); font-family: Inter, sans-serif; font-size: 13px; letter-spacing: .08em; color: #56684F; }
 .ex-fee-tabs .e-n-tab-title[aria-selected="true"]::before { color: #B7AA99; }
 .ex-fee-tabs .e-n-tab-title::after { content: "→"; margin-left: auto; font-family: Inter, sans-serif; }
 .ex-fee-tabs .e-n-tab-title-text { flex: 1; text-align: left; }
@@ -175,7 +175,7 @@ a.ex-underline-olive { color: #4F5945; font-weight: 500; text-decoration: underl
   .ex-fee-tabs .e-n-tab-title { flex: 0 0 100% !important; }
 }
 @media (max-width: 560px) { .ex-fee-tabs .e-n-tab-title { padding: 14px 12px !important; letter-spacing: .08em; } }
-.ex-dur { font-family: Inter, sans-serif; font-size: 14px; letter-spacing: 0; color: rgba(39,43,38,.76); margin-left: 6px; }
+.ex-dur { font-family: Inter, sans-serif; font-size: 14px; letter-spacing: 0; color: rgba(34,48,42,.76); margin-left: 6px; }
 .e-con.ex-minw-240 { min-width: 240px; }
 .ex-nowrap-text .elementor-heading-title { white-space: nowrap; }
 
@@ -183,14 +183,14 @@ a.ex-underline-olive { color: #4F5945; font-weight: 500; text-decoration: underl
 .ex-round .elementor-button { width: 60px; height: 60px; padding: 0 !important; display: inline-flex; align-items: center; justify-content: center; }
 .ex-round .elementor-button-icon svg { width: 24px; height: 24px; }
 .ex-break, .ex-break .elementor-heading-title { overflow-wrap: anywhere; }
-.ex-small { font-size: 14px; color: rgba(39,43,38,.76); }
+.ex-small { font-size: 14px; color: rgba(34,48,42,.76); }
 .ex-gap-8 { --ex-gap: 8px; }
-.ex-dark-links a { color: #272B26; }
-.ex-dark-links a:hover { color: #4F5945; }
+.ex-dark-links a { color: #22302A; }
+.ex-dark-links a:hover { color: #56684F; }
 
 /* 23. Birmingham: side shade variant, bold label line, regular-weight olive links */
-.ex-hero-side--93::after { background: linear-gradient(180deg, rgba(39,43,38,.62) 0px, rgba(39,43,38,.38) 120px, rgba(39,43,38,0) 260px), linear-gradient(90deg, rgba(39,43,38,.8) 0%, rgba(39,43,38,.52) 45%, rgba(39,43,38,.08) 100%); }
-.ex-strong-600 strong { font-weight: 600; color: #272B26; }
+.ex-hero-side--93::after { background: linear-gradient(180deg, rgba(34,48,42,.62) 0px, rgba(34,48,42,.38) 120px, rgba(34,48,42,0) 260px), linear-gradient(90deg, rgba(34,48,42,.8) 0%, rgba(34,48,42,.52) 45%, rgba(34,48,42,.08) 100%); }
+.ex-strong-600 strong { font-weight: 600; color: #22302A; }
 a.ex-w400 { font-weight: 400; }
 
 /* 24. Blog: hairline under the header on plain dark heroes, 4:3 cards, category filter underline, load-more button */
@@ -199,11 +199,11 @@ a.ex-w400 { font-weight: 400; }
 .ex-ratio-43 { aspect-ratio: 4 / 3; }
 .ex-ratio-43 img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .ex-blog-filter .e-filter-item { border-bottom: 2px solid transparent; margin-bottom: -1px; background: transparent; }
-.ex-blog-filter .e-filter-item[aria-pressed="true"] { border-bottom-color: #4F5945; }
+.ex-blog-filter .e-filter-item[aria-pressed="true"] { border-bottom-color: #56684F; }
 .ex-blog-grid .e-load-more-anchor + .elementor-button-wrapper .elementor-button,
-.ex-blog-grid .e-loop__load-more .elementor-button { background: transparent; color: #272B26; border: 1px solid #B7AA99; border-radius: 3px;
+.ex-blog-grid .e-loop__load-more .elementor-button { background: transparent; color: #22302A; border: 1px solid #B7AA99; border-radius: 3px;
   font: 500 15px/1.2 Inter, sans-serif; height: 52px; padding: 0 30px; display: inline-flex; align-items: center; }
-.ex-blog-grid .e-loop__load-more .elementor-button:hover { background: #E6E0D5; border-color: #4F5945; }
+.ex-blog-grid .e-loop__load-more .elementor-button:hover { background: #EDE5D6; border-color: #56684F; }
 
 /* 25. Blog article: round "e" avatars, overlapping hero photo, light bold text, right column hidden below 1180px */
 .e-con.ex-avatar { flex: none; padding: 0; }
@@ -235,8 +235,8 @@ a.ex-w400 { font-weight: 400; }
 /* 30. Lighter hero shades (client feedback 18 Oct): phones get a top-to-bottom shade because the text fills the hero */
 @media (max-width: 767px) {
   .ex-hero-side::after, .ex-hero-side--92::after, .ex-hero-side--93::after {
-    background: linear-gradient(180deg, rgba(39,43,38,.6) 0%, rgba(39,43,38,.5) 15%, rgba(39,43,38,.55) 40%, rgba(39,43,38,.8) 100%); }
+    background: linear-gradient(180deg, rgba(34,48,42,.6) 0%, rgba(34,48,42,.5) 15%, rgba(34,48,42,.55) 40%, rgba(34,48,42,.8) 100%); }
 }
 
-/* 31. Header "Book Now" stays visible over light photos: soft ivory ring + shadow (client feedback 18 Oct) */
-.ex-header .ex-hide-xs .elementor-button { box-shadow: inset 0 0 0 1px rgba(245,242,234,.45), 0 8px 24px rgba(20,22,19,.28); }
+/* 31. Header "Book Now" (gold): soft shadow so it lifts off photos */
+.ex-header .ex-hide-xs .elementor-button { box-shadow: 0 8px 24px rgba(20,22,19,.28); }
