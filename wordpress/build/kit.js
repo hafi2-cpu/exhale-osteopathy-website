@@ -10,7 +10,8 @@
       .map(([_id, title, color]) => ({ _id, title, color }));
     const cust = [['excream', 'Cream', '#F5F2EA'], ['exsand', 'Sand', '#EDE5D6'], ['extaupe', 'Taupe (lines)', '#B7AA99'], ['exdeep', 'Deep green', '#2C3D33']]
       .map(([_id, title, color]) => ({ _id, title, color }));
-    await $e.run('document/elements/settings', { container: kit.container, settings: { system_colors: sys, custom_colors: cust, custom_css: css }, options: { external: true } });
+    const prev = (kit.container.settings.get('custom_colors') || { toJSON: () => [] }); const keep = (prev.toJSON ? prev.toJSON() : prev).filter(c => !cust.some(n => n._id === c._id)); K.kept = keep.map(c => c.title + ' ' + c.color);
+    await $e.run('document/elements/settings', { container: kit.container, settings: { system_colors: sys, custom_colors: cust.concat(keep), custom_css: css }, options: { external: true } });
     await $e.run('document/save/update', { document: kit });
     await $e.run('panel/global/close'); K.log.push('kit saved');
   } catch (e) { K.errs.push(e.message); }
