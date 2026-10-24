@@ -72,7 +72,7 @@
     // backup original data as a .txt in the media library
     const nonce = await (await fetch('/wp-admin/admin-ajax.php?action=rest-nonce', { credentials: 'include' })).text();
     const name = 'exhale-backup-' + doc.id + '-' + new Date().toISOString().slice(0, 10) + '.txt';
-    const up = await (await fetch('/wp-json/wp/v2/media', { method: 'POST', credentials: 'include', headers: { 'X-WP-Nonce': nonce, 'Content-Disposition': 'attachment; filename="' + name + '"', 'Content-Type': 'text/plain' }, body: before })).json();
+    const up = await (await fetch('/wp-json/wp/v2/media', { method: 'POST', credentials: 'include', headers: { 'X-WP-Nonce': nonce, 'Content-Disposition': 'attachment; filename="' + name + '"', 'Content-Type': 'text/plain' }, body: 'Exhale Osteopathy - Elementor backup of document ' + doc.id + ' before the green and gold recolour. To restore, paste the data below back into the document.\n\n' + before })).json();
     if (!up.id) throw new Error('backup failed ' + JSON.stringify(up).slice(0, 160));
     RC.backup = up.id; RC.log.push('backup');
     // replace content
