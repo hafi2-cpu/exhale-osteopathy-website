@@ -64,6 +64,12 @@
     const orig = JSON.parse(JSON.stringify(doc.config.elements));
     const data = JSON.parse(JSON.stringify(orig));
     data.forEach(goldify); data.forEach(walk);
+    if (window.RC_JOB && RC_JOB.fixAccentBg) {   // gold-deep fills behind photo cards / sections -> sign green
+      const fx = (el) => { const s = el.settings || {};
+        if (el.elType === 'container' && /^#B8975A$/i.test(s.background_color || '')) { setG(s, 'background_color', '#56684F', 'primary'); inc('accentBg'); }
+        (el.elements || []).forEach(fx); };
+      data.forEach(fx);
+    }
     RC.log.push('transformed');
     const before = JSON.stringify(orig), after = JSON.stringify(data);
     RC.changed = before !== after; RC.left = (after.match(/#(4F5945|272B26|7B826C|E6E0D5|178D86|155E63)\b|rgba?\(\s*(79,\s*89,\s*69|39,\s*43,\s*38|123,\s*130,\s*108)/gi) || []).slice(0, 10);
