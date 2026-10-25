@@ -30,3 +30,6 @@ the condition and treatment pages, and the three blog posts
 ## New pages (not on the old site)
 - `/assisted-stretch-therapy-sutton-coldfield` (Assisted Stretch Therapy, launching December 2026). Yoast: "Assisted Stretch Therapy in Sutton Coldfield | Exhale", keyphrase "Assisted Stretch Therapy Sutton Coldfield". Service + FAQ schema on page.
 - Delete or draft the WordPress default `/sample-page` before launch.
+
+## Title changes vs live site
+- `/osteopathy`: was "Cranial Osteopathy Birmingham | Osteopaths in Sutton Coldfield" (clashed with `/cranial-osteopathy`). Now "Osteopathic Treatment Sutton Coldfield & Birmingham | Exhale". After launch, check Search Console queries for this URL; if "cranial osteopathy birmingham" impressions drop overall, add Birmingham wording to `/cranial-osteopathy`.

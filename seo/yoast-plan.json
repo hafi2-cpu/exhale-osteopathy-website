@@ -82,12 +82,13 @@
  },
  {
   "slug": "osteopathy",
-  "title": "Cranial Osteopathy Birmingham | Osteopaths in Sutton Coldfield",
+  "title": "Osteopathic Treatment Sutton Coldfield & Birmingham | Exhale",
   "desc": "At Exhale Osteopathy Sutton Coldfield, we offer treatments for a variety of conditions including: headaches, neck pain, back pain, hip pain.",
   "kw": "Osteopathic Treatment",
-  "src": "live",
-  "tlen": 62,
-  "dlen": 140
+  "src": "changed",
+  "tlen": 60,
+  "dlen": 140,
+  "note": "Live title targeted \"Cranial Osteopathy Birmingham\", clashing with /cranial-osteopathy. Changed 2026-10-25 to match page intent (live H1 \"Osteopathy - Sutton Coldfield\", keyphrase \"Osteopathic Treatment\"). Same URL, no redirect."
  },
  {
   "slug": "back-pain",
