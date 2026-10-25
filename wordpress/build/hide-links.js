@@ -21,8 +21,8 @@
         deletes.push(el.id); if (parent) renumber.add(parent.id); return;
       }
       if (el.elType === 'widget' && hits(own) && parent) {
-        // a button/heading linking there: remove its card (parent) if the card holds nothing else of value
-        deletes.push(parent.id); return;
+        // a widget mentioning the link: report only, never delete automatically
+        (PIPE.widgetHits = PIPE.widgetHits || []).push(el.widgetType + ' ' + el.id + ' in ' + parent.id + ' (' + (parent.elements || []).length + ' siblings): ' + own.slice(0, 160)); return;
       }
       (el.elements || []).forEach(c => walk(c, el));
     };
