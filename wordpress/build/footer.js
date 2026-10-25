@@ -16,7 +16,7 @@ window.buildFooter = function (pid, old) {
 
   var isCond = pid === 186;
   var colThree = isCond ? { title: 'What We Treat', html: src('4906f0a') } : { title: 'Treatments', html: src('969ce31') };
-  var clinicsHtml = src(isCond ? '68e6f9a' : '897a8a4');
+  var clinicsHtml = src(isCond ? '68e6f9a' : '897a8a4').replace(/<\/p>\s*<p>Lichfield/, '</p><hr class="ex-ft-sep"><p>Lichfield');
   var book = 'https://exhale-osteopaths.uk2.cliniko.com/bookings?business_id=1358847506980544559#service';
   var maps = 'https://www.google.com/maps/search/?api=1&query=Exhale+Osteopathy+Sutton+Coldfield';
 
@@ -47,7 +47,7 @@ window.buildFooter = function (pid, old) {
   var hours = text('<div class="ex-ft-hours"><div><span>Monday – Friday</span><span>09:00 – 20:00</span></div><div><span>Saturday</span><span>08:00 – 14:00</span></div><div><span>Sunday</span><span>Closed</span></div></div><p class="ex-ft-note">Evening and Saturday appointments available. No GP referral needed.</p>');
   var col = function (kids) { return con({ flex_direction: 'column' }, kids); };
   var oldGrid = find(old, isCond ? '3636476' : 'f6acc73');
-  var gridSettings = merge(oldGrid ? oldGrid.settings : {}, { margin: box(48, 0, 0, 0) });
+  var gridSettings = merge(oldGrid ? oldGrid.settings : {}, { margin: box(0, 0, 0, 0) });
   var grid = { id: uid(), elType: 'container', isInner: true, settings: gridSettings, elements: [
     col([label('Get in touch'), contactList, directions]),
     col([label('Opening hours'), hours]),
@@ -83,10 +83,11 @@ window.buildFooter = function (pid, old) {
     'selector .ex-ft-outline .elementor-button{color:' + C.cream + '!important;background:transparent!important;border:1px solid rgba(245,242,234,0.55)!important}',
     'selector .ex-ft-outline .elementor-button:hover{color:' + C.ink + '!important;background:' + C.cream + '!important}',
     '@media (max-width:767px){selector .ex-ft-accred-label{width:100%}selector .ex-ft-chip img{height:30px!important;padding:7px 12px}selector .elementor-widget-button{width:100%!important;max-width:100%!important}selector .elementor-widget-button .elementor-button{width:100%;justify-content:center}}',
+    'selector .ex-ft-sep{border:0;border-top:1px solid ' + C.line + ';margin:18px 0;height:0}',
     'selector .ex-ft-arrow{color:' + C.gold + ';text-decoration:none}',
     'selector .ex-ft-arrow:hover{color:' + C.cream + '}',
     'selector .elementor-icon-list-item a:hover .elementor-icon-list-text{color:' + C.cream + '}'
   ].join('\n');
-  root.elements = [band, grid, accred, oldBottom];
+  root.elements = [grid, accred, oldBottom];
   return [root];
 };
