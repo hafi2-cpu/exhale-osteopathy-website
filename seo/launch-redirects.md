@@ -28,5 +28,5 @@ the condition and treatment pages, and the three blog posts
 5. Watch Search Console → Pages and Performance weekly for 6–8 weeks.
 
 ## New pages (not on the old site)
-- `/assisted-stretch-therapy-sutton-coldfield` (Assisted Stretch Therapy, launching January 2027). Yoast: "Assisted Stretch Therapy in Sutton Coldfield | Exhale", keyphrase "Assisted Stretch Therapy Sutton Coldfield". Service + FAQ schema on page.
+- `/assisted-stretch-therapy-sutton-coldfield` (Assisted Stretch Therapy, launching December 2026). Yoast: "Assisted Stretch Therapy in Sutton Coldfield | Exhale", keyphrase "Assisted Stretch Therapy Sutton Coldfield". Service + FAQ schema on page.
 - Delete or draft the WordPress default `/sample-page` before launch.
