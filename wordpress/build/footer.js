@@ -29,7 +29,7 @@ window.buildFooter = function (pid, old) {
   var btnBase = merge(font(15, 500, 1.2), { border_radius: { unit: 'px', top: '3', right: '3', bottom: '3', left: '3', isLinked: true }, text_padding: box(16, 24, 16, 24) });
   var ctas = con({ flex_direction: 'row', flex_wrap: 'wrap', flex_justify_content: 'flex-end', flex_justify_content_mobile: 'flex-start', flex_gap: { unit: 'px', size: 12, column: '12', row: '12', isLinked: true } }, [
     w('button', merge(btnBase, { text: 'Book an appointment', link: { url: book, is_external: '', nofollow: '' }, button_text_color: C.ink, background_color: C.gold, hover_color: C.ink, button_background_hover_color: C.goldH, size: 'sm' })),
-    w('button', merge(btnBase, { text: '0121 751 2440', link: { url: 'tel:+441217512440', is_external: '', nofollow: '' }, button_text_color: C.cream, background_color: 'rgba(0,0,0,0)', hover_color: C.ink, button_background_hover_color: C.cream, border_border: 'solid', border_width: { unit: 'px', top: '1', right: '1', bottom: '1', left: '1', isLinked: true }, border_color: 'rgba(245,242,234,0.55)', size: 'sm' }))
+    w('button', merge(btnBase, { text: '0121 751 2440', link: { url: 'tel:+441217512440', is_external: '', nofollow: '' }, button_text_color: C.cream, background_color: 'rgba(0,0,0,0)', hover_color: C.ink, button_background_hover_color: C.cream, border_border: 'solid', border_width: { unit: 'px', top: '1', right: '1', bottom: '1', left: '1', isLinked: true }, border_color: 'rgba(245,242,234,0.55)', size: 'sm', _css_classes: 'ex-ft-outline' }))
   ]);
   var cta = con({ flex_direction: 'column', flex_gap: { unit: 'px', size: 16, column: '16', row: '16', isLinked: true }, flex_align_items: 'flex-end', flex_align_items_mobile: 'flex-start', width: { unit: '%', size: 50, sizes: [] }, width_mobile: { unit: '%', size: 100, sizes: [] } }, [stars, ctas]);
   var band = con({ flex_direction: 'row', flex_direction_mobile: 'column', flex_justify_content: 'space-between', flex_align_items: 'center', flex_align_items_mobile: 'flex-start', flex_gap: { unit: 'px', size: 32, column: '32', row: '32', isLinked: true }, padding: box(0, 0, 48, 0), border_border: 'solid', border_width: box(0, 0, 1, 0), border_color: C.line }, [brand, cta]);
@@ -58,7 +58,7 @@ window.buildFooter = function (pid, old) {
   // 3. Accreditations
   var chip = function (id, url, alt) { return w('image', { image: { id: id, url: url, alt: alt }, image_size: 'full', height: px(36), height_mobile: px(30), object_fit: 'contain', _css_classes: 'ex-ft-chip' }); };
   var accred = con({ flex_direction: 'row', flex_wrap: 'wrap', flex_align_items: 'center', flex_gap: { unit: 'px', size: 12, column: '12', row: '12', isLinked: true }, margin: box(52, 0, 0, 0) }, [
-    w('heading', merge({ title: 'Registered with', header_size: 'p', title_color: 'rgba(245,242,234,0.7)', _margin: box(0, 8, 0, 0) }, font(12, 600, 1.4, { typography_letter_spacing: { unit: 'em', size: 0.16, sizes: [] }, typography_text_transform: 'uppercase' }))),
+    w('heading', merge({ title: 'Registered with', header_size: 'p', title_color: 'rgba(245,242,234,0.7)', _margin: box(0, 8, 0, 0), _css_classes: 'ex-ft-accred-label' }, font(12, 600, 1.4, { typography_letter_spacing: { unit: 'em', size: 0.16, sizes: [] }, typography_text_transform: 'uppercase' }))),
     chip(1890, 'https://hafir61.sg-host.com/wp-content/uploads/2026/10/exhale-gosc-transparent.png', 'General Osteopathic Council'),
     chip(39, 'https://hafir61.sg-host.com/wp-content/uploads/2026/10/exhale-io.png', 'Institute of Osteopathy'),
     chip(35, 'https://hafir61.sg-host.com/wp-content/uploads/2026/10/exhale-hcpc.png', 'Health and Care Professions Council')
@@ -80,6 +80,9 @@ window.buildFooter = function (pid, old) {
     'selector .ex-ft-note{margin-top:14px;font-size:13px;opacity:.85}',
     'selector .ex-ft-chip{width:auto!important}',
     'selector .ex-ft-chip img{width:auto!important;max-width:none!important;height:36px!important;background:' + C.cream + ';border-radius:6px;padding:8px 14px;box-sizing:content-box;display:block}',
+    'selector .ex-ft-outline .elementor-button{color:' + C.cream + '!important;background:transparent!important;border:1px solid rgba(245,242,234,0.55)!important}',
+    'selector .ex-ft-outline .elementor-button:hover{color:' + C.ink + '!important;background:' + C.cream + '!important}',
+    '@media (max-width:767px){selector .ex-ft-accred-label{width:100%}selector .ex-ft-chip img{height:30px!important;padding:7px 12px}}',
     'selector .ex-ft-arrow{color:' + C.gold + ';text-decoration:none}',
     'selector .ex-ft-arrow:hover{color:' + C.cream + '}',
     'selector .elementor-icon-list-item a:hover .elementor-icon-list-text{color:' + C.cream + '}'
