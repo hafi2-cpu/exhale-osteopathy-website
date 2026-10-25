@@ -21,7 +21,7 @@ window.buildFooter = function (pid, old) {
   var maps = 'https://www.google.com/maps/search/?api=1&query=Exhale+Osteopathy+Sutton+Coldfield';
 
   // 1. Brand band
-  var brand = con({ flex_direction: 'column', flex_gap: { unit: 'px', size: 18, column: '18', row: '18', isLinked: true }, width: { unit: '%', size: 50, sizes: [] }, width_mobile: { unit: '%', size: 100, sizes: [] } }, [
+  var brand = con({ flex_direction: 'column', flex_gap: { unit: 'px', size: 18, column: '18', row: '18', isLinked: true }, width: { unit: '%', size: 100, sizes: [] } }, [
     w('image', { image: { id: 430, url: 'https://hafir61.sg-host.com/wp-content/uploads/2026/10/exhale-logo-white.png', alt: 'Exhale Osteopathy' }, image_size: 'full', width: px(200), width_mobile: px(170), align: 'left', link_to: 'custom', link: { url: '/', is_external: '', nofollow: '' } }),
     w('text-editor', merge({ editor: '<p>Hands-on osteopathy, physiotherapy and massage in Sutton Coldfield, helping people across Birmingham move better and feel better.</p>', text_color: 'rgba(245,242,234,0.9)' }, font(17, 400, 1.6), { _element_width: 'initial', _element_custom_width: px(460), _element_custom_width_mobile: { unit: '%', size: 100, sizes: [] } }))
   ]);
@@ -32,7 +32,7 @@ window.buildFooter = function (pid, old) {
     w('button', merge(btnBase, { text: '0121 751 2440', link: { url: 'tel:+441217512440', is_external: '', nofollow: '' }, button_text_color: C.cream, background_color: 'rgba(0,0,0,0)', hover_color: C.ink, button_background_hover_color: C.cream, border_border: 'solid', border_width: { unit: 'px', top: '1', right: '1', bottom: '1', left: '1', isLinked: true }, border_color: 'rgba(245,242,234,0.55)', size: 'sm', _css_classes: 'ex-ft-outline' }))
   ]);
   var cta = con({ flex_direction: 'column', flex_gap: { unit: 'px', size: 16, column: '16', row: '16', isLinked: true }, flex_align_items: 'flex-end', flex_align_items_mobile: 'flex-start', width: { unit: '%', size: 50, sizes: [] }, width_mobile: { unit: '%', size: 100, sizes: [] } }, [stars, ctas]);
-  var band = con({ flex_direction: 'row', flex_direction_mobile: 'column', flex_justify_content: 'space-between', flex_align_items: 'center', flex_align_items_mobile: 'flex-start', flex_gap: { unit: 'px', size: 32, column: '32', row: '32', isLinked: true }, padding: box(0, 0, 48, 0), border_border: 'solid', border_width: box(0, 0, 1, 0), border_color: C.line }, [brand, cta]);
+  var band = con({ flex_direction: 'row', flex_direction_mobile: 'column', flex_justify_content: 'space-between', flex_align_items: 'center', flex_align_items_mobile: 'flex-start', flex_gap: { unit: 'px', size: 32, column: '32', row: '32', isLinked: true }, padding: box(0, 0, 40, 0), border_border: 'solid', border_width: box(0, 0, 1, 0), border_color: C.line }, [brand]);
 
   // 2. Columns
   var contactList = w('icon-list', merge({
