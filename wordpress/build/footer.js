@@ -44,7 +44,7 @@ window.buildFooter = function (pid, old) {
     icon_color: C.gold, text_color: C.soft, text_color_hover: C.cream, icon_size: px(15), text_indent: px(12), space_between: px(14), icon_self_vertical_align: 'flex-start', _margin: box(18, 0, 0, 0)
   }, { icon_typography_typography: 'custom', icon_typography_font_family: 'Inter', icon_typography_font_size: px(15), icon_typography_line_height: { unit: 'em', size: 1.6, sizes: [] } }));
   var directions = w('text-editor', merge({ editor: '<p><a class="ex-ft-arrow" href="' + maps + '" target="_blank" rel="noopener">Get directions →</a></p>', text_color: C.gold, _margin: box(14, 0, 0, 0) }, font(14, 500, 1.4)));
-  var hours = text('<div class="ex-ft-hours"><div><span>Monday – Friday</span><span>09:00 – 20:00</span></div><div><span>Saturday</span><span>08:00 – 14:00</span></div><div><span>Sunday</span><span>Closed</span></div></div><p class="ex-ft-note">Evening and Saturday appointments available. No GP referral needed.</p>');
+  var hours = text('<div class="ex-ft-hours"><div><span>Monday – Friday</span><span>09:00 – 20:00</span></div><div><span>Saturday</span><span>08:00 – 14:00</span></div><div><span>Sunday</span><span>Closed</span></div></div><p class="ex-ft-note">Evening and Saturday appointments available.</p>');
   var col = function (kids) { return con({ flex_direction: 'column' }, kids); };
   var oldGrid = find(old, isCond ? '3636476' : 'f6acc73');
   var gridSettings = merge(oldGrid ? oldGrid.settings : {}, { margin: box(0, 0, 0, 0) });
