@@ -116,3 +116,11 @@ See the conversation for the current, tested status of each page. Staging is set
 - Meta description: `New to Exhale Osteopathy? See what happens at your first appointment in Sutton Coldfield or Lichfield, how long it takes, fees, what to wear and how to book.` (156 chars)
 - Linked from: homepage hero and booking card ("New Patients", "Your First Visit"), Pricing booking card.
 - To confirm: accepted payment methods, insurers you're registered with, parking at each clinic, whether the same fees apply to every practitioner.
+
+## Colour scheme (24–25 Oct 2026): sign green + gold
+Matches the Jockey Road shop sign. Set as Elementor Global Colours (Site Settings → Global Colours);
+every page links to them, so a palette change is made there once.
+Primary green #56684F · Gold #C9A86A · Forest (text, dark sections) #22302A · Gold – deep #B8975A ·
+Cream #F5F2EA · Sand #EDE5D6 · Taupe #B7AA99 · Deep green #2C3D33.
+Applied in place by build/recolour.js (keeps manual Elementor edits). A backup of each page's layout
+before the change is in the Media Library as exhale-backup-<id>-2026-10-24/25.txt.
