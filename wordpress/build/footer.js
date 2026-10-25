@@ -27,7 +27,7 @@ window.buildFooter = function (pid, old) {
   ]);
   var stars = w('text-editor', merge({ editor: '<p><span class="ex-ft-stars">★★★★★</span> <strong>5.0</strong> on Google reviews</p>', text_color: C.cream }, font(14, 400, 1.4)));
   var btnBase = merge(font(15, 500, 1.2), { border_radius: { unit: 'px', top: '3', right: '3', bottom: '3', left: '3', isLinked: true }, text_padding: box(16, 24, 16, 24) });
-  var ctas = con({ flex_direction: 'row', flex_wrap: 'wrap', flex_gap: { unit: 'px', size: 12, column: '12', row: '12', isLinked: true } }, [
+  var ctas = con({ flex_direction: 'row', flex_wrap: 'wrap', flex_justify_content: 'flex-end', flex_justify_content_mobile: 'flex-start', flex_gap: { unit: 'px', size: 12, column: '12', row: '12', isLinked: true } }, [
     w('button', merge(btnBase, { text: 'Book an appointment', link: { url: book, is_external: '', nofollow: '' }, button_text_color: C.ink, background_color: C.gold, hover_color: C.ink, button_background_hover_color: C.goldH, size: 'sm' })),
     w('button', merge(btnBase, { text: '0121 751 2440', link: { url: 'tel:+441217512440', is_external: '', nofollow: '' }, button_text_color: C.cream, background_color: 'rgba(0,0,0,0)', hover_color: C.ink, button_background_hover_color: C.cream, border_border: 'solid', border_width: { unit: 'px', top: '1', right: '1', bottom: '1', left: '1', isLinked: true }, border_color: 'rgba(245,242,234,0.55)', size: 'sm' }))
   ]);
@@ -78,7 +78,8 @@ window.buildFooter = function (pid, old) {
     'selector .ex-ft-hours>div{display:flex;justify-content:space-between;gap:16px;padding-bottom:10px;border-bottom:1px solid ' + C.line + '}',
     'selector .ex-ft-hours span:last-child{color:' + C.cream + ';white-space:nowrap}',
     'selector .ex-ft-note{margin-top:14px;font-size:13px;opacity:.85}',
-    'selector .ex-ft-chip img{background:' + C.cream + ';border-radius:6px;padding:8px 14px;box-sizing:content-box;display:block}',
+    'selector .ex-ft-chip{width:auto!important}',
+    'selector .ex-ft-chip img{width:auto!important;max-width:none!important;height:36px!important;background:' + C.cream + ';border-radius:6px;padding:8px 14px;box-sizing:content-box;display:block}',
     'selector .ex-ft-arrow{color:' + C.gold + ';text-decoration:none}',
     'selector .ex-ft-arrow:hover{color:' + C.cream + '}',
     'selector .elementor-icon-list-item a:hover .elementor-icon-list-text{color:' + C.cream + '}'
