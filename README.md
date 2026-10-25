@@ -89,3 +89,7 @@ It is generated from `source/` and is not the approved reference. Differences fr
 - a mobile `viewport` tag is added so phones use the responsive layout
 
 The pages, layout, copy and styles are otherwise unchanged. `source/` remains the frozen approved design.
+
+## Copy style
+- No em dashes (—) or en dashes (–) as sentence punctuation. Use full stops, commas, colons or connecting words.
+  En dashes are fine only for genuine ranges (09:00–20:00, 45–60 mins, Mon–Fri). Rewrites applied 25 Oct 2026: see seo/dash-rewrites.json.
