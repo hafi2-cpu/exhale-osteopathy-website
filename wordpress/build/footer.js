@@ -1,48 +1,88 @@
-/* Exhale Osteopathy — shared footer (Elementor Pro Theme Builder "footer" template). */
-(function () {
-  const { C, W, px, pct, dims, all, gap, heading, text, button, IT, IN } = EX;
-  const L = EX.L;
-  const colHead = (t) => heading(t, { tag: 'h3', color: '#E6E0D5', t: { f: IN, s: 13, w: 600, ls: 0.14, tt: 'uppercase', lh: 1.4 } });
-  const list = (html, o = {}) => text(html, { color: o.color || 'rgba(245,242,234,0.85)', t: { s: o.s || 14, lh: 1.75 },
-    x: { _css_classes: 'ex-list ex-on-dark' + (o.gap12 ? ' ex-gap-12' : ''), _margin: dims(o.mt ?? 16, 0, 0, 0) } });
+// Builds the redesigned Exhale footer for template 105 (services/general) and 186 (conditions).
+// Run inside that footer's own Elementor editor: (window.buildFooter)(105|186, oldElements)
+window.buildFooter = function (pid, old) {
+  var uid = function () { return elementorCommon.helpers.getUniqueId(); };
+  var find = function (arr, id) { for (var i = 0; i < arr.length; i++) { var e = arr[i]; if (e.id === id) return e; var r = find(e.elements || [], id); if (r) return r; } return null; };
+  var C = { sage: '#56684F', deep: '#4A5B44', ink: '#22302A', gold: '#C9A86A', goldH: '#B8975A', cream: '#F5F2EA', sand: '#EDE5D6', soft: 'rgba(245,242,234,0.82)', line: 'rgba(245,242,234,0.16)' };
+  var px = function (n) { return { unit: 'px', size: n, sizes: [] }; };
+  var box = function (t, r, b, l) { return { unit: 'px', top: String(t), right: String(r), bottom: String(b), left: String(l), isLinked: false }; };
+  var font = function (size, weight, lh, extra) { var o = { typography_typography: 'custom', typography_font_family: 'Inter', typography_font_size: px(size), typography_font_weight: String(weight), typography_line_height: { unit: 'em', size: lh, sizes: [] } }; for (var k in extra || {}) o[k] = extra[k]; return o; };
+  var merge = function () { var o = {}; for (var i = 0; i < arguments.length; i++) for (var k in arguments[i]) o[k] = arguments[i][k]; return o; };
+  var con = function (settings, kids, inner) { return { id: uid(), elType: 'container', isInner: inner !== false, settings: merge({ content_width: 'full' }, settings), elements: kids || [] }; };
+  var w = function (type, settings) { return { id: uid(), elType: 'widget', widgetType: type, isInner: false, settings: settings, elements: [] }; };
+  var label = function (txt) { return w('heading', merge({ title: txt, header_size: 'h3', title_color: C.gold }, font(12, 600, 1.4, { typography_letter_spacing: { unit: 'em', size: 0.16, sizes: [] }, typography_text_transform: 'uppercase' }))); };
+  var text = function (html, extra) { return w('text-editor', merge({ editor: html, text_color: C.soft, _css_classes: 'ex-list ex-on-dark' }, font(15, 400, 1.75), { _margin: box(18, 0, 0, 0) }, extra || {})); };
+  var src = function (id) { var e = find(old, id); return e ? e.settings.editor : ''; };
 
-  EX.buildFooter = async function (variant) {
-    const condCol = [['Back Pain', L.back], ['Neck Pain', L.neck], ['Shoulder Pain', L.shoulder], ['Hip Pain', L.hip], ['Knee Pain', L.knee],
-      ['Foot &amp; Ankle Pain', L.ankle], ['Headaches &amp; Migraines', L.head], ['Sciatica', L.sciatica]];
-    await EX.clearPage();
-    return EX.insert(C({ content_width: 'boxed', html_tag: 'div', background_background: 'classic', background_color: '#4F5945',
-      padding: dims(72, 30, 56, 30), padding_mobile: dims(56, 16, 40, 16), _element_id: 'contact' }, [
-      C({ container_type: 'grid', grid_columns_grid: { unit: 'custom', size: 'minmax(0,1.3fr) repeat(3,minmax(0,1fr))', sizes: [] },
-        grid_columns_grid_tablet: { unit: 'fr', size: 2, sizes: [] }, grid_columns_grid_mobile: { unit: 'fr', size: 1, sizes: [] },
-        grid_rows_grid: { unit: 'custom', size: 'auto', sizes: [] }, grid_gaps: { unit: 'px', column: '40', row: '40', isLinked: true } }, [
-        C({}, [
-          heading('Get In Touch', { tag: 'h2', color: '#F5F2EA', t: { s: 28, ls: -0.02, lh: 1.2 } }),
-          list('<p>Exhale Osteopathy<br>1 Sutton Oak Corner, Streetly<br>Sutton Coldfield, B74 2DH</p><p><a href="tel:+441217512440">0121 751 2440</a></p><p><a href="mailto:info@exhaleosteopathy.co.uk">info@exhaleosteopathy.co.uk</a></p>',
-            { s: 15, gap12: true, mt: 20 })
-        ]),
-        C({}, [
-          colHead('Opening Hours'),
-          list('<p>Monday – Friday 09:00 – 20:00</p><p>Saturday 08:00 – 14:00</p><p>Sunday Closed</p>', { color: 'rgba(245,242,234,0.82)' })
-        ]),
-        variant === 'conditions'
-          ? C({}, [colHead('What We Treat'), list(condCol.map(([n, h]) => '<p><a href="' + h + '">' + n + '</a></p>').join(''))])
-          : C({}, [
-          colHead('Treatments'),
-          list('<p><a href="' + L.osteo + '">Osteopathy</a></p><p><a href="/#services">Sports Therapy</a></p><p><a href="' + L.massage + '">Sports Massage</a></p><p><a href="' + L.acu + '">Acupuncture</a></p>',
-            { x: {} })
-        ]),
-        C({ flex_align_items: 'flex-start' }, [
-          colHead('Our Clinics'),
-          list('<p>Exhale Osteopathy, Sutton Coldfield<br><a class="ex-underline" href="' + L.bham + '">Visiting from Birmingham?</a></p><p>Lichfield Osteopathic Practice<br>30 Rotten Row, Lichfield, WS13 6JB<br><a href="tel:+441543252673">01543 252673</a></p>'),
-          button('Book Now', L.book, { kind: 'ivory', h: 48, fs: 14, pl: 22, pr: 22, x: { _margin: dims(22, 0, 0, 0) } })
-        ])
-      ]),
-      C({ flex_direction: 'row', flex_wrap: 'wrap', flex_justify_content: 'space-between', flex_gap: gap(12), margin: dims(56, 0, 0, 0), padding: dims(22, 0, 0, 0),
-        border_border: 'solid', border_width: dims(1, 0, 0, 0), border_color: 'rgba(245,242,234,0.18)' }, [
-        heading('© 2026 Exhale Osteopathy', { tag: 'p', color: 'rgba(245,242,234,0.88)', t: { f: IN, s: 13, lh: 1.6 } }),
-        heading('<a href="/privacy-policy">Privacy Policy</a> · <a href="/terms">Terms &amp; Conditions</a> · <a href="/cookie-policy">Cookie Policy</a>',
-          { tag: 'p', color: 'rgba(245,242,234,0.88)', t: { f: IN, s: 13, lh: 1.6 }, x: { _css_classes: 'ex-on-dark ex-muted-links' } })
-      ])
-    ]));
-  };
-})();
+  var isCond = pid === 186;
+  var colThree = isCond ? { title: 'What We Treat', html: src('4906f0a') } : { title: 'Treatments', html: src('969ce31') };
+  var clinicsHtml = src(isCond ? '68e6f9a' : '897a8a4');
+  var book = 'https://exhale-osteopaths.uk2.cliniko.com/bookings?business_id=1358847506980544559#service';
+  var maps = 'https://www.google.com/maps/search/?api=1&query=Exhale+Osteopathy+Sutton+Coldfield';
+
+  // 1. Brand band
+  var brand = con({ flex_direction: 'column', flex_gap: { unit: 'px', size: 18, column: '18', row: '18', isLinked: true }, width: { unit: '%', size: 50, sizes: [] }, width_mobile: { unit: '%', size: 100, sizes: [] } }, [
+    w('image', { image: { id: 430, url: 'https://hafir61.sg-host.com/wp-content/uploads/2026/10/exhale-logo-white.png', alt: 'Exhale Osteopathy' }, image_size: 'full', width: px(200), width_mobile: px(170), align: 'left', link_to: 'custom', link: { url: '/', is_external: '', nofollow: '' } }),
+    w('text-editor', merge({ editor: '<p>Hands-on osteopathy, physiotherapy and massage in Sutton Coldfield, helping people across Birmingham move better and feel better.</p>', text_color: 'rgba(245,242,234,0.9)' }, font(17, 400, 1.6), { _element_width: 'initial', _element_custom_width: px(460), _element_custom_width_mobile: { unit: '%', size: 100, sizes: [] } }))
+  ]);
+  var stars = w('text-editor', merge({ editor: '<p><span class="ex-ft-stars">★★★★★</span> <strong>5.0</strong> on Google reviews</p>', text_color: C.cream }, font(14, 400, 1.4)));
+  var btnBase = merge(font(15, 500, 1.2), { border_radius: { unit: 'px', top: '3', right: '3', bottom: '3', left: '3', isLinked: true }, text_padding: box(16, 24, 16, 24) });
+  var ctas = con({ flex_direction: 'row', flex_wrap: 'wrap', flex_gap: { unit: 'px', size: 12, column: '12', row: '12', isLinked: true } }, [
+    w('button', merge(btnBase, { text: 'Book an appointment', link: { url: book, is_external: '', nofollow: '' }, button_text_color: C.ink, background_color: C.gold, hover_color: C.ink, button_background_hover_color: C.goldH, size: 'sm' })),
+    w('button', merge(btnBase, { text: '0121 751 2440', link: { url: 'tel:+441217512440', is_external: '', nofollow: '' }, button_text_color: C.cream, background_color: 'rgba(0,0,0,0)', hover_color: C.ink, button_background_hover_color: C.cream, border_border: 'solid', border_width: { unit: 'px', top: '1', right: '1', bottom: '1', left: '1', isLinked: true }, border_color: 'rgba(245,242,234,0.55)', size: 'sm' }))
+  ]);
+  var cta = con({ flex_direction: 'column', flex_gap: { unit: 'px', size: 16, column: '16', row: '16', isLinked: true }, flex_align_items: 'flex-end', flex_align_items_mobile: 'flex-start', width: { unit: '%', size: 50, sizes: [] }, width_mobile: { unit: '%', size: 100, sizes: [] } }, [stars, ctas]);
+  var band = con({ flex_direction: 'row', flex_direction_mobile: 'column', flex_justify_content: 'space-between', flex_align_items: 'center', flex_align_items_mobile: 'flex-start', flex_gap: { unit: 'px', size: 32, column: '32', row: '32', isLinked: true }, padding: box(0, 0, 48, 0), border_border: 'solid', border_width: box(0, 0, 1, 0), border_color: C.line }, [brand, cta]);
+
+  // 2. Columns
+  var contactList = w('icon-list', merge({
+    icon_list: [
+      { _id: uid(), text: '1 Sutton Oak Corner, Streetly, Sutton Coldfield, B74 2DH', selected_icon: { value: 'fas fa-map-marker-alt', library: 'fa-solid' }, link: { url: maps, is_external: 'on', nofollow: '' } },
+      { _id: uid(), text: '0121 751 2440', selected_icon: { value: 'fas fa-phone-alt', library: 'fa-solid' }, link: { url: 'tel:+441217512440', is_external: '', nofollow: '' } },
+      { _id: uid(), text: 'info@exhaleosteopathy.co.uk', selected_icon: { value: 'fas fa-envelope', library: 'fa-solid' }, link: { url: 'mailto:info@exhaleosteopathy.co.uk', is_external: '', nofollow: '' } }
+    ],
+    icon_color: C.gold, text_color: C.soft, text_color_hover: C.cream, icon_size: px(15), text_indent: px(12), space_between: px(14), icon_self_vertical_align: 'flex-start', _margin: box(18, 0, 0, 0)
+  }, { icon_typography_typography: 'custom', icon_typography_font_family: 'Inter', icon_typography_font_size: px(15), icon_typography_line_height: { unit: 'em', size: 1.6, sizes: [] } }));
+  var directions = w('text-editor', merge({ editor: '<p><a class="ex-ft-arrow" href="' + maps + '" target="_blank" rel="noopener">Get directions →</a></p>', text_color: C.gold, _margin: box(14, 0, 0, 0) }, font(14, 500, 1.4)));
+  var hours = text('<div class="ex-ft-hours"><div><span>Monday – Friday</span><span>09:00 – 20:00</span></div><div><span>Saturday</span><span>08:00 – 14:00</span></div><div><span>Sunday</span><span>Closed</span></div></div><p class="ex-ft-note">Evening and Saturday appointments available. No GP referral needed.</p>');
+  var col = function (kids) { return con({ flex_direction: 'column' }, kids); };
+  var oldGrid = find(old, isCond ? '3636476' : 'f6acc73');
+  var gridSettings = merge(oldGrid ? oldGrid.settings : {}, { margin: box(48, 0, 0, 0) });
+  var grid = { id: uid(), elType: 'container', isInner: true, settings: gridSettings, elements: [
+    col([label('Get in touch'), contactList, directions]),
+    col([label('Opening hours'), hours]),
+    col([label(colThree.title), text(colThree.html)]),
+    col([label('Our clinics'), text(clinicsHtml)])
+  ] };
+
+  // 3. Accreditations
+  var chip = function (id, url, alt) { return w('image', { image: { id: id, url: url, alt: alt }, image_size: 'full', height: px(36), height_mobile: px(30), object_fit: 'contain', _css_classes: 'ex-ft-chip' }); };
+  var accred = con({ flex_direction: 'row', flex_wrap: 'wrap', flex_align_items: 'center', flex_gap: { unit: 'px', size: 12, column: '12', row: '12', isLinked: true }, margin: box(52, 0, 0, 0) }, [
+    w('heading', merge({ title: 'Registered with', header_size: 'p', title_color: 'rgba(245,242,234,0.7)', _margin: box(0, 8, 0, 0) }, font(12, 600, 1.4, { typography_letter_spacing: { unit: 'em', size: 0.16, sizes: [] }, typography_text_transform: 'uppercase' }))),
+    chip(1890, 'https://hafir61.sg-host.com/wp-content/uploads/2026/10/exhale-gosc-transparent.png', 'General Osteopathic Council'),
+    chip(39, 'https://hafir61.sg-host.com/wp-content/uploads/2026/10/exhale-io.png', 'Institute of Osteopathy'),
+    chip(35, 'https://hafir61.sg-host.com/wp-content/uploads/2026/10/exhale-hcpc.png', 'Health and Care Professions Council')
+  ]);
+
+  // 4. Bottom bar (reuse old, keep only working policy link)
+  var oldBottom = JSON.parse(JSON.stringify(find(old, isCond ? '18e3711' : '2f3ac53')));
+  oldBottom.settings.margin = box(32, 0, 0, 0);
+  (oldBottom.elements || []).forEach(function (e) { if (/Privacy Policy/.test(e.settings.title || '')) e.settings.title = '<a href="/privacy-policy">Privacy Policy</a>'; });
+
+  var root = JSON.parse(JSON.stringify(old[0]));
+  root.settings.padding = box(80, 30, 36, 30);
+  root.settings.padding_mobile = box(56, 16, 32, 16);
+  root.settings.custom_css = [
+    'selector .ex-ft-stars{color:' + C.gold + ';letter-spacing:2px;margin-right:4px}',
+    'selector .ex-ft-hours{display:grid;gap:10px}',
+    'selector .ex-ft-hours>div{display:flex;justify-content:space-between;gap:16px;padding-bottom:10px;border-bottom:1px solid ' + C.line + '}',
+    'selector .ex-ft-hours span:last-child{color:' + C.cream + ';white-space:nowrap}',
+    'selector .ex-ft-note{margin-top:14px;font-size:13px;opacity:.85}',
+    'selector .ex-ft-chip img{background:' + C.cream + ';border-radius:6px;padding:8px 14px;box-sizing:content-box;display:block}',
+    'selector .ex-ft-arrow{color:' + C.gold + ';text-decoration:none}',
+    'selector .ex-ft-arrow:hover{color:' + C.cream + '}',
+    'selector .elementor-icon-list-item a:hover .elementor-icon-list-text{color:' + C.cream + '}'
+  ].join('\n');
+  root.elements = [band, grid, accred, oldBottom];
+  return [root];
+};
