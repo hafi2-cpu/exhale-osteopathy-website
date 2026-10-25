@@ -26,3 +26,7 @@ the condition and treatment pages, and the three blog posts
 3. Search Console: submit `https://exhaleosteopathy.co.uk/sitemap_index.xml`; use URL Inspection → Request indexing on `/`, `/babies`, `/cranial-osteopathy`.
 4. Check `http://www.exhaleosteopathy.co.uk/` lands on `https://exhaleosteopathy.co.uk/` in one hop.
 5. Watch Search Console → Pages and Performance weekly for 6–8 weeks.
+
+## New pages (not on the old site)
+- `/assisted-stretch-therapy-sutton-coldfield` (Assisted Stretch Therapy, launching January 2027). Yoast: "Assisted Stretch Therapy in Sutton Coldfield | Exhale", keyphrase "Assisted Stretch Therapy Sutton Coldfield". Service + FAQ schema on page.
+- Delete or draft the WordPress default `/sample-page` before launch.
