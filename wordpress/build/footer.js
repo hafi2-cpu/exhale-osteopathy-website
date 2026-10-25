@@ -82,7 +82,7 @@ window.buildFooter = function (pid, old) {
     'selector .ex-ft-chip img{width:auto!important;max-width:none!important;height:36px!important;background:' + C.cream + ';border-radius:6px;padding:8px 14px;box-sizing:content-box;display:block}',
     'selector .ex-ft-outline .elementor-button{color:' + C.cream + '!important;background:transparent!important;border:1px solid rgba(245,242,234,0.55)!important}',
     'selector .ex-ft-outline .elementor-button:hover{color:' + C.ink + '!important;background:' + C.cream + '!important}',
-    '@media (max-width:767px){selector .ex-ft-accred-label{width:100%}selector .ex-ft-chip img{height:30px!important;padding:7px 12px}}',
+    '@media (max-width:767px){selector .ex-ft-accred-label{width:100%}selector .ex-ft-chip img{height:30px!important;padding:7px 12px}selector .elementor-widget-button{width:100%!important;max-width:100%!important}selector .elementor-widget-button .elementor-button{width:100%;justify-content:center}}',
     'selector .ex-ft-arrow{color:' + C.gold + ';text-decoration:none}',
     'selector .ex-ft-arrow:hover{color:' + C.cream + '}',
     'selector .elementor-icon-list-item a:hover .elementor-icon-list-text{color:' + C.cream + '}'
