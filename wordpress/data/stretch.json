@@ -1,0 +1,98 @@
+{
+ "book": "https://exhale-osteopaths.uk2.cliniko.com/bookings?business_id=1358847506980544559#service",
+ "heroImg": {"id": 825, "url": "https://hafir61.sg-host.com/wp-content/uploads/2026/10/exhale-w-desk-hd.jpg"},
+ "introImg": {"id": 813, "url": "https://hafir61.sg-host.com/wp-content/uploads/2026/10/exhale-c-sports-hd.jpg"},
+ "introAlt": "Assisted stretch therapy session at Exhale Osteopathy in Sutton Coldfield",
+ "crumbs": "<a href=\"/\">Home</a> <span aria-hidden=\"true\">→</span> Treatments <span aria-hidden=\"true\">→</span> <strong>Assisted Stretch Therapy</strong>",
+ "h1": "Assisted Stretch Therapy in Sutton Coldfield",
+ "lead": "New at Exhale from January 2027: one-to-one, fully clothed stretching led by osteopaths and physiotherapists — designed to help you move more freely. For clients across Sutton Coldfield and Birmingham.",
+ "facts": [["First visit", "50 mins + movement screen"], ["From", "£40"], ["Led by", "Osteopaths &amp; physios"], ["Clinic", "Sutton Coldfield"]],
+ "introTitle": "What is assisted stretch therapy?",
+ "intro": [
+  "Assisted stretch therapy is a one-to-one session where a clinician moves and supports your body through a series of targeted stretches while you relax. You stay fully clothed throughout — it isn’t massage, and it isn’t a yoga class.",
+  "At Exhale it’s osteopath- and physiotherapist-led. Every client starts with a movement screen, so your stretches are planned around how your body actually moves. It’s our own clinically led method, not a one-size-fits-all routine."
+ ],
+ "ticks": ["Fully clothed — no oils, no getting changed", "Movement screen before any stretching", "Never painful — you control the intensity"],
+ "toc": [["Who it’s for", "#who"], ["The Exhale method", "#method"], ["Clinically led", "#clinical"], ["Sessions &amp; prices", "#prices"], ["What to expect", "#expect"], ["FAQs", "#faqs"]],
+ "sideTitle": "Book Assisted Stretch Therapy",
+ "sideSub": "Sutton Coldfield · Self-pay · From £40",
+ "sections": [
+  {"id": "who", "title": "Who is assisted stretching for?", "paras": [
+   "<strong>Desk workers.</strong> Long hours at a desk or behind the wheel can leave your neck, shoulders, back and hips feeling tight. Regular assisted stretching may help ease muscle tension and stiffness, and may help improve posture alongside simple changes to how you sit and move.",
+   "<strong>Active people.</strong> Whether you run, lift, cycle or play sport, sessions are designed to help you move more freely, support your training and complement your recovery.",
+   "<strong>Regular maintenance.</strong> Many people simply want to feel looser and move better week to week. A short, regular session is an easy way to stay on top of tightness before it builds up."]},
+  {"id": "method", "title": "The Exhale stretch method", "paras": [
+   "Your first session always starts with a movement screen. Your clinician looks at how you move — your posture, flexibility and range of motion through the hips, spine and shoulders — and uses it to set a baseline and plan your stretches.",
+   "Stretches are then taken slowly, with your feedback throughout, using techniques such as assisted static stretching and contract–relax (PNF) stretching. Each session builds on the last, and we re-check how you move so you can see your progress."]},
+  {"id": "clinical", "title": "Clinically led, not just a stretch", "paras": [
+   "Sessions are led by registered osteopaths and physiotherapists, so your clinician is trained to spot when something needs more than stretching. If you have pain, an injury or a specific problem such as back pain or sciatica, we’ll assess it properly and recommend <a href=\"/osteopathy\">osteopathy</a> or <a href=\"/physiotherapy\">physiotherapy</a> first — with stretching as part of your plan where it helps.",
+   "Hafi Rahman, our founder and principal osteopath, leads sessions at first, and the wider Exhale team is being trained in the method over time. Want treatment and stretching together? Ask about our combined osteopathy and stretch session."]}
+ ],
+ "techTitle": "What a session can include",
+ "techniques": [
+  ["Movement screen", "Checks posture, flexibility and range of motion to set your baseline."],
+  ["Assisted static stretching", "Slow, supported stretches held while you relax."],
+  ["Contract–relax (PNF)", "Gentle muscle contractions to help you stretch further, comfortably."],
+  ["Mobility work", "Movement through the hips, spine and shoulders."],
+  ["Breathing &amp; relaxation", "Calm, unhurried pacing so your body can let go."],
+  ["Home plan", "A few simple stretches to keep you moving between sessions."]
+ ],
+ "prices": {
+  "eyebrow": "Sessions &amp; Prices",
+  "title": "Assisted stretch therapy prices",
+  "text": "Every new client starts with a 50-minute session that includes a movement screen. Shorter 25-minute sessions are available once you’ve had your first visit.",
+  "cardTitle": "Assisted Stretch Therapy",
+  "cardText": "Osteopath- and physio-led stretching. Fully clothed, one-to-one.",
+  "cardLink": "<a href=\"/osteopathy\">About osteopathy →</a>",
+  "group1": "Sessions",
+  "rows1": [["First session with movement screen (50 mins)", "Required for all new clients — sets your baseline and stretch plan.", "£70"],
+            ["Stretch session (25 mins)", "For returning clients only, after your first 50-minute session.", "£40"]],
+  "group2": "Coming soon",
+  "rows2": [["Osteopathy + stretch combined (60 mins)", "Osteopathy treatment and assisted stretching in one appointment. Price to be confirmed.", "Soon"],
+            ["Monthly membership", "Regular sessions at a reduced rate. Details to be confirmed.", "Soon"]],
+  "note": "Assisted stretch therapy is self-pay only and can’t be claimed on health insurance. Payment is taken at the end of each session."
+ },
+ "selfpay": {"eyebrow": "Self-Pay Only", "title": "Not claimable on health insurance", "text": "Assisted stretch therapy is a self-pay service and can’t be claimed through your health insurer. If you have pain or an injury, osteopathy or physiotherapy may be covered by your policy — call us and we’ll explain your options."},
+ "expectEyebrow": "Your First Session",
+ "expectTitle": "What to expect at your first stretch session",
+ "steps": [
+  ["Health history", "We ask about your health, any injuries, your work and activity, and what you’d like to get out of your sessions."],
+  ["Movement screen", "Before any stretching, we check your posture, flexibility and range of motion to set your baseline and plan."],
+  ["Assisted stretching", "Your clinician guides you through targeted stretches. It should never be painful — you control the intensity throughout."],
+  ["Your plan", "We talk you through what we found, how often to come, and simple stretches to do at home."]
+ ],
+ "why": {"eyebrow": "Why Exhale", "title": "Why choose Exhale for assisted stretching", "cards": [
+  ["Clinician-led", "Sessions are led by registered osteopaths and physiotherapists, not fitness instructors."],
+  ["Assessment first", "A movement screen on your first visit means your stretches are planned around you."],
+  ["Our own method", "The Exhale stretch method is structured, consistent and refined by our clinical team."],
+  ["Joined-up care", "If something needs treatment, we can combine stretching with osteopathy or physiotherapy."]]},
+ "teamTitle": "Your stretch therapy team",
+ "reviewsTitle": "What patients say about Exhale",
+ "reviews": [
+  ["He’s an incredibly skilled osteopath—thorough, knowledgeable, and always attentive to whatever issue I bring up. Hafi has a calm, gentle and professional presence that immediately puts you at ease, and it’s clear he genuinely cares about his patients’ well-being.", "Charlotte W."],
+  ["From the very first appointment he has been professional, friendly, and genuinely takes the time to listen to your concerns. The assessment was thorough, and everything was clearly explained, which put me at ease.", "Riz A."],
+  ["I've been seeing Hafi for different ailments over the last few years and can honestly say he's a brilliant osteopath. He is very professional and all the staff at the clinic are very friendly too. The assessments are always thorough and the treatment is explained properly and they never feel rushed.", "Nigel M."]
+ ],
+ "faqTitle": "Assisted stretch therapy questions, answered",
+ "faqs": [
+  ["Does assisted stretching hurt?", "No — it should never be painful. You’ll feel a stretch, but your clinician works with your feedback throughout and you control the intensity. Tell us at any point and we’ll ease off."],
+  ["How often should I come?", "It depends on your goals. Many people start with weekly or fortnightly sessions, then move to a regular maintenance routine. We’ll suggest a plan after your movement screen."],
+  ["What should I wear?", "Comfortable clothes you can move in, such as leggings, joggers or shorts and a T-shirt. You stay fully clothed throughout."],
+  ["How is it different from massage?", "Massage works on your muscles with hands-on pressure. Assisted stretching moves you through stretches and positions to work on flexibility and range of motion. You stay fully clothed and no oils are used."],
+  ["How is it different from osteopathy?", "Osteopathy is assessment and treatment for pain and injury, such as back pain, neck pain or sciatica. Assisted stretching is designed to help you move more freely — it isn’t a treatment for a specific condition. If you have pain or an injury, we’ll recommend <a href=\"/osteopathy\">osteopathy</a> or physiotherapy, with stretching as part of your plan where it helps. You can also book a combined osteopathy and stretch session."],
+  ["Why does my first session have to be 50 minutes?", "Your first session includes a movement screen before any stretching. It shows us how you move, sets your baseline, checks that stretching is suitable for you and lets us plan the right stretches. Shorter 25-minute sessions are available after that."],
+  ["Can I have assisted stretching while pregnant?", "Please speak to us before booking. We’ll talk through your pregnancy and health history and let you know whether assisted stretching is suitable, or whether <a href=\"/pregnancy-osteopathy\">pregnancy osteopathy</a> would be a better fit."],
+  ["Can I claim it on health insurance?", "No — assisted stretch therapy is self-pay only and can’t be claimed through health insurance."],
+  ["Where can I have assisted stretch therapy?", "At our Sutton Coldfield clinic, 1 Sutton Oak Corner, Streetly, B74 2DH — easy to reach from Four Oaks, Aldridge, Walsall and across north Birmingham."]
+ ],
+ "bookTitle": "Book your assisted stretch session",
+ "bookText": "New clients start with a 50-minute session including a movement screen. Book online or call 0121 751 2440. Self-pay only.",
+ "schema": {"@context": "https://schema.org", "@type": "Service", "name": "Assisted Stretch Therapy", "serviceType": "Assisted stretch therapy",
+  "description": "Osteopath- and physiotherapist-led assisted stretch therapy in Sutton Coldfield, near Birmingham. One-to-one, fully clothed sessions that start with a movement screen.",
+  "url": "https://exhaleosteopathy.co.uk/assisted-stretch-therapy-sutton-coldfield",
+  "areaServed": [{"@type": "City", "name": "Sutton Coldfield"}, {"@type": "City", "name": "Birmingham"}],
+  "provider": {"@type": "MedicalBusiness", "name": "Exhale Osteopathy", "url": "https://exhaleosteopathy.co.uk/", "telephone": "+441217512440",
+   "address": {"@type": "PostalAddress", "streetAddress": "1 Sutton Oak Corner", "addressLocality": "Sutton Coldfield", "postalCode": "B74 2DH", "addressCountry": "GB"}},
+  "offers": [{"@type": "Offer", "name": "First session with movement screen (50 minutes)", "price": "70", "priceCurrency": "GBP"},
+             {"@type": "Offer", "name": "Stretch session (25 minutes, returning clients)", "price": "40", "priceCurrency": "GBP"}]}
+}
