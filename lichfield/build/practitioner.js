@@ -7,7 +7,8 @@
   const L = EX.L, SITE = EX.SITE;
   const { grid, gridC, fr, gaps, h2, circle, photoCard, esc, amp, PEOPLE, PAGE } = EX.tx;
   const label = (t, color) => heading(t, { tag: 'h3', color: color || '#4F5945', t: { f: IN, s: 12, w: 500, ls: 0.2, tt: 'uppercase', lh: 1.4 } });
-  const TREAT = { osteo: ['Osteopathy', 'osteo-arm'], paediatric: ['Baby & Paediatric Osteopathy', 'cranial-baby'], massage: ['Sports & Deep Tissue Massage', 'massage-stock'] };
+  const TREAT = { osteo: ['Osteopathy', 'osteo-arm'], paediatric: ['Baby & Paediatric Osteopathy', 'cranial-baby'], massage: ['Sports & Deep Tissue Massage', 'massage-stock'],
+    physio: ['Physiotherapy', 'emre'], acupuncture: ['Acupuncture', 'acupuncture'], laser: ['Laser Therapy', 'laser'] };
 
   EX.buildPractitioner = async function (key, D) {
     const p = D.P[key];
@@ -40,8 +41,9 @@
           image(p.portrait, 'Portrait of ' + amp(p.name), { x: { _css_classes: 'ex-ratio-45 ex-pos-top ex-round-top' } }),
           C({ css_classes: 'ex-float-card ex-float-card--hi', padding: dims(18, 22, 18, 22), flex_gap: gap(2), background_background: 'classic', background_color: '#F5F2EA', border_radius: all(3) }, [
             heading('In clinic at Lichfield', { tag: 'span', color: '#4F5945', t: { f: IN, s: 11, w: 600, ls: 0.18, tt: 'uppercase', lh: 1.6 } }),
-            heading(esc(person.days), { tag: 'span', t: { s: 18, ls: -0.01, lh: 1.4 } }),
-            heading(person.times.map(([d, t]) => d.slice(0, 3) + ' ' + t.replace(/ – /g, '–')).join(' · '), { tag: 'span', color: 'rgba(39,43,38,0.76)', t: { f: IN, s: 14, lh: 1.75 } })
+            ...(person.times.length ? [heading(esc(person.days), { tag: 'span', t: { s: 18, ls: -0.01, lh: 1.4 } }),
+              heading(person.times.map(([d, t]) => d.slice(0, 3) + ' ' + t.replace(/ – /g, '–')).join(' · '), { tag: 'span', color: 'rgba(39,43,38,0.76)', t: { f: IN, s: 14, lh: 1.75 } })]
+              : [heading('Call ' + SITE.phone + ' for days', { tag: 'span', t: { s: 18, ls: -0.01, lh: 1.4 } })])
           ])
         ])
       ])
@@ -76,10 +78,11 @@
               heading(esc(q.t), { tag: 'span', t: { f: IN, s: 16, w: 500, lh: 1.4 } }),
               ...(q.d ? [heading(esc(q.d), { tag: 'span', color: 'rgba(39,43,38,0.76)', t: { f: IN, s: 14, lh: 1.4 } })] : [])
             ]))),
-            label('Days at Lichfield'),
+            ...(person.times.length ? [label('Days at Lichfield')] : []),
             C({ margin: dims(10, 0, 0, 0), flex_gap: gap(4) }, person.times.map(([d, t]) => C({ flex_direction: 'row', flex_justify_content: 'space-between', flex_gap: gap(16) }, [
               heading(d, { tag: 'span', color: 'rgba(39,43,38,0.84)', t: { f: IN, s: 15, lh: 1.75 } }), heading(t, { tag: 'span', t: { f: IN, s: 15, lh: 1.75 }, x: { _flex_size: 'none' } })]))),
-            ...(p.gosc ? [label('Registered with'), image('gosc', 'General Osteopathic Council', { x: { height: px(38), width: px(91), _element_width: 'auto', _margin: dims(14, 0, 0, 0) } })] : [])
+            ...(p.gosc ? [label('Registered with'), image('gosc', 'General Osteopathic Council', { x: { height: px(38), width: px(91), _element_width: 'auto', _margin: dims(14, 0, 0, 0) } })] : []),
+            ...(p.hcpc ? [label('Registered with'), image('hcpc', 'Health and Care Professions Council', { x: { height: px(46), width: px(45), _element_width: 'auto', _margin: dims(14, 0, 0, 0) } })] : [])
           ]),
           C({ background_background: 'classic', background_color: '#272B26', border_radius: all(3), padding: dims(26, 24, 26, 24) }, [
             heading('Book with ' + esc(p.first), { tag: 'span', color: '#F5F2EA', t: { s: 22, ls: -0.015, lh: 1.25 } }),

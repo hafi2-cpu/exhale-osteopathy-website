@@ -9,9 +9,9 @@
   const fr = (n) => ({ unit: 'fr', size: n, sizes: [] });
   const gaps = (r, c = r) => ({ unit: 'px', column: String(c), row: String(r), isLinked: r === c });
   const h2 = (t, o = {}) => heading(t, Object.assign({ t: Object.assign({ s: 44, st: 32, sm: 28, lh: 1.1, lhm: 1.15, ls: -0.025 }, o.t || {}) }, o.o || {}));
-  const PAGE = { osteo: L.osteo, paediatric: L.babies, massage: L.massage };
+  const PAGE = { osteo: L.osteo, paediatric: L.babies, massage: L.massage, physio: L.physio, acupuncture: L.acu, laser: L.laser };
   const CPAGE = {};
-  const PEOPLE = { hafi: L.hafi, zoe: L.zoe, freta: L.freta, emma: L.emma, david: L.david };
+  const PEOPLE = { hafi: L.hafi, zoe: L.zoe, freta: L.freta, emma: L.emma, david: L.david, emre: L.emre };
   const FACT_ICON = { 'Initial consultation': 'pound', 'Follow-up': 'pound', '60 minutes': 'clock', '90 minutes': 'clock', 'Open': 'clock', 'Clinic': 'pin', 'Who for': 'user', 'Approach': 'check', 'Parents': 'check', 'Massage types': 'check', 'Appointments': 'clock' };
   const amp = (s) => String(s).replace(/&amp;/g, '&');
   const esc = (s) => amp(s).replace(/&/g, '&amp;');

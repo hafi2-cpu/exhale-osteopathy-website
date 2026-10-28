@@ -240,7 +240,9 @@
     }
    ],
    "treatments": [
-    "osteo"
+    "osteo",
+    "acupuncture",
+    "laser"
    ],
    "quote": "I look forward to meeting you and helping you on your pathway to health.",
    "quoteBy": "Hafi Rahman",
@@ -482,6 +484,103 @@
      "t": "Tailored to you",
      "d": "Treatments tailored to each individual's needs and goals."
     }
+   ]
+  },
+  "emre": {
+   "name": "Emre Tosun",
+   "first": "Emre",
+   "role": "Physiotherapist",
+   "reg": "Registered Physiotherapist · MSc Physiotherapy · HCPC Reg. No. PH150112",
+   "lead": "Emre helps people manage pain, recover from injuries and feel more confident in their movement, with a plan built around your needs and goals.",
+   "creds": [
+    "Physiotherapist, personal trainer and sports massage therapist",
+    "Master's in Physiotherapy, with a background in Sports and Exercise Science",
+    "Combines hands-on treatment with practical rehabilitation"
+   ],
+   "portrait": "emre",
+   "gosc": false,
+   "hcpc": true,
+   "facts": [
+    {
+     "k": "Registered with",
+     "v": "HCPC"
+    },
+    {
+     "k": "Specialty",
+     "v": "MSK rehab"
+    },
+    {
+     "k": "Clinic",
+     "v": "Lichfield"
+    },
+    {
+     "k": "Also a",
+     "v": "Personal trainer & sports massage therapist"
+    }
+   ],
+   "aboutTitle": "Rehab that gets you stronger than before",
+   "bio": [
+    "Hi, I'm Emre, a physiotherapist, personal trainer and sports massage therapist with a background in Sports and Exercise Science and a Master's degree in Physiotherapy.",
+    "I help people manage pain, recover from injuries and feel more confident in their movement. Whether you're struggling with everyday aches, a sports injury or getting back into exercise, I'll work with you to build a treatment plan around your needs and goals.",
+    "My approach combines hands-on treatment with practical rehabilitation. Depending on what's appropriate for you, this may include massage, muscle energy techniques (METs), stretching and cupping, alongside targeted exercises to improve strength and mobility.",
+    "As a personal trainer, I also enjoy helping people bridge the gap between injury recovery and returning to the activities they love."
+   ],
+   "quote": "My aim is to help you understand your symptoms and give you the tools to manage your recovery beyond the treatment room.",
+   "quoteBy": "Emre Tosun",
+   "quals": [
+    {
+     "t": "MSc Physiotherapy",
+     "d": "University of Birmingham, 2025"
+    },
+    {
+     "t": "Sports & Exercise Science",
+     "d": "University of Liverpool"
+    },
+    {
+     "t": "Personal Training",
+     "d": "Qualified personal trainer"
+    },
+    {
+     "t": "Sports Massage",
+     "d": "Qualified sports massage therapist"
+    }
+   ],
+   "interests": [
+    {
+     "t": "Sports injuries",
+     "d": "Sprains and sports injuries.",
+     "img": "hands-leg"
+    },
+    {
+     "t": "Knee pain",
+     "d": "Knee pain in runners and gym-goers.",
+     "img": "osteo-arm"
+    },
+    {
+     "t": "Hip pain",
+     "d": "Hip and groin pain in active people.",
+     "img": "hands-deep"
+    },
+    {
+     "t": "Back pain",
+     "d": "Long-standing and recurring back pain.",
+     "img": "hands-back"
+    }
+   ],
+   "credTitle": "Qualified in 2025, with a sports science background",
+   "recognition": [
+    {
+     "t": "MSc Physiotherapy",
+     "d": "Qualified at the University of Birmingham in 2025, building on a Sports and Exercise Science degree from the University of Liverpool."
+    },
+    {
+     "t": "HCPC registered",
+     "d": "Registered with the Health and Care Professions Council, registration number PH150112."
+    }
+   ],
+   "treatments": [
+    "physio",
+    "massage"
    ]
   }
  }

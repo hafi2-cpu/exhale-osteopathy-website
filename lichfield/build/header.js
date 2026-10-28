@@ -10,13 +10,24 @@
 
   const SITE = EX.SITE;
   const TREAT = [
-    ['Treatments', [['Osteopathy', L.osteo, 'osteo-arm', 'Hands-on treatment for pain and stiffness'], ['Cranial &amp; Baby Osteopathy', L.babies, 'cranial-baby', 'Gentle osteopathy for babies and children'],
-      ['Sports, Deep Tissue &amp; Pregnancy Massage', L.massage, 'massage-stock', '60 and 90 minute sessions']]]
+    ['Osteopathy &amp; Wellbeing', [['Osteopathy', L.osteo, 'osteo-arm'], ['Cranial &amp; Baby Osteopathy', L.babies, 'cranial-baby'],
+      ['Sports &amp; Deep Tissue Massage', L.massage, 'massage-stock'], ['Acupuncture', L.acu, 'acupuncture']]],
+    ['Recovery &amp; Performance', [['Physiotherapy', L.physio, 'emre'], ['Laser Therapy', L.laser, 'laser']]]
   ];
-  // Our Team dropdown (headshots from the live Lichfield site)
+  const CONDS = [
+    ['Spine &amp; Head', [['Back Pain', L.back, 'hands-back'], ['Neck Pain', L.neck, 'hands-upper'], ['Sciatica', L.sciatica, 'hands-deep'],
+      ['Headaches &amp; Migraines', L.head, 'hands-upper'], ['TMJ / Jaw Pain', L.jaw, 'osteo-freta']]],
+    ['Joints &amp; Injuries', [['Hip Pain', L.hip, 'hands-deep'], ['Knee Pain', L.knee, 'hands-leg'], ['Foot &amp; Ankle Pain', L.ankle, 'hands-leg'],
+      ['Shoulder Pain', L.shoulder, 'osteo-arm'], ['Sports Injuries', L.sports, 'massage-zoe'], ['Tendon Problems', L.tendon, 'osteo-arm']]]
+  ];
+  // Our Team dropdown (headshots from the live Lichfield site; Emre's from the Exhale shoot)
   const TEAM = [
-    ['Osteopaths', EX.TEAM.filter(p => p.k !== 'zoe').map(p => [p.name, p.href, p.photo, p.days.replace(/&/g, '&amp;')])],
-    ['Massage', EX.TEAM.filter(p => p.k === 'zoe').map(p => [p.name, p.href, p.photo, p.role + ' · ' + p.days.replace(/&/g, '&amp;')])]
+    ['Osteopathy', EX.TEAM.filter(p => /Osteopath/.test(p.role)).map(p => [p.name, p.href, p.photo, p.role])],
+    ['Physiotherapy &amp; Massage', EX.TEAM.filter(p => !/Osteopath/.test(p.role)).map(p => [p.name, p.href, p.photo, p.role])]
+  ];
+  const ABOUT = [
+    ['About Us', [['About the Practice', L.about, 'exterior', 'Established in Lichfield in 1983'], ['Meet the Team', L.team, 'freta', 'Our osteopaths and therapists'],
+      ['Contact &amp; Directions', L.contact, 'exterior', '30 Rotten Row, Lichfield']]]
   ];
 
   const thumb = (asset, size) => asset
@@ -49,9 +60,13 @@
   const callFooter = C({ flex_direction: 'row', flex_wrap: 'wrap', flex_justify_content: 'space-between', flex_align_items: 'center', flex_gap: gap(12),
     margin: dims(22, 0, 0, 0), padding: dims(18, 0, 0, 0), border_border: 'solid', border_width: dims(1, 0, 0, 0), border_color: '#B7AA99' }, [
     text('<p>Not sure what you need? Call <a href="' + SITE.tel + '" style="font-weight:500;text-decoration:underline;text-underline-offset:3px">' + SITE.phone + '</a> and we’ll point you to the right person.</p>', { t: { s: 15, lh: 1.6 } }),
-    heading('<a href="' + L.fees + '">See our fees →</a>', { tag: 'p', color: '#4F5945', t: { f: IN, s: 15, w: 500, lh: 1.6 } })
+    heading('<a href="' + L.fees + '">See our prices →</a>', { tag: 'p', color: '#4F5945', t: { f: IN, s: 15, w: 500, lh: 1.6 } })
   ]);
-
+  const aboutFooter = C({ flex_direction: 'row', flex_wrap: 'wrap', flex_justify_content: 'space-between', flex_align_items: 'center', flex_gap: gap(12),
+    margin: dims(22, 0, 0, 0), padding: dims(18, 0, 0, 0), border_border: 'solid', border_width: dims(1, 0, 0, 0), border_color: '#B7AA99' }, [
+    text('<p>New to the practice? Book online or call <a href="' + SITE.tel + '" style="font-weight:500;text-decoration:underline;text-underline-offset:3px">' + SITE.phone + '</a>.</p>', { t: { s: 15, lh: 1.6 } }),
+    heading('<a href="' + L.newp + '">What to expect at your first visit →</a>', { tag: 'p', color: '#4F5945', t: { f: IN, s: 15, w: 500, lh: 1.6 } })
+  ]);
   const teamFooter = C({ flex_direction: 'row', flex_wrap: 'wrap', flex_justify_content: 'flex-end', flex_align_items: 'center', flex_gap: gap(12),
     margin: dims(22, 0, 0, 0), padding: dims(18, 0, 0, 0), border_border: 'solid', border_width: dims(1, 0, 0, 0), border_color: '#B7AA99' }, [
     heading('<a href="' + L.team + '">Meet the whole team →</a>', { tag: 'p', color: '#4F5945', t: { f: IN, s: 15, w: 500, lh: 1.6 } })
@@ -68,7 +83,7 @@
     'selector .e-n-menu-title a,selector .e-n-menu-title-text{white-space:nowrap}'
   ].join('\n');
 
-  const items = [['Home', L.home], ['Treatments', '', TREAT], ['Our Team', '', TEAM], ['Our Fees', L.fees], ['Contact', L.contact]];
+  const items = [['About', L.about, ABOUT], ['Treatments', '', TREAT], ['What We Treat', '', CONDS], ['Our Team', '', TEAM], ['New Patients', L.newp], ['Pricing', L.fees], ['Contact', L.contact]];
   const mega = W('mega-menu', Object.assign({
     menu_items: items.map(([t, href, cols]) => Object.assign({ _id: EX.rid(), item_title: t, item_link: { url: href || '', is_external: '', nofollow: '' } },
       cols ? { item_dropdown_content: 'yes' } : { item_dropdown_content: '' })),
@@ -78,7 +93,7 @@
     menu_item_title_text_color_normal: '#F5F2EA', menu_item_title_text_color_hover: '#F5F2EA', menu_item_title_text_color_active: '#F5F2EA',
     custom_css: megaCss
   }, EX.typo({ f: IN, s: 16, w: 500, lh: 1.5 }, 'menu_item_title_typography'), hideBelowDesktop),
-  items.map(([, , cols], i) => C({ padding: all(0) }, cols ? [panel(cols, i === 1 ? callFooter : i === 2 ? teamFooter : null)] : [])));
+  items.map(([, , cols], i) => C({ padding: all(0) }, cols ? [panel(cols, i === 0 ? aboutFooter : i === 2 ? callFooter : i === 3 ? teamFooter : null)] : [])));
 
   // Off-canvas (mobile) menu
   const OC_ID = EX.rid();
@@ -104,11 +119,11 @@
     'selector .e-n-accordion-item > [role="region"], selector .e-n-accordion-item > .e-con{border:0;padding:0}'
   ].join('\n');
   const accordion = W('nested-accordion', Object.assign({
-    items: [{ _id: EX.rid(), item_title: 'Treatments' }, { _id: EX.rid(), item_title: 'Our Team' }],
+    items: [{ _id: EX.rid(), item_title: 'About' }, { _id: EX.rid(), item_title: 'Treatments' }, { _id: EX.rid(), item_title: 'What We Treat' }, { _id: EX.rid(), item_title: 'Our Team' }],
     accordion_item_title_icon: icon('plus'), accordion_item_title_icon_active: icon('plus'),
     title_color: '#272B26', custom_css: accCss, max_items_expended: 'one', default_state: 'all_collapsed'
   }, EX.typo({ f: IT, s: 26, w: 400, ls: -0.02, lh: 1.25 }, 'title_typography')), [
-    C({ padding: all(0) }, [mobGroup(TREAT)]), C({ padding: all(0) }, [mobGroup(TEAM)])
+    C({ padding: all(0) }, [mobGroup(ABOUT)]), C({ padding: all(0) }, [mobGroup(TREAT)]), C({ padding: all(0) }, [mobGroup(CONDS)]), C({ padding: all(0) }, [mobGroup(TEAM)])
   ]);
   // Lichfield logo from the live site (white/gold for dark heroes; charcoal/gold copy for the light mobile menu)
   const logo = (dark, h = 46, hm = 38) => {
@@ -131,7 +146,7 @@
       ]),
       C({ content_width: 'boxed', boxed_width: px(900), padding: dims(4, 16, 24, 16), html_tag: 'nav' }, [
         accordion,
-        bigRow('Home', L.home), bigRow('Our Fees', L.fees), bigRow('Contact', L.contact)
+        bigRow('New Patients', L.newp), bigRow('Pricing', L.fees), bigRow('Contact', L.contact)
       ]),
       C({ margin: dims(0, 0, 0, 0), padding: dims(24, 16, 28, 16), background_background: 'classic', background_color: '#E6E0D5', css_classes: 'ex-push-bottom' }, [
         C({ content_width: 'boxed', boxed_width: px(900), flex_gap: gap(10), padding: all(0) }, [
@@ -146,10 +161,7 @@
   EX.buildHeader = async function () {
     await EX.clearPage();
     return EX.insert(C({ content_width: 'boxed', flex_direction: 'row', flex_justify_content: 'space-between', flex_align_items: 'center', flex_gap: gap(24),
-      min_height: px(96), padding: dims(0, 30, 0, 30), padding_mobile: dims(0, 16, 0, 16), css_classes: 'ex-header', z_index: 50,
-      // Lichfield: solid near-black bar so the header stands apart from the charcoal page sections
-      background_background: 'classic', background_color: '#1F1F1F', __globals__: { background_color: 'globals/colors?id=lopink' },
-      border_border: 'solid', border_width: dims(0, 0, 1, 0), border_color: 'rgba(215,214,164,0.18)' }, [
+      min_height: px(96), padding: dims(0, 30, 0, 30), padding_mobile: dims(0, 16, 0, 16), css_classes: 'ex-header', z_index: 50 }, [
       logo(false),
       mega,
       C({ flex_direction: 'row', flex_align_items: 'center', flex_gap: gap(10), css_classes: 'ex-fit' }, [

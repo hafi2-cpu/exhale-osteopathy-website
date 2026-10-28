@@ -22,7 +22,7 @@
     }, { icon_typography_typography: 'custom', icon_typography_font_family: 'Inter', icon_typography_font_size: px(15), icon_typography_line_height: { unit: 'em', size: 1.6, sizes: [] } }));
     const directions = W('text-editor', Object.assign({ editor: '<p><a class="ex-ft-arrow" href="' + L.dir + '" target="_blank" rel="noopener">Get directions →</a></p>', text_color: PALE, _margin: dims(14, 0, 0, 0) }, font(14, 500, 1.4)));
     const hours = body('<div class="ex-ft-hours">' + SITE.hours.map(([d, t]) => '<div><span>' + d + '</span><span>' + t + '</span></div>').join('') + '</div><p class="ex-ft-note">Open 6 days a week.</p>');
-    const treatments = body('<p><a href="' + L.osteo + '">Osteopathy</a></p><p><a href="' + L.babies + '">Cranial &amp; Baby Osteopathy</a></p><p><a href="' + L.massage + '">Sports &amp; Deep Tissue Massage</a></p><p><a href="' + L.massage + '">Pregnancy Massage</a></p><p><a href="' + L.fees + '">Our Fees</a></p>');
+    const treatments = body([['Osteopathy', L.osteo], ['Cranial &amp; Baby Osteopathy', L.babies], ['Physiotherapy', L.physio], ['Acupuncture', L.acu], ['Laser Therapy', L.laser], ['Sports &amp; Deep Tissue Massage', L.massage], ['Pricing', L.fees]].map(([t, h]) => '<p><a href="' + h + '">' + t + '</a></p>').join(''));
     const team = body(EX.TEAM.map(p => '<p><a href="' + p.href + '">' + p.name + '</a></p>').join('') + '<p><a href="' + L.team + '">Meet the team →</a></p>');
     const col = (kids) => C({ padding: all(0) }, kids);
     const grid4 = C({ container_type: 'grid', grid_columns_grid: { unit: 'fr', size: 4, sizes: [] }, grid_columns_grid_tablet: { unit: 'fr', size: 2, sizes: [] }, grid_columns_grid_mobile: { unit: 'fr', size: 1, sizes: [] },

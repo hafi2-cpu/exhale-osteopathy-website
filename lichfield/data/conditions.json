@@ -1,0 +1,1249 @@
+{
+ "_note": "Lichfield condition pages. Adapted from the approved Exhale condition copy (wordpress/data/conditions.json on main): Exhale-only services (physiotherapy, rehab/Pilates, shockwave, laser, acupuncture, ultrasound), Sutton/Birmingham references and evening-appointment claims removed. Treatments link to Lichfield's own pages only.",
+ "TREAT": {
+  "osteo": [
+   "Osteopathy",
+   "/osteopathy/"
+  ],
+  "cranial": [
+   "Cranial Osteopathy",
+   "/peadiatric-osteopathy/"
+  ],
+  "massage": [
+   "Sports & Deep Tissue Massage",
+   "/massage/"
+  ],
+  "preg": [
+   "Pregnancy Massage",
+   "/massage/"
+  ],
+  "physio": [
+   "Physiotherapy",
+   "/physiotherapy/"
+  ],
+  "acu": [
+   "Acupuncture",
+   "/acupuncture/"
+  ],
+  "laser": [
+   "Laser Therapy",
+   "/laser-therapy/"
+  ]
+ },
+ "PAGE": {
+  "back": [
+   "Back Pain",
+   "/back-pain/"
+  ],
+  "neck": [
+   "Neck Pain",
+   "/neck-pain/"
+  ],
+  "shoulder": [
+   "Shoulder Pain",
+   "/shoulder-pain/"
+  ],
+  "hip": [
+   "Hip Pain",
+   "/hip-pain/"
+  ],
+  "knee": [
+   "Knee Pain",
+   "/knee-pain/"
+  ],
+  "foot": [
+   "Foot & Ankle Pain",
+   "/ankle-pain/"
+  ],
+  "headaches": [
+   "Headaches & Migraines",
+   "/headaches/"
+  ],
+  "sciatica": [
+   "Sciatica",
+   "/sciatica/"
+  ],
+  "sports": [
+   "Sports Injuries",
+   "/sports-injuries/"
+  ],
+  "tendon": [
+   "Tendon Problems",
+   "/tendon-problems/"
+  ],
+  "jaw": [
+   "TMJ / Jaw Pain",
+   "/jaw-pain/"
+  ]
+ },
+ "TH": {
+  "back": "hands-back",
+  "neck": "hands-upper",
+  "shoulder": "osteo-arm",
+  "hip": "hands-leg",
+  "knee": "hands-leg",
+  "foot": "hands-leg",
+  "headaches": "hands-upper",
+  "sciatica": "hands-deep",
+  "sports": "massage-zoe",
+  "tendon": "osteo-arm",
+  "jaw": "hands-upper"
+ },
+ "steps": [
+  {
+   "n": "01",
+   "t": "Your case history",
+   "d": "Your first appointment starts with a detailed case history: your symptoms, health, work and activity."
+  },
+  {
+   "n": "02",
+   "t": "Examination",
+   "d": "Careful observation and examination, using palpation (feel through touch) to find areas of restriction, strain and weakness."
+  },
+  {
+   "n": "03",
+   "t": "Diagnosis &amp; plan",
+   "d": "We explain what we've found. By the second treatment your osteopath can usually tell you how many treatments you're likely to need."
+  },
+  {
+   "n": "04",
+   "t": "After treatment",
+   "d": "You may feel a little sore or achy for up to 48 hours. Most people usually start feeling better after this."
+  }
+ ],
+ "C": {
+  "back": {
+   "name": "Back Pain",
+   "lower": "back pain",
+   "hero": "hands-back",
+   "heroPos": "50% 45%",
+   "introImg": "massage-stock",
+   "h1": "Back Pain Treatment in Lichfield",
+   "lead": "Registered osteopaths for lower back pain, upper back pain and stiffness, at 30 Rotten Row, Lichfield. No GP referral needed.",
+   "introTitle": "Back pain treatment in Lichfield",
+   "intro": [
+    "Back pain is one of the most common reasons people visit an osteopath, and most of the time it isn't caused by anything serious. Whether it came on suddenly lifting the shopping or has been grumbling for months at your desk, our osteopaths will find out what's driving it and help you get moving again.",
+    "We treat lower back pain, upper back pain, muscle spasm, stiffness and recurring \"bad backs\" for patients from Lichfield and the surrounding areas. Every appointment combines a thorough assessment with hands-on treatment and advice you can use at home."
+   ],
+   "introAlt": "Hands-on treatment of the upper back",
+   "symTitle": "Signs your back needs some help",
+   "symptoms": [
+    "Aching or sharp pain in the lower or upper back",
+    "Stiffness first thing in the morning or after sitting",
+    "Muscle spasm that makes it hard to stand up straight",
+    "Pain that spreads into the buttock or thigh",
+    "Pain that keeps coming back every few months"
+   ],
+   "causeTitle": "Why back pain happens",
+   "causes": [
+    {
+     "t": "Muscle strain",
+     "d": "Lifting, twisting or a sudden increase in activity."
+    },
+    {
+     "t": "Posture & desk work",
+     "d": "Long hours sitting with little movement."
+    },
+    {
+     "t": "Disc irritation",
+     "d": "Can cause back pain with or without leg pain."
+    },
+    {
+     "t": "Joint stiffness",
+     "d": "Facet joints and the pelvis can become stiff and sore."
+    },
+    {
+     "t": "Stress & poor sleep",
+     "d": "Both can make back pain more sensitive and last longer."
+    }
+   ],
+   "helpTitle": "How we treat back pain",
+   "helpLead": "Your plan is built around your assessment, usually a mix of hands-on treatment and advice.",
+   "treats": [
+    [
+     "osteo",
+     "Soft tissue work, joint mobilisation and gentle manipulation to ease pain and restore movement."
+    ],
+    [
+     "physio",
+     "Progressive strengthening to support your back and reduce the chance of it coming back."
+    ],
+    [
+     "massage",
+     "Deep tissue work to release tight, guarded muscles around the spine and hips."
+    ]
+   ],
+   "tips": [
+    "Keep moving gently, as bed rest usually slows recovery.",
+    "Use heat to ease muscle spasm for 15–20 minutes at a time.",
+    "Break up long periods of sitting every 30–45 minutes.",
+    "Over-the-counter pain relief can help. Ask your pharmacist what’s right for you."
+   ],
+   "redFlags": [
+    "Numbness or tingling around your genitals or bottom",
+    "Loss of bladder or bowel control, or difficulty peeing",
+    "Weakness or numbness in both legs, or legs that are getting weaker",
+    "Severe pain after a serious fall or accident"
+   ],
+   "gpNote": "See your GP urgently if you also have a high temperature, unexplained weight loss, or a history of cancer.",
+   "team": [
+    "freta",
+    "emma",
+    "hafi",
+    "emre"
+   ],
+   "faqTitle": "Back pain questions, answered",
+   "faqs": [
+    {
+     "q": "Can an osteopath help with lower back pain?",
+     "a": "Yes. Lower back pain is the most common problem osteopaths treat. NICE guidelines recommend manual therapy, such as osteopathy, alongside exercise for low back pain."
+    },
+    {
+     "q": "Do I need a GP referral?",
+     "a": "No. You can book directly with us without seeing your GP first."
+    },
+    {
+     "q": "How many sessions will I need?",
+     "a": "It depends on the problem and the person. Your osteopath will usually be able to tell you by the second treatment how many treatments are likely to be needed."
+    },
+    {
+     "q": "Should I rest or keep moving?",
+     "a": "For most back pain, staying gently active helps you recover faster than resting. We'll advise you on which movements suit you."
+    }
+   ],
+   "related": [
+    "sciatica",
+    "hip",
+    "neck",
+    "sports"
+   ],
+   "ctaTitle": "Book back pain treatment in Lichfield"
+  },
+  "neck": {
+   "name": "Neck Pain",
+   "lower": "neck pain",
+   "hero": "hands-upper",
+   "heroPos": "50% 40%",
+   "introImg": "osteo-freta",
+   "h1": "Neck Pain Treatment in Lichfield",
+   "lead": "Relief for stiff, sore and painful necks, from desk-related tension to whiplash, with registered osteopaths in Lichfield.",
+   "introTitle": "Neck pain treatment in Lichfield",
+   "intro": [
+    "A stiff, painful neck can affect everything from sleeping and driving to concentrating at work. We treat neck pain for people from Lichfield and the surrounding areas, from office workers and drivers to new parents and athletes.",
+    "Our osteopaths look at how your neck, shoulders and upper back are working together, then use gentle hands-on treatment and practical posture advice to ease pain and get you turning your head freely again."
+   ],
+   "introAlt": "An osteopath assessing a patient's neck and shoulder",
+   "symTitle": "Common neck pain symptoms",
+   "symptoms": [
+    "Stiffness and difficulty turning your head",
+    "Pain spreading into the shoulders or between the shoulder blades",
+    "Headaches that start at the base of the skull",
+    "Waking up with a “cricked” neck",
+    "Pins and needles into the arm or hand"
+   ],
+   "causeTitle": "What causes neck pain",
+   "causes": [
+    {
+     "t": "Desk & screen posture",
+     "d": "Long hours looking down at laptops and phones."
+    },
+    {
+     "t": "Sleeping awkwardly",
+     "d": "Pillows that are too high, low or soft."
+    },
+    {
+     "t": "Whiplash",
+     "d": "After car accidents or sudden jolts."
+    },
+    {
+     "t": "Stress & tension",
+     "d": "Tight shoulders and upper back muscles."
+    },
+    {
+     "t": "Wear and tear",
+     "d": "Normal age-related changes in the joints of the neck."
+    }
+   ],
+   "helpTitle": "How we treat neck pain",
+   "helpLead": "Gentle, hands-on treatment plus practical changes that fit your day.",
+   "treats": [
+    [
+     "osteo",
+     "Gentle mobilisation and soft tissue work to ease stiffness and muscle tension."
+    ],
+    [
+     "acu",
+     "Fine needles to calm persistent, tight areas in the neck and shoulders."
+    ],
+    [
+     "massage",
+     "Targeted massage to release tension through the neck, shoulders and upper back."
+    ]
+   ],
+   "tips": [
+    "Raise your screen to eye level and take regular breaks.",
+    "Use heat on tight muscles for 15–20 minutes.",
+    "Try gentle neck turns and shoulder rolls through the day.",
+    "Choose a pillow that keeps your neck in line with your spine."
+   ],
+   "redFlags": [
+    "Neck pain after a serious fall, accident or head injury",
+    "A sudden, severe headache with neck stiffness",
+    "Fever with a stiff neck or a rash",
+    "Weakness, numbness or clumsiness in both arms or legs"
+   ],
+   "gpNote": "See your GP if pain is getting worse over several weeks or you have unexplained weight loss.",
+   "team": [
+    "freta",
+    "emma",
+    "hafi",
+    "david"
+   ],
+   "faqTitle": "Neck pain questions, answered",
+   "faqs": [
+    {
+     "q": "Can an osteopath help with neck pain?",
+     "a": "Yes. Osteopaths regularly treat neck pain and stiffness using gentle hands-on techniques and posture advice."
+    },
+    {
+     "q": "Is neck manipulation safe?",
+     "a": "Manipulation is only used where it's appropriate and with your consent. Many patients are treated entirely with gentle techniques instead."
+    },
+    {
+     "q": "Can neck problems cause headaches?",
+     "a": "Yes. Tension in the neck and upper back is a common cause of headaches that start at the base of the skull."
+    },
+    {
+     "q": "Do you treat whiplash?",
+     "a": "Yes. We assess and treat whiplash-related neck pain."
+    }
+   ],
+   "related": [
+    "headaches",
+    "shoulder",
+    "back",
+    "jaw"
+   ],
+   "ctaTitle": "Book neck pain treatment in Lichfield"
+  },
+  "shoulder": {
+   "name": "Shoulder Pain",
+   "lower": "shoulder pain",
+   "hero": "osteo-freta",
+   "heroPos": "60% 35%",
+   "introImg": "osteo-arm",
+   "h1": "Shoulder Pain Treatment in Lichfield",
+   "lead": "Assessment and treatment for painful, stiff and weak shoulders, including rotator cuff problems and frozen shoulder.",
+   "introTitle": "Shoulder pain treatment in Lichfield",
+   "intro": [
+    "Shoulder pain can make simple things like reaching up, getting dressed or sleeping on your side surprisingly difficult. Our osteopaths and physiotherapist help people from Lichfield and the surrounding areas get to the bottom of shoulder pain and restore movement.",
+    "We assess how your shoulder blade, neck and upper back are working with the shoulder joint, then combine hands-on treatment with advice and exercises you can do at home."
+   ],
+   "introAlt": "An osteopath treating a patient's arm and shoulder",
+   "symTitle": "Common shoulder symptoms",
+   "symptoms": [
+    "Pain lifting your arm overhead or out to the side",
+    "Pain lying on the affected side at night",
+    "Stiffness and loss of movement",
+    "A weak or “catching” feeling",
+    "Pain spreading down the upper arm"
+   ],
+   "causeTitle": "Common causes of shoulder pain",
+   "causes": [
+    {
+     "t": "Rotator cuff problems",
+     "d": "Irritated or overloaded shoulder tendons."
+    },
+    {
+     "t": "Frozen shoulder",
+     "d": "Gradual, painful stiffening of the joint."
+    },
+    {
+     "t": "Bursitis",
+     "d": "Inflammation of the fluid-filled sac in the shoulder."
+    },
+    {
+     "t": "Overuse",
+     "d": "Gym, racket sports, swimming or repetitive work."
+    },
+    {
+     "t": "Referred pain",
+     "d": "From the neck or upper back."
+    }
+   ],
+   "helpTitle": "How we treat shoulder pain",
+   "helpLead": "Hands-on care for the shoulder, neck and upper back, with advice to keep you moving.",
+   "treats": [
+    [
+     "physio",
+     "Progressive strengthening and mobility work to rebuild the shoulder."
+    ],
+    [
+     "osteo",
+     "Hands-on treatment for the shoulder, neck and upper back."
+    ],
+    [
+     "massage",
+     "Soft tissue work for tight muscles around the shoulder blade and neck."
+    ]
+   ],
+   "tips": [
+    "Keep the shoulder moving within a comfortable range.",
+    "Avoid long periods with your arm overhead while it’s sore.",
+    "Sleep with a pillow under the affected arm for support.",
+    "Use ice or heat, whichever feels better, for 15–20 minutes."
+   ],
+   "redFlags": [
+    "Shoulder or arm pain with chest pain, breathlessness or sweating",
+    "Sudden inability to lift your arm after a fall",
+    "A hot, red, swollen shoulder with fever",
+    "A visible deformity after an injury"
+   ],
+   "gpNote": "See your GP if pain doesn’t improve after several weeks or you feel unwell.",
+   "team": [
+    "freta",
+    "emma",
+    "hafi",
+    "emre"
+   ],
+   "faqTitle": "Shoulder pain questions, answered",
+   "faqs": [
+    {
+     "q": "Can you treat frozen shoulder?",
+     "a": "Yes. We help manage pain and gradually restore movement. Frozen shoulder can take months to settle, and we'll guide you through each stage."
+    },
+    {
+     "q": "Do I need a scan for shoulder pain?",
+     "a": "Most shoulder problems can be assessed hands-on. If we think a scan would help, we'll tell you and suggest seeing your GP."
+    },
+    {
+     "q": "Should I keep going to the gym?",
+     "a": "Usually yes, with some changes. We'll advise you on how to adapt your training while it recovers."
+    }
+   ],
+   "related": [
+    "neck",
+    "tendon",
+    "sports",
+    "back"
+   ],
+   "ctaTitle": "Book shoulder pain treatment in Lichfield"
+  },
+  "hip": {
+   "name": "Hip Pain",
+   "lower": "hip pain",
+   "hero": "hands-leg",
+   "heroPos": "50% 50%",
+   "introImg": "hands-deep",
+   "h1": "Hip Pain Treatment in Lichfield",
+   "lead": "Care for hip, groin and buttock pain, whether you're a runner, a desk worker or simply want to walk comfortably again.",
+   "introTitle": "Hip pain treatment in Lichfield",
+   "intro": [
+    "Hip pain can show up in the groin, the side of the hip, the buttock or even the knee. Our osteopaths and physiotherapist help people from Lichfield and the surrounding areas work out where it's coming from and what to do about it.",
+    "We treat hip pain in runners and gym-goers, people who sit for long hours, and older adults with stiff, achy hips, combining hands-on treatment with practical advice."
+   ],
+   "introAlt": "Hands-on soft tissue treatment",
+   "symTitle": "Common hip symptoms",
+   "symptoms": [
+    "Pain on the outside of the hip, worse lying on that side",
+    "Groin pain when walking, running or getting out of a car",
+    "Stiffness putting on socks and shoes",
+    "Pain in the buttock that may spread down the leg",
+    "Clicking or catching in the hip"
+   ],
+   "causeTitle": "Common causes of hip pain",
+   "causes": [
+    {
+     "t": "Gluteal tendinopathy",
+     "d": "Irritated tendons on the outside of the hip."
+    },
+    {
+     "t": "Hip osteoarthritis",
+     "d": "Wear-and-tear changes that cause stiffness and ache."
+    },
+    {
+     "t": "Muscle strains",
+     "d": "Hip flexors, groin and hamstrings."
+    },
+    {
+     "t": "Referred pain",
+     "d": "From the lower back or pelvis."
+    },
+    {
+     "t": "Long periods of sitting",
+     "d": "Tight hip flexors and weak glutes."
+    }
+   ],
+   "helpTitle": "How we treat hip pain",
+   "helpLead": "Treatment focused on movement and getting you back to the things you enjoy.",
+   "treats": [
+    [
+     "osteo",
+     "Hands-on treatment for the hip, pelvis and lower back."
+    ],
+    [
+     "physio",
+     "Targeted strengthening for the glutes and hip muscles."
+    ],
+    [
+     "massage",
+     "Deep tissue work for tight hip, glute and thigh muscles."
+    ]
+   ],
+   "tips": [
+    "Avoid crossing your legs or sitting on very low chairs.",
+    "Sleep with a pillow between your knees.",
+    "Keep walking, but stick to flatter routes while it settles.",
+    "Build up activity gradually rather than all at once."
+   ],
+   "redFlags": [
+    "Unable to put weight on your leg after a fall",
+    "A hot, swollen hip with fever or feeling unwell",
+    "Sudden severe hip pain with no obvious cause",
+    "A leg that looks shortened or turned outwards after a fall"
+   ],
+   "gpNote": "See your GP if night pain is severe and constant or you have unexplained weight loss.",
+   "team": [
+    "freta",
+    "emma",
+    "hafi",
+    "emre"
+   ],
+   "faqTitle": "Hip pain questions, answered",
+   "faqs": [
+    {
+     "q": "Can an osteopath help hip arthritis?",
+     "a": "While treatment can't reverse arthritis, it can help reduce pain, ease stiffness and keep you moving."
+    },
+    {
+     "q": "Why does my hip hurt at night?",
+     "a": "Pain on the outside of the hip at night is often linked to irritated gluteal tendons. Small changes to sleeping position can help."
+    },
+    {
+     "q": "Could my hip pain be coming from my back?",
+     "a": "Yes, the lower back and pelvis often refer pain to the hip. Our assessment checks all of these areas."
+    }
+   ],
+   "related": [
+    "back",
+    "knee",
+    "sciatica",
+    "sports"
+   ],
+   "ctaTitle": "Book hip pain treatment in Lichfield"
+  },
+  "knee": {
+   "name": "Knee Pain",
+   "lower": "knee pain",
+   "hero": "hands-leg",
+   "heroPos": "40% 50%",
+   "introImg": "osteo-arm",
+   "h1": "Knee Pain Treatment in Lichfield",
+   "lead": "Assessment and treatment for knee pain, from runner's knee and sports injuries to stiff, arthritic knees.",
+   "introTitle": "Knee pain treatment in Lichfield",
+   "intro": [
+    "Knee pain can stop you running, climbing stairs or kneeling down. Our osteopaths and physiotherapist help people from Lichfield and the surrounding areas understand what's causing their knee pain and plan how to ease it.",
+    "Because the knee sits between the hip and the foot, we look at how your whole leg moves, then combine hands-on treatment with advice that gets you back to the activities you love."
+   ],
+   "introAlt": "An osteopath treating a patient",
+   "symTitle": "Common knee symptoms",
+   "symptoms": [
+    "Pain around or behind the kneecap",
+    "Pain on stairs, squatting or kneeling",
+    "Swelling or stiffness after activity",
+    "A feeling of the knee giving way",
+    "Pain on the inside or outside of the knee"
+   ],
+   "causeTitle": "Common causes of knee pain",
+   "causes": [
+    {
+     "t": "Patellofemoral pain",
+     "d": "Often called runner’s knee."
+    },
+    {
+     "t": "Ligament sprains",
+     "d": "From twisting or contact injuries."
+    },
+    {
+     "t": "Meniscus irritation",
+     "d": "Cartilage problems that can cause catching or swelling."
+    },
+    {
+     "t": "Patellar tendinopathy",
+     "d": "Jumper’s knee from repeated loading."
+    },
+    {
+     "t": "Osteoarthritis",
+     "d": "Stiffness and ache with age-related changes."
+    }
+   ],
+   "helpTitle": "How we treat knee pain",
+   "helpLead": "Hands-on care for the knee, hip and ankle, with advice to keep you active.",
+   "treats": [
+    [
+     "physio",
+     "Progressive strengthening for the quads, hips and calves."
+    ],
+    [
+     "osteo",
+     "Hands-on treatment for the knee, hip and ankle."
+    ],
+    [
+     "massage",
+     "Sports massage for tight thigh and calf muscles."
+    ]
+   ],
+   "tips": [
+    "Reduce, don’t stop. Keep active within a comfortable level.",
+    "Swap running for cycling or swimming for a few weeks.",
+    "Ice can help settle swelling after activity.",
+    "Avoid deep squats and kneeling while it’s sore."
+   ],
+   "redFlags": [
+    "Unable to put weight on your leg after an injury",
+    "A knee that is locked and won’t straighten",
+    "A hot, red, swollen knee with fever",
+    "Calf pain and swelling, especially after travel or surgery"
+   ],
+   "gpNote": "See your GP if swelling keeps coming back without an obvious cause.",
+   "team": [
+    "freta",
+    "emma",
+    "hafi",
+    "emre"
+   ],
+   "faqTitle": "Knee pain questions, answered",
+   "faqs": [
+    {
+     "q": "Can an osteopath treat knee pain?",
+     "a": "Yes. Osteopaths treat knee pain with hands-on treatment, looking at the hip and ankle as well as the knee."
+    },
+    {
+     "q": "Do I need a scan for my knee?",
+     "a": "Often not. A thorough assessment is usually enough. If we think a scan would help, we'll tell you and suggest seeing your GP."
+    },
+    {
+     "q": "Can I keep exercising?",
+     "a": "In most cases, yes. We'll advise you on how to adapt your training so you stay active while it recovers."
+    }
+   ],
+   "related": [
+    "sports",
+    "hip",
+    "foot",
+    "tendon"
+   ],
+   "ctaTitle": "Book knee pain treatment in Lichfield"
+  },
+  "foot": {
+   "name": "Foot & Ankle Pain",
+   "lower": "foot and ankle pain",
+   "hero": "hands-leg",
+   "heroPos": "50% 60%",
+   "introImg": "hands-deep",
+   "h1": "Foot & Ankle Pain Treatment in Lichfield",
+   "lead": "Treatment for ankle sprains, heel pain, plantar fasciitis and Achilles problems, so you can walk, run and train in comfort.",
+   "introTitle": "Foot and ankle pain treatment in Lichfield",
+   "intro": [
+    "Your feet and ankles take your full body weight with every step, so when they hurt, everything is harder. Our osteopaths treat foot and ankle pain for walkers, runners and footballers from Lichfield and the surrounding areas.",
+    "From a rolled ankle that never quite recovered to heel pain that's worst first thing in the morning, we'll look for the cause and use hands-on treatment and advice to help get you back on your feet."
+   ],
+   "introAlt": "Hands-on soft tissue treatment",
+   "symTitle": "Common foot and ankle symptoms",
+   "symptoms": [
+    "Heel pain, especially with your first steps in the morning",
+    "Pain and stiffness at the back of the ankle",
+    "An ankle that keeps rolling or feels unstable",
+    "Swelling after walking or sport",
+    "Pain in the ball of the foot"
+   ],
+   "causeTitle": "Common causes",
+   "causes": [
+    {
+     "t": "Plantar fasciitis",
+     "d": "Irritation of the tissue under the foot."
+    },
+    {
+     "t": "Ankle sprains",
+     "d": "Ligament injuries from rolling the ankle."
+    },
+    {
+     "t": "Achilles tendinopathy",
+     "d": "Pain and stiffness in the Achilles tendon."
+    },
+    {
+     "t": "Footwear & training changes",
+     "d": "New shoes or a sudden jump in mileage."
+    },
+    {
+     "t": "Stiffness after old injuries",
+     "d": "Ankles that never fully regained movement."
+    }
+   ],
+   "helpTitle": "How we treat foot and ankle pain",
+   "helpLead": "Hands-on care for the foot and ankle, and for the knee and hip above them.",
+   "treats": [
+    [
+     "physio",
+     "Strength and balance rehab to rebuild a stable, resilient ankle."
+    ],
+    [
+     "osteo",
+     "Hands-on treatment for the foot, ankle, knee and hip."
+    ],
+    [
+     "massage",
+     "Sports massage for tight calf and foot muscles."
+    ]
+   ],
+   "tips": [
+    "Wear supportive shoes and avoid going barefoot on hard floors.",
+    "Roll your foot over a cold bottle for heel pain.",
+    "Do gentle calf stretches or raises little and often.",
+    "Reduce running mileage rather than stopping completely."
+   ],
+   "redFlags": [
+    "Unable to put any weight on your foot after an injury",
+    "An obvious deformity or bone sticking out",
+    "Calf pain, swelling and redness, especially after travel",
+    "A wound, colour change or loss of feeling in the foot if you have diabetes"
+   ],
+   "gpNote": "See your GP if you hear a “snap” at the back of the ankle, as this could be an Achilles rupture and needs urgent assessment.",
+   "team": [
+    "freta",
+    "emma",
+    "hafi",
+    "emre"
+   ],
+   "faqTitle": "Foot and ankle questions, answered",
+   "faqs": [
+    {
+     "q": "Can you treat plantar fasciitis?",
+     "a": "Yes. We combine hands-on treatment with stretches and footwear advice."
+    },
+    {
+     "q": "My ankle sprain never fully recovered. Can you help?",
+     "a": "Yes. Ongoing pain or instability after a sprain is common, and we'll assess the ankle and the way you move."
+    },
+    {
+     "q": "How quickly can I get back to running?",
+     "a": "It depends on the injury. We'll advise you on when it's sensible to build back up."
+    }
+   ],
+   "related": [
+    "tendon",
+    "knee",
+    "sports",
+    "hip"
+   ],
+   "ctaTitle": "Book foot and ankle treatment in Lichfield"
+  },
+  "headaches": {
+   "name": "Headaches & Migraines",
+   "lower": "headaches",
+   "hero": "hands-upper",
+   "heroPos": "50% 40%",
+   "introImg": "osteo-freta",
+   "h1": "Headache & Migraine Help in Lichfield",
+   "lead": "Help for tension headaches and neck-related headaches, and support alongside your GP for migraines.",
+   "introTitle": "Help with headaches in Lichfield",
+   "intro": [
+    "Many headaches are linked to tension in the neck, shoulders and jaw, especially if you spend long hours at a desk or carry stress in your upper body. Our osteopaths help people from Lichfield and the surrounding areas with headaches linked to neck and shoulder tension.",
+    "We assess your neck, upper back and jaw, then use gentle hands-on treatment and practical advice on posture, screen set-up and sleep. If you have migraines, we work alongside your GP's care rather than replacing it."
+   ],
+   "introAlt": "An osteopath assessing a patient's neck and shoulder",
+   "symTitle": "Headaches we commonly help with",
+   "symptoms": [
+    "A band-like tightness around the head",
+    "Headaches starting at the base of the skull",
+    "Headaches that get worse through the working day",
+    "Pain behind the eyes with neck and shoulder tension",
+    "Headaches linked to jaw clenching or teeth grinding"
+   ],
+   "causeTitle": "Common triggers",
+   "causes": [
+    {
+     "t": "Neck & shoulder tension",
+     "d": "Often from desk work and screens."
+    },
+    {
+     "t": "Stress",
+     "d": "Tight muscles and poor sleep."
+    },
+    {
+     "t": "Jaw clenching",
+     "d": "Tension through the jaw and temples."
+    },
+    {
+     "t": "Dehydration & skipped meals",
+     "d": "Common, easily overlooked triggers."
+    },
+    {
+     "t": "Migraine triggers",
+     "d": "Hormones, sleep changes, certain foods."
+    }
+   ],
+   "helpTitle": "How we help with headaches",
+   "helpLead": "Easing tension in the neck, shoulders and jaw, and helping you avoid triggers.",
+   "treats": [
+    [
+     "osteo",
+     "Gentle treatment of the neck, upper back and jaw to ease tension."
+    ],
+    [
+     "acu",
+     "NICE recommends acupuncture as an option to help prevent migraines and tension-type headaches."
+    ],
+    [
+     "cranial",
+     "A very gentle approach for people who prefer light-touch treatment."
+    ]
+   ],
+   "tips": [
+    "Keep a headache diary to spot your triggers.",
+    "Drink water regularly and don’t skip meals.",
+    "Take regular screen breaks and check your desk set-up.",
+    "Use heat on tight neck and shoulder muscles."
+   ],
+   "redFlags": [
+    "A sudden, severe “worst ever” headache",
+    "Headache with fever, stiff neck or a rash",
+    "Headache after a head injury",
+    "Headache with weakness, slurred speech, confusion or vision loss"
+   ],
+   "gpNote": "See your GP if headaches are new and getting worse, or if you’re over 50 and have a new type of headache.",
+   "team": [
+    "freta",
+    "emma",
+    "hafi",
+    "david"
+   ],
+   "faqTitle": "Headache questions, answered",
+   "faqs": [
+    {
+     "q": "Can an osteopath help with headaches?",
+     "a": "Osteopathy can help tension-type and neck-related headaches by easing tension in the neck, shoulders and upper back."
+    },
+    {
+     "q": "Can you treat migraines?",
+     "a": "We don't replace medical care for migraine. Treating neck and shoulder tension may help some people, alongside their GP's care."
+    },
+    {
+     "q": "How quickly will I notice a difference?",
+     "a": "It varies from person to person. We'll review your progress with you as we go."
+    }
+   ],
+   "related": [
+    "neck",
+    "jaw",
+    "shoulder",
+    "back"
+   ],
+   "ctaTitle": "Book headache treatment in Lichfield"
+  },
+  "sciatica": {
+   "name": "Sciatica",
+   "lower": "sciatica",
+   "hero": "hands-back",
+   "heroPos": "50% 50%",
+   "introImg": "hands-deep",
+   "h1": "Sciatica Treatment in Lichfield",
+   "lead": "Help for leg pain, numbness and tingling caused by an irritated sciatic nerve, with a clear plan to help it settle.",
+   "introTitle": "Sciatica treatment in Lichfield",
+   "intro": [
+    "Sciatica is pain that travels from the lower back or buttock down the leg, sometimes with pins and needles or numbness. It can be intense, but most cases settle with the right care. Our osteopaths and physiotherapist help people from Lichfield and the surrounding areas manage sciatica and get back to normal life.",
+    "We'll assess your back, pelvis and nerves carefully, explain what's going on, and use gentle treatment and advice to help calm symptoms down."
+   ],
+   "introAlt": "Hands-on soft tissue treatment",
+   "symTitle": "Common sciatica symptoms",
+   "symptoms": [
+    "Pain spreading from the buttock down the back of the leg",
+    "Burning, shooting or electric-shock pain",
+    "Pins and needles or numbness in the leg or foot",
+    "Pain worse when sitting, coughing or sneezing",
+    "Leg pain that is worse than back pain"
+   ],
+   "causeTitle": "What causes sciatica",
+   "causes": [
+    {
+     "t": "Disc bulge",
+     "d": "The most common cause, and it usually settles over time."
+    },
+    {
+     "t": "Spinal stenosis",
+     "d": "Narrowing around the nerves, more common with age."
+    },
+    {
+     "t": "Muscle tightness",
+     "d": "Including the piriformis in the buttock."
+    },
+    {
+     "t": "Pregnancy",
+     "d": "Changes in posture and load on the pelvis."
+    },
+    {
+     "t": "Long periods of sitting",
+     "d": "Can aggravate an irritated nerve."
+    }
+   ],
+   "helpTitle": "How we treat sciatica",
+   "helpLead": "Gentle, progressive care to calm the nerve and restore movement.",
+   "treats": [
+    [
+     "osteo",
+     "Gentle hands-on treatment to reduce stiffness and muscle guarding."
+    ],
+    [
+     "physio",
+     "Nerve mobility and strengthening exercises to support recovery."
+    ],
+    [
+     "acu",
+     "Can help reduce pain while the nerve settles."
+    ]
+   ],
+   "tips": [
+    "Keep moving gently. Short walks often help.",
+    "Change position regularly rather than sitting for long periods.",
+    "Lie on your back with your knees bent over pillows for relief.",
+    "Speak to your pharmacist or GP about pain relief options."
+   ],
+   "redFlags": [
+    "Numbness or tingling around your genitals or bottom",
+    "Loss of bladder or bowel control, or difficulty peeing",
+    "Weakness or numbness in both legs, or legs that are getting weaker",
+    "Severe pain after a serious fall or accident"
+   ],
+   "gpNote": "See your GP if the leg pain is getting worse, your foot is weak or catching, or symptoms haven’t improved after a few weeks.",
+   "team": [
+    "freta",
+    "emma",
+    "hafi",
+    "emre"
+   ],
+   "faqTitle": "Sciatica questions, answered",
+   "faqs": [
+    {
+     "q": "Can an osteopath help with sciatica?",
+     "a": "Yes. Osteopathy and advice can help ease sciatic pain and support recovery, alongside your GP where needed."
+    },
+    {
+     "q": "Should I rest with sciatica?",
+     "a": "Short periods of rest can help in the first few days, but gentle movement usually speeds recovery."
+    },
+    {
+     "q": "Do I need a scan?",
+     "a": "Most people don't. Scans are usually only needed if symptoms are severe, getting worse, or not improving."
+    }
+   ],
+   "related": [
+    "back",
+    "hip",
+    "sports",
+    "knee"
+   ],
+   "ctaTitle": "Book sciatica treatment in Lichfield"
+  },
+  "sports": {
+   "name": "Sports Injuries",
+   "lower": "sports injuries",
+   "hero": "massage-zoe",
+   "heroPos": "50% 45%",
+   "introImg": "hands-leg",
+   "h1": "Sports Injury Treatment in Lichfield",
+   "lead": "Osteopathy, physiotherapy and sports massage for strains, sprains and overuse injuries, so you can get back to training with confidence.",
+   "introTitle": "Sports injury treatment in Lichfield",
+   "intro": [
+    "Whether you run, play football or train at the gym, injuries happen. Our osteopaths, physiotherapist and sports massage therapist help active people from Lichfield and the surrounding areas recover from sports injuries.",
+    "Sports injuries are part of the broad spectrum of osteopathic skills our team covers. We'll assess the problem, treat it hands-on, and advise you on getting back to your sport."
+   ],
+   "introAlt": "Treatment of the leg",
+   "symTitle": "Injuries we commonly treat",
+   "symptoms": [
+    "Hamstring, calf and groin strains",
+    "Ankle and knee sprains",
+    "Runner’s knee and shin splints",
+    "Tennis and golfer’s elbow",
+    "Shoulder pain from lifting or throwing"
+   ],
+   "causeTitle": "Why sports injuries happen",
+   "causes": [
+    {
+     "t": "Doing too much too soon",
+     "d": "Sudden jumps in training load."
+    },
+    {
+     "t": "Not enough recovery",
+     "d": "Poor sleep and back-to-back sessions."
+    },
+    {
+     "t": "Weakness or imbalance",
+     "d": "Muscles not ready for the demands of your sport."
+    },
+    {
+     "t": "Old injuries",
+     "d": "Not fully rehabilitated the first time."
+    },
+    {
+     "t": "Contact & accidents",
+     "d": "Tackles, falls and awkward landings."
+    }
+   ],
+   "helpTitle": "How we treat sports injuries",
+   "helpLead": "Treatment built around your sport and your goals.",
+   "treats": [
+    [
+     "physio",
+     "Staged rehab and return-to-sport planning."
+    ],
+    [
+     "massage",
+     "Sports massage to speed recovery and ease tight muscles."
+    ],
+    [
+     "osteo",
+     "Assessment and hands-on treatment of the injured area."
+    ]
+   ],
+   "tips": [
+    "For the first 48 hours, protect the area and avoid heavy loading.",
+    "Keep gently moving as pain allows.",
+    "Don’t return to full training until you can hop, jog and change direction pain-free.",
+    "Build training up by no more than about 10% a week."
+   ],
+   "redFlags": [
+    "A suspected broken bone or obvious deformity",
+    "Unable to put weight on your leg",
+    "A head injury with confusion, vomiting or drowsiness",
+    "Severe swelling with numbness or a cold, pale limb"
+   ],
+   "gpNote": "If you hear a pop and lose strength immediately, for example in the Achilles or knee, get assessed urgently.",
+   "team": [
+    "david",
+    "hafi",
+    "emre",
+    "zoe"
+   ],
+   "faqTitle": "Sports injury questions, answered",
+   "faqs": [
+    {
+     "q": "Should I see an osteopath, a physio or a massage therapist?",
+     "a": "All three can help. Call us if you're not sure who to book and we'll point you to the right person."
+    },
+    {
+     "q": "Can I keep training?",
+     "a": "Often yes, with changes. We'll advise you on what you can keep doing while you recover."
+    }
+   ],
+   "related": [
+    "knee",
+    "foot",
+    "tendon",
+    "shoulder"
+   ],
+   "ctaTitle": "Book a sports injury appointment in Lichfield"
+  },
+  "tendon": {
+   "name": "Tendon Problems",
+   "lower": "tendon pain",
+   "hero": "osteo-arm",
+   "heroPos": "50% 50%",
+   "introImg": "hands-leg",
+   "h1": "Tendon Pain Treatment in Lichfield",
+   "lead": "Treatment and advice for Achilles, tennis elbow, knee and shoulder tendon pain.",
+   "introTitle": "Tendon pain treatment in Lichfield",
+   "intro": [
+    "Tendon problems, often called tendinopathy or tendonitis, can be slow and frustrating, especially if rest hasn't helped. Our osteopaths and physiotherapist help people from Lichfield and the surrounding areas with tendon pain in the Achilles, knee, hip, elbow and shoulder.",
+    "Tendons usually recover best with the right kind of loading, not complete rest. We'll assess the problem, use hands-on treatment where it helps, and advise you on how to manage your activity."
+   ],
+   "introAlt": "Treatment of the leg",
+   "symTitle": "Common tendon problems",
+   "symptoms": [
+    "Achilles pain and morning stiffness",
+    "Tennis elbow or golfer’s elbow",
+    "Pain below the kneecap (jumper’s knee)",
+    "Pain on the outside of the hip",
+    "Shoulder pain lifting your arm"
+   ],
+   "causeTitle": "Why tendons become painful",
+   "causes": [
+    {
+     "t": "Sudden increase in load",
+     "d": "More running, lifting or repetitive work."
+    },
+    {
+     "t": "Not enough recovery",
+     "d": "Tendons adapt slowly."
+    },
+    {
+     "t": "Weakness",
+     "d": "Muscles that can’t support the load."
+    },
+    {
+     "t": "Age & hormones",
+     "d": "Tendons can become more sensitive with age and menopause."
+    },
+    {
+     "t": "Some medications",
+     "d": "Certain antibiotics and steroids. Ask your GP."
+    }
+   ],
+   "helpTitle": "How we treat tendon pain",
+   "helpLead": "Hands-on care and advice on loading the tendon in the right way.",
+   "treats": [
+    [
+     "physio",
+     "Progressive tendon loading programmes tailored to you."
+    ],
+    [
+     "laser",
+     "Can be added to support pain relief alongside rehab."
+    ],
+    [
+     "osteo",
+     "Assessment and hands-on treatment around the affected tendon."
+    ]
+   ],
+   "tips": [
+    "Don’t rest completely. Reduce the activity that flares it instead.",
+    "Avoid stretching a painful tendon hard.",
+    "Slow, heavy strength exercises are often very helpful.",
+    "Be patient, as tendons often take 3 months or more to improve."
+   ],
+   "redFlags": [
+    "A sudden pop or snap with immediate weakness",
+    "Unable to stand on tiptoe after an Achilles injury",
+    "A hot, red, swollen joint with fever",
+    "Sudden severe pain with no obvious cause"
+   ],
+   "gpNote": "See your GP if tendon pain started after taking certain antibiotics.",
+   "team": [
+    "freta",
+    "emma",
+    "hafi",
+    "emre"
+   ],
+   "faqTitle": "Tendon pain questions, answered",
+   "faqs": [
+    {
+     "q": "What is the difference between tendonitis and tendinopathy?",
+     "a": "Tendinopathy is the more accurate term for most long-standing tendon pain, which usually isn't caused by inflammation."
+    },
+    {
+     "q": "Should I rest my tendon?",
+     "a": "Complete rest usually makes tendons weaker. The right kind of activity is normally an important part of recovery."
+    }
+   ],
+   "related": [
+    "foot",
+    "sports",
+    "shoulder",
+    "knee"
+   ],
+   "ctaTitle": "Book tendon pain treatment in Lichfield"
+  },
+  "jaw": {
+   "name": "TMJ / Jaw Pain",
+   "lower": "jaw pain",
+   "hero": "hands-upper",
+   "heroPos": "50% 35%",
+   "introImg": "osteo-freta",
+   "h1": "Jaw Pain & TMJ Treatment in Lichfield",
+   "lead": "Gentle treatment for jaw pain, clicking and clenching, and the neck and head tension that often comes with it.",
+   "introTitle": "Jaw pain treatment in Lichfield",
+   "intro": [
+    "Pain around the jaw joint (TMJ) can make eating, talking and yawning uncomfortable, and is often linked to clenching, grinding and tension in the neck. Our osteopaths help people from Lichfield and the surrounding areas ease jaw pain with gentle, hands-on treatment.",
+    "We look at your jaw, neck and posture together, use gentle techniques to release tight muscles, and give you simple habits to reduce strain. Where useful, we'll suggest checking with your dentist."
+   ],
+   "introAlt": "An osteopath assessing a patient's neck and shoulder",
+   "symTitle": "Common jaw symptoms",
+   "symptoms": [
+    "Pain in front of the ear or around the jaw",
+    "Clicking, popping or grinding when opening your mouth",
+    "Difficulty opening your mouth fully",
+    "Headaches or earache with no ear infection",
+    "Jaw ache in the morning from clenching"
+   ],
+   "causeTitle": "What causes jaw pain",
+   "causes": [
+    {
+     "t": "Clenching & grinding",
+     "d": "Often during sleep or stress."
+    },
+    {
+     "t": "Neck & posture",
+     "d": "Forward head posture can strain the jaw."
+    },
+    {
+     "t": "Stress",
+     "d": "Tension in the jaw, temples and neck."
+    },
+    {
+     "t": "Dental work",
+     "d": "Long appointments with the mouth wide open."
+    },
+    {
+     "t": "Chewing habits",
+     "d": "Gum, hard foods or chewing on one side."
+    }
+   ],
+   "helpTitle": "How we treat jaw pain",
+   "helpLead": "Gentle care for the jaw, neck and head together.",
+   "treats": [
+    [
+     "osteo",
+     "Gentle release of the jaw muscles, neck and upper back."
+    ],
+    [
+     "cranial",
+     "A light-touch approach that many jaw pain patients find relaxing."
+    ],
+    [
+     "acu",
+     "Fine needles to ease tight jaw and neck muscles."
+    ]
+   ],
+   "tips": [
+    "Rest your jaw by choosing softer foods for a while.",
+    "Avoid chewing gum and very wide yawns.",
+    "Notice clenching during the day: lips together, teeth apart.",
+    "Use gentle warmth on the side of the face."
+   ],
+   "redFlags": [
+    "Jaw pain with chest pain or breathlessness",
+    "A locked jaw you can’t open or close",
+    "Swelling of the face with fever",
+    "Jaw pain after a significant injury to the face"
+   ],
+   "gpNote": "See your dentist or GP if you have tooth pain, swelling, or symptoms that aren’t improving.",
+   "team": [
+    "freta",
+    "emma",
+    "hafi",
+    "david"
+   ],
+   "faqTitle": "Jaw pain questions, answered",
+   "faqs": [
+    {
+     "q": "Can an osteopath help with TMJ pain?",
+     "a": "Yes. Osteopaths can help ease jaw pain by treating the jaw muscles, neck and posture, often alongside your dentist's care."
+    },
+    {
+     "q": "Should I see a dentist instead?",
+     "a": "If you grind your teeth, a dentist can check whether a night guard would help. Osteopathy and dental care often work well together."
+    },
+    {
+     "q": "Can jaw problems cause headaches?",
+     "a": "Yes. Tension in the jaw muscles is a common cause of headaches around the temples."
+    }
+   ],
+   "related": [
+    "headaches",
+    "neck",
+    "shoulder",
+    "back"
+   ],
+   "ctaTitle": "Book jaw pain treatment in Lichfield"
+  }
+ }
+}

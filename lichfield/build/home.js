@@ -79,7 +79,7 @@
       C({}, [
         eyebrow('Welcome to Our Clinic'),
         heading('A busy Lichfield clinic, caring for patients since 1983', { t: { s: 44, st: 30, sm: 28, lh: 1.1, lhm: 1.15, ls: -0.025 }, x: { _margin: dims(24, 0, 0, 0) } }),
-        text('<p>Lichfield Osteopathic Practice is a clinic of four registered osteopaths and a sports massage therapist. Our dedicated team covers a broad spectrum of osteopathic skills, including classical, cranial and paediatric osteopathy, sports injuries and functional medicine. We look forward to helping you on your pathway to health.</p>',
+        text('<p>Lichfield Osteopathic Practice is a clinic of four registered osteopaths, a physiotherapist and a sports massage therapist. Our dedicated team covers a broad spectrum of osteopathic skills, including classical, cranial and paediatric osteopathy, sports injuries and functional medicine. We look forward to helping you on your pathway to health.</p>',
           { t: { s: 18, lh: 1.75 }, x: { _margin: dims(24, 0, 0, 0), _element_width: 'initial', _element_custom_width: px(600), _element_custom_width_tablet: pct(100) } }),
         C({ flex_direction: 'row', flex_wrap: 'wrap', flex_gap: gap(12), margin: dims(32, 0, 0, 0) }, [
           button('Meet the Team', L.team, { kind: 'olive' }),
@@ -96,52 +96,59 @@
       border_border: 'solid', border_width: dims(1, 0, 1, 0), border_color: '#B7AA99' }, [
       heading('What We Offer', { tag: 'p', color: '#4F5945', t: { f: IN, s: 11, w: 600, ls: 0.18, tt: 'uppercase', lh: 1.4 }, x: { _flex_size: 'none' } }),
       C({ css_classes: 'ex-marquee', flex_direction: 'row' }, [
-        text('<p>' + [0, 1].map(() => ['Classical Osteopathy', 'Cranial Osteopathy', 'Paediatric Osteopathy', 'Sports Injuries', 'Sports &amp; Deep Tissue Massage', 'Pregnancy Massage']
+        text('<p>' + [0, 1].map(() => ['Classical Osteopathy', 'Cranial Osteopathy', 'Paediatric Osteopathy', 'Physiotherapy', 'Acupuncture', 'Laser Therapy', 'Sports &amp; Deep Tissue Massage', 'Pregnancy Massage']
           .map(v => '<span>' + v + '</span><span style="color:#B7AA99">✦</span>').join('')).join('') + '</p>',
           { t: { f: IT, s: 24, ls: -0.015, lh: 1.4 }, x: { _css_classes: 'ex-marquee-track' } })
       ])
     ])
   ]);
 
-  /* 3. TREATMENTS: one carousel (Lichfield offers three treatments) */
-  const TREAT = [['Osteopathy', L.osteo, 'osteo-arm'], ['Cranial &amp; Baby Osteopathy', L.babies, 'cranial-baby'], ['Sports, Deep Tissue &amp; Pregnancy Massage', L.massage, 'massage-stock']];
-  S.services = () => section({ pt: 80, pb: 100, ptm: 64, pbm: 64, x: { _element_id: 'services', overflow: 'hidden' } }, [
-    C({ flex_direction: 'row', flex_wrap: 'wrap', flex_justify_content: 'space-between', flex_align_items: 'flex-end', flex_gap: gap(24) }, [
-      C({ css_classes: 'ex-shrink' }, [
-        eyebrow('Our Services'),
-        heading('Osteopathy for all the family', { t: { s: 44, st: 30, sm: 28, lh: 1.1, lhm: 1.15, ls: -0.025 }, x: { _margin: dims(24, 0, 0, 0) } })
-      ]),
-      text("<p>We offer osteopathy, massage and cranial osteopathy to help ease pain and support your body's natural ability to heal, whether you're dealing with back, neck, shoulder, hip or knee pain, or simply want to feel and move better day to day.</p>",
-        { t: { s: 17, lh: 1.7 }, x: { _element_width: 'initial', _element_custom_width: px(520), _element_custom_width_tablet: pct(100) } })
-    ]),
-    C({ margin: dims(40, 0, 0, 0) }, [carousel(slides(TREAT), { show: '3' })])
+  /* 3. TREATMENTS: tabs with a carousel in each (as on Exhale) */
+  const OSTEO = [['Osteopathy', L.osteo, 'osteo-arm'], ['Cranial &amp; Baby Osteopathy', L.babies, 'cranial-baby'],
+    ['Sports &amp; Deep Tissue Massage', L.massage, 'massage-stock'], ['Acupuncture', L.acu, 'acupuncture']];
+  const RECOV = [['Physiotherapy', L.physio, 'emre'], ['Laser Therapy', L.laser, 'laser'], ['Sports Massage', L.massage, 'massage-zoe']];
+  const tabsCss = 'selector .e-n-tabs-heading{border-bottom:1px solid #B7AA99;gap:0}\nselector .e-n-tab-title{padding:18px 48px 20px;margin-bottom:-1px;border:0;border-bottom:2px solid transparent;background:transparent}\nselector .e-n-tab-title[aria-selected="true"]{border-bottom-color:#4F5945}\nselector .e-n-tabs-content > .e-con{padding:0;border:0}\n@media(max-width:560px){selector .e-n-tab-title{padding:14px 12px;letter-spacing:.08em}}';
+  S.services = () => section({ pt: 80, pb: 100, ptm: 64, pbm: 64, x: { _element_id: 'services', overflow: 'hidden', position: 'relative' } }, [
+    heading('Hands-on treatment, from first twinge to full recovery.', { t: { s: 34, st: 30, sm: 28, lh: 1.15, ls: -0.02 },
+      x: { _element_width: 'initial', _element_custom_width: px(520), _element_custom_width_tablet: pct(100),
+        _position: 'absolute', _offset_orientation_h: 'end', _offset_x_end: px(0), _offset_y: px(0), _z_index: 2,
+        custom_css: '@media (max-width:980px){selector{position:static!important;margin:0 0 24px!important}}' } }),
+    W('nested-tabs', Object.assign({
+      tabs: [{ _id: EX.rid(), tab_title: 'Osteopathy & Wellbeing' }, { _id: EX.rid(), tab_title: 'Recovery & Performance' }],
+      tabs_justify_horizontal: 'start', breakpoint_selector: 'none', tabs_title_space_between: px(0), tabs_title_spacing: px(30),
+      tabs_title_background_color_background: 'classic', tabs_title_background_color_color: 'rgba(0,0,0,0)',
+      tabs_title_background_color_hover_background: 'classic', tabs_title_background_color_hover_color: 'rgba(0,0,0,0)',
+      tabs_title_background_color_active_background: 'classic', tabs_title_background_color_active_color: 'rgba(0,0,0,0)',
+      title_text_color: '#272B26', title_text_color_hover: '#4F5945', title_text_color_active: '#4F5945',
+      custom_css: tabsCss
+    }, EX.typo({ f: IN, s: 15, w: 500, ls: 0.18, tt: 'uppercase', lh: 1.3 }, 'title_typography')), [
+      C({ padding: all(0) }, [carousel(slides(OSTEO))]),
+      C({ padding: all(0) }, [carousel(slides(RECOV), { show: '3' })])
+    ])
   ]);
 
-  /* 4. CONDITIONS card over photo (from the live Osteopathy page) */
-  const CONDS = ['Back pain', 'Neck &amp; shoulder pain', 'Headaches', 'Knee &amp; ankle pain', 'Joint problems &amp; stiffness', 'Arthritis pain',
-    'Repetitive strain injuries', 'Posture problems from driving or work', 'Changes to posture in pregnancy', 'Sports injuries'];
+  /* 4. CONDITIONS card over photo (links to the What We Treat pages, as on Exhale) */
+  const CONDS = [['Back Pain', 'hands-back', L.back], ['Neck Pain', 'hands-upper', L.neck], ['Shoulder Pain', 'osteo-arm', L.shoulder], ['Hip Pain', 'hands-deep', L.hip],
+    ['Knee Pain', 'hands-leg', L.knee], ['Foot &amp; Ankle Pain', 'hands-leg', L.ankle], ['Headaches &amp; Migraines', 'hands-upper', L.head], ['Sciatica', 'hands-deep', L.sciatica],
+    ['Sports Injuries', 'massage-zoe', L.sports], ['Tendon Problems', 'osteo-arm', L.tendon], ['TMJ / Jaw Pain', 'osteo-freta', L.jaw]];
   S.conditions = () => section({ pt: 90, pb: 90, ptm: 64, pbm: 64, x: { _element_id: 'conditions',
     background_background: 'classic', background_color: '#7B826C', background_image: img('hands-back'),
     background_position: 'initial', background_xpos: pct(75), background_ypos: pct(50), background_size: 'cover' } }, [
     C({ width: pct(62), width_tablet: pct(100), background_background: 'classic', background_color: '#F5F2EA', border_radius: all(3),
       padding: dims(70, 70, 64, 70), padding_tablet: dims(56, 48, 52, 48), padding_mobile: dims(36, 22, 32, 22) }, [
       eyebrow('How We Can Help'),
-      heading('Common problems<br>we treat', { t: { s: 56, st: 30, sm: 28, lh: 1.1, lhm: 1.15, ls: -0.03 }, x: { _margin: dims(24, 0, 0, 0) } }),
-      C(grid(2, { grid_columns_grid_mobile: { unit: 'fr', size: 1, sizes: [] }, grid_gaps: gaps(16, 28), margin: dims(34, 0, 0, 0) }),
-        CONDS.map(n => C({ html_tag: 'a', link: { url: L.osteo, is_external: '', nofollow: '' }, flex_direction: 'row', flex_align_items: 'center', flex_gap: gap(14),
-          padding: dims(0, 0, 14, 0), border_border: 'solid', border_width: dims(0, 0, 1, 0), border_color: '#B7AA99' }, [
-          C({ css_classes: 'ex-fit', width: px(26), min_height: px(26), flex_justify_content: 'center', flex_align_items: 'center', border_radius: all(50, '%'), padding: all(0),
-            background_background: 'classic', background_color: '#E6E0D5' }, [W('icon', { selected_icon: icon('tick'), primary_color: '#4F5945', size: px(14) })]),
-          heading(n, { tag: 'span', t: { f: IN, s: 19, w: 500, lh: 1.35 } })
-        ]))),
-      text('<p>Not sure if we can help? Call us on <a class="ex-underline-olive" href="' + SITE.tel + '">' + SITE.phone + '</a> for a quick chat before you book.</p>',
-        { t: { s: 16, lh: 1.7 }, x: { _margin: dims(28, 0, 0, 0) } })
+      heading('Common conditions<br>we treat', { t: { s: 56, st: 30, sm: 28, lh: 1.1, lhm: 1.15, ls: -0.03 }, x: { _margin: dims(24, 0, 0, 0) } }),
+      C(grid(2, { grid_columns_grid_mobile: { unit: 'fr', size: 1, sizes: [] }, grid_gaps: gaps(22, 28), margin: dims(34, 0, 0, 0) }),
+        CONDS.map(([n, a, h]) => C({ html_tag: 'a', link: { url: h, is_external: '', nofollow: '' }, flex_direction: 'row', flex_align_items: 'center', flex_gap: gap(16) }, [
+          image(a, '', { x: { width: px(96), height: px(96), 'object-fit': 'cover', image_border_radius: all(3), _flex_size: 'none' } }),
+          heading(n, { tag: 'span', t: { f: IN, s: 20, w: 500, lh: 1.3 } })
+        ])))
     ])
   ]);
 
   /* 5. WHO WE HELP (from the live Osteopathy FAQ: "the young, the more mature person, manual workers, office professionals, pregnant women, children and sports people") */
   const WHO = [['Babies &amp; Children', L.babies, 'cranial-baby-2'], ['Office Professionals', L.osteo, 'hands-upper'], ['Manual Workers', L.osteo, 'hands-deep'],
-    ['Sports People', L.osteo, 'hands-leg'], ['Pregnancy', L.massage, 'massage-stock'], ['Later Life', L.osteo, 'osteo-arm']];
+    ['Sports People', L.sports, 'hands-leg'], ['Pregnancy', L.massage, 'massage-stock'], ['Later Life', L.osteo, 'osteo-arm']];
   S.who = () => section({ pt: 110, pb: 120, ptm: 64, pbm: 64, x: { _element_id: 'who', overflow: 'hidden', background_background: 'classic', background_color: '#4F5945' } }, [
     eyebrow('Who We Help', { light: true, pb: 18 }),
     C({ margin: dims(40, 0, 0, 0) }, [carousel(slides(WHO), { arrowBg: '#F5F2EA', arrowFg: '#4F5945', arrowHover: '#E6E0D5' })])
@@ -154,7 +161,7 @@
       heading('Meet the Clinicians Behind Your Recovery', { t: { s: 44, st: 30, sm: 28, lh: 1.1, lhm: 1.15, ls: -0.025 } }),
       button('View All Team', L.team, { kind: 'outline', h: 50, pl: 24, pr: 24 })
     ]),
-    C(grid(5, { grid_columns_grid_tablet: { unit: 'fr', size: 2, sizes: [] }, grid_columns_grid_mobile: { unit: 'fr', size: 2, sizes: [] }, grid_gaps: gaps(20), grid_gaps_mobile: gaps(16), margin: dims(40, 0, 0, 0) }),
+    C(grid(EX.TEAM.length, { grid_columns_grid_tablet: { unit: 'fr', size: 3, sizes: [] }, grid_columns_grid_mobile: { unit: 'fr', size: 2, sizes: [] }, grid_gaps: gaps(20), grid_gaps_mobile: gaps(16), margin: dims(40, 0, 0, 0) }),
       EX.TEAM.map(p => C({ html_tag: 'a', link: { url: p.href, is_external: '', nofollow: '' } }, [
         image(p.photo, p.name, { x: { _css_classes: 'ex-ratio-34 ex-pos-top', image_border_radius: all(3) } }),
         heading(p.name, { tag: 'h3', t: { s: 20, ls: -0.015, lh: 1.3 }, x: { _margin: dims(16, 0, 0, 0) } }),
