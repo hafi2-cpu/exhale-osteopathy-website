@@ -181,7 +181,6 @@
               [heading('[Headshot]', { tag: 'span', color: 'rgba(39,43,38,0.76)', t: { f: IN, s: 12, lh: 1.4 } })]),
           heading(esc(p.name), { tag: 'h3', t: { s: 22, ls: -0.015, lh: 1.3 }, x: { _margin: dims(16, 0, 0, 0) } }),
           heading(esc(p.role), { tag: 'span', color: 'rgba(39,43,38,0.76)', t: { f: IN, s: 14, lh: 1.75 } }),
-          heading('In clinic: ' + esc(p.days), { tag: 'span', color: 'rgba(39,43,38,0.76)', t: { f: IN, s: 14, lh: 1.6 } }),
           text('<p>' + esc(p.bio) + '</p>', { color: 'rgba(39,43,38,0.84)', t: { s: 15, lh: 1.6 }, x: { _margin: dims(10, 0, 0, 0) } }),
           heading('View Profile →', { tag: 'span', color: '#4F5945', t: { f: IN, s: 14, w: 500, lh: 1.75 }, x: { _margin: dims(10, 0, 0, 0) } })
         ]);

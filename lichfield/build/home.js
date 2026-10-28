@@ -159,7 +159,6 @@
         image(p.photo, p.name, { x: { _css_classes: 'ex-ratio-34 ex-pos-top', image_border_radius: all(3) } }),
         heading(p.name, { tag: 'h3', t: { s: 20, ls: -0.015, lh: 1.3 }, x: { _margin: dims(16, 0, 0, 0) } }),
         heading(p.role, { tag: 'span', color: 'rgba(39,43,38,0.76)', t: { f: IN, s: 14, lh: 1.75 } }),
-        heading('In clinic: ' + p.days.replace(/&/g, '&amp;'), { tag: 'span', color: 'rgba(39,43,38,0.76)', t: { f: IN, s: 14, lh: 1.6 } }),
         heading('View Profile →', { tag: 'span', color: '#4F5945', t: { f: IN, s: 14, w: 500, lh: 1.75 }, x: { _margin: dims(8, 0, 0, 0) } })
       ])))
   ]);
