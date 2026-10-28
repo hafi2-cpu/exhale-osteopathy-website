@@ -146,7 +146,10 @@
   EX.buildHeader = async function () {
     await EX.clearPage();
     return EX.insert(C({ content_width: 'boxed', flex_direction: 'row', flex_justify_content: 'space-between', flex_align_items: 'center', flex_gap: gap(24),
-      min_height: px(96), padding: dims(0, 30, 0, 30), padding_mobile: dims(0, 16, 0, 16), css_classes: 'ex-header', z_index: 50 }, [
+      min_height: px(96), padding: dims(0, 30, 0, 30), padding_mobile: dims(0, 16, 0, 16), css_classes: 'ex-header', z_index: 50,
+      // Lichfield: solid near-black bar so the header stands apart from the charcoal page sections
+      background_background: 'classic', background_color: '#1F1F1F', __globals__: { background_color: 'globals/colors?id=lopink' },
+      border_border: 'solid', border_width: dims(0, 0, 1, 0), border_color: 'rgba(215,214,164,0.18)' }, [
       logo(false),
       mega,
       C({ flex_direction: 'row', flex_align_items: 'center', flex_gap: gap(10), css_classes: 'ex-fit' }, [

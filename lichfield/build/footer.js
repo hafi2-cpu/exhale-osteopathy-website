@@ -58,7 +58,9 @@
       'selector .ex-ft-arrow:hover{color:#F4EFEB}',
       'selector .elementor-icon-list-item a:hover .elementor-icon-list-text{color:#F4EFEB}'
     ].join('\n');
-    const root = C({ content_width: 'boxed', html_tag: 'footer', background_background: 'classic', background_color: '#272B26',
+    // Lichfield: near-black with an olive top rule, so the footer stands apart from the charcoal Book Today band above it
+    const root = C({ content_width: 'boxed', html_tag: 'footer', background_background: 'classic', background_color: '#1F1F1F', __globals__: { background_color: 'globals/colors?id=lopink', border_color: 'globals/colors?id=secondary' },
+      border_border: 'solid', border_width: dims(3, 0, 0, 0), border_color: '#949366',
       padding: dims(80, 30, 36, 30), padding_mobile: dims(56, 16, 32, 16), custom_css: css }, [grid4, accred, bottom]);
     await EX.clearPage();
     return EX.insert(root);
