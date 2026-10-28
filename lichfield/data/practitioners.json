@@ -34,8 +34,7 @@
    "aboutTitle": "Treating the individual, not just the symptoms",
    "bio": [
     "Freta is a friendly and approachable osteopath who has completed her Master's degree in Osteopathic Medicine. She is passionate about helping patients overcome pain, restore movement and improve their overall quality of life.",
-    "With additional training in soft tissue therapy and a background in healthcare, Freta combines manual therapy, tailored rehabilitation and practical advice to help each patient achieve lasting results.",
-    "She believes in treating the individual, not just the symptoms, and enjoys working with people of all ages and activity levels."
+    "With additional training in soft tissue therapy and a background in healthcare, Freta combines manual therapy, tailored rehabilitation and practical advice to help each patient achieve lasting results."
    ],
    "quals": [
     {
@@ -49,6 +48,49 @@
    ],
    "treatments": [
     "osteo"
+   ],
+   "quote": "Freta believes in treating the individual, not just the symptoms, and enjoys working with people of all ages and activity levels.",
+   "quoteBy": "",
+   "interests": [
+    {
+     "t": "Pain relief",
+     "d": "Helping patients overcome pain.",
+     "img": "hands-back"
+    },
+    {
+     "t": "Restoring movement",
+     "d": "Getting stiff, restricted areas moving again.",
+     "img": "hands-leg"
+    },
+    {
+     "t": "Tailored rehabilitation",
+     "d": "Manual therapy combined with rehab and practical advice.",
+     "img": "hands-upper"
+    },
+    {
+     "t": "All ages &amp; activity levels",
+     "d": "Working with people of all ages and activity levels.",
+     "img": "osteo-arm"
+    }
+   ],
+   "credTitle": "Trained in osteopathic medicine and soft tissue therapy",
+   "recognition": [
+    {
+     "t": "Master's degree",
+     "d": "Master's degree in Osteopathic Medicine."
+    },
+    {
+     "t": "Soft tissue therapy",
+     "d": "Additional training in soft tissue therapy."
+    },
+    {
+     "t": "Healthcare background",
+     "d": "A background in healthcare."
+    },
+    {
+     "t": "Lasting results",
+     "d": "Combines manual therapy, tailored rehabilitation and practical advice."
+    }
    ]
   },
   "emma": {
@@ -86,8 +128,7 @@
    "bio": [
     "I graduated and qualified from the College of Osteopaths in 2020, having previously worked as a sports massage therapist since 2010.",
     "I am a keen swimmer, runner and triathlete, having completed a number of marathons and ultra marathons as well as triathlons of all distances. I also enjoy surfing and paddleboarding, basically being in water or on it!",
-    "My interest in the body, and how it functions, has been a passion since school. From being involved in sports, and as a mother of sporting kids, I've seen how movement and injury affect performance. Through my studies, and through being a mother, I've also seen how osteopathy can help with various stress patterns that can often come from within the womb as well as the whole birth process, and how this can affect us into adulthood.",
-    "I enjoy working with people from all backgrounds and ages, from babies to those in their golden years."
+    "My interest in the body, and how it functions, has been a passion since school. From being involved in sports, and as a mother of sporting kids, I've seen how movement and injury affect performance. Through my studies, and through being a mother, I've also seen how osteopathy can help with various stress patterns that can often come from within the womb as well as the whole birth process, and how this can affect us into adulthood."
    ],
    "quals": [
     {
@@ -102,6 +143,49 @@
    "treatments": [
     "osteo",
     "paediatric"
+   ],
+   "quote": "I enjoy working with people from all backgrounds and ages, from babies to those in their golden years.",
+   "quoteBy": "Emma Thompson",
+   "interests": [
+    {
+     "t": "Runners &amp; triathletes",
+     "d": "How movement and injury affect performance.",
+     "img": "hands-leg"
+    },
+    {
+     "t": "Babies &amp; birth",
+     "d": "Stress patterns from the womb and the birth process.",
+     "img": "cranial-baby-2"
+    },
+    {
+     "t": "All ages",
+     "d": "From babies to those in their golden years.",
+     "img": "osteo-arm"
+    },
+    {
+     "t": "Sports massage",
+     "d": "A sports massage therapist since 2010.",
+     "img": "hands-deep"
+    }
+   ],
+   "credTitle": "An osteopath with a background in sport",
+   "recognition": [
+    {
+     "t": "College of Osteopaths",
+     "d": "Graduated and qualified in 2020."
+    },
+    {
+     "t": "Sports massage since 2010",
+     "d": "Worked as a sports massage therapist before osteopathy."
+    },
+    {
+     "t": "Endurance athlete",
+     "d": "Marathons, ultra marathons and triathlons of all distances."
+    },
+    {
+     "t": "In the water",
+     "d": "A keen swimmer who also enjoys surfing and paddleboarding."
+    }
    ]
   },
   "hafi": {
@@ -139,8 +223,7 @@
    "bio": [
     "I qualified from The College of Osteopaths with a Bachelor of Honours Degree in Osteopathy. Further to this, I am a qualified Sports Therapist and Personal Trainer.",
     "As a keen sportsman, having played football and studied various martial arts to a high level, I am acutely aware of the mechanisms of sports injuries. This, coupled with my training in osteopathy and sports therapy, gives me insight into the cause and necessary treatment to facilitate optimal health and comfort.",
-    "Osteopathy has served to show me how important it is to assess the patient holistically, and be able to diagnose the root cause of the problem, rather than just treat the symptoms. Drawing on my knowledge and experience gained over the years, I treat a wide range of patient presentations, from minor issues to complex chronic complaints.",
-    "I look forward to meeting you and helping you on your pathway to health."
+    "Osteopathy has served to show me how important it is to assess the patient holistically, and be able to diagnose the root cause of the problem, rather than just treat the symptoms. Drawing on my knowledge and experience gained over the years, I treat a wide range of patient presentations, from minor issues to complex chronic complaints."
    ],
    "quals": [
     {
@@ -158,6 +241,49 @@
    ],
    "treatments": [
     "osteo"
+   ],
+   "quote": "I look forward to meeting you and helping you on your pathway to health.",
+   "quoteBy": "Hafi Rahman",
+   "interests": [
+    {
+     "t": "Sports injuries",
+     "d": "Understanding the mechanisms behind sports injuries.",
+     "img": "hands-leg"
+    },
+    {
+     "t": "Finding the root cause",
+     "d": "Assessing you holistically, not just treating symptoms.",
+     "img": "hands-back"
+    },
+    {
+     "t": "Chronic complaints",
+     "d": "From minor issues to complex chronic complaints.",
+     "img": "hands-upper"
+    },
+    {
+     "t": "Back to fitness",
+     "d": "Sports therapy and personal training alongside osteopathy.",
+     "img": "hands-deep"
+    }
+   ],
+   "credTitle": "Osteopath, sports therapist and personal trainer",
+   "recognition": [
+    {
+     "t": "B.Ost (Hons)",
+     "d": "Bachelor of Honours Degree in Osteopathy, The College of Osteopaths."
+    },
+    {
+     "t": "Sports Therapist",
+     "d": "A qualified sports therapist."
+    },
+    {
+     "t": "Personal Trainer",
+     "d": "A qualified personal trainer."
+    },
+    {
+     "t": "A keen sportsman",
+     "d": "Played football and studied various martial arts to a high level."
+    }
    ]
   },
   "david": {
@@ -196,7 +322,7 @@
     "I graduated with an Honours Degree in 2001 from the London School of Osteopathy and have worked at Lichfield Osteopathic Practice since 2003.",
     "I have a keen interest in sports injury rehabilitation. Supporting this pathway, I have undertaken a post-graduate course with the British Association of Sport & Exercise (BASEM), and further courses relating to strength and conditioning.",
     "I am familiar with a wide range of sports and the injuries associated with them, including running, climbing, sailing, swimming, and all things related to classical dance. I continue to look for ways to improve health and fitness within the osteopathic spectrum.",
-    "My approach is a mix of traditional structural osteopathy, corrective exercises and gentle cranial osteopathy. I am happy to treat all ages from 5 years upwards.",
+    "I am happy to treat all ages from 5 years upwards.",
     "I value my time at Lichfield Osteopathic Practice, and am very keen to work in a team setting, sharing concepts and best value outcomes for you, the patient."
    ],
    "quals": [
@@ -215,6 +341,49 @@
    ],
    "treatments": [
     "osteo"
+   ],
+   "quote": "My approach is a mix of traditional structural osteopathy, corrective exercises and gentle cranial osteopathy.",
+   "quoteBy": "David Brown",
+   "interests": [
+    {
+     "t": "Sports injury rehab",
+     "d": "A keen interest in sports injury rehabilitation.",
+     "img": "hands-leg"
+    },
+    {
+     "t": "Running, climbing &amp; swimming",
+     "d": "Familiar with a wide range of sports and their injuries.",
+     "img": "hands-deep"
+    },
+    {
+     "t": "Classical dance",
+     "d": "All things related to classical dance.",
+     "img": "osteo-arm"
+    },
+    {
+     "t": "Gentle cranial work",
+     "d": "Part of his approach, for all ages from 5 years upwards.",
+     "img": "hands-upper"
+    }
+   ],
+   "credTitle": "Over twenty years at Lichfield Osteopathic Practice",
+   "recognition": [
+    {
+     "t": "London School of Osteopathy",
+     "d": "Graduated with an Honours Degree in 2001."
+    },
+    {
+     "t": "At Lichfield since 2003",
+     "d": "Part of the Lichfield Osteopathic Practice team."
+    },
+    {
+     "t": "BASEM post-graduate course",
+     "d": "British Association of Sport & Exercise (BASEM)."
+    },
+    {
+     "t": "Strength &amp; conditioning",
+     "d": "Further courses in strength and conditioning."
+    }
    ]
   },
   "zoe": {
@@ -252,7 +421,7 @@
    "bio": [
     "I'm Zoe, a Level 4 qualified Sports Massage Therapist with a degree in Sport, Exercise and Health Science, and I am currently studying for an MSc in Physiotherapy.",
     "I have a strong passion for helping people move better, feel better and recover well, whether that's from training, injury, muscle tension or the general stresses of everyday life.",
-    "I enjoy working with a variety of clients and tailoring treatments to suit each individual's needs and goals. My aim is to create a professional, welcoming and relaxed environment where you can feel comfortable, supported and confident in your treatment."
+    "I enjoy working with a variety of clients and tailoring treatments to suit each individual's needs and goals."
    ],
    "quals": [
     {
@@ -270,6 +439,49 @@
    ],
    "treatments": [
     "massage"
+   ],
+   "quote": "My aim is to create a professional, welcoming and relaxed environment where you can feel comfortable, supported and confident in your treatment.",
+   "quoteBy": "Zoe Goodwin",
+   "interests": [
+    {
+     "t": "Muscle tension",
+     "d": "Tight, overworked muscles.",
+     "img": "hands-upper"
+    },
+    {
+     "t": "Training recovery",
+     "d": "Recovering well from training.",
+     "img": "hands-leg"
+    },
+    {
+     "t": "Injury recovery",
+     "d": "Support while you recover from injury.",
+     "img": "hands-deep"
+    },
+    {
+     "t": "Everyday stress",
+     "d": "The general stresses of everyday life.",
+     "img": "massage-stock"
+    }
+   ],
+   "credTitle": "Trained to get the most from every session",
+   "recognition": [
+    {
+     "t": "Level 4 Sports Massage",
+     "d": "A Level 4 qualified Sports Massage Therapist."
+    },
+    {
+     "t": "BSc Sport, Exercise &amp; Health Science",
+     "d": "A degree in Sport, Exercise and Health Science."
+    },
+    {
+     "t": "Physiotherapy MSc",
+     "d": "Currently studying for an MSc in Physiotherapy."
+    },
+    {
+     "t": "Tailored to you",
+     "d": "Treatments tailored to each individual's needs and goals."
+    }
    ]
   }
  }

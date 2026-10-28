@@ -1,7 +1,7 @@
 /* Lichfield Osteopathic Practice: practitioner profile, same template as Exhale (source/Practitioner.dc.html).
    EX.buildPractitioner(key, data) with data = lichfield/data/practitioners.json. Needs treatment.js (EX.tx).
-   Only what is on the live Lichfield profiles is used: sections that would need new facts (quote,
-   achievements, outside the clinic, reviews) are left out rather than filled with placeholders. */
+   Same sections as the Exhale profiles. Quotes, special interests and credentials come from each person's
+   live Lichfield bio; reviews and "outside the clinic" are left out until real content is supplied. */
 (function () {
   const { C, W, px, pct, dims, all, gap, section, heading, text, eyebrow, button, image, img, icon, IT, IN } = EX;
   const L = EX.L, SITE = EX.SITE;
@@ -33,7 +33,7 @@
           ]))),
           C({ flex_direction: 'row', flex_wrap: 'wrap', flex_gap: gap(14), margin: dims(36, 0, 0, 0) }, [
             button('Book with ' + esc(p.first), L.book, { kind: 'ivory', h: 62, fs: 18, icon: 'right', split: true, minw: 280, pl: 32, pr: 28 }),
-            button('About ' + esc(p.first), '#about', { kind: 'outline-light', h: 62, fs: 18, icon: 'right', split: true, minw: 240, pl: 32, pr: 28 })
+            button('Treatments', '#treatments', { kind: 'outline-light', h: 62, fs: 18, icon: 'right', split: true, minw: 240, pl: 32, pr: 28 })
           ])
         ]),
         C({ css_classes: 'ex-rel', flex_justify_content: 'flex-end' }, [
@@ -62,7 +62,12 @@
         C({}, [
           eyebrow('About ' + esc(p.first)),
           h2(esc(p.aboutTitle), { o: { x: { _margin: dims(24, 0, 0, 0) } } }),
-          ...p.bio.map(b => text('<p>' + esc(b) + '</p>', { t: { s: 18, lh: 1.8 }, x: { _margin: dims(20, 0, 0, 0) } }))
+          ...p.bio.map(b => text('<p>' + esc(b) + '</p>', { t: { s: 18, lh: 1.8 }, x: { _margin: dims(20, 0, 0, 0) } })),
+          ...(p.quote ? [C({ html_tag: 'figure', margin: dims(40, 0, 0, 0), padding: dims(32, 36, 32, 36), padding_mobile: dims(26, 24, 26, 24), background_background: 'classic', background_color: '#E6E0D5', border_radius: all(3) }, [
+            W('icon', { selected_icon: icon('quote'), primary_color: '#B7AA99', size: px(34), align: 'left', _css_classes: 'ex-icon-fill' }),
+            heading(esc(p.quote), { tag: 'p', t: { s: 26, st: 22, lh: 1.35, ls: -0.015 }, x: { _margin: dims(12, 0, 0, 0) } }),
+            ...(p.quoteBy ? [heading(esc(p.quoteBy), { tag: 'span', color: 'rgba(39,43,38,0.76)', t: { f: IN, s: 14, lh: 1.75 }, x: { _margin: dims(14, 0, 0, 0) } })] : [])
+          ])] : [])
         ]),
         C({ html_tag: 'aside', css_classes: 'ex-sticky', flex_gap: gap(18) }, [
           C({ background_background: 'classic', background_color: '#E6E0D5', border_radius: all(3), padding: dims(28, 26, 28, 26) }, [
@@ -86,12 +91,39 @@
       ])
     ]));
 
+    /* SPECIAL INTERESTS */
+    out.push(section({ pt: 96, pb: 96, ptm: 64, pbm: 64, x: { background_background: 'classic', background_color: '#E6E0D5' } }, [
+      eyebrow('Special Interests'),
+      h2('What ' + esc(p.first) + ' helps with most', { o: { x: { _margin: dims(24, 0, 0, 0) } } }),
+      C(grid(4, { grid_columns_grid_tablet: fr(2), grid_columns_grid_mobile: fr(1), grid_gaps: gaps(14), margin: dims(36, 0, 0, 0) }), p.interests.map(it =>
+        C({ background_background: 'classic', background_color: '#F5F2EA', border_radius: all(3), padding: all(0), overflow: 'hidden' }, [
+          image(it.img, '', { x: { _css_classes: 'ex-ratio-1610' } }),
+          C({ padding: dims(20, 22, 24, 22) }, [
+            heading(esc(it.t), { tag: 'h3', t: { s: 20, w: 500, ls: -0.01, lh: 1.3 } }),
+            text('<p>' + esc(it.d) + '</p>', { color: 'rgba(39,43,38,0.84)', t: { s: 15, lh: 1.6 }, x: { _margin: dims(6, 0, 0, 0) } })
+          ])
+        ])))
+    ]));
+
     /* TREATMENTS */
-    out.push(section({ pt: 96, pb: 96, ptm: 64, pbm: 64, x: { _element_id: 'treatments', css_classes: 'ex-anchor', background_background: 'classic', background_color: '#E6E0D5' } }, [
+    out.push(section({ x: { _element_id: 'treatments', css_classes: 'ex-anchor' } }, [
       eyebrow('Treatments'),
       h2('Book ' + esc(p.first) + ' for', { o: { x: { _margin: dims(24, 0, 0, 0) } } }),
       C(grid(3, { grid_columns_grid_tablet: fr(2), grid_columns_grid_mobile: fr(1), grid_gaps: gaps(14), margin: dims(36, 0, 0, 0) }), p.treatments.map((k, i) =>
         photoCard(TREAT[k][0], PAGE[k], TREAT[k][1], tones[i % 5], 'ex-card-560')))
+    ]));
+
+    /* CREDENTIALS */
+    out.push(section({ x: { background_background: 'classic', background_color: '#4F5945' } }, [
+      eyebrow('Credentials &amp; Experience', { light: true, pb: 18 }),
+      h2(esc(p.credTitle), { o: { color: '#F5F2EA', x: { _margin: dims(28, 0, 0, 0), _element_width: 'initial', _element_custom_width: px(760), _element_custom_width_tablet: pct(100) } } }),
+      C(grid(4, { grid_columns_grid_tablet: fr(2), grid_columns_grid_mobile: fr(1), grid_gaps: gaps(14), margin: dims(44, 0, 0, 0) }), p.recognition.map(r =>
+        C({ flex_gap: gap(12), padding: dims(28, 26, 30, 26), border_radius: all(3), background_background: 'classic', background_color: 'rgba(245,242,234,0.08)',
+          border_border: 'solid', border_width: all(1), border_color: 'rgba(245,242,234,0.18)' }, [
+          circle('award', 46, 20, { color: '#E6E0D5', box: { border_border: 'solid', border_width: all(1), border_color: 'rgba(245,242,234,0.35)' } }),
+          heading(esc(r.t), { tag: 'h3', color: '#F5F2EA', t: { s: 21, w: 500, ls: -0.015, lh: 1.25 } }),
+          text('<p>' + esc(r.d) + '</p>', { color: 'rgba(245,242,234,0.82)', t: { s: 15, lh: 1.6 } })
+        ])))
     ]));
 
     /* REST OF THE TEAM */
