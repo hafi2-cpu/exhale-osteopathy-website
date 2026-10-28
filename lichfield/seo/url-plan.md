@@ -20,6 +20,20 @@ or gets a 301 to the closest page.
 | `/emma-thompson/` | Emma Thompson - LOP | Profile |
 | `/zoe-goodwin/` | Zoe Goodwin - LOP | Profile |
 
+## New pages (not on the live site)
+
+| URL | Suggested title |
+|---|---|
+| `/about/` | About Us \| Lichfield Osteopathic Practice |
+| `/new-patients/` | New Patients: Your First Appointment \| Lichfield Osteopathic Practice |
+| `/physiotherapy/` | Physiotherapy in Lichfield \| Lichfield Osteopathic Practice |
+| `/acupuncture/` | Acupuncture in Lichfield \| Lichfield Osteopathic Practice |
+| `/laser-therapy/` | Laser Therapy in Lichfield \| Lichfield Osteopathic Practice |
+| `/emre-tosun/` | Emre Tosun, Physiotherapist \| Lichfield Osteopathic Practice |
+| `/back-pain/` and the other 10 condition pages | <Condition> Treatment in Lichfield \| Lichfield Osteopathic Practice |
+
+Note: `/about/` was a 404 on the live site, so it needs no redirect.
+
 ## Changed: 301 redirects to add at launch
 
 | From (live) | To | Why |
