@@ -1,0 +1,27 @@
+{
+  "_note": "Media for the Lichfield staging site. 'repo' files are in lichfield/media or lichfield/icons on this branch; 'live' files are copied from the live lichfield-osteopaths.co.uk Media Library.",
+  "photos": {
+    "hero":          { "live": "/wp-content/uploads/2026/01/spa-salon-therapy-treatment-2026-01-08-05-24-37-utc-scaled.jpg", "file": "lop-hero.jpg", "alt": "An osteopath treating a patient's shoulder" },
+    "osteo-freta":   { "live": "/wp-content/uploads/2026/09/DSC05426-scaled.jpg", "file": "lop-osteo-freta.jpg", "alt": "Freta assessing a patient's shoulder" },
+    "osteo-arm":     { "live": "/wp-content/uploads/2025/11/osteopath-treating-woman-s-arm-2025-03-09-02-27-40-utc-scaled.jpg", "file": "lop-osteo-arm.jpg", "alt": "An osteopath treating a patient's arm and shoulder" },
+    "massage-zoe":   { "live": "/wp-content/uploads/2026/09/DSC05300-2-scaled.jpg", "file": "lop-massage-zoe.jpg", "alt": "Zoe giving a sports massage" },
+    "massage-stock": { "live": "/wp-content/uploads/2025/12/young-indian-woman-lying-on-the-table-and-getting-2024-10-30-21-30-55-utc-scaled.jpg", "file": "lop-massage.jpg", "alt": "A deep tissue massage of the upper back" },
+    "baby-sleeping": { "live": "/wp-content/uploads/2025/11/sleeping-peacefully-2025-04-06-09-45-36-utc-scaled.jpg", "file": "lop-baby-sleeping.jpg", "alt": "A baby sleeping peacefully" },
+    "exterior":      { "live": "/wp-content/uploads/2025/11/lichfield_osteopaths_exterior_rottenrow.webp", "file": "lop-exterior.webp", "alt": "Lichfield Osteopathic Practice, 30 Rotten Row" },
+    "emma":          { "live": "/wp-content/uploads/2025/12/PHOTO-2025-12-16-17-42-26.jpg", "file": "lop-emma-thompson.jpg", "alt": "Emma Thompson" },
+    "freta":         { "live": "/wp-content/uploads/2026/07/Freta-Profile.png", "file": "lop-freta-teklesenbet.png", "alt": "Freta Teklesenbet" },
+    "zoe":           { "live": "/wp-content/uploads/2021/09/DSC05193-scaled.jpg", "file": "lop-zoe-goodwin.jpg", "alt": "Zoe Goodwin" },
+    "david":         { "live": "/wp-content/uploads/2021/09/Gemini_Generated_Image_84qc2684qc2684qc.png", "file": "lop-david-brown.png", "alt": "David Brown" },
+    "hafi":          { "live": "/wp-content/uploads/2021/09/Hafi-osteopath.jpg", "file": "lop-hafi-rahman.jpg", "alt": "Hafi Rahman" },
+    "logo-white":    { "live": "/wp-content/uploads/2025/11/Logo-LOP.png", "file": "lop-logo-white.png", "alt": "Lichfield Osteopathic Practice" },
+    "logo-dark":     { "live": "/wp-content/uploads/2025/11/Logo-LOP.png", "recolour": "dark", "file": "lop-logo-dark.png", "alt": "Lichfield Osteopathic Practice" },
+    "cranial-baby":   { "repo": "media/lop-cranial-baby.jpg", "alt": "Gentle cranial osteopathy for a baby" },
+    "cranial-baby-2": { "repo": "media/lop-cranial-baby-2.jpg", "alt": "Gentle cranial osteopathy for a baby" },
+    "hands-deep":     { "repo": "media/lop-hands-deep.jpg", "alt": "Hands-on soft tissue treatment" },
+    "hands-back":     { "repo": "media/lop-hands-back.jpg", "alt": "Hands-on treatment of the back" },
+    "hands-upper":    { "repo": "media/lop-hands-upper.jpg", "alt": "Treatment of the upper back" },
+    "hands-leg":      { "repo": "media/lop-hands-leg.jpg", "alt": "Treatment of the leg" },
+    "gosc":           { "repo": "media/lop-gosc.png", "alt": "General Osteopathic Council" }
+  },
+  "icons": "every icons/lop-icon-*.svg, keyed icon-<name>"
+}

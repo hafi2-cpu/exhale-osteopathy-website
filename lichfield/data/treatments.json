@@ -1,0 +1,201 @@
+{
+  "S": {
+    "osteo": {
+      "name": "Osteopathy",
+      "short": "osteopathy",
+      "h1": "Osteopathy in Lichfield",
+      "lead": "Professional, hands-on osteopathy to help reduce pain, improve movement and support long term musculoskeletal health.",
+      "heroImg": "osteo-freta",
+      "heroPos": "60% 35%",
+      "facts": [
+        { "k": "Initial consultation", "v": "£75", "icon": "pound" },
+        { "k": "Follow-up", "v": "£60", "icon": "pound" },
+        { "k": "Open", "v": "6 days a week", "icon": "clock" },
+        { "k": "Clinic", "v": "30 Rotten Row, Lichfield", "icon": "pin" }
+      ],
+      "introTitle": "Osteopathic treatment at Lichfield Osteopathic Practice",
+      "intro": [
+        "Whether you're dealing with back pain, neck stiffness, headaches, joint problems, or ongoing aches and strains, osteopathy offers a hands-on, whole body approach tailored to you.",
+        "We welcome patients of all ages from Lichfield and the surrounding areas, offering calm, thorough care in a supportive clinical setting."
+      ],
+      "ticks": [
+        "Four registered osteopaths",
+        "Patients of all ages, from babies to later life",
+        "Caring for patients in Lichfield since 1983"
+      ],
+      "introImg": "osteo-arm",
+      "introAlt": "An osteopath treating a patient's arm and shoulder",
+      "sections": [
+        {
+          "id": "what-is",
+          "title": "What is osteopathy?",
+          "paras": [
+            "Osteopathy is a form of manual therapy that focuses on how the body's muscles, joints, ligaments and nervous system work together. Osteopaths use skilled hands-on techniques to assess and treat restrictions that may be contributing to pain or reduced movement.",
+            "Rather than only treating symptoms, osteopathy looks at the wider picture to understand why pain has developed and how best to support recovery."
+          ]
+        },
+        {
+          "id": "who-for",
+          "title": "Who is osteopathy for?",
+          "paras": [
+            "Osteopaths' patients include the young, the more mature person, manual workers, office professionals, pregnant women, children and sports people.",
+            "Our team covers a broad spectrum of osteopathic skills, including classical, cranial and paediatric osteopathy, sports injuries and functional medicine."
+          ]
+        }
+      ],
+      "techTitle": "What treatment may include",
+      "techniques": [
+        { "t": "Joint mobilisation", "d": "Gentle movement of stiff or restricted joints." },
+        { "t": "Soft tissue work", "d": "Muscle and soft tissue techniques to ease tension." },
+        { "t": "Stretching &amp; movement", "d": "Stretching and movement work as part of your treatment." },
+        { "t": "Advice", "d": "Advice on posture, activity and recovery." }
+      ],
+      "condsTitle": "What osteopathy can help with",
+      "condsLead": "Patients see us for a wide variety of problems. Not sure if we can help? Call us for a quick chat before you book.",
+      "conds": ["Back pain", "Shoulder &amp; neck pain", "Headaches", "Knee &amp; ankle pain", "Joint problems", "Repetitive strain injuries", "Changes to posture in pregnancy", "Posture problems from driving or work", "Arthritis pain", "Most sports injuries"],
+      "steps": [
+        { "n": "01", "t": "Your case history", "d": "Your first appointment starts with a detailed case history." },
+        { "n": "02", "t": "Examination", "d": "Careful observation and examination, using palpation (feel through touch) to find areas of restriction, strain and weakness." },
+        { "n": "03", "t": "Diagnosis &amp; plan", "d": "We explain the diagnosis. By the second treatment your osteopath can usually tell you how many treatments are likely to be needed." },
+        { "n": "04", "t": "After treatment", "d": "You may feel a little sore or achy for up to 48 hours. Most people usually start feeling better after this." }
+      ],
+      "team": ["freta", "emma", "hafi", "david"],
+      "faqs": [
+        { "q": "What is osteopathy recommended for?", "a": "Patients seek treatment for a wide variety of conditions, including back pain, shoulder and neck pain, knee and ankle pain, repetitive strain injuries, changes to posture in pregnancy, postural problems caused by driving or work strain, the pain of arthritis and most sports injuries." },
+        { "q": "How many sessions will I need?", "a": "The number of sessions you need depends on the condition and the person we are treating. The aim is to keep your appointments to a minimum. Your osteopath will usually be able to tell you by the second treatment how many treatments are likely to be required, and this will be discussed with you after the diagnosis has been explained at your initial assessment." },
+        { "q": "What can I expect at my first session?", "a": "Your initial consultation will include a detailed case history, as well as careful observation and examination using highly developed skills of palpation (feel through touch) to find areas of restriction, strain and weakness in the body." },
+        { "q": "How will I feel after a treatment?", "a": "There is the possibility of feeling a little sore or achy for up to 48 hours after a treatment. Most people will usually start feeling better after this." }
+      ]
+    },
+    "paediatric": {
+      "name": "Baby & Paediatric Osteopathy",
+      "short": "baby osteopathy",
+      "h1": "Baby Osteopathy in Lichfield",
+      "lead": "Gentle, specialist osteopathy for babies and infants to help support comfort, movement and healthy development during the early months of life.",
+      "heroImg": "cranial-baby",
+      "heroPos": "50% 40%",
+      "facts": [
+        { "k": "Who for", "v": "Babies &amp; infants", "icon": "user" },
+        { "k": "Approach", "v": "Gentle, light pressure", "icon": "check" },
+        { "k": "Parents", "v": "Hold or feed during sessions", "icon": "check" },
+        { "k": "Clinic", "v": "30 Rotten Row, Lichfield", "icon": "pin" }
+      ],
+      "introTitle": "Baby osteopathy at Lichfield Osteopathic Practice",
+      "intro": [
+        "Babies can experience strain from pregnancy and birth, even when delivery has gone smoothly. Gentle osteopathic treatment aims to reduce tension, support normal movement patterns and help babies feel more settled.",
+        "We regularly see families from Lichfield and the surrounding areas looking for a safe, natural approach to support their baby's wellbeing."
+      ],
+      "ticks": [
+        "Soft, hands-on treatment using light pressure",
+        "We work at your baby's pace",
+        "Parents are encouraged to ask questions"
+      ],
+      "introImg": "baby-sleeping",
+      "introAlt": "A baby sleeping peacefully",
+      "sections": [
+        {
+          "id": "why",
+          "title": "Why parents bring their baby",
+          "paras": [
+            "Parents often seek baby osteopathy for concerns such as colic, feeding difficulties, unsettled sleep or a preference to turn the head one way.",
+            "These issues can be associated with birth factors such as prolonged labour, assisted delivery, caesarean section or breech positioning, but they can also occur without an obvious cause."
+          ]
+        },
+        {
+          "id": "cranial",
+          "title": "Cranial osteopathy",
+          "paras": [
+            "Cranial osteopathy is part of the broad spectrum of osteopathic skills our team covers. It is a very gentle approach, which is why it is often used with babies and young children.",
+            "Osteopathy is suitable for all ages, from birth to seniority."
+          ]
+        }
+      ],
+      "techniques": [],
+      "condsTitle": "Common reasons parents bring their baby",
+      "condsLead": "Every baby is different. If you're unsure whether osteopathy is right for your baby, call us for a quick chat.",
+      "conds": ["Colic, wind or reflux-type symptoms", "Feeding difficulties, including latch issues", "Sleep disturbances or difficulty settling", "Torticollis (turning the head one way)", "Flat head or head shape concerns", "General irritability or excessive crying"],
+      "steps": [
+        { "n": "01", "t": "A chat first", "d": "A detailed discussion about pregnancy, birth, feeding and sleep." },
+        { "n": "02", "t": "Gentle observation", "d": "Gentle observation of your baby's posture and movement." },
+        { "n": "03", "t": "Gentle treatment", "d": "Soft, hands-on treatment using light pressure and subtle techniques. We'll always explain what we are doing." },
+        { "n": "04", "t": "Your baby's pace", "d": "You're welcome to hold or feed your baby during the session if needed." }
+      ],
+      "team": ["emma"],
+      "faqs": [
+        { "q": "Can I hold or feed my baby during the appointment?", "a": "Yes. We work at your baby's pace, and you are welcome to hold or feed your baby during the session if needed." },
+        { "q": "What causes these problems?", "a": "Babies can experience strain from pregnancy and birth, even when delivery has gone smoothly. Problems can be associated with birth factors such as prolonged labour, assisted delivery, caesarean section or breech positioning, but they can also occur without an obvious cause." },
+        { "q": "Will my baby improve?", "a": "Many parents notice improvements in comfort, feeding or sleep following treatment, although every baby responds differently." }
+      ]
+    },
+    "massage": {
+      "name": "Sports & Deep Tissue Massage",
+      "short": "massage",
+      "h1": "Deep Tissue & Sports Massage in Lichfield",
+      "lead": "Expert deep tissue and sports massage to help relieve muscle tension, improve mobility and support recovery from physical strain or injury.",
+      "heroImg": "massage-zoe",
+      "heroPos": "50% 45%",
+      "facts": [
+        { "k": "60 minutes", "v": "£60", "icon": "clock" },
+        { "k": "90 minutes", "v": "£80", "icon": "clock" },
+        { "k": "Massage types", "v": "Sports, deep tissue, pregnancy", "icon": "check" },
+        { "k": "Clinic", "v": "30 Rotten Row, Lichfield", "icon": "pin" }
+      ],
+      "introTitle": "Deep tissue &amp; sports massage in Lichfield",
+      "intro": [
+        "This style of massage uses firmer pressure and targeted techniques to work into deeper layers of muscle and connective tissue.",
+        "It's ideal for active individuals, those with physically demanding jobs, or anyone experiencing persistent tightness or muscle discomfort."
+      ],
+      "ticks": [
+        "Treatments are always tailored to you",
+        "Pressure adjusted so the work is effective but controlled",
+        "Sports, deep tissue or pregnancy massage"
+      ],
+      "introImg": "massage-stock",
+      "introAlt": "A deep tissue massage of the upper back",
+      "sections": [
+        {
+          "id": "about",
+          "title": "Tailored to you",
+          "paras": [
+            "Treatments are always tailored to you, with pressure adjusted to ensure the work is effective but controlled.",
+            "Choose sports, deep tissue or pregnancy massage, in a 60 or 90 minute session."
+          ]
+        },
+        {
+          "id": "with-osteo",
+          "title": "Massage alongside osteopathy",
+          "paras": [
+            "Massage may be used on its own or alongside osteopathic treatment, depending on your symptoms and goals. We'll always discuss the most appropriate approach and what to expect following treatment."
+          ]
+        }
+      ],
+      "techniques": [],
+      "condsTitle": "Who deep tissue & sports massage is for",
+      "condsLead": "Deep tissue and sports massage can be particularly helpful if you're experiencing any of these.",
+      "conds": ["Ongoing muscle tightness or stiffness", "Sports or exercise-related strains", "Neck, shoulder or lower back pain", "Reduced flexibility or movement restriction", "Muscle fatigue from training or manual work", "Recovery issues after activity or competition"],
+      "steps": [
+        { "n": "01", "t": "Your goals", "d": "We discuss your symptoms and goals, and the most appropriate approach." },
+        { "n": "02", "t": "Tailored treatment", "d": "Firmer pressure and targeted techniques, adjusted so the work is effective but controlled." },
+        { "n": "03", "t": "Aftercare", "d": "We'll explain what to expect following treatment." }
+      ],
+      "team": ["zoe"],
+      "faqs": [
+        { "q": "How firm is the pressure?", "a": "Deep tissue and sports massage uses firmer pressure, but treatments are always tailored to you, with pressure adjusted to ensure the work is effective but controlled." },
+        { "q": "Can massage be combined with osteopathy?", "a": "Yes. Massage may be used on its own or alongside osteopathic treatment, depending on your symptoms and goals." },
+        { "q": "Do you offer pregnancy massage?", "a": "Yes. You can choose sports, deep tissue or pregnancy massage, in a 60 minute (£60) or 90 minute (£80) session." }
+      ]
+    }
+  },
+  "people": {
+    "freta": { "name": "Freta Teklesenbet", "role": "Registered Osteopath", "img": "freta", "days": "Mon, Tue, Wed &amp; Fri", "bio": "Master's degree in Osteopathic Medicine, with additional training in soft tissue therapy." },
+    "emma": { "name": "Emma Thompson", "role": "Registered Osteopath", "img": "emma", "days": "Monday", "bio": "Qualified from the College of Osteopaths in 2020, after working as a sports massage therapist since 2010." },
+    "hafi": { "name": "Hafi Rahman", "role": "Registered Osteopath", "img": "hafi", "days": "Friday", "bio": "Bachelor of Honours Degree in Osteopathy, plus qualified sports therapist and personal trainer." },
+    "david": { "name": "David Brown", "role": "Registered Osteopath", "img": "david", "days": "Thursday", "bio": "Honours Degree from the London School of Osteopathy (2001). At Lichfield Osteopathic Practice since 2003." },
+    "zoe": { "name": "Zoe Goodwin", "role": "Sports Massage Therapist", "img": "zoe", "days": "Wed &amp; Sat", "bio": "Level 4 Sports Massage Therapist with a degree in Sport, Exercise and Health Science." }
+  },
+  "related": [
+    { "k": "osteo", "name": "Osteopathy", "img": "osteo-arm" },
+    { "k": "paediatric", "name": "Baby & Paediatric Osteopathy", "img": "cranial-baby" },
+    { "k": "massage", "name": "Sports & Deep Tissue Massage", "img": "massage-stock" }
+  ]
+}

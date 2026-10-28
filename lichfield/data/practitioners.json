@@ -1,0 +1,276 @@
+{
+ "P": {
+  "freta": {
+   "name": "Freta Teklesenbet",
+   "first": "Freta",
+   "role": "Registered Osteopath",
+   "reg": "Registered Osteopath · Master's degree in Osteopathic Medicine",
+   "lead": "Freta is a friendly and approachable osteopath, passionate about helping patients overcome pain, restore movement and improve their overall quality of life.",
+   "creds": [
+    "Master's degree in Osteopathic Medicine",
+    "Additional training in soft tissue therapy",
+    "Background in healthcare"
+   ],
+   "portrait": "freta",
+   "gosc": true,
+   "facts": [
+    {
+     "k": "Role",
+     "v": "Registered Osteopath"
+    },
+    {
+     "k": "At Lichfield",
+     "v": "Mon, Tue, Wed & Fri"
+    },
+    {
+     "k": "Treats",
+     "v": "All ages & activity levels"
+    },
+    {
+     "k": "Approach",
+     "v": "Treating the individual"
+    }
+   ],
+   "aboutTitle": "Treating the individual, not just the symptoms",
+   "bio": [
+    "Freta is a friendly and approachable osteopath who has completed her Master's degree in Osteopathic Medicine. She is passionate about helping patients overcome pain, restore movement and improve their overall quality of life.",
+    "With additional training in soft tissue therapy and a background in healthcare, Freta combines manual therapy, tailored rehabilitation and practical advice to help each patient achieve lasting results.",
+    "She believes in treating the individual, not just the symptoms, and enjoys working with people of all ages and activity levels."
+   ],
+   "quals": [
+    {
+     "t": "Master's degree",
+     "d": "Osteopathic Medicine"
+    },
+    {
+     "t": "Soft tissue therapy",
+     "d": "Additional training"
+    }
+   ],
+   "treatments": [
+    "osteo"
+   ]
+  },
+  "emma": {
+   "name": "Emma Thompson",
+   "first": "Emma",
+   "role": "Registered Osteopath",
+   "reg": "Registered Osteopath · College of Osteopaths, 2020",
+   "lead": "Emma enjoys working with people from all backgrounds and ages, from babies to those in their golden years.",
+   "creds": [
+    "Qualified from the College of Osteopaths in 2020",
+    "Sports massage therapist since 2010",
+    "Keen swimmer, runner and triathlete"
+   ],
+   "portrait": "emma",
+   "gosc": true,
+   "facts": [
+    {
+     "k": "Role",
+     "v": "Registered Osteopath"
+    },
+    {
+     "k": "At Lichfield",
+     "v": "Monday"
+    },
+    {
+     "k": "Qualified",
+     "v": "2020"
+    },
+    {
+     "k": "Treats",
+     "v": "Babies to later life"
+    }
+   ],
+   "aboutTitle": "A lifelong interest in how the body works",
+   "bio": [
+    "I graduated and qualified from the College of Osteopaths in 2020, having previously worked as a sports massage therapist since 2010.",
+    "I am a keen swimmer, runner and triathlete, having completed a number of marathons and ultra marathons as well as triathlons of all distances. I also enjoy surfing and paddleboarding, basically being in water or on it!",
+    "My interest in the body, and how it functions, has been a passion since school. From being involved in sports, and as a mother of sporting kids, I've seen how movement and injury affect performance. Through my studies, and through being a mother, I've also seen how osteopathy can help with various stress patterns that can often come from within the womb as well as the whole birth process, and how this can affect us into adulthood.",
+    "I enjoy working with people from all backgrounds and ages, from babies to those in their golden years."
+   ],
+   "quals": [
+    {
+     "t": "Osteopathy",
+     "d": "College of Osteopaths, 2020"
+    },
+    {
+     "t": "Sports massage therapy",
+     "d": "Practising since 2010"
+    }
+   ],
+   "treatments": [
+    "osteo",
+    "paediatric"
+   ]
+  },
+  "hafi": {
+   "name": "Hafi Rahman",
+   "first": "Hafi",
+   "role": "Registered Osteopath",
+   "reg": "Registered Osteopath · B.Ost (Hons) · GOsC 10803",
+   "lead": "Hafi assesses each patient holistically, to diagnose the root cause of the problem rather than just treat the symptoms.",
+   "creds": [
+    "Bachelor of Honours Degree in Osteopathy, The College of Osteopaths",
+    "Qualified Sports Therapist and Personal Trainer",
+    "Treats minor issues through to complex chronic complaints"
+   ],
+   "portrait": "hafi",
+   "gosc": true,
+   "facts": [
+    {
+     "k": "Role",
+     "v": "Registered Osteopath"
+    },
+    {
+     "k": "At Lichfield",
+     "v": "Friday"
+    },
+    {
+     "k": "Also qualified in",
+     "v": "Sports therapy"
+    },
+    {
+     "k": "GOsC registration",
+     "v": "10803"
+    }
+   ],
+   "aboutTitle": "Finding the root cause of the problem",
+   "bio": [
+    "I qualified from The College of Osteopaths with a Bachelor of Honours Degree in Osteopathy. Further to this, I am a qualified Sports Therapist and Personal Trainer.",
+    "As a keen sportsman, having played football and studied various martial arts to a high level, I am acutely aware of the mechanisms of sports injuries. This, coupled with my training in osteopathy and sports therapy, gives me insight into the cause and necessary treatment to facilitate optimal health and comfort.",
+    "Osteopathy has served to show me how important it is to assess the patient holistically, and be able to diagnose the root cause of the problem, rather than just treat the symptoms. Drawing on my knowledge and experience gained over the years, I treat a wide range of patient presentations, from minor issues to complex chronic complaints.",
+    "I look forward to meeting you and helping you on your pathway to health."
+   ],
+   "quals": [
+    {
+     "t": "B.Ost (Hons) Osteopathy",
+     "d": "The College of Osteopaths"
+    },
+    {
+     "t": "Sports Therapist",
+     "d": ""
+    },
+    {
+     "t": "Personal Trainer",
+     "d": ""
+    }
+   ],
+   "treatments": [
+    "osteo"
+   ]
+  },
+  "david": {
+   "name": "David Brown",
+   "first": "David",
+   "role": "Registered Osteopath",
+   "reg": "Registered Osteopath · B.Sc. (Hons) Ost",
+   "lead": "David has worked at Lichfield Osteopathic Practice since 2003, with a keen interest in sports injury rehabilitation.",
+   "creds": [
+    "Honours Degree, London School of Osteopathy, 2001",
+    "Post-graduate course with the British Association of Sport & Exercise (BASEM)",
+    "Further courses in strength and conditioning"
+   ],
+   "portrait": "david",
+   "gosc": true,
+   "facts": [
+    {
+     "k": "Role",
+     "v": "Registered Osteopath"
+    },
+    {
+     "k": "At Lichfield",
+     "v": "Thursday"
+    },
+    {
+     "k": "With us since",
+     "v": "2003"
+    },
+    {
+     "k": "Treats",
+     "v": "Ages 5 and upwards"
+    }
+   ],
+   "aboutTitle": "Structural osteopathy, corrective exercise and gentle cranial work",
+   "bio": [
+    "I graduated with an Honours Degree in 2001 from the London School of Osteopathy and have worked at Lichfield Osteopathic Practice since 2003.",
+    "I have a keen interest in sports injury rehabilitation. Supporting this pathway, I have undertaken a post-graduate course with the British Association of Sport & Exercise (BASEM), and further courses relating to strength and conditioning.",
+    "I am familiar with a wide range of sports and the injuries associated with them, including running, climbing, sailing, swimming, and all things related to classical dance. I continue to look for ways to improve health and fitness within the osteopathic spectrum.",
+    "My approach is a mix of traditional structural osteopathy, corrective exercises and gentle cranial osteopathy. I am happy to treat all ages from 5 years upwards.",
+    "I value my time at Lichfield Osteopathic Practice, and am very keen to work in a team setting, sharing concepts and best value outcomes for you, the patient."
+   ],
+   "quals": [
+    {
+     "t": "B.Sc. (Hons) Osteopathy",
+     "d": "London School of Osteopathy, 2001"
+    },
+    {
+     "t": "Post-graduate course",
+     "d": "British Association of Sport & Exercise (BASEM)"
+    },
+    {
+     "t": "Strength & conditioning",
+     "d": "Further courses"
+    }
+   ],
+   "treatments": [
+    "osteo"
+   ]
+  },
+  "zoe": {
+   "name": "Zoe Goodwin",
+   "first": "Zoe",
+   "role": "Sports Massage Therapist",
+   "reg": "Level 4 Sports Massage Therapist · BSc Sport, Exercise and Health Science",
+   "lead": "Zoe has a strong passion for helping people move better, feel better and recover well, whether from training, injury, muscle tension or the general stresses of everyday life.",
+   "creds": [
+    "Level 4 qualified Sports Massage Therapist",
+    "Degree in Sport, Exercise and Health Science",
+    "Currently studying for an MSc in Physiotherapy"
+   ],
+   "portrait": "zoe",
+   "gosc": false,
+   "facts": [
+    {
+     "k": "Role",
+     "v": "Sports Massage Therapist"
+    },
+    {
+     "k": "At Lichfield",
+     "v": "Wednesday & Saturday"
+    },
+    {
+     "k": "Massage",
+     "v": "Sports, deep tissue, pregnancy"
+    },
+    {
+     "k": "Studying",
+     "v": "MSc Physiotherapy"
+    }
+   ],
+   "aboutTitle": "Helping you move better, feel better and recover well",
+   "bio": [
+    "I'm Zoe, a Level 4 qualified Sports Massage Therapist with a degree in Sport, Exercise and Health Science, and I am currently studying for an MSc in Physiotherapy.",
+    "I have a strong passion for helping people move better, feel better and recover well, whether that's from training, injury, muscle tension or the general stresses of everyday life.",
+    "I enjoy working with a variety of clients and tailoring treatments to suit each individual's needs and goals. My aim is to create a professional, welcoming and relaxed environment where you can feel comfortable, supported and confident in your treatment."
+   ],
+   "quals": [
+    {
+     "t": "Level 4 Sports Massage",
+     "d": ""
+    },
+    {
+     "t": "BSc Sport, Exercise and Health Science",
+     "d": ""
+    },
+    {
+     "t": "MSc Physiotherapy",
+     "d": "In progress"
+    }
+   ],
+   "treatments": [
+    "massage"
+   ]
+  }
+ }
+}
