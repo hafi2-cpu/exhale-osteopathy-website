@@ -93,3 +93,7 @@ The pages, layout, copy and styles are otherwise unchanged. `source/` remains th
 ## Copy style
 - No em dashes (—) or en dashes (–) as sentence punctuation. Use full stops, commas, colons or connecting words.
   En dashes are fine only for genuine ranges (09:00–20:00, 45–60 mins, Mon–Fri). Rewrites applied 25 Oct 2026: see seo/dash-rewrites.json.
+
+## Design lock (28 Oct 2026)
+Hafi approved and locked the staging design on 28 October 2026, including the redesigned footer (four columns, "Registered with" logos, no brand band), gold Lichfield hours on About, laser card photos, front-facing photos of Hafi, and reduced "No GP referral" wording.
+From here on: no visual or layout changes unless Hafi asks. Content updates (team details, prices, new pages, links) are still fine.
