@@ -259,3 +259,15 @@ a.ex-w400 { font-weight: 400; }
 
 /* Lichfield: element spanning every column of its grid */
 .ex-span-2 { grid-column: 1 / -1; }
+
+/* Lichfield: the live site's photos are lighter than the Exhale shoot, so heroes get a
+   stronger charcoal shade where the text sits (text stays readable on bright sheets and walls) */
+.ex-hero-shade::after {
+  background: linear-gradient(90deg, rgba(61,57,55,.55) 0%, rgba(61,57,55,.25) 55%, rgba(61,57,55,0) 100%),
+              linear-gradient(180deg, rgba(61,57,55,.6) 0%, rgba(61,57,55,.3) 14%, rgba(61,57,55,.2) 32%, rgba(61,57,55,.55) 58%, rgba(61,57,55,.88) 100%);
+}
+@media (max-width: 980px) {
+  .ex-hero-shade::after { background: linear-gradient(180deg, rgba(61,57,55,.62) 0%, rgba(61,57,55,.45) 30%, rgba(61,57,55,.72) 60%, rgba(61,57,55,.9) 100%); }
+  .ex-hero-side::after, .ex-hero-side--92::after, .ex-hero-side--93::after, .ex-shade--about::after {
+    background: linear-gradient(180deg, rgba(61,57,55,.62) 0%, rgba(61,57,55,.5) 30%, rgba(61,57,55,.72) 60%, rgba(61,57,55,.88) 100%) !important; }
+}
