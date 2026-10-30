@@ -40,3 +40,4 @@ the condition and treatment pages, and the three blog posts
 Titles and meta descriptions match the live site on 22 of 23 URLs (`/osteopathy` changed on purpose). Body copy was rewritten.
 Longer than live: babies, cranial, jaw, osteopathy, neck, hip, knee, ankle, headaches, massage, fees.
 Shorter than live: home (H1 no longer contains "osteopath Sutton Coldfield"; "Why choose us" copy gone), about (bios moved to profile pages), PGP blog post (~2,000 words to ~900).
+Fixed 30 Oct 2026: home H1 is now "Family Osteopaths · Sutton Coldfield & Birmingham" (big headline is H2, same look); home About paragraph lists conditions and treatments; PGP post restored to ~1,500 words with a local "Sutton Coldfield & Birmingham" section.
