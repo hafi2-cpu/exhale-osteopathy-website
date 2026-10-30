@@ -34,3 +34,9 @@ the condition and treatment pages, and the three blog posts
 ## Title changes vs live site
 - `/osteopathy`: was "Cranial Osteopathy Birmingham | Osteopaths in Sutton Coldfield" (clashed with `/cranial-osteopathy`). Now "Osteopathic Treatment Sutton Coldfield & Birmingham | Exhale". After launch, check Search Console queries for this URL; if "cranial osteopathy birmingham" impressions drop overall, add Birmingham wording to `/cranial-osteopathy`.
 - `/womens-health-osteopathy` (new, 30 Oct 2026): Women's Health Osteopathy page with £99 postnatal check (Ankita). Title "Women’s Health Osteopath Sutton Coldfield & Birmingham | Exhale", keyphrase "women’s health osteopath Sutton Coldfield", Service + FAQPage schema. Linked from header menus, footer, Pregnancy page and Ankita's profile. Does not use the "Mummy MOT" trademark.
+- `/our-fees` meta description (30 Oct 2026): updated from old prices (£70/£50) to "Our fees at Exhale Osteopathy, Sutton Coldfield: osteopathy and physiotherapy £75 initial, £60 follow-up. Sports massage from £40. Card and cash accepted."
+
+## Content vs live site (checked 30 Oct 2026)
+Titles and meta descriptions match the live site on 22 of 23 URLs (`/osteopathy` changed on purpose). Body copy was rewritten.
+Longer than live: babies, cranial, jaw, osteopathy, neck, hip, knee, ankle, headaches, massage, fees.
+Shorter than live: home (H1 no longer contains "osteopath Sutton Coldfield"; "Why choose us" copy gone), about (bios moved to profile pages), PGP blog post (~2,000 words to ~900).
