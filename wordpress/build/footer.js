@@ -15,7 +15,7 @@ window.buildFooter = function (pid, old) {
   var src = function (id) { var e = find(old, id); return e ? e.settings.editor : ''; };
 
   var isCond = pid === 186;
-  var colThree = isCond ? { title: 'What We Treat', html: src('4906f0a') } : { title: 'Treatments', html: src('969ce31') };
+  var colThree = isCond ? { title: 'What We Treat', html: src('4906f0a') } : { title: 'Treatments', html: src('969ce31').replace('<p><a href="/acupuncture">', '<p><a href="/womens-health-osteopathy">Women’s Health</a></p><p><a href="/acupuncture">') };
   var clinicsHtml = src(isCond ? '68e6f9a' : '897a8a4').replace(/<\/p>\s*<p>Lichfield/, '</p><hr class="ex-ft-sep"><p>Lichfield');
   var book = 'https://exhale-osteopaths.uk2.cliniko.com/bookings?business_id=1358847506980544559#service';
   var maps = 'https://www.google.com/maps/search/?api=1&query=Exhale+Osteopathy+Sutton+Coldfield';

@@ -33,3 +33,4 @@ the condition and treatment pages, and the three blog posts
 
 ## Title changes vs live site
 - `/osteopathy`: was "Cranial Osteopathy Birmingham | Osteopaths in Sutton Coldfield" (clashed with `/cranial-osteopathy`). Now "Osteopathic Treatment Sutton Coldfield & Birmingham | Exhale". After launch, check Search Console queries for this URL; if "cranial osteopathy birmingham" impressions drop overall, add Birmingham wording to `/cranial-osteopathy`.
+- `/womens-health-osteopathy` (new, 30 Oct 2026): Women's Health Osteopathy page with £99 postnatal check (Ankita). Title "Women’s Health Osteopath Sutton Coldfield & Birmingham | Exhale", keyphrase "women’s health osteopath Sutton Coldfield", Service + FAQPage schema. Linked from header menus, footer, Pregnancy page and Ankita's profile. Does not use the "Mummy MOT" trademark.
