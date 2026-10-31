@@ -41,3 +41,11 @@ Titles and meta descriptions match the live site on 22 of 23 URLs (`/osteopathy`
 Longer than live: babies, cranial, jaw, osteopathy, neck, hip, knee, ankle, headaches, massage, fees.
 Shorter than live: home (H1 no longer contains "osteopath Sutton Coldfield"; "Why choose us" copy gone), about (bios moved to profile pages), PGP blog post (~2,000 words to ~900).
 Fixed 30 Oct 2026: home H1 is now "Family Osteopaths · Sutton Coldfield & Birmingham" (big headline is H2, same look); home About paragraph lists conditions and treatments; PGP post restored to ~1,500 words with a local "Sutton Coldfield & Birmingham" section.
+
+## Speed settings (31 Oct 2026)
+- SiteGround Speed Optimizer: minify + combine CSS (with preload), minify JS, defer render-blocking JS, minify HTML, web font optimisation, remove query strings, disable emojis, WebP on. Combine JS left OFF (Elementor-safe).
+- Elementor > Performance: Lazy Load Background Images turned OFF (it delayed the hero image, the LCP element).
+- Every page hero (first section with a background image) has an absolutely positioned HTML widget with `<link rel="preload" as="image" fetchpriority="high" class="ex-hero-preload">` for its background.
+- Header (127) has an HTML widget preloading the Inter and Inter Tight woff2 files.
+- Image widgets: team portraits / about-strip photos use the 768px size; 54px avatars use thumbnail.
+- Result so far: /osteopathy mobile 68 → 79 (FCP 2.9 s → 1.7 s) after the plugin settings alone.
