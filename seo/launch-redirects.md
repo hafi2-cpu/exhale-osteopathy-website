@@ -48,7 +48,7 @@ Shorter than live: home (H1 no longer contains "osteopath Sutton Coldfield"; "Wh
 Fixed 30 Oct 2026: home H1 is now "Family Osteopaths · Sutton Coldfield & Birmingham" (big headline is H2, same look); home About paragraph lists conditions and treatments; PGP post restored to ~1,500 words with a local "Sutton Coldfield & Birmingham" section.
 
 ## Speed settings (31 Oct 2026)
-- SiteGround Speed Optimizer: minify + combine CSS (with preload), minify JS, defer render-blocking JS, minify HTML, web font optimisation, remove query strings, disable emojis, WebP on. Combine JS left OFF (Elementor-safe).
+- SiteGround Speed Optimizer: minify + combine CSS (with preload), minify JS, minify HTML, web font optimisation, remove query strings, disable emojis, WebP on. Combine JS left OFF (Elementor-safe).
 - Elementor > Performance: Lazy Load Background Images turned OFF (it delayed the hero image, the LCP element).
 - Every page hero (first section with a background image) has an absolutely positioned HTML widget with `<link rel="preload" as="image" fetchpriority="high" class="ex-hero-preload">` for its background.
 - Header (127) has an HTML widget preloading the Inter and Inter Tight woff2 files.
@@ -75,3 +75,4 @@ Canonicals: Yoast deliberately omits rel=canonical on noindexed pages, so their 
 6. Each redirect above returns a single 301 to the right page (`curl -sI`).
 7. Rich results test on / shows Organization; on a condition page shows FAQPage.
 8. Staging copy (hafir61.sg-host.com) keeps "Discourage search engines" ticked, or is deleted; exhaleclinic.co.uk forwards to the live domain.
+- 31 Oct 2026: "Defer render-blocking JS" turned OFF again. It deferred Elementor core but not Elementor Pro's scripts, so Pro widgets (the off-canvas mobile menu) could load before core and the hamburger did nothing on phones. Leave it off.
