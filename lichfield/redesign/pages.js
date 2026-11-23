@@ -241,4 +241,80 @@
     TXT([bb])[0].settings.editor = '<p>Appointments Monday to Saturday at 30 Rotten Row, Lichfield. No GP referral needed.</p>';
     return els;
   };
+
+  /* ================= PRACTITIONER PROFILE ================= */
+  const DAYS = { freta: 'Mon · Tue · Wed · Fri', emma: 'Monday', hafi: 'Friday', david: 'Thursday', zoe: 'Wed evening · Sat morning', emre: 'Call 01543 252673 for days' };
+  const TURL = { osteo: ['Osteopathy', '/osteopathy/'], paediatric: ['Cranial &amp; Paediatric Osteopathy', '/peadiatric-osteopathy/'], massage: ['Sports &amp; Deep Tissue Massage', '/massage/'],
+    physio: ['Physiotherapy', '/physiotherapy/'], acupuncture: ['Acupuncture', '/acupuncture/'], laser: ['Laser Therapy', '/laser-therapy/'] };
+  R.practitioner = (key) => {
+    const p = window.LOP_DATA.prac.P[key]; if (!p) throw new Error('no practitioner ' + key);
+    const els = XF.base(XF.src('p168'));
+    const first = esc(p.first), name = esc(p.name);
+    // hero
+    const hero = els[0]; const hh = H([hero]);
+    hh[0].settings.title = '<a href="/">Home</a> → <a href="/meet-the-team/">Our Team</a> → ' + name;
+    hh[1].settings.title = esc(p.role); hh[2].settings.title = name; hh[3].settings.title = esc(p.reg);
+    TXT([hero])[0].settings.editor = '<p>' + esc(p.lead) + '</p>';
+    one([hero], e => e.widgetType === 'html' && /ex-ticks/.test(e.settings.html)).settings.html = R.ticks(p.creds).replace('class="ex-ticks"', 'class="ex-ticks ex-ticks--dark"');
+    const bt = W([hero], 'button'); if (bt[0]) bt[0].settings.text = 'Book with ' + first;
+    one([hero], e => e.widgetType === 'html' && /<picture/.test(e.settings.html)).settings.html = R.heroPic(p.portrait || key, 'center top', 'Portrait of ' + lc(p.name));
+    one([hero], e => e.widgetType === 'html' && /ex-floatcard/.test(e.settings.html)).settings.html =
+      '<div class="ex-floatcard ex-floatcard--prof"><span class="ex-fc-k">In clinic at</span><span class="ex-fc-b">30 Rotten Row, Lichfield</span><span class="ex-fc-t">' + DAYS[key] + '</span></div>';
+    const n = p.facts.length;
+    one(els, e => e.widgetType === 'html' && /sb-glance/.test(e.settings.html)).settings.html = R.glance(p.facts.map(f => ({ k: f.k, v: f.v, icon: /lichfield|clinic/i.test(f.k) ? 'pin' : /role|registered|gosc/i.test(f.k) ? 'check' : 'user' })))
+      .replace('class="sb-glance"', 'class="sb-glance ex-glance--' + n + '"');
+    // about + sidebar
+    const ab = one(els, cls(/ex-abou/));
+    const ah = H([ab]); ah[0].settings.title = 'About ' + first; ah[1].settings.title = esc(p.aboutTitle);
+    const ats = TXT([ab]); const holder = XF.all([ab], e => (e.elements || []).includes(ats[0]))[0].e; const at = holder.elements.indexOf(ats[0]);
+    ats.forEach(t => holder.elements.splice(holder.elements.indexOf(t), 1));
+    holder.elements.splice(at, 0, ...p.bio.map(x => { const t = XF.clone(ats[0]); t.settings.editor = '<p>' + esc(x) + '</p>'; return t; }));
+    const q = XF.all([ab], e => e.widgetType === 'html' && /ex-quoteblock/.test(e.settings.html))[0];
+    if (q) { if (p.quote) q.e.settings.html = '<blockquote class="ex-quoteblock"><p>“' + esc(p.quote) + '”</p><cite>' + esc(p.quoteBy || p.name) + '</cite></blockquote>'; else XF.remove(els, q.e); }
+    const side = one([ab], cls(/ex-sidecard/));
+    const dls = W([side], 'html').filter(h => /ex-dl1/.test(h.settings.html)); const dpos = side.elements.indexOf(dls[0]);
+    dls.forEach(d => side.elements.splice(side.elements.indexOf(d), 1));
+    side.elements.splice(dpos, 0, ...p.quals.map(x => { const d = XF.clone(dls[0]); d.settings.html = '<div class="ex-dl1"><strong>' + esc(x.t) + '</strong><span>' + esc(x.d || '') + '</span></div>'; return d; }));
+    const regIm = W([side], 'image'); const regs = [p.gosc !== false ? 'gosc' : null, p.hcpc ? 'hcpc' : null].filter(Boolean);
+    regIm.forEach((im, i) => { if (!regs[i]) XF.remove(els, im); else im.settings.image = Object.assign({}, im.settings.image, XF.img(regs[i]), { alt: regs[i] === 'gosc' ? 'General Osteopathic Council registered' : 'HCPC registered' }); });
+    if (!regs.length) { const rh = H([side]).find(h => /Registrations/.test(h.settings.title)); if (rh) XF.remove(els, rh); }
+    // special interests
+    const sp = one(els, e => cls(/ex-cond/)(e) && !id('treatments')(e) && H([e]).some(h => /Special Interests/.test(h.settings.title)));
+    H([sp])[1].settings.title = 'What ' + first + ' helps with most';
+    const sg = one([sp], cls(/ex-minigrid/)); const spat = sg.elements[0];
+    sg.elements = (p.interests || []).map(x => {
+      const card = XF.clone(spat); const u = /bab|child|infant/i.test(x.t) ? '/peadiatric-osteopathy/' : R.condUrl(x.t);
+      const ci = W([card], 'image')[0]; ci.settings.image = Object.assign({}, ci.settings.image, XF.img(x.img || (u && XF.IMG_BY_LINK[u]) || 'hands-deep'), { alt: '' });
+      const ch = H([card])[0]; ch.settings.title = esc(x.t); TXT([card])[0].settings.editor = '<p>' + esc(x.d) + '</p>';
+      [ci, ch].forEach(w => { if (u) w.settings.link = Object.assign({}, w.settings.link, { url: u }); else delete w.settings.link; });
+      return card;
+    });
+    // treatments
+    const tr = one(els, id('treatments'));
+    H([tr])[1].settings.title = 'Book ' + first + ' for';
+    const tg = one([tr], cls(/ex-minigrid/)); const tpat = tg.elements[0];
+    tg.elements = (p.treatments || []).map(k => {
+      const [tn, tu] = TURL[k]; const card = XF.clone(tpat);
+      const ci = W([card], 'image')[0]; ci.settings.image = Object.assign({}, ci.settings.image, XF.img(XF.IMG_BY_LINK[tu]), { alt: '' }); ci.settings.link = Object.assign({}, ci.settings.link, { url: tu });
+      const ch = H([card])[0]; ch.settings.title = tn; ch.settings.link = Object.assign({}, ch.settings.link, { url: tu });
+      const more = TXT([card])[0]; if (more) more.settings.editor = '<p><a href="' + tu + '">Learn More →</a></p>';
+      return card;
+    });
+    // credentials
+    const cr = one(els, cls(/ex-steps/));
+    H([cr])[1].settings.title = esc(p.credTitle || 'Qualified and experienced');
+    if (p.recognition && p.recognition.length) R.infocards(one([cr], cls(/sb-grid/)), p.recognition.map(x => [x.t, x.d])); else XF.remove(els, cr);
+    // no "outside the clinic" or reviews for Lichfield yet
+    XF.remove(els, one(els, cls(/ex-outside/)).constructor === Object ? XF.all(els, e => cls(/sb-what/)(e) && XF.all([e], cls(/ex-outside/)).length)[0].e : null);
+    XF.remove(els, one(els, cls(/ex-rv/)));
+    // rest of the team
+    const tm = one(els, id('team'));
+    R.perso(one([tm], cls(/ex-team3/)), R.TEAM.map(t => t[0]).filter(k => k !== key));
+    R.accr(els);
+    const bb = one(els, id('book'));
+    H([bb])[1].settings.title = 'Book an appointment with ' + first;
+    TXT([bb])[0].settings.editor = '<p>Book online in under a minute, or call 01543 252673 and ask for ' + first + '.</p>';
+    XF.all([bb], e => e.widgetType === 'html').forEach(x => { x.e.settings.html = x.e.settings.html.replace(/Hafi/g, first); });
+    return els;
+  };
 })();
