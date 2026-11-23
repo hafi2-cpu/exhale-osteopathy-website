@@ -107,6 +107,17 @@
     ren('TMJ / Jaw Pain', 'Jaw Pain'); ren('Foot & Ankle Pain', 'Ankle Pain');
     XF.all(els, e => e.widgetType === 'text-editor' && /New to Exhale\?/.test(e.settings.editor)).forEach(x => x.e.settings.editor = x.e.settings.editor.replace('New to Exhale?', 'New to the practice?'));
     XF.all(els, e => e.widgetType === 'text-editor' && /Sutton Coldfield/.test(e.settings.editor)).forEach(x => x.e.settings.editor = x.e.settings.editor.replace(/Sutton Coldfield\s*·\s*Lichfield/g, '30 Rotten Row, Lichfield'));
+    // About menus: Lichfield has no blog, FAQs or Birmingham page, so list the team, fees and finding us instead
+    XF.all(els, e => e.elType === 'container' && (e.elements || []).some(c => XF.linkOf(c) === '/about/')).forEach(({ e: g }) => {
+      const pat = g.elements.find(c => XF.linkOf(c) === '/about/');
+      [['/meet-the-team/', 'Meet the Team', 'Our osteopaths, physio and massage therapist', 'osteo-freta'], ['/pricing/', 'Our Fees', 'Prices for every treatment', 'exterior'],
+        ['/contact/', 'Find Us', '30 Rotten Row, parking and opening hours', 'exterior']].forEach(([h, t, sub, img]) => {
+        const c = XF.clone(pat); c.settings.link = Object.assign({}, c.settings.link, { url: h });
+        const hs = XF.all([c], x => x.widgetType === 'heading').map(x => x.e); if (hs[0]) hs[0].settings.title = t; if (hs[1]) hs[1].settings.title = sub;
+        XF.all([c], x => x.widgetType === 'image').forEach(x => { x.e.settings.image = Object.assign({}, x.e.settings.image, XF.img(img), { alt: '' }); });
+        g.elements.push(c);
+      });
+    });
     // Team menus (desktop mega menu and the mobile menu): Osteopathy = Freta, Emma, Hafi, David; Physio & Massage = Emre, Zoe
     const groups = XF.all(els, e => e.elType === 'container' && (e.elements || []).some(c => XF.linkOf(c) === '/hafi-rahman/')).map(x => x.e);
     groups.forEach(g => {
