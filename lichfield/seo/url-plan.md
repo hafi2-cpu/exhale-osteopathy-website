@@ -94,3 +94,15 @@ settings and redirects be exported and imported.
 - [ ] Titles and descriptions set per page.
 - [ ] XML sitemap submitted in Search Console after launch.
 - [ ] LocalBusiness schema: Lichfield Osteopathic Practice, 30 Rotten Row, Lichfield, WS13 6JB, 01543 252673.
+
+## Done on staging (23 Nov 2026)
+- Rank Math is installed in Advanced mode. The account connection was skipped, and the Redirections module is on.
+- Titles and meta descriptions are set on all 31 pages, using `seo/titles.json` and Rank Math's `updateMeta`.
+- All 30 redirects above are live in Rank Math → Redirections, and each one was tested. Also added:
+  - `/paediatric-osteopathy/` → `/peadiatric-osteopathy/`
+  - `/physio/` → `/physiotherapy/`
+  - `/sports-massage/` → `/massage/`
+- Every one of the 26 URLs in the live sitemap now exists on staging or redirects.
+- Alt text is set on every photo in the media library.
+- Checked on all 31 pages: one H1 each, no broken internal links, and still noindex.
+- The homepage keeps the live site's "osteopathy for all ages, open 6 days a week" wording, with keyword links to the treatment and condition pages.
