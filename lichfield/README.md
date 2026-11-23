@@ -55,3 +55,26 @@ qualifications or claims are added; Exhale template sections that would need new
 
 ## SEO and redirects
 See `seo/url-plan.md`.
+
+## Redesign on the new Exhale design (23 Nov 2026)
+
+The whole staging site now uses the new Exhale design that went live on exhaleosteopathy.co.uk, recoloured to Lichfield olive.
+
+- `redesign/xf.js`: the engine. It covers:
+  - the colour map (Exhale forest green/gold to dark olive/olive gold, plus a hue shift for one-off shades);
+  - the link map (Exhale pages Lichfield doesn't have are dropped);
+  - the image and icon maps;
+  - phone, hours and email swaps;
+  - insert and save.
+- `redesign/recipes.js`: home, header, footer, kit, and the Customizer CSS.
+- `redesign/pages.js`: the treatment, condition and practitioner templates, filled from `data/*.json`.
+- `redesign/pages2.js`: About, Meet the Team, New Patients, Pricing, Contact, `/treatments/` and `/conditions/`.
+- `redesign/run.js`: the loader. Set `XF_BASE`, `XF_JOB` and `XF_ARG` in the Elementor editor, then poll `XS`.
+- Exhale's Elementor JSON and Customizer CSS were read (GET only) from the live Exhale admin and are kept in hafir63's localStorage (`EXB64`, `EXB64b`, `EXCSS`). To refresh them, repeat that hand-over. Nothing on Exhale is changed.
+- New staging pages: Treatments 374, Conditions 375.
+- Left out until supplied:
+  - reviews;
+  - laser and acupuncture prices;
+  - insurer list;
+  - payment and cancellation policy;
+  - Emre's days.
