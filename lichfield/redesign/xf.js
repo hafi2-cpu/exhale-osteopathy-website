@@ -151,6 +151,23 @@
       (e.elements || []).forEach(c => fix(c, l));
     };
     els.forEach(e => fix(e));
+    // SVG icons from Exhale's media library -> the same icons in Lichfield's
+    const icons = (v) => {
+      if (Array.isArray(v)) return v.forEach(icons);
+      if (!v || typeof v !== 'object') return;
+      if (v.library === 'svg' && v.value && /exhale-icon-([a-z-]+)\.svg/.test(v.value.url || '')) {
+        const k = 'icon-' + v.value.url.match(/exhale-icon-([a-z-]+)\.svg/)[1];
+        if (M()[k]) v.value = { id: M()[k][0], url: M()[k][1] }; else console.warn('XF no icon', k);
+        return;
+      }
+      Object.values(v).forEach(icons);
+    };
+    XF.walk(els, e => icons(e.settings));
+    // alt text naming Exhale
+    XF.walk(els, e => { const s = e.settings || {}; for (const k of ['image']) if (s[k] && /Exhale/.test(s[k].alt || '')) s[k].alt = 'Lichfield Osteopathic Practice'; });
+    // headings/text that were only a link to a page Lichfield doesn't have
+    XF.all(els, e => { const s = e.settings || {}; const t = s.title || s.editor || ''; return /#__gone__/.test(t) && !t.replace(/<a[^>]*#__gone__[^>]*>[\s\S]*?<\/a>/g, '').replace(/<[^>]+>/g, '').trim(); })
+      .forEach(({ e }) => XF.remove(els, e));
     // remove linked containers/buttons pointing at pages Lichfield doesn't have
     XF.all(els, e => XF.linkOf(e) === XF.GONE_MARK).forEach(({ e }) => XF.remove(els, e));
     // nested carousels: drop slides left empty, keep carousel_items in step
