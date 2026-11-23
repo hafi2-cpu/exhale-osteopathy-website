@@ -191,6 +191,8 @@
       .forEach(({ e }) => XF.remove(els, e));
     // remove linked containers/buttons pointing at pages Lichfield doesn't have
     XF.all(els, e => XF.linkOf(e) === XF.GONE_MARK).forEach(({ e }) => XF.remove(els, e));
+    // any remaining inline links to removed pages become plain text
+    XF.walk(els, e => { if (e.settings && !Array.isArray(e.settings)) deep(e.settings, (str) => str.indexOf('#__gone__') < 0 ? str : str.replace(/<a[^>]*href="#__gone__"[^>]*>([\s\S]*?)<\/a>/g, '$1')); });
     // nested carousels: drop slides left empty, keep carousel_items in step
     XF.all(els, e => e.widgetType === 'nested-carousel').forEach(({ e }) => {
       const keep = e.elements.map(sl => XF.all(sl.elements || [], x => true).length > 0);
