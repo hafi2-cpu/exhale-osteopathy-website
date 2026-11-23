@@ -89,7 +89,8 @@
     ['1358847506980544559', '1833503730075443426'], ['info@exhaleosteopathy.co.uk', 'contact@lichfield-osteopaths.co.uk'],
     ['09:00 to 20:00', '09:00 to 19:00'], ['08:00 to 14:00', '09:00 to 14:00'],
     ['https://www.instagram.com/exhaleosteopathy/', 'https://www.instagram.com/lichfield_osteopaths/'],
-    ['https://www.facebook.com/exhaleosteopathy/', 'https://www.facebook.com/LichfieldOsteopaths/']
+    ['https://www.facebook.com/exhaleosteopathy/', 'https://www.facebook.com/LichfieldOsteopaths/'],
+    ['at Exhale Osteopathy', 'at Lichfield Osteopathic Practice'], ['at the Exhale clinic', 'at the clinic']
   ];
   XF.RE = [
     // two-clinic call card -> one Lichfield number
