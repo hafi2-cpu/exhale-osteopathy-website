@@ -112,7 +112,7 @@
   XF.walk = (els, f, parent) => { for (const e of [...els]) { f(e, parent, els); XF.walk(e.elements || [], f, e); } };
   XF.all = (els, pred) => { const o = []; XF.walk(els, (e, p, arr) => { if (pred(e)) o.push({ e, p, arr }); }); return o; };
   XF.one = (els, pred, what) => { const r = XF.all(els, pred); if (!r.length) throw new Error('not found: ' + (what || pred)); return r[0]; };
-  XF.byText = (els, re) => XF.one(els, e => { const s = e.settings || {}; return re.test(s.title || s.editor || s.text || ''); }, String(re));
+  XF.byText = (els, re) => XF.one(els, e => { const s = e.settings || {}; const t = String(s.title || s.editor || s.text || '').replace(/<[^>]+>/g, '').replace(/&amp;/g, '&').trim(); return re.test(t) || re.test(s.title || s.editor || s.text || ''); }, String(re));
   XF.remove = (els, e) => { XF.walk(els, (x, p, arr) => { const i = arr.indexOf(e); if (i >= 0) arr.splice(i, 1); }); const i = els.indexOf(e); if (i >= 0) els.splice(i, 1); };
   XF.clone = (o) => { const c = JSON.parse(JSON.stringify(o)); XF.walk([c], e => { e.id = Math.random().toString(16).slice(2, 9); }); return c; };
   XF.linkOf = (e) => e.settings && e.settings.link && e.settings.link.url;
