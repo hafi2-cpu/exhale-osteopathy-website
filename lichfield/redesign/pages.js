@@ -29,9 +29,9 @@
   const CONDURL = [[/back|postur/i, '/back-pain/'], [/neck/i, '/neck-pain/'], [/shoulder/i, '/shoulder-pain/'], [/hip/i, '/hip-pain/'], [/knee/i, '/knee-pain/'],
     [/ankle|foot/i, '/ankle-pain/'], [/headache|migraine/i, '/headaches/'], [/sciatica/i, '/sciatica/'], [/sport/i, '/sports-injuries/'], [/tendon|repetitive/i, '/tendon-problems/'], [/jaw|tmj/i, '/jaw-pain/']];
   R.condUrl = (t) => { for (const [re, u] of CONDURL) if (re.test(t)) return u; return ''; };
-  R.TREATS = [['osteo', 'Osteopathy', '/osteopathy/', 'osteo-arm'], ['paediatric', 'Cranial &amp; Paediatric Osteopathy', '/peadiatric-osteopathy/', 'cranial-baby'],
-    ['physio', 'Physiotherapy', '/physiotherapy/', 'hands-leg'], ['massage', 'Sports &amp; Deep Tissue Massage', '/massage/', 'massage-stock'],
-    ['acupuncture', 'Acupuncture', '/acupuncture/', 'acupuncture'], ['laser', 'Laser Therapy', '/laser-therapy/', 'laser']];
+  R.TREATS = [['osteo', 'Osteopathy', '/osteopathy/'], ['paediatric', 'Cranial &amp; Paediatric Osteopathy', '/peadiatric-osteopathy/'],
+    ['physio', 'Physiotherapy', '/physiotherapy/'], ['massage', 'Sports &amp; Deep Tissue Massage', '/massage/'],
+    ['acupuncture', 'Acupuncture', '/acupuncture/'], ['laser', 'Laser Therapy', '/laser-therapy/']].map(t => t.concat([XF.IMG_BY_LINK[t[2]]]));
 
   // Rebuild a carousel's slides from a list of [title, href, img]
   R.slides = (car, list) => {
@@ -82,9 +82,27 @@
   const CSRC = { back: 'p161', neck: 'p223', shoulder: 'p224', hip: 'p225', knee: 'p226', foot: 'p227', headaches: 'p228', sciatica: 'p229', sports: 'p230', tendon: 'p231', jaw: 'p232' };
   const figsOf = (els) => XF.all(els, e => e.widgetType === 'html' && /ex-split-fig/.test(e.settings.html)).map(x => x.e.settings.html);
   const exPhoto = (html) => /hafir63/.test(html || '');
+  R.photosOf = (srcKey) => {
+    const els = XF.base(XF.src(srcKey));
+    const pic = XF.all(els, e => e.widgetType === 'html' && /<picture/.test(e.settings.html || ''))[0];
+    const intro = XF.all(els, e => e.widgetType === 'image' && /sb-img--43|ex-port/.test(e.settings._css_classes || '') && /hafir63/.test((e.settings.image || {}).url || ''))[0];
+    return { pic: pic && exPhoto(pic.e.settings.html) ? pic.e.settings.html : null, intro: intro ? intro.e.settings.image : null, figs: figsOf(els).filter(exPhoto) };
+  };
+  const withPhotos = (els, ov) => {
+    if (!ov) return els;
+    const pic = XF.all(els, e => e.widgetType === 'html' && /<picture/.test(e.settings.html || ''))[0];
+    if (pic && ov.pic) { pic.e.settings.html = ov.pic; const pre = XF.all(els, e => e.widgetType === 'html' && /ex-hero-preload/.test(e.settings.html || ''))[0]; if (pre) pre.e.settings.html = ''; }
+    const intro = XF.all(els, e => e.widgetType === 'image' && /sb-img--43|ex-port/.test(e.settings._css_classes || ''))[0];
+    if (intro && ov.intro) intro.e.settings.image = Object.assign({}, intro.e.settings.image, ov.intro);
+    if (ov.figs.length) XF.all(els, e => e.widgetType === 'html' && /ex-split-fig/.test(e.settings.html || '')).forEach((x, i) => { x.e.settings.html = ov.figs[i % ov.figs.length]; });
+    return els;
+  };
   R.treatment = (key) => {
+    try { return R.treatmentFrom(key, XF.B[TSRC[key]] ? TSRC[key] : 'p150'); }
+    catch (e) { console.warn('treatment ' + key + ' on its own Exhale layout failed (' + e.message + '); using the osteopathy layout with its photos'); return withPhotos(R.treatmentFrom(key, 'p150'), R.photosOf(TSRC[key])); }
+  };
+  R.treatmentFrom = (key, src) => {
     const s = window.LOP_DATA.treat.S[key]; if (!s) throw new Error('no treatment ' + key);
-    const src = XF.B[TSRC[key]] ? TSRC[key] : 'p150';
     const els = XF.base(XF.src(src));
     const exFigs = figsOf(els).filter(exPhoto);
     const name = esc(s.name), short = s.short;
@@ -172,8 +190,12 @@
 
   /* ================= CONDITION ================= */
   R.condition = (key) => {
+    try { return R.conditionFrom(key, XF.B[CSRC[key]] ? CSRC[key] : 'p161'); }
+    catch (e) { console.warn('condition ' + key + ' on its own Exhale layout failed (' + e.message + '); using the back pain layout with its photos'); return withPhotos(R.conditionFrom(key, 'p161'), R.photosOf(CSRC[key])); }
+  };
+  R.conditionFrom = (key, srcKey) => {
     const D = window.LOP_DATA.cond, c = D.C[key]; if (!c) throw new Error('no condition ' + key);
-    const els = XF.base(XF.src(XF.B[CSRC[key]] ? CSRC[key] : 'p161'));
+    const els = XF.base(XF.src(srcKey));
     const name = esc(c.name), lower = esc(c.lower);
     const pic = one(els, e => e.widgetType === 'html' && /<picture/.test(e.settings.html));
     if (!exPhoto(pic.settings.html)) { one(els, e => e.widgetType === 'html' && /ex-hero-preload/.test(e.settings.html)).settings.html = R.preload(c.hero); pic.settings.html = R.heroPic(c.hero, c.heroPos, lc(c.introAlt || c.name)); }
