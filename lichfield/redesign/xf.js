@@ -194,6 +194,13 @@
 
   /* ---------- write into the open Elementor document ---------- */
   XF.replaceDoc = async (els) => {
+    // Elementor won't create a widget at the top level: tuck any (script-only html widgets) into the next section
+    for (let i = els.length - 1; i >= 0; i--) {
+      if (els[i].elType === 'widget') {
+        const w = els.splice(i, 1)[0]; w.settings._position = 'absolute';
+        const host = els[i] || els[i - 1]; if (host) host.elements.unshift(w);
+      }
+    }
     const target = elementor.getPreviewContainer();
     const kids = [...target.children];
     if (kids.length) await $e.run('document/elements/delete', { containers: kids });
