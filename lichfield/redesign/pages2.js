@@ -24,7 +24,7 @@
   };
   const dropSchema = (els) => XF.all(els, e => e.widgetType === 'html' && /application\/ld\+json/.test(e.settings.html || '')).forEach(x => XF.remove(els, x.e));
   const dropReviews = (els) => XF.all(els, cls(/ex-rv(\s|$)/)).forEach(x => XF.remove(els, x.e));
-  const ROTA = [['Monday', 'Freta, Emma'], ['Tuesday', 'Freta'], ['Wednesday', 'Freta · Zoe (4pm to 8pm)'], ['Thursday', 'David'], ['Friday', 'Freta, Hafi'], ['Saturday', 'Zoe (8am to 12pm)']];
+  const ROTA = [['Monday', 'Freta, Emma'], ['Tuesday', 'Freta, Emre'], ['Wednesday', 'Freta · Zoe (4pm to 8pm)'], ['Thursday', 'David, Emre'], ['Friday', 'Freta, Hafi'], ['Saturday', 'Zoe (8am to 12pm)']];
   R.ROTA = ROTA;
 
   /* ================= ABOUT ================= */

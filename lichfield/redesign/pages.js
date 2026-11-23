@@ -274,7 +274,7 @@
   };
 
   /* ================= PRACTITIONER PROFILE ================= */
-  const DAYS = { freta: 'Mon · Tue · Wed · Fri', emma: 'Monday', hafi: 'Friday', david: 'Thursday', zoe: 'Wed evening · Sat morning', emre: 'Call 01543 252673 for days' };
+  const DAYS = { freta: 'Mon · Tue · Wed · Fri', emma: 'Monday', hafi: 'Friday', david: 'Thursday', zoe: 'Wed evening · Sat morning', emre: 'Tue · Thu' };
   const TURL = { osteo: ['Osteopathy', '/osteopathy/'], paediatric: ['Cranial &amp; Paediatric Osteopathy', '/peadiatric-osteopathy/'], massage: ['Sports &amp; Deep Tissue Massage', '/massage/'],
     physio: ['Physiotherapy', '/physiotherapy/'], acupuncture: ['Acupuncture', '/acupuncture/'], laser: ['Laser Therapy', '/laser-therapy/'] };
   R.practitioner = (key) => {
