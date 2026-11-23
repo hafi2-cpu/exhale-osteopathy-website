@@ -28,9 +28,25 @@
     '86,104,79': '111,110,74', '237,229,214': '234,227,221', '183,170,153': '201,193,187', '44,61,51': '48,47,34'
   };
   XF.HEX = HEX;
+  // Any other green or gold Exhale used (gradients, one-off shades): same lightness, olive hue
+  const shift = (r, g, b) => {
+    r /= 255; g /= 255; b /= 255;
+    const mx = Math.max(r, g, b), mn = Math.min(r, g, b), l = (mx + mn) / 2, d = mx - mn;
+    if (d < 0.04) return null;
+    const s = d / (1 - Math.abs(2 * l - 1));
+    let h = mx === r ? ((g - b) / d) % 6 : mx === g ? (b - r) / d + 2 : (r - g) / d + 4; h = (h * 60 + 360) % 360;
+    let nh, ns;
+    if (h >= 80 && h <= 185) { nh = 57; ns = s * 0.85; }          // greens -> olive
+    else if (h >= 28 && h < 52 && s > 0.2) { nh = 58; ns = s * 0.7; } // golds -> olive gold
+    else return null;
+    const c = (1 - Math.abs(2 * l - 1)) * ns, x = c * (1 - Math.abs((nh / 60) % 2 - 1)), m0 = l - c / 2;
+    const [r1, g1, b1] = nh < 60 ? [c, x, 0] : [x, c, 0];
+    return [r1, g1, b1].map(v => Math.round((v + m0) * 255));
+  };
+  const hex2 = (a) => '#' + a.map(v => v.toString(16).padStart(2, '0')).join('').toUpperCase();
   XF.col = (s) => s
-    .replace(/#([0-9a-fA-F]{6})\b/g, (m, h) => HEX['#' + h.toUpperCase()] || m)
-    .replace(/(rgba?\(\s*)(\d+)\s*,\s*(\d+)\s*,\s*(\d+)/g, (m, p, r, g, b) => { const t = RGB[r + ',' + g + ',' + b]; return t ? p + t : m; });
+    .replace(/#([0-9a-fA-F]{6})\b/g, (m, h) => { const H = HEX['#' + h.toUpperCase()]; if (H) return H; const n = parseInt(h, 16); const t = shift(n >> 16, (n >> 8) & 255, n & 255); return t ? hex2(t) : m; })
+    .replace(/(rgba?\(\s*)(\d+)\s*,\s*(\d+)\s*,\s*(\d+)/g, (m, p, r, g, b) => { const t = RGB[r + ',' + g + ',' + b]; if (t) return p + t; const u = shift(+r, +g, +b); return u ? p + u.join(',') : m; });
 
   /* ---------- links ---------- */
   const BOOK = 'https://exhale-osteopaths.uk2.cliniko.com/bookings?business_id=1833503730075443426#service';
