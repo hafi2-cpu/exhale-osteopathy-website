@@ -71,7 +71,7 @@
       const c = XF.clone(pat); const p = P[k]; const href = R.HREF[k];
       const im = W([c], 'image')[0]; im.settings.image = Object.assign({}, im.settings.image, XF.img(k), { alt: p.name }); if (im.settings.link) im.settings.link.url = href;
       const hs = H([c]); hs[0].settings.title = esc(p.name); if (hs[0].settings.link) hs[0].settings.link.url = href; hs[1].settings.title = esc(p.role);
-      const t = TXT([c]); t[0].settings.editor = '<p>' + esc(p.lead.split(/(?<=\.)\s/)[0]) + '</p>';
+      const t = TXT([c]); if (t.length > 1) t[0].settings.editor = '<p>' + esc(p.lead.split(/(?<=\.)\s/)[0]) + '</p>';
       if (c.settings.link) c.settings.link.url = href;
       return c;
     });
@@ -159,6 +159,86 @@
     const bb = one(els, id('book'));
     H([bb])[1].settings.title = 'Book your ' + esc(short) + ' appointment today';
     XF.all([bb], e => e.widgetType === 'html').forEach(x => { x.e.settings.html = x.e.settings.html.replace(/whether osteopathy is right/g, 'whether ' + esc(short) + ' is right'); });
+    return els;
+  };
+
+  /* ================= CONDITION ================= */
+  R.condition = (key) => {
+    const D = window.LOP_DATA.cond, c = D.C[key]; if (!c) throw new Error('no condition ' + key);
+    const els = XF.base(XF.src('p161'));
+    const name = esc(c.name), lower = esc(c.lower);
+    one(els, e => e.widgetType === 'html' && /ex-hero-preload/.test(e.settings.html)).settings.html = R.preload(c.hero);
+    one(els, e => e.widgetType === 'html' && /<picture/.test(e.settings.html)).settings.html = R.heroPic(c.hero, c.heroPos, lc(c.introAlt || c.name));
+    const hero = els[0]; const hh = H([hero]);
+    hh[0].settings.title = '<a href="/">Home</a> → <a href="/conditions/">What We Treat</a> → ' + name;
+    hh[1].settings.title = esc(c.h1);
+    TXT([hero])[0].settings.editor = '<p>' + esc(c.lead) + '</p>';
+    hh.filter(h => /5\.0 on Google/.test(h.settings.title)).forEach(h => XF.remove(els, h));
+    one(els, e => e.widgetType === 'html' && /sb-glance/.test(e.settings.html)).settings.html = R.glance([
+      { k: 'Seen by', v: 'Registered clinicians', icon: 'user' }, { k: 'GP referral', v: 'Not needed', icon: 'check' }, { k: 'Clinic', v: '30 Rotten Row, Lichfield', icon: 'pin' }]).replace('class="sb-glance"', 'class="sb-glance ex-glance--3"');
+    // intro
+    const what = one(els, cls(/sb-what/));
+    const im = W([what], 'image')[0]; im.settings.image = Object.assign({}, im.settings.image, XF.img(c.introImg), { alt: lc(c.introAlt || '') });
+    XF.all([what], e => e.widgetType === 'html' && /ex-floatcard/.test(e.settings.html)).forEach(x => XF.remove(els, x.e));
+    const wh = H([what]); wh[0].settings.title = name + ' Treatment'; wh[1].settings.title = esc(c.introTitle);
+    const wt = TXT([what]); const holder = XF.all([what], e => (e.elements || []).includes(wt[0]))[0].e; const at = holder.elements.indexOf(wt[0]);
+    wt.forEach(t => holder.elements.splice(holder.elements.indexOf(t), 1));
+    holder.elements.splice(at, 0, ...c.intro.map(p => { const t = XF.clone(wt[0]); t.settings.editor = '<p>' + esc(p) + '</p>'; return t; }));
+    // symptoms + causes
+    const cols = XF.all(els, cls(/ex-cols/)).map(x => x.e);
+    const c1 = cols[0].elements[0].elements[0].elements; // two column cards
+    const sym = cols[0], symCards = XF.all([sym], cls(/ex-colcard/)).map(x => x.e);
+    H([symCards[0]])[1].settings.title = esc(c.symTitle);
+    W([symCards[0]], 'html')[0].settings.html = '<ul class="ex-dots">' + c.symptoms.map(x => '<li>' + esc(x) + '</li>').join('') + '</ul>';
+    H([symCards[1]])[1].settings.title = esc(c.causeTitle);
+    W([symCards[1]], 'html')[0].settings.html = '<dl class="ex-dl">' + c.causes.map(x => '<div><dt>' + esc(x.t) + '</dt><dd>' + esc(x.d) + '</dd></div>').join('') + '</dl>';
+    // how we help
+    const steps = XF.all(els, cls(/ex-steps/)).map(x => x.e);
+    const help = steps[0];
+    const fig = XF.all([help], e => e.widgetType === 'html' && /ex-split-fig/.test(e.settings.html))[0];
+    if (fig) fig.e.settings.html = R.fig(D.TH[key] === c.hero ? 'hands-deep' : (D.TH[key] || 'hands-deep'), lc(c.name) + ' treatment');
+    const helpH = H([help]); helpH[1].settings.title = esc(c.helpTitle);
+    TXT([help])[0].settings.editor = '<p>' + esc(c.helpLead) + '</p>';
+    const hg = one([help], cls(/sb-grid/)); const hp = hg.elements[0];
+    hg.elements = c.treats.map(([k, d], i) => {
+      const [tn, tu] = D.TREAT[k]; const card = XF.clone(hp); const hs = H([card]);
+      hs[0].settings.title = String(i + 1).padStart(2, '0'); hs[1].settings.title = esc(tn); hs[1].settings.link = Object.assign({}, hs[1].settings.link, { url: tu });
+      const ts = TXT([card]); ts[0].settings.editor = '<p>' + esc(d) + '</p>'; if (ts[1]) ts[1].settings.editor = '<p><a href="' + tu + '">About ' + esc(tn) + ' →</a></p>';
+      if (card.settings.link) card.settings.link.url = tu;
+      return card;
+    });
+    // self-help + red flags
+    const self = cols[1]; const sc = XF.all([self], cls(/ex-colcard/)).map(x => x.e);
+    W([sc[0]], 'html')[0].settings.html = '<ol class="ex-nums">' + c.tips.map((t, i) => '<li><span class="ex-n">' + String(i + 1).padStart(2, '0') + '</span><span>' + esc(t).replace(/(\d+)–(\d+)/g, '$1 to $2') + '</span></li>').join('') + '</ol>';
+    W([sc[1]], 'html')[0].settings.html = '<ul class="ex-dots">' + c.redFlags.map(x => '<li>' + esc(x) + '</li>').join('') + '</ul>';
+    const gp = TXT([sc[1]])[0]; if (gp) { if (c.gpNote) gp.settings.editor = '<p>' + esc(c.gpNote) + '</p>'; else XF.remove(els, gp); }
+    // first appointment
+    const ex = steps[1];
+    H([ex])[1].settings.title = 'What to expect when you come to us with ' + lower;
+    R.infocards(one([ex], cls(/sb-grid/)), D.steps.map(x => [lc(x.t), lc(x.d)]));
+    // team
+    const ts = one(els, cls(/ex-teamsec/));
+    H([ts])[1].settings.title = 'Who you’ll see for ' + lower;
+    R.perso(one([ts], cls(/ex-team3/)), c.team);
+    XF.remove(els, one(els, cls(/ex-rv/)));
+    XF.remove(els, one(els, cls(/ex-areas/)));
+    // FAQs
+    const fq = one(els, id('faqs'));
+    if (c.faqs && c.faqs.length) { H([fq])[1].settings.title = esc(c.faqTitle); R.faqs(W([fq], 'nested-accordion')[0], c.faqs); } else XF.remove(els, fq);
+    // related conditions
+    const rel = one(els, cls(/ex-cond/));
+    H([rel])[1].settings.title = 'You might also be interested in';
+    const rg = one([rel], cls(/ex-minigrid/)); const rp = rg.elements[0];
+    rg.elements = c.related.map(k => {
+      const [rn, ru] = D.PAGE[k]; const card = XF.clone(rp);
+      const ci = W([card], 'image')[0]; ci.settings.image = Object.assign({}, ci.settings.image, XF.img(D.TH[k] || 'hands-deep'), { alt: '' }); ci.settings.link = Object.assign({}, ci.settings.link, { url: ru });
+      const ch = H([card])[0]; ch.settings.title = esc(rn); ch.settings.link = Object.assign({}, ch.settings.link, { url: ru });
+      return card;
+    });
+    R.accr(els);
+    const bb = one(els, id('book'));
+    H([bb])[1].settings.title = esc(c.ctaTitle || ('Book ' + c.lower + ' treatment in Lichfield'));
+    TXT([bb])[0].settings.editor = '<p>Appointments Monday to Saturday at 30 Rotten Row, Lichfield. No GP referral needed.</p>';
     return els;
   };
 })();
