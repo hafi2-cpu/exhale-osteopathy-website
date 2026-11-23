@@ -75,7 +75,12 @@
     ['https://www.instagram.com/exhaleosteopathy/', 'https://www.instagram.com/lichfield_osteopaths/'],
     ['https://www.facebook.com/exhaleosteopathy/', 'https://www.facebook.com/LichfieldOsteopaths/']
   ];
-  const swapText = (s) => { for (const [a, b] of XF.TEXT) s = s.split(a).join(b); return s; };
+  XF.RE = [
+    // two-clinic call card -> one Lichfield number
+    [/<a class="p" href="tel:[^"]*">Sutton Coldfield [^<]*<span[^>]*>→<\/span><\/a><a class="s"([^>]*)>Lichfield /g, '<a class="p"$1>Call '],
+    [/Sutton Coldfield (and|&amp;|&) Lichfield/g, 'Lichfield']
+  ];
+  const swapText = (s) => { for (const [a, b] of XF.TEXT) s = s.split(a).join(b); for (const [re, b] of XF.RE) s = s.replace(re, b); return s; };
   const swapHrefs = (s) => s.replace(/href=(["'])([^"']*)\1/g, (m, q, u) => 'href=' + q + XF.mapUrl(u) + q);
   // Drop <p>/<li>/<br>-separated links whose target is gone
   XF.dropGoneLinks = (h) => h
