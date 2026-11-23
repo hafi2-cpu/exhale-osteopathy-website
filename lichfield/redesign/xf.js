@@ -106,27 +106,43 @@
 
   /* ---------- media ---------- */
   const M = () => window.LOP_MEDIA;
-  XF.img = (k) => { const m = M()[k]; if (!m) throw new Error('no media ' + k); return { url: m[1], id: m[0], alt: '', source: 'library', size: '' }; };
-  XF.url = (k) => M()[k][1];
+  // Copies of Exhale's photos in Lichfield's media library, keyed by Exhale file name (exhale-image-map.json)
+  const EM = () => window.LOP_EXMAP || {};
+  XF.exBase = (u) => String(u || '').split('?')[0].split('/').pop().replace(/-\d+x\d+(?=\.\w+$)/, '').replace(/-scaled(?=\.\w+$)/, '');
+  const look = (k) => EM()[k] || M()[k];
+  XF.img = (k) => { const m = look(k); if (!m) throw new Error('no media ' + k); return { url: m[1], id: m[0], alt: '', source: 'library', size: '' }; };
+  XF.url = (k) => look(k)[1];
+  XF.has = (k) => !!look(k);
   // Picture for a linked card / menu item, by where it links
   XF.IMG_BY_LINK = {
-    '/osteopathy/': 'osteo-arm', '/peadiatric-osteopathy/': 'cranial-baby', '/massage/': 'massage-stock', '/physiotherapy/': 'hands-leg',
-    '/acupuncture/': 'acupuncture', '/laser-therapy/': 'laser', '/about/': 'exterior', '/new-patients/': 'exterior', '/meet-the-team/': 'osteo-freta',
-    '/back-pain/': 'hands-back', '/neck-pain/': 'hands-upper', '/shoulder-pain/': 'osteo-freta', '/hip-pain/': 'hands-deep', '/knee-pain/': 'osteo-arm',
-    '/ankle-pain/': 'hands-leg', '/headaches/': 'hands-upper', '/sciatica/': 'hands-back', '/sports-injuries/': 'hands-leg',
-    '/tendon-problems/': 'osteo-arm', '/jaw-pain/': 'hands-upper',
+    '/osteopathy/': 'exhale-c-osteo-hd.jpg', '/peadiatric-osteopathy/': 'exhale-i-baby-hd.jpg', '/massage/': 'exhale-c-massage-hd.jpg', '/physiotherapy/': 'exhale-c-ankle-hd.jpg',
+    '/acupuncture/': 'exhale-acupuncture.jpg', '/laser-therapy/': 'exhale-laser.jpg', '/about/': 'exterior', '/new-patients/': 'exhale-c-assess-hd.jpg', '/meet-the-team/': 'osteo-freta',
+    '/treatments/': 'exhale-c-osteo-hd.jpg', '/conditions/': 'exhale-lower-back-hand.jpg', '/pricing/': 'exterior', '/contact/': 'exhale-lichfield-clinic.jpg',
+    '/back-pain/': 'exhale-lower-back-hand.jpg', '/neck-pain/': 'exhale-w-neck-hd.jpg', '/shoulder-pain/': 'exhale-shoulder-taping.jpg', '/hip-pain/': 'exhale-hip-mobilisation-couch.jpg',
+    '/knee-pain/': 'exhale-knee-pain-assessment.jpg', '/ankle-pain/': 'exhale-foot-ankle-mobilisation.jpg', '/headaches/': 'exhale-headache-temple-hold.jpg', '/sciatica/': 'exhale-hip-leg-mobilisation.jpg',
+    '/sports-injuries/': 'exhale-sports-injury-ankle-taping.jpg', '/tendon-problems/': 'exhale-achilles-tendon-taping.jpg', '/jaw-pain/': 'exhale-jaw-temple-treatment.jpg',
     '/hafi-rahman/': 'hafi', '/freta-teklesenbet/': 'freta', '/zoe-goodwin/': 'zoe', '/emre-tosun/': 'emre', '/emma-thompson/': 'emma', '/david-brown/': 'david'
   };
+  XF.PEOPLE_LINK = /^\/(hafi-rahman|freta-teklesenbet|zoe-goodwin|emre-tosun|emma-thompson|david-brown)\/$/;
   // Fallback by Exhale image file name
   XF.IMG_BY_FILE = [[/logo-white/, 'logo-white'], [/logo-forest|logo-dark|logo-green/, 'logo-dark'], [/gosc/, 'gosc'], [/hcpc/, 'hcpc'],
     [/hafi/, 'hafi'], [/freta/, 'freta'], [/zoe/, 'zoe'], [/emre/, 'emre'], [/ankita/, 'emma'], [/baby|cranial|infant/, 'cranial-baby'],
     [/massage/, 'massage-stock'], [/acupunct/, 'acupuncture'], [/laser/, 'laser'], [/back/, 'hands-back'], [/neck|head|jaw|temple/, 'hands-upper'],
     [/knee|ankle|foot|sport|tendon|achilles/, 'hands-leg'], [/hip|pelvi/, 'hands-deep'], [/shoulder/, 'osteo-freta'], [/team|clinic|hero|ab-/, 'exterior']];
   XF.imgFor = (exUrl, link) => {
-    if (link && XF.IMG_BY_LINK[link]) return XF.IMG_BY_LINK[link];
+    if (link && XF.PEOPLE_LINK.test(link)) return XF.IMG_BY_LINK[link];   // Lichfield's own portraits
+    const b = XF.exBase(exUrl); if (EM()[b]) return b;                      // the same photo Exhale uses there
+    if (link && XF.IMG_BY_LINK[link] && XF.has(XF.IMG_BY_LINK[link])) return XF.IMG_BY_LINK[link];
     const f = String(exUrl || '').split('/').pop();
     for (const [re, k] of XF.IMG_BY_FILE) if (re.test(f)) return k;
     return 'hands-deep';
+  };
+
+  XF.htmlImgs = (h) => {
+    const sw = (u) => { const b = XF.exBase(u); return EM()[b] ? EM()[b][1] : u; };
+    h = h.replace(/(?:https:\/\/(?:www\.)?exhaleosteopathy\.co\.uk)?\/wp-content\/uploads\/[^"'\s,)]+\.(?:jpe?g|png|webp)/gi, (u) => /exhale-(gosc|io|hcpc|appi)|logo/.test(u) ? u : sw(u));
+    if (/hafir63|lichfield-osteopaths/.test(h)) h = h.replace(/\s(srcset|imagesrcset)="[^"]*"/g, '').replace(/<source[^>]*>/g, '');
+    return h;
   };
 
   /* ---------- tree helpers ---------- */
@@ -156,6 +172,7 @@
         let t = XF.col(str);
         if (key === 'url') t = XF.mapUrl(t);
         if (/<a |href=/.test(t)) t = XF.dropGoneLinks(swapHrefs(t));
+        if (/\/wp-content\/uploads\/[^"'\s]+\.(jpe?g|png|webp)/i.test(t) && /<(img|picture|figure|link)/.test(t)) t = XF.htmlImgs(t);
         return swapText(t);
       });
     });

@@ -65,7 +65,7 @@
       li('<path d="M16 29s-9-8.5-9-15a9 9 0 0 1 18 0c0 6.5-9 15-9 15z"/><circle cx="16" cy="14" r="3.2"/>', 'Lichfield city centre', 'With a sister clinic in Sutton Coldfield') + '</ul>';
     // About
     const about = XF.one(els, e => e.widgetType === 'image' && e.settings._css_classes && /sb-img--43/.test(e.settings._css_classes)).e;
-    about.settings.image = Object.assign({}, about.settings.image, XF.img('osteo-freta'), { alt: 'Freta assessing a patient at Lichfield Osteopathic Practice' });
+    about.settings.image = Object.assign({}, about.settings.image, { alt: 'Hands-on treatment at Lichfield Osteopathic Practice' });
     T(els, /^A family clinic in Sutton Coldfield/, 'A Lichfield clinic, caring for patients since 1983');
     T(els, /^Exhale is a family osteopathy clinic/, '<p>Lichfield Osteopathic Practice is a clinic of four registered osteopaths, a physiotherapist and a sports massage therapist at 30 Rotten Row, a few minutes’ walk from Lichfield city centre.</p><p>Our team covers a broad spectrum of osteopathic skills, including classical, cranial and paediatric osteopathy, sports injuries and functional medicine. We see patients of all ages, from babies to later life, for back and neck pain, headaches, joint problems, sports injuries and changes to posture in pregnancy.</p>');
     htmlW(els, /ex-accr/).settings.html = '<div class="ex-accr"><img src="' + XF.url('gosc') + '" alt="General Osteopathic Council registered" loading="lazy"><img src="' + XF.url('hcpc') + '" alt="HCPC registered" loading="lazy"></div>';
@@ -75,7 +75,7 @@
     const cars = XF.all(els, e => e.widgetType === 'nested-carousel').map(x => x.e);
     if (cars[1]) {
       const src = cars[0].elements.find(sl => XF.all([sl], e => XF.linkOf(e) === '/massage/').length);
-      if (src) { const c = XF.clone(src); XF.all([c], e => e.elType === 'container' && XF.linkOf(e)).forEach(x => { x.e.settings.background_image = Object.assign({}, x.e.settings.background_image, XF.img('massage-zoe')); });
+      if (src) { const c = XF.clone(src); XF.all([c], e => e.elType === 'container' && XF.linkOf(e)).forEach(x => { x.e.settings.background_image = Object.assign({}, x.e.settings.background_image, XF.img('exhale-c-massage-hd.jpg')); });
         cars[1].elements.push(c); cars[1].settings.carousel_items.push({ _id: Math.random().toString(16).slice(2, 9), slide_title: 'Sports Massage' }); }
     }
     // Team

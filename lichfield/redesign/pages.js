@@ -78,13 +78,20 @@
   };
 
   /* ================= TREATMENT ================= */
+  const TSRC = { osteo: 'p150', paediatric: 'p217', massage: 'p214', physio: 'p213', acupuncture: 'p219', laser: 'p215' };
+  const CSRC = { back: 'p161', neck: 'p223', shoulder: 'p224', hip: 'p225', knee: 'p226', foot: 'p227', headaches: 'p228', sciatica: 'p229', sports: 'p230', tendon: 'p231', jaw: 'p232' };
+  const figsOf = (els) => XF.all(els, e => e.widgetType === 'html' && /ex-split-fig/.test(e.settings.html)).map(x => x.e.settings.html);
+  const exPhoto = (html) => /hafir63/.test(html || '');
   R.treatment = (key) => {
     const s = window.LOP_DATA.treat.S[key]; if (!s) throw new Error('no treatment ' + key);
-    const els = XF.base(XF.src('p150'));
+    const src = XF.B[TSRC[key]] ? TSRC[key] : 'p150';
+    const els = XF.base(XF.src(src));
+    const exFigs = figsOf(els).filter(exPhoto);
     const name = esc(s.name), short = s.short;
     // hero
-    one(els, e => e.widgetType === 'html' && /ex-hero-preload/.test(e.settings.html)).settings.html = R.preload(s.heroImg);
-    one(els, e => e.widgetType === 'html' && /<picture/.test(e.settings.html)).settings.html = R.heroPic(s.heroImg, s.heroPos, lc(s.name) + ' at Lichfield Osteopathic Practice');
+    const pic = one(els, e => e.widgetType === 'html' && /<picture/.test(e.settings.html));
+    if (!exPhoto(pic.settings.html)) { one(els, e => e.widgetType === 'html' && /ex-hero-preload/.test(e.settings.html)).settings.html = R.preload(s.heroImg); pic.settings.html = R.heroPic(s.heroImg, s.heroPos, lc(s.name) + ' at Lichfield Osteopathic Practice'); }
+    else pic.settings.html = pic.settings.html.replace(/alt="[^"]*"/, 'alt="' + lc(s.name) + ' at Lichfield Osteopathic Practice"');
     const hero = els[0];
     const hh = H([hero]);
     hh[0].settings.title = '<a href="/">Home</a> → <a href="/treatments/">Treatments</a> → ' + name;
@@ -94,7 +101,7 @@
     one(els, e => e.widgetType === 'html' && /sb-glance/.test(e.settings.html)).settings.html = R.glance(s.facts);
     // intro
     const what = one(els, cls(/sb-what/));
-    const im = W([what], 'image')[0]; im.settings.image = Object.assign({}, im.settings.image, XF.img(s.introImg), { alt: lc(s.introAlt || '') });
+    const im = W([what], 'image')[0]; if (!/hafir63\.sg-host\.com\/wp-content\/uploads\/20\d\d\/11\/exhale-/.test(im.settings.image.url)) im.settings.image = Object.assign({}, im.settings.image, XF.img(s.introImg)); im.settings.image.alt = lc(s.introAlt || '');
     XF.all([what], e => e.widgetType === 'html' && /ex-floatcard/.test(e.settings.html)).forEach(x => XF.remove(els, x.e));
     const wh = H([what]); wh[1].settings.title = esc(s.introTitle);
     const wt = TXT([what]); wt[0].settings.editor = '<p>' + esc(s.intro[0]) + '</p>';
@@ -117,7 +124,7 @@
       ts.forEach(t => holder.elements.splice(holder.elements.indexOf(t), 1));
       holder.elements.splice(pos, 0, ...sec.paras.map(p => { const t = XF.clone(ts[0]); t.settings.editor = '<p>' + p + '</p>'; return t; }));
       const fig = XF.all([r], e => e.widgetType === 'html' && /ex-split-fig/.test(e.settings.html))[0];
-      if (fig) fig.e.settings.html = R.fig(pics[i % pics.length], lc(sec.title));
+      if (fig) fig.e.settings.html = exFigs.length ? exFigs[i % exFigs.length] : R.fig(pics[i % pics.length], lc(sec.title));
       return r;
     });
     main.elements = [...rows, ...(tech ? [tech] : [])];
@@ -130,9 +137,10 @@
     H([cs])[1].settings.title = esc(s.condsTitle || 'What we can help with');
     TXT([cs])[0].settings.editor = '<p>' + esc(s.condsLead) + '</p>';
     const grid = one([cs], cls(/ex-minigrid/)); const pat = grid.elements[0];
-    grid.elements = s.conds.map(c => {
+    const exCards = grid.elements.map(c => W([c], 'image')[0]).filter(Boolean).map(i => i.settings.image);
+    grid.elements = s.conds.map((c, ci0) => {
       const card = XF.clone(pat); const u = R.condUrl(lc(c));
-      const ci = W([card], 'image')[0]; ci.settings.image = Object.assign({}, ci.settings.image, XF.img(u ? XF.IMG_BY_LINK[u] : 'hands-deep'), { alt: '' });
+      const ci = W([card], 'image')[0]; ci.settings.image = Object.assign({}, ci.settings.image, u ? XF.img(XF.IMG_BY_LINK[u]) : exCards[ci0 % exCards.length], { alt: '' });
       const ch = H([card])[0]; ch.settings.title = esc(c);
       [ci, ch].forEach(w => { if (u) w.settings.link = Object.assign({}, w.settings.link, { url: u }); else delete w.settings.link; });
       if (!u) card.settings.css_classes = (card.settings.css_classes || '').replace('sb-cell--link', '');
@@ -165,10 +173,11 @@
   /* ================= CONDITION ================= */
   R.condition = (key) => {
     const D = window.LOP_DATA.cond, c = D.C[key]; if (!c) throw new Error('no condition ' + key);
-    const els = XF.base(XF.src('p161'));
+    const els = XF.base(XF.src(XF.B[CSRC[key]] ? CSRC[key] : 'p161'));
     const name = esc(c.name), lower = esc(c.lower);
-    one(els, e => e.widgetType === 'html' && /ex-hero-preload/.test(e.settings.html)).settings.html = R.preload(c.hero);
-    one(els, e => e.widgetType === 'html' && /<picture/.test(e.settings.html)).settings.html = R.heroPic(c.hero, c.heroPos, lc(c.introAlt || c.name));
+    const pic = one(els, e => e.widgetType === 'html' && /<picture/.test(e.settings.html));
+    if (!exPhoto(pic.settings.html)) { one(els, e => e.widgetType === 'html' && /ex-hero-preload/.test(e.settings.html)).settings.html = R.preload(c.hero); pic.settings.html = R.heroPic(c.hero, c.heroPos, lc(c.introAlt || c.name)); }
+    else pic.settings.html = pic.settings.html.replace(/alt="[^"]*"/, 'alt="' + lc(c.name) + ' treatment at Lichfield Osteopathic Practice"');
     const hero = els[0]; const hh = H([hero]);
     hh[0].settings.title = '<a href="/">Home</a> → <a href="/conditions/">What We Treat</a> → ' + name;
     hh[1].settings.title = esc(c.h1);
@@ -178,7 +187,7 @@
       { k: 'Seen by', v: 'Registered clinicians', icon: 'user' }, { k: 'GP referral', v: 'Not needed', icon: 'check' }, { k: 'Clinic', v: '30 Rotten Row, Lichfield', icon: 'pin' }]).replace('class="sb-glance"', 'class="sb-glance ex-glance--3"');
     // intro
     const what = one(els, cls(/sb-what/));
-    const im = W([what], 'image')[0]; im.settings.image = Object.assign({}, im.settings.image, XF.img(c.introImg), { alt: lc(c.introAlt || '') });
+    const im = W([what], 'image')[0]; if (!/hafir63\.sg-host\.com\/wp-content\/uploads\/20\d\d\/11\/exhale-/.test(im.settings.image.url)) im.settings.image = Object.assign({}, im.settings.image, XF.img(c.introImg)); im.settings.image.alt = lc(c.introAlt || '');
     XF.all([what], e => e.widgetType === 'html' && /ex-floatcard/.test(e.settings.html)).forEach(x => XF.remove(els, x.e));
     const wh = H([what]); wh[0].settings.title = name + ' Treatment'; wh[1].settings.title = esc(c.introTitle);
     const wt = TXT([what]); const holder = XF.all([what], e => (e.elements || []).includes(wt[0]))[0].e; const at = holder.elements.indexOf(wt[0]);
@@ -196,7 +205,7 @@
     const steps = XF.all(els, cls(/ex-steps/)).map(x => x.e);
     const help = steps[0];
     const fig = XF.all([help], e => e.widgetType === 'html' && /ex-split-fig/.test(e.settings.html))[0];
-    if (fig) fig.e.settings.html = R.fig(D.TH[key] === c.hero ? 'hands-deep' : (D.TH[key] || 'hands-deep'), lc(c.name) + ' treatment');
+    if (fig && !exPhoto(fig.e.settings.html)) fig.e.settings.html = R.fig(D.TH[key] === c.hero ? 'hands-deep' : (D.TH[key] || 'hands-deep'), lc(c.name) + ' treatment');
     const helpH = H([help]); helpH[1].settings.title = esc(c.helpTitle);
     TXT([help])[0].settings.editor = '<p>' + esc(c.helpLead) + '</p>';
     const hg = one([help], cls(/sb-grid/)); const hp = hg.elements[0];
@@ -231,7 +240,7 @@
     const rg = one([rel], cls(/ex-minigrid/)); const rp = rg.elements[0];
     rg.elements = c.related.map(k => {
       const [rn, ru] = D.PAGE[k]; const card = XF.clone(rp);
-      const ci = W([card], 'image')[0]; ci.settings.image = Object.assign({}, ci.settings.image, XF.img(D.TH[k] || 'hands-deep'), { alt: '' }); ci.settings.link = Object.assign({}, ci.settings.link, { url: ru });
+      const ci = W([card], 'image')[0]; ci.settings.image = Object.assign({}, ci.settings.image, XF.img(XF.IMG_BY_LINK[ru] || D.TH[k] || 'hands-deep'), { alt: '' }); ci.settings.link = Object.assign({}, ci.settings.link, { url: ru });
       const ch = H([card])[0]; ch.settings.title = esc(rn); ch.settings.link = Object.assign({}, ch.settings.link, { url: ru });
       return card;
     });
@@ -284,7 +293,7 @@
     const sg = one([sp], cls(/ex-minigrid/)); const spat = sg.elements[0];
     sg.elements = (p.interests || []).map(x => {
       const card = XF.clone(spat); const u = /bab|child|infant/i.test(x.t) ? '/peadiatric-osteopathy/' : R.condUrl(x.t);
-      const ci = W([card], 'image')[0]; ci.settings.image = Object.assign({}, ci.settings.image, XF.img(x.img || (u && XF.IMG_BY_LINK[u]) || 'hands-deep'), { alt: '' });
+      const ci = W([card], 'image')[0]; ci.settings.image = Object.assign({}, ci.settings.image, XF.img((u && XF.IMG_BY_LINK[u]) || x.img || 'hands-deep'), { alt: '' });
       const ch = H([card])[0]; ch.settings.title = esc(x.t); TXT([card])[0].settings.editor = '<p>' + esc(x.d) + '</p>';
       [ci, ch].forEach(w => { if (u) w.settings.link = Object.assign({}, w.settings.link, { url: u }); else delete w.settings.link; });
       return card;

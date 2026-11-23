@@ -7,7 +7,7 @@
     const B = window.XF_BASE;
     const get = async (p) => { const r = await fetch(B + p); if (!r.ok) throw new Error(p + ' ' + r.status); return r.text(); };
     for (let i = 0; i < 200 && !(window.elementor && elementor.getPreviewContainer && elementor.getPreviewContainer()); i++) await new Promise(r => setTimeout(r, 250));
-    window.LOP_MEDIA = JSON.parse(await get('media-map.json'));
+    window.LOP_MEDIA = JSON.parse(await get('media-map.json')); window.LOP_EXMAP = JSON.parse(await get('exhale-image-map.json'));
     eval(await get('redesign/xf.js')); eval(await get('redesign/recipes.js')); eval(await get('redesign/pages.js')); eval(await get('redesign/pages2.js'));
     window.LOP_DATA = { treat: JSON.parse(await get('data/treatments.json')), prac: JSON.parse(await get('data/practitioners.json')), cond: JSON.parse(await get('data/conditions.json')) };
     if (window.XF_EXTRA) for (const f of window.XF_EXTRA) eval(await get('redesign/' + f));

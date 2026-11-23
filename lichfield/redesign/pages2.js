@@ -83,7 +83,7 @@
     const cb = W([cc[1]], 'button'); cb[1].settings.text = 'Call 01543 252673';
     // photo strip
     const strip = els.find(s => cls(/ex-tone-beige/)(s) && W([s], 'image').length >= 4 && !H([s]).length);
-    if (strip) W([strip], 'image').forEach((im, i) => { const k = ['exterior', 'osteo-freta', 'massage-zoe', 'cranial-baby'][i] || 'hands-deep'; im.settings.image = Object.assign({}, im.settings.image, XF.img(k), { alt: '' }); });
+    if (strip) W([strip], 'image').forEach((im, i) => { const k = ['exhale-lichfield-clinic.jpg', 'exhale-hafi-treatment-smile.jpg', 'exhale-c-massage-hd.jpg', 'exhale-babies-cranial-hold.jpg'][i] || 'hands-deep'; im.settings.image = Object.assign({}, im.settings.image, XF.img(k), { alt: '' }); });
     dropReviews(els); R.accr(els); dropSchema(els);
     setT(els, /^Book your first appointment today/, 'Book your first appointment today');
     return els;
@@ -119,7 +119,7 @@
   /* ================= NEW PATIENTS ================= */
   R.newp = () => {
     const els = XF.base(XF.src('p580'));
-    hero(els, 'New Patients', 'New patients: what to expect at your first appointment', 'Coming to Lichfield Osteopathic Practice for the first time? Here’s how your first visit works and what it costs.', 'osteo-freta', 'Freta assessing a patient’s shoulder');
+    hero(els, 'New Patients', 'New patients: what to expect at your first appointment', 'Coming to Lichfield Osteopathic Practice for the first time? Here’s how your first visit works and what it costs.', 'exhale-c-assess-hd.jpg', 'An osteopath assessing a patient');
     one(els, e => e.widgetType === 'html' && /sb-glance/.test(e.settings.html)).settings.html = R.glance([
       { k: 'Initial consultation', v: '£75, including treatment', icon: 'pound' }, { k: 'GP referral', v: 'Not needed', icon: 'check' }, { k: 'Open', v: '6 days a week', icon: 'clock' }])
       .replace('class="sb-glance"', 'class="sb-glance ex-glance--3"');
@@ -169,7 +169,7 @@
   /* ================= PRICING ================= */
   R.pricing = () => {
     const els = XF.base(XF.src('p357'));
-    hero(els, 'Pricing', 'Our fees', 'Osteopathy, physiotherapy and massage fees at Lichfield Osteopathic Practice. Book online, or call us if you have any questions.', 'exterior', 'Lichfield Osteopathic Practice, 30 Rotten Row');
+    hero(els, 'Pricing', 'Our fees', 'Osteopathy, physiotherapy and massage fees at Lichfield Osteopathic Practice. Book online, or call us if you have any questions.', 'exhale-condbg-hd.jpg', 'Hands-on treatment at Lichfield Osteopathic Practice');
     const hb = W([els[0]], 'button'); if (hb[1]) { hb[1].settings.text = 'New patients'; hb[1].settings.link = Object.assign({}, hb[1].settings.link, { url: '/new-patients/' }); }
     const fees = one(els, id('fees'));
     TXT([fees])[0].settings.editor = P('Choose a treatment to see what’s included and what it costs. Not sure which to book? Call us on 01543 252673 and we will help.');
@@ -205,7 +205,7 @@
   /* ================= CONTACT ================= */
   R.contact = () => {
     const els = XF.base(XF.src('p358'));
-    hero(els, 'Contact', 'Contact Lichfield Osteopathic Practice', 'Call, email or pop in to see us at 30 Rotten Row, Lichfield.', 'exterior', 'Lichfield Osteopathic Practice, 30 Rotten Row');
+    hero(els, 'Contact', 'Contact Lichfield Osteopathic Practice', 'Call, email or pop in to see us at 30 Rotten Row, Lichfield.', 'exhale-lichfield-clinic.jpg', 'Lichfield Osteopathic Practice, 30 Rotten Row');
     const intro = secWith(els, /Our Clinics/);
     setT([intro], /Our Clinics/, 'Find Us');
     setT([intro], /^Find us in/, '30 Rotten Row, Lichfield');
@@ -229,7 +229,7 @@
   /* ================= TREATMENTS overview (/treatments/) ================= */
   R.treatIndex = () => {
     const els = XF.base(XF.src('p2682'));
-    hero(els, 'Treatments', 'Treatments in Lichfield', 'Osteopathy, physiotherapy, sports massage, acupuncture and laser therapy at 30 Rotten Row, Lichfield. No GP referral needed.', 'osteo-arm', 'An osteopath treating a patient’s arm and shoulder');
+    hero(els, 'Treatments', 'Treatments in Lichfield', 'Osteopathy, physiotherapy, sports massage, acupuncture and laser therapy at 30 Rotten Row, Lichfield. No GP referral needed.', 'exhale-condbg-hd.jpg', 'An osteopath treating a patient’s arm and shoulder');
     const S = window.LOP_DATA.treat.S;
     const BY = { '/osteopathy/': ['Osteopathy', 'osteo'], '/peadiatric-osteopathy/': ['Cranial &amp; Paediatric Osteopathy', 'paediatric'], '/acupuncture/': ['Acupuncture', 'acupuncture'],
       '/physiotherapy/': ['Physiotherapy', 'physio'], '/massage/': ['Sports &amp; Deep Tissue Massage', 'massage'], '/laser-therapy/': ['Laser Therapy', 'laser'] };
@@ -246,7 +246,7 @@
   /* ================= CONDITIONS overview (/conditions/) ================= */
   R.condIndex = () => {
     const els = XF.base(XF.src('p2667'));
-    hero(els, 'Conditions', 'Conditions we treat in Lichfield', 'Our osteopaths, physiotherapist and sports massage therapist assess and treat a wide range of muscle, joint and nerve problems. Choose a condition to find out more.', 'hands-back', 'Hands-on treatment of the back');
+    hero(els, 'Conditions', 'Conditions we treat in Lichfield', 'Our osteopaths, physiotherapist and sports massage therapist assess and treat a wide range of muscle, joint and nerve problems. Choose a condition to find out more.', 'exhale-lower-back-hand.jpg', 'Hands-on treatment of the back');
     XF.all(els, cls(/ex-cond-tile/)).forEach(({ e: t }) => {
       const u = XF.linkOf(t); W([t], 'image').forEach(im => { im.settings.image = Object.assign({}, im.settings.image, XF.img(XF.IMG_BY_LINK[u] || 'hands-deep'), { alt: '' }); });
       const h = H([t])[0]; if (/TMJ/.test(h.settings.title)) h.settings.title = 'Jaw pain'; if (/Headaches/.test(h.settings.title)) h.settings.title = 'Headaches';
