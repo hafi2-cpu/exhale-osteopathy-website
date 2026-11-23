@@ -78,3 +78,10 @@ The whole staging site now uses the new Exhale design that went live on exhaleos
   - insurer list;
   - payment and cancellation policy;
   - Emre's days.
+
+### Exhale photos (23 Nov 2026)
+- 52 of Exhale's treatment and condition photos were copied into Lichfield's media library through an Elementor template import. Hafir63 downloaded the public image files, and nothing on Exhale changed.
+- `exhale-image-map.json` maps each Exhale file name to its Lichfield copy. Each page now uses the same photos as its Exhale counterpart.
+- Some photos were not copied: Exhale team and clinic photos, staff portraits, logos, and the pregnancy and Pilates images.
+- Copying the photos left import templates in Templates > Saved Templates, titled lop-img-*: IDs 384, 392, 400, 408, 416, 424, 432, 440, 448 and 452. They can be deleted. The images stay.
+- Pages are now written through the REST API (`_elementor_data`), followed by Elementor > Tools > Regenerate CSS.
