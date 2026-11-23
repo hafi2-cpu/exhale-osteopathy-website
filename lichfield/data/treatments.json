@@ -57,6 +57,44 @@
       "Osteopaths' patients include the young, the more mature person, manual workers, office professionals, pregnant women, children and sports people.",
       "Our team covers a broad spectrum of osteopathic skills, including classical, cranial and paediatric osteopathy, sports injuries and functional medicine."
      ]
+    },
+    {
+     "id": "our-osteopaths",
+     "title": "Our osteopaths and their days",
+     "paras": [
+      "Four registered osteopaths work at Lichfield Osteopathic Practice: <a class=\"ex-underline-olive ex-w400\" href=\"/emma-thompson/\">Emma Thompson</a> on Mondays, <a class=\"ex-underline-olive ex-w400\" href=\"/freta-teklesenbet/\">Freta Teklesenbet</a> on Mondays, Tuesdays, Wednesdays and Fridays, <a class=\"ex-underline-olive ex-w400\" href=\"/david-brown/\">David Brown</a> on Thursdays and <a class=\"ex-underline-olive ex-w400\" href=\"/hafi-rahman/\">Hafi Rahman</a> on Fridays.",
+      "You can book with any of them online, or call us on 01543 252673 and we'll help you find a time."
+     ]
+    },
+    {
+     "id": "back-pain",
+     "title": "Osteopathy for back pain",
+     "paras": [
+      "Back pain is one of the most common reasons people come to see us. Your osteopath will look at how your spine, pelvis and hips are moving, then use hands-on treatment such as soft tissue work and joint mobilisation, with advice and exercises to help you stay active. <a class=\"ex-underline-olive ex-w400\" href=\"/back-pain/\">Read more about back pain</a>."
+     ]
+    },
+    {
+     "id": "sciatica",
+     "title": "Sciatica",
+     "paras": [
+      "Sciatica is pain that travels from the lower back or buttock down the leg, sometimes with tingling or numbness. Your osteopath will examine your back and legs to understand what is irritating the nerve, then use gentle treatment and advice to help ease your symptoms. <a class=\"ex-underline-olive ex-w400\" href=\"/sciatica/\">Read more about sciatica</a>.",
+      "If you have numbness around your groin or buttocks, or problems controlling your bladder or bowels, get urgent medical help by calling 999 or 111, or going to A&amp;E."
+     ]
+    },
+    {
+     "id": "neck-pain",
+     "title": "Neck pain",
+     "paras": [
+      "Neck pain often builds up from long hours at a desk, driving or sleeping awkwardly, and can bring headaches with it. Treatment may include soft tissue work to the neck and shoulders, gentle mobilisation and advice on posture and movement. <a class=\"ex-underline-olive ex-w400\" href=\"/neck-pain/\">Read more about neck pain</a>."
+     ]
+    },
+    {
+     "id": "osteopath-or-chiropractor",
+     "title": "Osteopath or chiropractor?",
+     "paras": [
+      "Osteopaths and chiropractors are both regulated healthcare professionals who use hands-on treatment for back, neck and joint problems. Osteopaths are registered with the General Osteopathic Council, and chiropractors with the General Chiropractic Council.",
+      "Osteopathy tends to take a whole-body approach, using a wide range of techniques such as soft tissue work, stretching and joint mobilisation. The right choice often comes down to personal preference. If you're not sure whether osteopathy is right for you, call us for a quick chat."
+     ]
     }
    ],
    "techTitle": "What treatment may include",
@@ -252,11 +290,16 @@
   "massage": {
    "name": "Sports & Deep Tissue Massage",
    "short": "massage",
-   "h1": "Deep Tissue & Sports Massage in Lichfield",
-   "lead": "Expert deep tissue and sports massage to help relieve muscle tension, improve mobility and support recovery from physical strain or injury.",
+   "h1": "Sports &amp; Deep Tissue Massage in Lichfield",
+   "lead": "Clinical sports and deep tissue massage from a physiotherapist and a qualified sports massage therapist, to ease muscle tension, improve mobility and support your recovery.",
    "heroImg": "massage-zoe",
    "heroPos": "50% 45%",
    "facts": [
+    {
+     "k": "30 minutes",
+     "v": "£40",
+     "icon": "clock"
+    },
     {
      "k": "60 minutes",
      "v": "£60",
@@ -268,42 +311,52 @@
      "icon": "clock"
     },
     {
-     "k": "Massage types",
-     "v": "Sports, deep tissue, pregnancy",
-     "icon": "check"
-    },
-    {
-     "k": "Clinic",
-     "v": "30 Rotten Row, Lichfield",
-     "icon": "pin"
+     "k": "Therapists",
+     "v": "Zoe &amp; Emre",
+     "icon": "user"
     }
    ],
-   "introTitle": "Deep tissue &amp; sports massage in Lichfield",
+   "introTitle": "Clinical massage in Lichfield, not a spa",
    "intro": [
-    "This style of massage uses firmer pressure and targeted techniques to work into deeper layers of muscle and connective tissue.",
-    "It's ideal for active individuals, those with physically demanding jobs, or anyone experiencing persistent tightness or muscle discomfort."
+    "Our massage is a clinical treatment, given in an osteopathic practice by therapists trained in how muscles, joints and injuries behave. It uses firmer pressure and targeted techniques to work into the deeper layers of muscle and connective tissue.",
+    "It suits active people, those with physically demanding jobs, and anyone with persistent tightness or muscle discomfort. Treatments are always tailored to you, with pressure adjusted so the work is effective but controlled."
    ],
    "ticks": [
-    "Treatments are always tailored to you",
-    "Pressure adjusted so the work is effective but controlled",
+    "Given by a physiotherapist and a Level 4 sports massage therapist",
+    "30, 60 or 90 minute sessions",
     "Sports, deep tissue or pregnancy massage"
    ],
    "introImg": "massage-stock",
    "introAlt": "A deep tissue massage of the upper back",
    "sections": [
     {
-     "id": "about",
-     "title": "Tailored to you",
+     "id": "therapists",
+     "title": "Your massage therapists",
      "paras": [
-      "Treatments are always tailored to you, with pressure adjusted to ensure the work is effective but controlled.",
-      "Choose sports, deep tissue or pregnancy massage, in a 60 or 90 minute session."
+      "<a class=\"ex-underline-olive ex-w400\" href=\"/zoe-goodwin/\">Zoe Goodwin</a> is a Level 4 qualified sports massage therapist with a degree in Sport, Exercise and Health Science, and is currently studying for an MSc in Physiotherapy. Zoe is at Lichfield on Wednesdays from 4pm to 8pm and on Saturdays from 8am to 12pm, so you can book a massage after work or at the weekend.",
+      "<a class=\"ex-underline-olive ex-w400\" href=\"/emre-tosun/\">Emre Tosun</a> is an HCPC-registered physiotherapist who is also a qualified sports massage therapist and personal trainer. His massage draws on his physiotherapy training, and he can combine it with stretching, cupping and exercise advice where that suits you."
+     ]
+    },
+    {
+     "id": "sports-or-deep",
+     "title": "Sports massage or deep tissue massage?",
+     "paras": [
+      "Sports massage focuses on the muscles you use in training and competition, to help you prepare, recover and keep moving well. Deep tissue massage works more slowly into the deeper layers of muscle to ease long-standing tightness.",
+      "Many treatments use a mix of both. Your therapist will talk through your symptoms and goals and choose the approach that suits you."
+     ]
+    },
+    {
+     "id": "how-long",
+     "title": "How long should I book?",
+     "paras": [
+      "A 30 minute session (£40) is a good fit for one area, such as the neck and shoulders. Choose 60 minutes (£60) or 90 minutes (£80) if you'd like more areas treated or a fuller session."
      ]
     },
     {
      "id": "with-osteo",
-     "title": "Massage alongside osteopathy",
+     "title": "Massage alongside osteopathy or physiotherapy",
      "paras": [
-      "Massage may be used on its own or alongside osteopathic treatment, depending on your symptoms and goals. We'll always discuss the most appropriate approach and what to expect following treatment."
+      "Massage can be booked on its own or alongside <a class=\"ex-underline-olive ex-w400\" href=\"/osteopathy/\">osteopathy</a> or <a class=\"ex-underline-olive ex-w400\" href=\"/physiotherapy/\">physiotherapy</a>, depending on your symptoms and goals. We'll always discuss the most appropriate approach and what to expect after treatment."
      ]
     }
    ],
@@ -336,20 +389,29 @@
     }
    ],
    "team": [
-    "zoe"
+    "zoe",
+    "emre"
    ],
    "faqs": [
+    {
+     "q": "How much does a massage cost?",
+     "a": "30 minutes is £40, 60 minutes is £60 and 90 minutes is £80."
+    },
+    {
+     "q": "Who gives the massage?",
+     "a": "Zoe Goodwin, our Level 4 sports massage therapist, or Emre Tosun, our physiotherapist, who is also a qualified sports massage therapist. Zoe is in clinic on Wednesday evenings and Saturday mornings."
+    },
     {
      "q": "How firm is the pressure?",
      "a": "Deep tissue and sports massage uses firmer pressure, but treatments are always tailored to you, with pressure adjusted to ensure the work is effective but controlled."
     },
     {
-     "q": "Can massage be combined with osteopathy?",
-     "a": "Yes. Massage may be used on its own or alongside osteopathic treatment, depending on your symptoms and goals."
+     "q": "Can massage be combined with osteopathy or physiotherapy?",
+     "a": "Yes. Massage can be used on its own or alongside osteopathy or physiotherapy, depending on your symptoms and goals."
     },
     {
      "q": "Do you offer pregnancy massage?",
-     "a": "Yes. You can choose sports, deep tissue or pregnancy massage, in a 60 minute (£60) or 90 minute (£80) session."
+     "a": "Yes. You can choose sports, deep tissue or pregnancy massage. Call us on 01543 252673 if you'd like to check which session suits you."
     }
    ]
   },
@@ -357,10 +419,20 @@
    "name": "Physiotherapy",
    "short": "physiotherapy",
    "h1": "Physiotherapy in Lichfield",
-   "lead": "Thorough assessment and structured rehab to rebuild strength, restore function and get you back to what you love.",
+   "lead": "Hands-on physiotherapy with Emre Tosun, an HCPC-registered physiotherapist, combining treatment with exercise rehab to help you recover from injury and move with confidence.",
    "heroImg": "osteo-arm",
    "heroPos": "50% 50%",
    "facts": [
+    {
+     "k": "New patient (1 hour)",
+     "v": "£75",
+     "icon": "pound"
+    },
+    {
+     "k": "Follow-up (45 mins)",
+     "v": "£60",
+     "icon": "pound"
+    },
     {
      "k": "Physiotherapist",
      "v": "Emre Tosun",
@@ -370,26 +442,16 @@
      "k": "GP referral",
      "v": "Not needed",
      "icon": "check"
-    },
-    {
-     "k": "Open",
-     "v": "6 days a week",
-     "icon": "clock"
-    },
-    {
-     "k": "Clinic",
-     "v": "30 Rotten Row, Lichfield",
-     "icon": "pin"
     }
    ],
-   "introTitle": "Structured physiotherapy for lasting recovery",
+   "introTitle": "Physiotherapy in Lichfield with Emre Tosun",
    "intro": [
-    "Recovering from a sports injury, living with a persistent joint problem or struggling to get back to full strength after an operation? Physiotherapy gives you a clear, step-by-step route back.",
-    "We combine hands-on treatment with a progressive exercise programme built around your goals, whether that's running a 10k, lifting your grandchildren or getting through the working day without pain."
+    "Recovering from a sports injury, living with back or neck pain, or getting back to full strength after an operation? Physiotherapy gives you a clear, step-by-step route back.",
+    "Emre is an HCPC-registered physiotherapist who works at Lichfield two days a week. His approach is very hands-on: he combines treatment such as massage, stretching, joint mobilisation, cupping and acupuncture with exercise rehab built around your goals."
    ],
    "ticks": [
-    "Registered physiotherapist with a sports science background",
-    "Rehab programmes you can follow at home",
+    "HCPC-registered physiotherapist",
+    "Hands-on treatment combined with exercise rehab",
     "Works hand-in-hand with osteopathy and massage"
    ],
    "introImg": "emre",
@@ -401,6 +463,14 @@
      "paras": [
       "Physiotherapy helps restore movement and function when you're affected by injury, illness or disability. It uses movement, exercise, manual therapy and education to get to the root of the problem.",
       "The focus is on you playing an active part in your recovery, so the results last beyond the treatment room."
+     ]
+    },
+    {
+     "id": "what-emre-treats",
+     "title": "What Emre treats",
+     "paras": [
+      "Emre sees people with <a class=\"ex-underline-olive ex-w400\" href=\"/sports-injuries/\">sports injuries</a>, <a class=\"ex-underline-olive ex-w400\" href=\"/back-pain/\">back pain</a> and <a class=\"ex-underline-olive ex-w400\" href=\"/neck-pain/\">neck pain</a>, and people recovering after an operation who need structured post-operative rehab. He also helps active people with knee, hip and shoulder problems.",
+      "As a personal trainer and sports massage therapist too, he enjoys helping people bridge the gap between injury recovery and getting back to the activities they love."
      ]
     },
     {
@@ -421,40 +491,40 @@
    ],
    "techniques": [
     {
-     "t": "Exercise prescription",
-     "d": "Personalised, progressive programmes you can do at home or in the gym."
+     "t": "Exercise rehab",
+     "d": "Personalised, progressive exercises you can do at home or in the gym."
     },
     {
-     "t": "Manual therapy",
-     "d": "Hands-on joint and soft tissue techniques to ease pain and stiffness."
+     "t": "Massage &amp; stretching",
+     "d": "Hands-on soft tissue work and stretching to ease tension and stiffness."
     },
     {
-     "t": "Movement analysis",
-     "d": "Looking at how you squat, lunge, run or lift to find the weak link."
+     "t": "Joint mobilisation",
+     "d": "Gentle movement of stiff or restricted joints."
     },
     {
-     "t": "Strength &amp; conditioning",
-     "d": "Building capacity so you're stronger than before the injury."
+     "t": "Cupping",
+     "d": "Used alongside other treatment where it suits you."
+    },
+    {
+     "t": "Acupuncture",
+     "d": "Fine needles used as part of your treatment where appropriate."
     },
     {
      "t": "Post-operative rehab",
-     "d": "Structured recovery after joint replacements and other surgery."
-    },
-    {
-     "t": "Return-to-sport planning",
-     "d": "Clear criteria for getting back to training safely."
+     "d": "Structured recovery after surgery, following your surgeon's guidance."
     }
    ],
    "condsTitle": "What physiotherapy can help with",
    "condsLead": "Not sure if your problem is on the list? Call us for a quick chat before you book.",
    "conds": [
-    "Knee pain",
     "Sports injuries",
-    "Shoulder pain",
     "Back pain",
-    "Hip pain",
-    "Postural strain",
     "Neck pain",
+    "Post-operative rehab",
+    "Knee pain",
+    "Hip pain",
+    "Shoulder pain",
     "Joint stiffness"
    ],
    "steps": [
@@ -484,24 +554,24 @@
    ],
    "faqs": [
     {
+     "q": "How much does physiotherapy cost?",
+     "a": "A new patient appointment is £75 and lasts one hour. Follow-up appointments are £60 and last 45 minutes."
+    },
+    {
      "q": "Do I need a GP referral?",
      "a": "No. You can book directly with us. Some insurers ask for a referral before they'll cover treatment, so it's worth checking."
+    },
+    {
+     "q": "Who will I see?",
+     "a": "You'll see Emre Tosun, our HCPC-registered physiotherapist. He is at Lichfield two days a week; call us on 01543 252673 to find out which days, or book online."
     },
     {
      "q": "What's the difference between osteopathy and physiotherapy?",
      "a": "There's a lot of overlap. Osteopathy tends to lead with hands-on treatment, while physiotherapy often leads with exercise-based rehab. We'll guide you to whichever suits your problem best, or combine the two."
     },
     {
-     "q": "Will I get exercises to do at home?",
-     "a": "Yes. You'll leave with a clear, simple programme, and we'll progress it at each visit."
-    },
-    {
      "q": "Can you help after surgery?",
      "a": "Yes. We help people recover after joint replacements, ligament repairs and other operations, following your surgeon's protocol."
-    },
-    {
-     "q": "How many sessions will I need?",
-     "a": "We'll give you an honest estimate at your first appointment and review it as you progress."
     }
    ]
   },

@@ -62,6 +62,15 @@
     const root = C({ content_width: 'boxed', html_tag: 'footer', background_background: 'classic', background_color: '#1F1F1F', __globals__: { background_color: 'globals/colors?id=lopink', border_color: 'globals/colors?id=secondary' },
       border_border: 'solid', border_width: dims(3, 0, 0, 0), border_color: '#949366',
       padding: dims(80, 30, 36, 30), padding_mobile: dims(56, 16, 32, 16), custom_css: css }, [grid4, accred, bottom]);
+    // Structured data for Google (SEO brief, Nov 2026): one MedicalBusiness block on every page, with the live www address
+    const ld = { '@context': 'https://schema.org', '@type': 'MedicalBusiness', '@id': 'https://www.lichfield-osteopaths.co.uk/#business',
+      name: SITE.name, url: 'https://www.lichfield-osteopaths.co.uk/', telephone: '+441543252673', email: SITE.email, foundingDate: SITE.since,
+      address: { '@type': 'PostalAddress', streetAddress: '30 Rotten Row', addressLocality: 'Lichfield', addressRegion: 'Staffordshire', postalCode: 'WS13 6JB', addressCountry: 'GB' },
+      openingHoursSpecification: [
+        { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'], opens: '09:00', closes: '19:00' },
+        { '@type': 'OpeningHoursSpecification', dayOfWeek: 'Saturday', opens: '09:00', closes: '14:00' }],
+      sameAs: [L.fb, L.insta] };
+    root.elements.push(W('html', { html: '<script type="application/ld+json">' + JSON.stringify(ld) + '</script>', _css_classes: 'ex-ld', _position: 'absolute' }));
     await EX.clearPage();
     return EX.insert(root);
   };

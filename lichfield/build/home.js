@@ -50,13 +50,13 @@
     background_background: 'classic', background_color: '#272B26', background_image: img('hero'),
     background_position: 'initial', background_xpos: pct(45), background_ypos: pct(40), background_size: 'cover',
     css_classes: 'ex-hero-shade' } }, [
-    heading('Osteopathy &amp; Massage · Lichfield · Established 1983', { tag: 'p', color: '#E6E0D5', t: { f: IN, s: 11, w: 600, ls: 0.18, tt: 'uppercase', lh: 1.6 } }),
-    heading('Expert Osteopathic Treatment &amp; Sports Massage in Lichfield', { tag: 'h1', color: '#F5F2EA', t: { s: 60, st: 40, sm: 36, lh: 1.05, lhm: 1.08, ls: -0.03 },
+    heading('30 Rotten Row · Lichfield · Established 1983', { tag: 'p', color: '#E6E0D5', t: { f: IN, s: 11, w: 600, ls: 0.18, tt: 'uppercase', lh: 1.6 } }),
+    heading('Osteopathy, Physiotherapy &amp; Sports Massage in Lichfield', { tag: 'h1', color: '#F5F2EA', t: { s: 60, st: 40, sm: 36, lh: 1.05, lhm: 1.08, ls: -0.03 },
       x: { _element_width: 'initial', _element_custom_width: px(900), _element_custom_width_tablet: pct(100), _margin: dims(18, 0, 0, 0) } }),
     C({ flex_direction: 'row', flex_wrap: 'wrap', flex_justify_content: 'space-between', flex_align_items: 'flex-end', flex_gap: gap(32),
       margin: dims(36, 0, 0, 0), padding: dims(36, 0, 0, 0), border_border: 'solid', border_width: dims(1, 0, 0, 0), border_color: 'rgba(245,242,234,0.22)' }, [
       C({ width: px(880), width_tablet: pct(100) }, [
-        text('<p>Welcome to Lichfield Osteopathic Practice, established in 1983. Our registered osteopaths and massage therapists offer a truly holistic approach to health, for all ages from birth to seniority.</p>',
+        text('<p>Welcome to Lichfield Osteopathic Practice, established in 1983. Our registered osteopaths, physiotherapist and sports massage therapist offer a truly holistic approach to health, for all ages from birth to seniority.</p>',
           { color: 'rgba(245,242,234,0.9)', t: { s: 20, lh: 1.65 } }),
         C({ flex_direction: 'row', flex_wrap: 'wrap', flex_gap: gap(14), margin: dims(32, 0, 0, 0) }, [
           button('Book an appointment', L.book, { kind: 'ivory', h: 64, fs: 18, icon: 'right', split: true, pl: 36, pr: 30 }),
@@ -65,12 +65,20 @@
       ]),
       C({ css_classes: 'ex-fit', flex_align_items: 'flex-end', flex_gap: gap(10) }, [
         heading('Open 6 days a week', { tag: 'p', color: 'rgba(245,242,234,0.9)', t: { f: IN, s: 12, w: 500, ls: 0.2, tt: 'uppercase', lh: 1.4 }, x: { align: 'right' } }),
-        C({ flex_direction: 'row', flex_gap: gap(0) }, ['freta', 'emma', 'zoe', 'hafi']
+        C({ flex_direction: 'row', flex_gap: gap(0) }, ['freta', 'emma', 'david', 'hafi', 'emre', 'zoe']
           .map((a, i) => image(a, '', { x: { width: px(54), height: px(54), 'object-fit': 'cover', 'object-position': 'center top',
             image_border_border: 'solid', image_border_width: all(3), image_border_color: '#F5F2EA', image_border_radius: all(50, '%'),
             _margin: dims(0, 0, 0, i ? -12 : 0) } })))
       ])
     ])
+  ]);
+
+  /* 1b. THREE MAIN SERVICES, straight after the hero (SEO brief, Nov 2026) */
+  const THREE = [['Osteopathy', L.osteo, 'osteo-arm'], ['Physiotherapy', L.physio, 'emre'], ['Sports &amp; Deep Tissue Massage', L.massage, 'massage-zoe']];
+  S.three = () => section({ pt: 64, pb: 0, ptm: 48, pbm: 0, x: { _element_id: 'our-services' } }, [
+    eyebrow('Our Services'),
+    C(grid(3, { grid_columns_grid_tablet: { unit: 'fr', size: 1, sizes: [] }, grid_gaps: gaps(14), grid_gaps_mobile: gaps(12), margin: dims(28, 0, 0, 0), css_classes: 'ex-three' }),
+      THREE.map(([t, h, a], i) => C({ padding: all(0) }, [card(t, h, a, tones[i])])))
   ]);
 
   /* 2. ABOUT + WHAT WE OFFER */
@@ -179,6 +187,8 @@
         heading('A few minutes’ walk from Lichfield city centre', { t: { s: 40, st: 30, sm: 28, lh: 1.12, ls: -0.025 }, x: { _margin: dims(24, 0, 0, 0) } }),
         text("<p>There is parking outside the clinic, on-street parking a few minutes' walk away, and free parking at Tesco, also a few minutes' walk away.</p>",
           { t: { s: 18, lh: 1.75 }, x: { _margin: dims(20, 0, 0, 0) } }),
+        text('<p>Nearer Sutton Coldfield? Visit our sister clinic, <a class="ex-underline-olive ex-w400" href="https://exhaleosteopathy.co.uk/">Exhale Osteopathy</a>.</p>',
+          { t: { s: 16, lh: 1.7 }, x: { _margin: dims(12, 0, 0, 0) } }),
         C({ flex_gap: gap(10), margin: dims(26, 0, 0, 0), padding: dims(24, 0, 0, 0), border_border: 'solid', border_width: dims(1, 0, 0, 0), border_color: '#B7AA99' }, [
           heading(SITE.name, { tag: 'h3', t: { s: 22, ls: -0.015, lh: 1.3 } }),
           text('<p>' + SITE.addr + '</p><p><a href="' + SITE.tel + '">' + SITE.phone + '</a> · <a href="mailto:' + SITE.email + '">' + SITE.email + '</a></p><p>' + SITE.hoursLine + ' · Sunday closed</p>',
@@ -228,7 +238,7 @@
   EX.HOME = S;
   EX.bookCard = bookCard;
   EX.buildHome = async function (only) {
-    const order = ['hero', 'about', 'services', 'conditions', 'who', 'team', 'findus', 'logos', 'book'];
+    const order = ['hero', 'three', 'about', 'services', 'conditions', 'who', 'team', 'findus', 'logos', 'book'];
     for (const k of (only || order)) await EX.insert(S[k]());
   };
 })();

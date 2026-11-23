@@ -109,7 +109,7 @@
   P.pricing = () => {
     const out = [];
     out.push(P.heroSide({ img: 'exterior', x: 55, y: 50, crumb: 'Our Fees', h1: 'Our fees',
-      lead: 'Osteopathy and massage fees at Lichfield Osteopathic Practice. Book online, or call us if you have any questions.',
+      lead: 'Osteopathy, physiotherapy and massage fees at Lichfield Osteopathic Practice. Book online, or call us if you have any questions.',
       buttons: [['Book an appointment', L.book], ['Call ' + SITE.phone, SITE.tel]] }));
 
     // Prices from the live /pricing/ page (28 Oct 2026)
@@ -118,10 +118,15 @@
         ['Appointments', [['Initial consultation &amp; treatment', '', "For patients who haven't attended Lichfield Osteopathic Practice before.", '£75'],
           ['Follow-up appointment', '', 'A follow-up treatment session where we review your progress and continue with your treatment plan.', '£60']]]],
         'Not sure which to book? Call us on ' + SITE.phone + ' and we will help.'],
+      ['Physiotherapy', L.physio, 'Hands-on treatment and exercise rehab with Emre Tosun, our HCPC-registered physiotherapist.', [
+        ['Appointments', [['New patient appointment', '(1 hour)', 'Assessment and treatment for patients new to physiotherapy with us.', '£75'],
+          ['Follow-up appointment', '(45 mins)', 'We review your progress and continue your treatment and rehab.', '£60']]]],
+        'You don’t need a GP referral to see our physiotherapist.'],
       ['Massage', L.massage, 'Sports, deep tissue or pregnancy massage, tailored to you.', [
-        ['Sessions', [['Sports, deep tissue or pregnancy massage', '(60 mins)', 'Choice of massage tailored to you.', '£60'],
+        ['Sessions', [['Sports, deep tissue or pregnancy massage', '(30 mins)', 'A shorter session, ideal for one area.', '£40'],
+          ['Sports, deep tissue or pregnancy massage', '(60 mins)', 'Choice of massage tailored to you.', '£60'],
           ['Sports, deep tissue or pregnancy massage', '(90 mins)', 'Choice of massage tailored to you.', '£80']]]],
-        'Massage can be booked on its own or alongside osteopathy.']];
+        'Massage can be booked on its own or alongside osteopathy or physiotherapy.']];
 
     const panel = ([name, href, intro, groups, note]) => C({ padding: all(0) }, [
       C({ background_background: 'classic', background_color: '#F5F2EA', border_radius: all(3), padding: dims(44, 48, 40, 48), padding_mobile: dims(44, 24, 40, 24) }, [
@@ -457,15 +462,17 @@
     ]));
 
     const KNOW = [['pound', 'Osteopathy fees', 'Initial consultation and treatment £75. Follow-up appointment £60.'],
-      ['pound', 'Massage fees', 'Sports, deep tissue or pregnancy massage: 60 minutes £60, 90 minutes £80.'],
+      ['pound', 'Physiotherapy fees', 'New patient appointment (1 hour) £75. Follow-up (45 minutes) £60.'],
+      ['pound', 'Massage fees', 'Sports, deep tissue or pregnancy massage: 30 minutes £40, 60 minutes £60, 90 minutes £80.'],
       ['check', 'No referral needed', 'You can book directly, with no need to see your GP first.'],
-      ['clock', 'Opening hours', SITE.hoursLine + '. Sunday closed.']];
+      ['clock', 'Opening hours', SITE.hoursLine + '. Sunday closed.'],
+      ['pin', 'Find us', SITE.addrShort + '. Parking outside and nearby.']];
     out.push(section({ x: { background_background: 'classic', background_color: '#E6E0D5' } }, [
       C({ flex_direction: 'row', flex_wrap: 'wrap', flex_justify_content: 'space-between', flex_align_items: 'flex-end', flex_gap: gap(24) }, [
         C({ css_classes: 'ex-shrink' }, [eyebrow('Good to Know'), h2('Fees and opening hours', { o: { x: { _margin: dims(24, 0, 0, 0) } } })]),
         button('See all fees', L.fees, { kind: 'outline', h: 52, fs: 15, pl: 24, pr: 24 })
       ]),
-      C(grid(4, { grid_columns_grid_tablet_extra: fr(2), grid_columns_grid_tablet: fr(2), grid_columns_grid_mobile: fr(1), grid_gaps: gaps(14), margin: dims(36, 0, 0, 0) }), KNOW.map(([ic, t, d]) =>
+      C(grid(3, { grid_columns_grid_tablet_extra: fr(2), grid_columns_grid_tablet: fr(2), grid_columns_grid_mobile: fr(1), grid_gaps: gaps(14), margin: dims(36, 0, 0, 0) }), KNOW.map(([ic, t, d]) =>
         C({ flex_gap: gap(12), padding: dims(28, 26, 30, 26), background_background: 'classic', background_color: '#F5F2EA', border_radius: all(3) }, [
           circle(ic, 46, 20, { color: '#4F5945', box: { background_background: 'classic', background_color: '#E6E0D5' } }),
           heading(t, { tag: 'h3', t: { s: 21, w: 500, ls: -0.015, lh: 1.3 } }),
@@ -483,7 +490,7 @@
     ]));
 
     const FAQ = [['Do I need a GP referral?', 'No. You can book directly with us online or by phone.'],
-      ['How much does it cost?', 'An initial consultation and treatment is £75 and a follow-up appointment is £60. Massage is £60 for 60 minutes or £80 for 90 minutes.'],
+      ['How much does it cost?', 'An initial consultation and treatment is £75 and a follow-up appointment is £60. Physiotherapy is £75 for a one-hour new patient appointment and £60 for a 45-minute follow-up. Massage is £40 for 30 minutes, £60 for 60 minutes or £80 for 90 minutes.'],
       ['What can I expect at my first session?', 'Your initial consultation will include a detailed case history, as well as careful observation and examination using palpation (feel through touch) to find areas of restriction, strain and weakness in the body.'],
       ['How many sessions will I need?', 'It depends on the condition and the person we are treating. The aim is to keep your appointments to a minimum, and your osteopath will usually be able to tell you by the second treatment how many are likely to be needed.'],
       ['How will I feel after a treatment?', 'You may feel a little sore or achy for up to 48 hours after a treatment. Most people usually start feeling better after this.'],
