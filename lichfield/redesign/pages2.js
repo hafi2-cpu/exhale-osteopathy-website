@@ -225,4 +225,33 @@
     dropSchema(els); dropReviews(els);
     return els;
   };
+
+  /* ================= TREATMENTS overview (/treatments/) ================= */
+  R.treatIndex = () => {
+    const els = XF.base(XF.src('p2682'));
+    hero(els, 'Treatments', 'Treatments in Lichfield', 'Osteopathy, physiotherapy, sports massage, acupuncture and laser therapy at 30 Rotten Row, Lichfield. No GP referral needed.', 'osteo-arm', 'An osteopath treating a patient’s arm and shoulder');
+    const S = window.LOP_DATA.treat.S;
+    const BY = { '/osteopathy/': ['Osteopathy', 'osteo'], '/peadiatric-osteopathy/': ['Cranial &amp; Paediatric Osteopathy', 'paediatric'], '/acupuncture/': ['Acupuncture', 'acupuncture'],
+      '/physiotherapy/': ['Physiotherapy', 'physio'], '/massage/': ['Sports &amp; Deep Tissue Massage', 'massage'], '/laser-therapy/': ['Laser Therapy', 'laser'] };
+    XF.all(els, cls(/ex-min/)).forEach(({ e: card }) => {
+      const hs = H([card]); const u = XF.linkOf(hs[0]); const m = BY[u]; if (!m) return;
+      hs[0].settings.title = m[0]; if (hs[1]) hs[1].settings.title = esc(S[m[1]].lead.split(/(?<=\.)\s/)[0]);
+      W([card], 'image').forEach(im => { im.settings.image = Object.assign({}, im.settings.image, XF.img(XF.IMG_BY_LINK[u]), { alt: '' }); });
+      if (card.settings.link) card.settings.link.url = u;
+    });
+    dropSchema(els);
+    return els;
+  };
+
+  /* ================= CONDITIONS overview (/conditions/) ================= */
+  R.condIndex = () => {
+    const els = XF.base(XF.src('p2667'));
+    hero(els, 'Conditions', 'Conditions we treat in Lichfield', 'Our osteopaths, physiotherapist and sports massage therapist assess and treat a wide range of muscle, joint and nerve problems. Choose a condition to find out more.', 'hands-back', 'Hands-on treatment of the back');
+    XF.all(els, cls(/ex-cond-tile/)).forEach(({ e: t }) => {
+      const u = XF.linkOf(t); W([t], 'image').forEach(im => { im.settings.image = Object.assign({}, im.settings.image, XF.img(XF.IMG_BY_LINK[u] || 'hands-deep'), { alt: '' }); });
+      const h = H([t])[0]; if (/TMJ/.test(h.settings.title)) h.settings.title = 'Jaw pain'; if (/Headaches/.test(h.settings.title)) h.settings.title = 'Headaches';
+    });
+    dropSchema(els);
+    return els;
+  };
 })();
