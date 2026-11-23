@@ -220,6 +220,23 @@
     return els;
   };
 
+  /* Alt text for photos in linked cards and team cards: the card's own heading (SEO + accessibility) */
+  XF.alts = (els) => {
+    const txt = (h) => String(h || '').replace(/<[^>]+>/g, '').replace(/&amp;/g, '&').replace(/\s+/g, ' ').trim();
+    const visit = (e, label) => {
+      const s = e.settings || {};
+      let l = label;
+      if (e.elType === 'container' || XF.linkOf(e)) {
+        const h = XF.all(e.elements || [], x => x.widgetType === 'heading' && txt(x.settings.title) && !/^(0\d|learn more|view profile)/i.test(txt(x.settings.title)))[0];
+        if (h && (XF.linkOf(e) || /card|cell|perso|ex-per|ex-min|tile/.test(s.css_classes || ''))) l = txt(h.e.settings.title);
+      }
+      if (e.widgetType === 'image' && s.image && !s.image.alt && l) s.image.alt = l;
+      (e.elements || []).forEach(c => visit(c, l));
+    };
+    els.forEach(e => visit(e, ''));
+    return els;
+  };
+
   /* ---------- load the Exhale bundle kept in localStorage ---------- */
   const gunzip = async (b64) => {
     const b = atob(b64); const u = new Uint8Array(b.length); for (let i = 0; i < b.length; i++) u[i] = b.charCodeAt(i);

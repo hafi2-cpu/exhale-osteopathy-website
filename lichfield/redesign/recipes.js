@@ -78,6 +78,7 @@
       if (src) { const c = XF.clone(src); XF.all([c], e => e.elType === 'container' && XF.linkOf(e)).forEach(x => { x.e.settings.background_image = Object.assign({}, x.e.settings.background_image, XF.img('exhale-c-massage-hd.jpg')); });
         cars[1].elements.push(c); cars[1].settings.carousel_items.push({ _id: Math.random().toString(16).slice(2, 9), slide_title: 'Sports Massage' }); }
     }
+    tryT(els, /^Osteopathy, physiotherapy, massage and more, all under one roof/, 'Osteopathy, physiotherapy and sports massage in Lichfield, all under one roof at 30 Rotten Row.');
     // Team
     rebuildPeople(els, TEAM);
     const teamGrid = XF.one(els, e => e.elType === 'container' && (e.elements || []).some(c => XF.linkOf(c) === '/freta-teklesenbet/')).e;
